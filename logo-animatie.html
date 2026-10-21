@@ -627,66 +627,49 @@
       <div id="view-morph">
         <div class="stage-viewport">
           
-          <!-- Dynamic SVG Morph Stage -->
+                    <!-- Dynamic SVG Morph Stage -->
           <svg id="morph-svg" viewBox="0 0 540 340">
             <defs>
               <filter id="cushion-shadow" x="-20%" y="-20%" width="140%" height="140%">
-                <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#2D3A2F" flood-opacity="0.12"/>
+                <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#2D3A2F" flood-opacity="0.08"/>
               </filter>
             </defs>
 
-            <!-- Background Pill Capsule (Morphs from circular badge to horizontal header capsule) -->
-            <rect id="bg-capsule" x="136" y="26" width="268" height="268" rx="134" ry="134" 
+            <!-- Background Pill Capsule (Starts as generous emblem plaque, morphs into sleek header capsule) -->
+            <rect id="bg-capsule" x="75" y="15" width="390" height="275" rx="36" 
                   fill="#FAF7F2" stroke="#E2DBD0" stroke-width="1.5" filter="url(#cushion-shadow)" />
 
             <!-- 1. Pure Vector Morphing Body (Cushion -> Scandinavian Arch) -->
-            <path id="morph-body" d="" fill="#048C2B" stroke="#111111" stroke-width="4.0" stroke-linejoin="round" />
+            <path id="morph-body" d="" fill="#048C2B" stroke="#111111" stroke-width="4.0" stroke-linejoin="round" opacity="0" />
 
-            <!-- 2. Pure Vector Tufting Stitches (Capitonnage lines & diamond buttons) -->
-            <g id="layer-tufting" stroke="#111111" stroke-width="3.0" stroke-linecap="round" opacity="1">
-              <path d="M 226 78 L 314 180" />
-              <path d="M 314 78 L 226 180" />
-              <path d="M 269.6 70 L 338 138" stroke-width="2.6" />
-              <path d="M 269.6 70 L 202 138" stroke-width="2.6" />
-              <!-- Diamond tuft buttons -->
-              <circle cx="270" cy="129" r="3.4" fill="#111111" />
-              <circle cx="244" cy="102" r="3.0" fill="#111111" />
-              <circle cx="296" cy="102" r="3.0" fill="#111111" />
-              <circle cx="244" cy="156" r="3.0" fill="#111111" />
-              <circle cx="296" cy="156" r="3.0" fill="#111111" />
-            </g>
+            <!-- 2. Authentic Raster Cushion (Emerald green, capitonnage stitches, authentic border) -->
+            <image id="layer-cushion-img" href="assets/authentic_cushion.png" x="191.7" y="35.6" width="151.5" height="138.5" opacity="1" preserveAspectRatio="none" />
 
-            <!-- 3. Pure Vector Gothic S (glides from left into center of arch) -->
-            <g id="layer-gothic-s" transform="translate(149.4, 97.9) scale(0.6494)">
-              <path d="M 54.50 163.56 C 59.21 161.42, 70.92 151.88, 73.83 147.80 C 74.56 146.77, 75.54 144.60, 76.01 142.97 L 76.86 140.00 L 70.93 140.00 L 65.00 140.00 L 65.00 123.37 C 65.00 108.04, 64.83 106.45, 62.82 103.12 C 56.94 93.37, 32.91 56.67, 31.97 56.00 C 30.75 55.13, 27.27 47.63, 26.56 44.32 C 25.35 38.71, 29.90 32.87, 34.19 34.52 C 35.01 34.83, 38.50 38.25, 41.97 42.12 C 49.99 51.08, 51.67 51.74, 59.19 48.93 L 65.00 46.76 L 65.00 40.80 C 65.00 35.43, 64.63 34.37, 61.29 30.17 C 55.80 23.26, 50.15 18.08, 47.35 17.37 C 45.53 16.92, 44.15 17.41, 42.18 19.22 C 40.71 20.57, 36.08 24.22, 31.90 27.32 C 18.62 37.16, 12.42 45.47, 11.36 54.82 C 10.86 59.30, 11.21 60.12, 19.56 74.00 C 30.74 92.56, 38.89 105.10, 47.44 116.93 C 57.14 130.32, 63.00 141.87, 63.00 147.57 C 63.00 152.66, 60.93 157.43, 58.06 158.97 C 57.00 159.54, 53.85 160.00, 51.07 160.00 C 46.68 160.00, 45.48 159.53, 42.12 156.49 C 37.90 152.67, 34.47 145.80, 33.64 139.50 C 33.35 137.30, 32.82 133.14, 32.46 130.25 C 32.11 127.36, 31.46 125.00, 31.04 125.00 C 29.06 125.00, 19.70 133.66, 17.36 137.65 C 12.72 145.56, 15.67 153.70, 25.70 160.66 C 35.04 167.13, 44.50 168.09, 54.50 163.56 Z M 69.94 159.20 C 75.40 152.25, 83.00 141.44, 83.00 140.61 C 83.00 139.17, 81.08 140.16, 80.54 141.88 C 80.21 142.91, 78.80 145.05, 77.39 146.63 C 75.99 148.21, 73.80 151.11, 72.52 153.07 C 71.25 155.03, 68.81 157.96, 67.10 159.57 C 64.23 162.28, 62.99 165.10, 64.75 164.93 C 65.16 164.89, 67.50 162.31, 69.94 159.20 Z M 52.00 157.19 C 52.00 156.74, 50.60 155.05, 48.90 153.44 C 47.19 151.82, 44.45 148.25, 42.80 145.50 C 41.15 142.75, 40.07 141.32, 40.39 142.31 C 41.76 146.50, 49.20 158.00, 50.54 158.00 C 51.34 158.00, 52.00 157.63, 52.00 157.19 Z M 64.98 93.25 C 64.97 91.34, 61.98 86.50, 55.23 77.48 C 49.88 70.32, 43.36 60.65, 40.74 55.98 C 38.12 51.32, 34.85 46.15, 33.47 44.50 L 30.97 41.50 L 32.89 46.74 C 35.51 53.93, 38.30 58.48, 48.93 72.90 C 53.96 79.73, 59.52 87.70, 61.28 90.63 C 63.05 93.55, 64.61 95.96, 64.75 95.97 C 64.89 95.99, 64.99 94.76, 64.98 93.25 Z M 62.73 22.89 C 58.11 18.48, 58.00 19.14, 62.30 25.34 C 63.65 27.29, 64.50 27.81, 65.01 26.98 C 65.45 26.26, 64.54 24.62, 62.73 22.89 Z" fill="#111111" fill-rule="evenodd" />
-            </g>
+            <!-- 3. Authentic Gothic S (glides from left into arch center, white inlines 100% intact) -->
+            <image id="layer-gothic-s" href="assets/authentic_S.png" x="154.0" y="87.6" width="51.4" height="102.0" opacity="1" preserveAspectRatio="none" />
 
-            <!-- 4. Modern Serif S (crossfades in at center of arch) -->
-            <text id="layer-serif-s" x="160" y="196" font-family="'Fraunces', serif" font-weight="700" 
-                  font-size="54" fill="#2D3A2F" text-anchor="middle" dominant-baseline="central" opacity="0">S</text>
+            <!-- 4. Modern Serif S (crossfades in at arch center) -->
+            <text id="layer-serif-s" x="155" y="166" font-family="'Fraunces', serif" font-weight="700" 
+                  font-size="52" fill="#2D3A2F" text-anchor="middle" dominant-baseline="central" opacity="0">S</text>
 
-            <!-- 5. Pure Vector Gothic C (floats right and dissolves) -->
-            <g id="layer-gothic-c" transform="translate(331.4, 97.9) scale(0.6500)">
-              <path d="M 61.12 150.23 L 73.29 138.50 L 63.89 137.72 C 45.40 136.17, 35.02 130.91, 33.38 122.24 C 32.99 120.19, 32.47 119.10, 32.23 119.82 C 31.98 120.55, 32.56 123.18, 33.51 125.67 C 35.83 131.73, 41.21 135.04, 54.56 138.63 C 62.06 140.65, 65.00 141.87, 64.99 142.97 C 64.98 143.81, 61.59 147.15, 57.46 150.39 C 53.33 153.63, 49.19 157.57, 48.26 159.14 C 47.33 160.71, 46.22 162.00, 45.78 162.00 C 45.35 162.00, 45.00 162.47, 45.00 163.04 C 45.00 165.08, 49.00 161.90, 61.12 150.23 Z M 41.79 160.52 C 44.40 159.15, 48.89 155.65, 51.76 152.74 L 56.99 147.45 L 53.74 145.83 C 51.96 144.94, 48.02 143.25, 45.00 142.09 C 37.48 139.19, 29.90 133.29, 27.53 128.49 C 25.66 124.70, 25.57 122.53, 25.79 85.50 C 26.04 43.23, 26.58 31.97, 28.37 32.06 C 28.99 32.09, 31.98 35.07, 35.00 38.69 C 41.12 46.01, 45.20 48.99, 49.13 49.00 C 52.11 49.00, 58.28 46.62, 62.00 44.03 C 63.38 43.07, 65.74 41.99, 67.25 41.63 C 70.45 40.85, 70.99 38.00, 67.93 38.00 C 64.35 38.00, 61.76 36.04, 51.93 25.89 C 46.66 20.45, 41.56 16.00, 40.59 16.00 C 39.61 16.00, 34.84 18.59, 29.98 21.75 L 21.14 27.50 L 21.07 83.75 L 21.00 140.00 L 14.40 140.00 L 7.81 140.00 L 11.28 144.75 C 16.85 152.36, 31.12 163.00, 35.77 163.00 C 36.47 163.00, 39.17 161.88, 41.79 160.52 Z M 33.64 58.19 C 33.23 46.58, 32.77 43.89, 31.43 45.24 C 30.66 46.00, 30.16 100.51, 30.83 110.00 C 31.63 121.28, 34.20 73.90, 33.64 58.19 Z M 63.85 49.94 C 67.20 47.71, 72.69 42.87, 76.07 39.19 L 82.20 32.50 L 75.28 31.87 C 66.44 31.06, 63.49 29.48, 55.42 21.22 C 49.64 15.30, 49.14 14.97, 51.25 18.50 C 52.57 20.70, 53.93 23.27, 54.28 24.21 C 55.31 27.01, 62.98 31.94, 68.94 33.64 C 76.30 35.73, 76.84 36.42, 73.39 39.33 C 71.80 40.68, 69.06 43.16, 67.31 44.84 C 65.55 46.53, 61.84 49.06, 59.06 50.47 C 56.28 51.88, 54.00 53.25, 54.00 53.52 C 54.00 55.12, 58.61 53.44, 63.85 49.94 Z" fill="#111111" fill-rule="evenodd" />
-            </g>
+            <!-- 5. Authentic Gothic C (floats right and dissolves, white inlines 100% intact) -->
+            <image id="layer-gothic-c" href="assets/authentic_C.png" x="332.1" y="86.3" width="54.0" height="101.4" opacity="1" preserveAspectRatio="none" />
 
-            <!-- 6. Pure Vector Gothic W (floats down and dissolves) -->
-            <g id="layer-gothic-w" transform="translate(203.4, 197.9) scale(0.6500)">
-              <path d="M 99.48 136.50 C 102.08 132.87, 104.49 127.95, 105.58 124.04 C 107.89 115.75, 114.92 103.00, 117.18 103.00 C 121.67 103.00, 130.19 121.63, 138.56 149.75 C 139.50 152.88, 140.72 151.46, 150.35 136.07 C 155.45 127.92, 155.30 128.45, 155.46 118.50 C 155.55 112.63, 156.18 110.21, 159.33 103.50 C 163.01 95.69, 164.64 92.95, 177.65 72.65 C 185.50 60.41, 187.66 54.15, 186.19 47.94 C 185.06 43.14, 178.29 26.07, 176.95 24.61 C 174.79 22.28, 161.75 35.52, 160.61 41.18 C 160.16 43.46, 160.90 46.24, 163.50 52.01 C 169.92 66.22, 170.02 75.56, 163.87 87.08 C 160.43 93.55, 151.26 104.81, 149.34 104.93 C 147.86 105.02, 143.42 95.51, 135.83 76.00 C 132.51 67.47, 128.78 58.02, 127.53 55.00 C 126.28 51.98, 122.89 43.41, 120.00 35.96 L 114.74 22.42 L 106.75 30.76 L 98.76 39.11 L 99.23 43.80 C 99.49 46.39, 100.65 50.52, 101.82 53.00 C 108.46 67.15, 116.00 87.13, 116.00 90.61 C 116.00 91.97, 115.09 94.86, 113.98 97.04 C 111.78 101.36, 100.08 114.00, 98.30 114.00 C 96.63 114.00, 89.30 97.87, 79.45 72.50 C 72.79 55.37, 64.99 35.80, 63.51 32.50 C 62.77 30.85, 61.87 28.49, 61.51 27.25 C 61.16 26.01, 59.99 24.53, 58.93 23.96 C 57.26 23.07, 55.13 24.60, 43.60 34.94 C 17.67 58.22, 12.50 65.63, 12.50 79.50 C 12.50 86.46, 12.88 88.18, 15.41 92.75 L 18.32 98.00 L 21.06 96.25 C 25.49 93.42, 33.78 85.98, 36.58 82.31 C 38.90 79.26, 39.05 78.59, 37.99 75.71 C 34.25 65.52, 32.97 53.87, 35.12 49.68 C 37.06 45.93, 40.26 43.00, 42.44 43.00 C 44.22 43.00, 45.66 45.84, 52.20 62.25 C 68.17 102.31, 75.22 119.74, 78.41 127.00 C 80.22 131.12, 82.75 138.22, 84.04 142.77 L 86.38 151.04 L 90.78 146.77 C 93.20 144.42, 97.12 139.80, 99.48 136.50 Z M 107.57 137.47 C 111.22 132.33, 111.32 132.01, 113.48 117.50 C 113.73 115.85, 112.76 118.10, 111.34 122.50 C 109.91 126.89, 107.30 132.76, 105.52 135.53 C 103.75 138.30, 101.74 141.62, 101.05 142.91 C 99.82 145.20, 99.85 145.22, 102.02 143.70 C 103.25 142.84, 105.75 140.03, 107.57 137.47 Z M 161.47 131.35 C 162.44 129.35, 163.00 125.34, 163.01 120.35 C 163.01 116.03, 163.49 110.77, 164.08 108.66 C 164.67 106.54, 169.31 98.67, 174.41 91.16 C 186.09 73.93, 188.50 69.76, 191.04 62.42 C 193.74 54.61, 193.71 46.64, 190.93 38.25 C 188.73 31.60, 182.97 21.48, 184.53 27.00 C 184.91 28.38, 186.53 32.59, 188.12 36.37 C 194.94 52.58, 192.33 63.51, 176.13 86.50 C 163.14 104.94, 161.86 107.71, 160.98 119.32 C 160.18 129.97, 159.31 133.21, 155.88 138.38 C 153.94 141.31, 154.00 141.28, 156.88 138.00 C 158.56 136.07, 160.63 133.08, 161.47 131.35 Z M 97.52 96.81 C 96.09 93.34, 91.28 81.28, 86.83 70.00 C 82.38 58.72, 78.17 48.15, 77.48 46.50 C 76.78 44.85, 74.80 39.96, 73.08 35.63 C 70.01 27.88, 68.09 23.89, 68.03 25.13 C 67.99 26.03, 74.47 43.95, 78.48 54.00 C 82.96 65.26, 89.60 82.87, 90.53 86.00 C 92.03 91.03, 99.24 105.46, 99.67 104.31 C 99.92 103.65, 98.95 100.28, 97.52 96.81 Z M 29.95 96.55 C 30.66 95.70, 31.80 95.00, 32.47 95.00 C 34.45 95.00, 44.60 83.75, 45.36 80.71 C 45.78 79.02, 45.26 74.57, 44.03 69.38 C 42.91 64.69, 42.00 58.40, 42.00 55.42 C 42.00 51.24, 41.65 50.00, 40.48 50.00 C 39.22 50.00, 39.04 51.36, 39.38 58.25 C 39.61 62.79, 40.52 68.47, 41.40 70.88 C 44.60 79.62, 43.77 81.65, 32.64 92.29 C 28.16 96.58, 25.44 99.64, 26.58 99.10 C 27.73 98.55, 29.25 97.41, 29.95 96.55 Z M 148.49 88.26 C 147.02 85.09, 143.38 75.97, 140.38 68.00 C 137.39 60.02, 134.29 52.11, 133.49 50.40 C 132.70 48.70, 130.64 43.30, 128.92 38.40 C 123.72 23.64, 121.84 21.60, 124.97 34.13 C 127.38 43.78, 132.20 56.02, 140.29 73.00 C 143.83 80.42, 147.54 88.71, 148.56 91.41 C 149.57 94.11, 150.57 95.80, 150.78 95.17 C 150.99 94.54, 149.96 91.43, 148.49 88.26 Z" fill="#111111" fill-rule="evenodd" />
-            </g>
+            <!-- 6. Authentic Gothic W (floats down and dissolves, white inlines 100% intact) -->
+            <image id="layer-gothic-w" href="assets/authentic_W.png" x="203.4" y="176.0" width="122.2" height="88.4" opacity="1" preserveAspectRatio="none" />
 
-            <!-- NEW TYPOGRAPHY: Schipper Compact Wonen (Reveals to the right of the arch) -->
-            <g id="new-typography" transform="translate(235, 155)" opacity="0">
-              <text id="text-schipper" x="0" y="8" font-family="'Fraunces', serif" font-weight="700" 
-                    font-size="44" fill="#2D3A2F">Schipper</text>
-              <text id="text-compact" x="3" y="36" font-family="'Figtree', sans-serif" font-weight="700" 
-                    font-size="14.5" letter-spacing="0.22em" fill="#4B584E">COMPACT WONEN</text>
+            <!-- 7. NEW TYPOGRAPHY: Schipper Compact Wonen (Reveals to the right of the arch) -->
+            <g id="new-typography" transform="translate(225, 142)" opacity="0">
+              <text id="text-schipper" x="0" y="14" font-family="'Fraunces', serif" font-weight="700" 
+                    font-size="42" fill="#2D3A2F">Schipper</text>
+              <text id="text-compact" x="3" y="44" font-family="'Figtree', sans-serif" font-weight="700" 
+                    font-size="14" letter-spacing="0.22em" fill="#4B584E">COMPACT WONEN</text>
             </g>
 
             <!-- Subtitle label at bottom showing year / status -->
             <text id="year-label" x="270" y="318" font-family="'Figtree', sans-serif" font-size="11.5" 
                   font-weight="700" letter-spacing="0.18em" fill="#5C675E" text-anchor="middle">
-              AMBACHTELIJK EMBLEEM · 1989
+              AMBACHTELIJK EMBLEEM · 1989 (ORIGINEEL)
             </text>
           </svg>
 
@@ -881,53 +864,53 @@
     </div>
   </footer>
 
-  <script>
-    // --- MORPHING ENGINE ---
-    // 10-Segment Cubic Bezier Model for Pure Vector Morphing
+    <script>
+    // --- MORPHING ENGINE (AUTHENTIC 1989 -> 2026 ARCH) ---
+    // 10-Segment Cubic Bezier Model
     // Cushion 1989 (at m=0)
-    const C_START = [269.60, 65.00];
+    const C_START = [270.0, 48.0];
     const C_SEGS = [
-      [252.00, 65.00, 236.00, 56.00, 222.00, 55.00],
-      [206.00, 54.00, 193.00, 68.00, 193.00, 88.00],
-      [193.00, 110.00, 206.00, 128.00, 214.50, 142.00],
-      [218.00, 155.00, 216.00, 178.00, 218.00, 192.50],
-      [228.00, 193.50, 250.00, 192.50, 269.60, 192.50],
-      [289.00, 192.50, 311.00, 193.50, 321.00, 192.50],
-      [323.00, 178.00, 321.00, 155.00, 324.50, 142.00],
-      [333.00, 128.00, 346.50, 110.00, 346.50, 88.00],
-      [346.50, 68.00, 333.00, 54.00, 317.00, 55.00],
-      [303.00, 56.00, 287.00, 65.00, 269.60, 65.00]
+      [252.0, 48.0, 236.0, 39.0, 222.0, 39.0],
+      [206.0, 39.0, 192.0, 52.0, 192.0, 72.0],
+      [192.0, 94.0, 206.0, 112.0, 214.0, 126.0],
+      [218.0, 139.0, 216.0, 162.0, 218.0, 172.0],
+      [228.0, 173.0, 250.0, 173.0, 270.0, 173.0],
+      [290.0, 173.0, 312.0, 173.0, 322.0, 172.0],
+      [324.0, 162.0, 322.0, 139.0, 326.0, 126.0],
+      [334.0, 112.0, 348.0, 94.0, 348.0, 72.0],
+      [348.0, 52.0, 334.0, 39.0, 320.0, 39.0],
+      [304.0, 39.0, 288.0, 48.0, 270.0, 48.0]
     ];
 
-    // Arch 2026 Centered (intermediate)
-    const AC_START = [270.00, 90.00];
-    const K = 13.26; // 4/3 * tan(pi/16) * 50
+    // Arch 2026 Centered (Intermediate)
+    const K = 12.2;
+    const AC_START = [270.0, 80.0];
     const AC_SEGS = [
-      [270.00 - K, 90.00, 270.00 - 35.36 + 9.38, 140.00 - 35.36 - 3.88, 270.00 - 35.36, 140.00 - 35.36],
-      [270.00 - 35.36 - 9.38, 140.00 - 35.36 + 3.88, 220.00, 140.00 - K, 220.00, 140.00],
-      [220.00, 160.00, 220.00, 180.00, 220.00, 195.00],
-      [220.00, 205.00, 220.00, 212.00, 228.00, 212.00],
-      [238.00, 212.00, 255.00, 212.00, 270.00, 212.00],
-      [285.00, 212.00, 302.00, 212.00, 312.00, 212.00],
-      [320.00, 212.00, 320.00, 205.00, 320.00, 195.00],
-      [320.00, 180.00, 320.00, 160.00, 320.00, 140.00],
-      [320.00, 140.00 - K, 270.00 + 35.36 + 9.38, 140.00 - 35.36 + 3.88, 270.00 + 35.36, 140.00 - 35.36],
-      [270.00 + 35.36 - 9.38, 140.00 - 35.36 - 3.88, 270.00 + K, 90.00, 270.00, 90.00]
+      [270.0 - K, 80.0, 270.0 - 32.53 + 8.63, 126.0 - 32.53 - 3.57, 270.0 - 32.53, 126.0 - 32.53],
+      [270.0 - 32.53 - 8.63, 126.0 - 32.53 + 3.57, 224.0, 126.0 - K, 224.0, 126.0],
+      [224.0, 145.0, 224.0, 165.0, 224.0, 178.0],
+      [224.0, 185.0, 224.0, 190.0, 232.0, 190.0],
+      [242.0, 190.0, 256.0, 190.0, 270.0, 190.0],
+      [284.0, 190.0, 298.0, 190.0, 308.0, 190.0],
+      [316.0, 190.0, 316.0, 185.0, 316.0, 178.0],
+      [316.0, 165.0, 316.0, 145.0, 316.0, 126.0],
+      [316.0, 126.0 - K, 270.0 + 32.53 + 8.63, 126.0 - 32.53 + 3.57, 270.0 + 32.53, 126.0 - 32.53],
+      [270.0 + 32.53 - 8.63, 126.0 - 32.53 - 3.57, 270.0 + K, 80.0, 270.0, 80.0]
     ];
 
-    // Arch 2026 Shifted Left (at m=1 for typography)
-    const AF_START = [160.00, 134.00];
+    // Arch 2026 Shifted Left (Final Brand Mark at m=1)
+    const AF_START = [155.0, 105.0];
     const AF_SEGS = [
-      [160.00 - K, 134.00, 160.00 - 35.36 + 9.38, 184.00 - 35.36 - 3.88, 160.00 - 35.36, 184.00 - 35.36],
-      [160.00 - 35.36 - 9.38, 184.00 - 35.36 + 3.88, 110.00, 184.00 - K, 110.00, 184.00],
-      [110.00, 204.00, 110.00, 224.00, 110.00, 239.00],
-      [110.00, 249.00, 110.00, 256.00, 118.00, 256.00],
-      [128.00, 256.00, 145.00, 256.00, 160.00, 256.00],
-      [175.00, 256.00, 192.00, 256.00, 202.00, 256.00],
-      [210.00, 256.00, 210.00, 249.00, 210.00, 239.00],
-      [210.00, 224.00, 210.00, 204.00, 210.00, 184.00],
-      [210.00, 184.00 - K, 160.00 + 35.36 + 9.38, 184.00 - 35.36 + 3.88, 160.00 + 35.36, 184.00 - 35.36],
-      [160.00 + 35.36 - 9.38, 184.00 - 35.36 - 3.88, 160.00 + K, 134.00, 160.00, 134.00]
+      [155.0 - K, 105.0, 155.0 - 32.53 + 8.63, 151.0 - 32.53 - 3.57, 155.0 - 32.53, 151.0 - 32.53],
+      [155.0 - 32.53 - 8.63, 151.0 - 32.53 + 3.57, 109.0, 151.0 - K, 109.0, 151.0],
+      [109.0, 170.0, 109.0, 190.0, 109.0, 203.0],
+      [109.0, 210.0, 109.0, 215.0, 117.0, 215.0],
+      [127.0, 215.0, 141.0, 215.0, 155.0, 215.0],
+      [169.0, 215.0, 183.0, 215.0, 193.0, 215.0],
+      [201.0, 215.0, 201.0, 210.0, 201.0, 203.0],
+      [201.0, 190.0, 201.0, 170.0, 201.0, 151.0],
+      [201.0, 151.0 - K, 155.0 + 32.53 + 8.63, 151.0 - 32.53 + 3.57, 155.0 + 32.53, 151.0 - 32.53],
+      [155.0 + 32.53 - 8.63, 151.0 - 32.53 - 3.57, 155.0 + K, 105.0, 155.0, 105.0]
     ];
 
     function lerp(a, b, t) { return a + (b - a) * t; }
@@ -962,7 +945,6 @@
       return d;
     }
 
-    // Color interpolation
     function lerpColor(r1, g1, b1, r2, g2, b2, t) {
       const r = Math.round(lerp(r1, r2, t));
       const g = Math.round(lerp(g1, g2, t));
@@ -970,39 +952,34 @@
       return `rgb(${r}, ${g}, ${b})`;
     }
 
-    // Easing & buffer helpers for holds at extremities
     function smootherstep(u) {
       return u * u * u * (u * (u * 6 - 15) + 10);
     }
 
     function getMorphFactor(t) {
-      // Buffer zone at beginning (0% to 14%): motionless at 1989 starting emblem
       if (t <= 0.14) return 0;
-      // Buffer zone at ending (86% to 100%): motionless at 2026 brand mark
       if (t >= 0.86) return 1;
-      // Smooth continuous quintic transition in between (14% -> 86%)
       const u = (t - 0.14) / (0.86 - 0.14);
       return smootherstep(u);
     }
 
     // Animation state
-    let progress = 0; // 0.0 to 1.0
+    let progress = 0;
     let isPlaying = false;
     let playSpeed = 1.0;
     let isLooping = true;
-    let direction = 1; // 1 = forward, -1 = reverse
+    let direction = 1;
     let animFrameId = null;
     let lastTimestamp = 0;
-    let holdRemaining = 0; // ms remaining during pause at start or end
+    let holdRemaining = 0;
 
-    const DURATION = 4600;    // ms for the active transition
-    const HOLD_START = 2400;  // ms pause at 1989 starting emblem
-    const HOLD_END = 2800;    // ms pause at 2026 new logo
+    const DURATION = 4600;
+    const HOLD_START = 2400;
+    const HOLD_END = 2800;
 
     function updateMorph(t) {
-      // Elements
       const morphBody = document.getElementById('morph-body');
-      const layerTufting = document.getElementById('layer-tufting');
+      const layerCushionImg = document.getElementById('layer-cushion-img');
       const layerGothicS = document.getElementById('layer-gothic-s');
       const layerSerifS = document.getElementById('layer-serif-s');
       const layerGothicC = document.getElementById('layer-gothic-c');
@@ -1013,91 +990,88 @@
       const scrubber = document.getElementById('scrubber');
       const scrubVal = document.getElementById('scrub-val');
 
-      // m is the effective morph progress (0.0 at beginning buffer, 1.0 at ending buffer)
       const m = getMorphFactor(t);
 
-      // 1. Letters C & W: At t <= 0.14 100% visible in exact original position.
-      // Between m=0.0 and 0.35, they gently float outward and fade out.
-      const cwT = Math.min(1.0, m / 0.35);
+      // 1. Letters C & W (Dissolve & drift outward between m=0.0 and m=0.38)
+      const cwT = Math.min(1.0, m / 0.38);
       const cwOpacity = Math.max(0, 1.0 - cwT);
-      const cShiftX = cwT * 50;
-      const cShiftY = -cwT * 15;
-      const wShiftY = cwT * 40;
+      const cShiftX = cwT * 48;
+      const cShiftY = -cwT * 12;
+      const wShiftY = cwT * 42;
 
       if (layerGothicC) {
-        layerGothicC.setAttribute('opacity', cwOpacity);
-        layerGothicC.setAttribute('transform', `translate(${(331.4 + cShiftX).toFixed(1)}, ${(97.9 + cShiftY).toFixed(1)}) scale(0.6500)`);
-        layerGothicC.style.display = cwOpacity <= 0.01 ? 'none' : 'inline';
+        layerGothicC.setAttribute('opacity', cwOpacity.toFixed(3));
+        layerGothicC.setAttribute('x', (332.1 + cShiftX).toFixed(1));
+        layerGothicC.setAttribute('y', (86.3 + cShiftY).toFixed(1));
+        layerGothicC.style.display = cwOpacity <= 0.005 ? 'none' : 'inline';
       }
       if (layerGothicW) {
-        layerGothicW.setAttribute('opacity', cwOpacity);
-        layerGothicW.setAttribute('transform', `translate(203.4, ${(197.9 + wShiftY).toFixed(1)}) scale(0.6500)`);
-        layerGothicW.style.display = cwOpacity <= 0.01 ? 'none' : 'inline';
+        layerGothicW.setAttribute('opacity', cwOpacity.toFixed(3));
+        layerGothicW.setAttribute('x', '203.4');
+        layerGothicW.setAttribute('y', (176.0 + wShiftY).toFixed(1));
+        layerGothicW.style.display = cwOpacity <= 0.005 ? 'none' : 'inline';
       }
 
-      // 2. Pure Vector Cushion & Arch Transformation (100% vector morphing - NO crossfade!)
-      // Path geometry smoothly deforms anchor points
+      // 2. Cushion Image to Vector Morph Body Transition
+      // Between m=0.10 and m=0.30, authentic cushion image crossfades into vector morph body
+      const cushFadeT = Math.max(0, Math.min(1, (m - 0.10) / 0.20));
+      if (layerCushionImg) {
+        const cushImgOp = Math.max(0, 1.0 - cushFadeT);
+        layerCushionImg.setAttribute('opacity', cushImgOp.toFixed(3));
+        layerCushionImg.style.display = cushImgOp <= 0.005 ? 'none' : 'inline';
+      }
       if (morphBody) {
+        const morphBodyOp = Math.min(1.0, cushFadeT);
+        morphBody.setAttribute('opacity', morphBodyOp.toFixed(3));
         morphBody.setAttribute('d', getMorphPath(m));
-        // Fill transitions from classic emerald (#048C2B) to Scandi sage (#A3B18A)
         morphBody.setAttribute('fill', lerpColor(4, 140, 43, 163, 177, 138, m));
-        // Stroke dissolves as modern arch forms
-        const strokeW = Math.max(0, 4.0 * (1.0 - m * 2.2));
-        morphBody.setAttribute('stroke', lerpColor(17, 17, 17, 45, 58, 47, m));
+        const strokeW = Math.max(0, 4.0 * (1.0 - m * 2.0));
+        morphBody.setAttribute('stroke', '#111111');
         morphBody.setAttribute('stroke-width', strokeW.toFixed(2));
+        morphBody.style.display = morphBodyOp <= 0.005 ? 'none' : 'inline';
       }
 
-      // 3. Tufting diamond stitches (fade & relax)
-      if (layerTufting) {
-        const tuftOpacity = Math.max(0, 1.0 - m * 2.5);
-        layerTufting.setAttribute('opacity', tuftOpacity.toFixed(3));
-        layerTufting.style.display = tuftOpacity <= 0.01 ? 'none' : 'inline';
-      }
-
-      // 4. Letter S Transformation:
-      // Glides from left (149.4, 97.9) into the center of the arch (160, 196)
+      // 3. Letter S Transformation:
+      // Glides from start (154.0, 87.6) toward arch center (155 - 51.4/2, 166 - 102.0/2)
       const sMoveT = Math.min(1.0, m / 0.65);
-      const shiftLeftT = Math.max(0, Math.min(1, (m - 0.35) / 0.65));
-      const targetArchCenterX = lerp(270 - 55.2/2, 160 - 55.2/2, shiftLeftT);
-      const targetArchCenterY = lerp(148 - 110.5/2, 196 - 110.5/2, shiftLeftT);
+      const curSX = lerp(154.0, 155.0 - 51.4 / 2, sMoveT);
+      const curSY = lerp(87.6, 166.0 - 102.0 / 2, sMoveT);
 
-      const curSX = lerp(149.4, targetArchCenterX, sMoveT);
-      const curSY = lerp(97.9, targetArchCenterY, sMoveT);
-
-      const sCrossfade = Math.max(0, Math.min(1, (m - 0.38) / 0.34));
+      // Crossfade between gothic S and modern serif S between m=0.35 and m=0.68
+      const sCrossfade = Math.max(0, Math.min(1, (m - 0.35) / 0.33));
       const gothicSOpacity = Math.max(0, 1.0 - sCrossfade);
       const serifSOpacity = sCrossfade;
 
       if (layerGothicS) {
-        layerGothicS.setAttribute('opacity', gothicSOpacity);
-        layerGothicS.setAttribute('transform', `translate(${curSX.toFixed(1)}, ${curSY.toFixed(1)}) scale(0.6494)`);
-        layerGothicS.style.display = gothicSOpacity <= 0.01 ? 'none' : 'inline';
+        layerGothicS.setAttribute('opacity', gothicSOpacity.toFixed(3));
+        layerGothicS.setAttribute('x', curSX.toFixed(1));
+        layerGothicS.setAttribute('y', curSY.toFixed(1));
+        layerGothicS.style.display = gothicSOpacity <= 0.005 ? 'none' : 'inline';
       }
-
       if (layerSerifS) {
-        layerSerifS.setAttribute('opacity', serifSOpacity);
-        const serifCenterX = lerp(270, 160, shiftLeftT);
-        const serifCenterY = lerp(155, 196, shiftLeftT);
-        layerSerifS.setAttribute('x', serifCenterX.toFixed(1));
-        layerSerifS.setAttribute('y', serifCenterY.toFixed(1));
-        layerSerifS.style.display = serifSOpacity <= 0.01 ? 'none' : 'inline';
+        layerSerifS.setAttribute('opacity', serifSOpacity.toFixed(3));
+        layerSerifS.style.display = serifSOpacity <= 0.005 ? 'none' : 'inline';
       }
 
-      // 5. Modern Typography ("Schipper Compact Wonen"):
-      const typoT = Math.max(0, Math.min(1, (m - 0.50) / 0.50));
-      const typoSlideX = lerp(255, 235, typoT);
+      // 4. Modern Typography ("Schipper Compact Wonen"):
+      // Slides from x=250 to x=225, fades in between m=0.50 and m=0.88
+      const typoT = Math.max(0, Math.min(1, (m - 0.50) / 0.38));
+      const typoSlideX = lerp(250, 225, typoT);
       if (newTypo) {
-        newTypo.setAttribute('opacity', typoT);
-        newTypo.setAttribute('transform', `translate(${typoSlideX.toFixed(1)}, 155)`);
-        newTypo.style.display = typoT <= 0.01 ? 'none' : 'inline';
+        newTypo.setAttribute('opacity', typoT.toFixed(3));
+        newTypo.setAttribute('transform', `translate(${typoSlideX.toFixed(1)}, 142)`);
+        newTypo.style.display = typoT <= 0.005 ? 'none' : 'inline';
       }
 
-      // 6. Background Capsule: from circular badge to horizontal pill
-      const capW = lerp(268, 480, m);
-      const capH = lerp(268, 160, m);
-      const capX = lerp(136, 30, m);
-      const capY = lerp(26, 90, m);
-      const capR = lerp(134, 80, m);
+      // 5. Background Capsule Container:
+      // Starts as generous plaque (w=390, h=275, rx=36)
+      // Morphs into sleek header pill (w=460, h=150, rx=75)
+      const capW = lerp(390, 460, m);
+      const capH = lerp(275, 150, m);
+      const capX = lerp(75, 40, m);
+      const capY = lerp(15, 85, m);
+      const capR = lerp(36, 75, m);
+
       if (bgCapsule) {
         bgCapsule.setAttribute('x', capX.toFixed(1));
         bgCapsule.setAttribute('y', capY.toFixed(1));
@@ -1107,25 +1081,25 @@
         bgCapsule.setAttribute('ry', capR.toFixed(1));
       }
 
-      // 7. Labels & Narrative
+      // 6. Labels & Narrative
       if (t < 0.22) {
         const isHold = (holdRemaining > 0 && progress <= 0.01) || t <= 0.14;
-        if (yearLabel) yearLabel.textContent = isHold ? 'AMBACHTELIJK EMBLEEM · 1989 (UITGANGSSITUATIE)' : 'AMBACHTELIJK EMBLEEM · 1989';
+        if (yearLabel) yearLabel.textContent = isHold ? 'AMBACHTELIJK EMBLEEM · 1989 (ORIGINEEL)' : 'AMBACHTELIJK EMBLEEM · 1989';
         updateMilestoneActive(0);
-        updateBanner('De Oorsprong: Het Ambachtelijke Fauteuilkussen (1989)', 'In het oorspronkelijke merkteken staat het gecapitonneerde kussen van een klassieke relax- en sta-op stoel centraal, omarmd door de gotische initialen S, C en W (Schipper Compact Wonen). Het straalt degelijkheid en 35+ jaar zorgambacht uit.');
+        updateBanner('De Oorsprong: Het Authentieke Ambachtelijke Fauteuilkussen (1989)', 'In het oorspronkelijke 1989-embleem staat het gecapitonneerde fauteuilkussen centraal, omringd door de gekalligrafeerde gotische letters S, C en W (Schipper Compact Wonen). De authentieke witte bieslijnen geven de letters diepte en karakter.');
       } else if (t < 0.52) {
         if (yearLabel) yearLabel.textContent = 'DECONSTRUCTIE · VORMONTLEDING';
         updateMilestoneActive(1);
-        updateBanner('Fase 2: De Vormelementen Ontleed', 'De letters C en W geven ruimte vrij, terwijl de authentieke letter S naar het centrum beweegt. De essentie van de kussenvorm blijft herkenbaar bewaard.');
+        updateBanner('Fase 2: De Vormelementen Ontleed', 'De letters C en W geven zachtjes ruimte vrij, terwijl de authentieke letter S naar het centrum glijdt. De herkenbare kussenvorm blijft centraal bewaard.');
       } else if (t < 0.82) {
         if (yearLabel) yearLabel.textContent = 'MORFING · GEOMETRISCHE VERSOEPELING';
         updateMilestoneActive(2);
-        updateBanner('Fase 3: Geometrische Versoepeling naar Boog', 'De kussenflanken richten zich op en versmelten tot de zuivere harmonie van een architectonische boog. Het authentieke smaragdgroen verzacht naar rustgevend Scandinavisch saliegroen.');
+        updateBanner('Fase 3: Geometrische Versoepeling naar Boog', 'De kussenflanken richten zich op en versmelten tot de zuivere harmonie van een architectonische boog. Het klassieke smaragdgroen verzacht naar rustgevend Scandinavisch saliegroen, terwijl de gotische S transformeert in een vorstelijke serif.');
       } else {
         const isHold = (holdRemaining > 0 && progress >= 0.99) || t >= 0.86;
         if (yearLabel) yearLabel.textContent = isHold ? 'HET NIEUWE MERKTEKEN · 2026 (EINDSITUATIE)' : 'HET NIEUWE MERKTEKEN · 2026';
         updateMilestoneActive(3);
-        updateBanner('Het Eigentijdse Merk: Rust, Maatwerk & Wooncomfort (2026)', 'De afgeronde boog omarmt de vorstelijke serif S. Daarnaast presenteert het woordmerk "Schipper Compact Wonen" zich evenwichtig en tijdloos.');
+        updateBanner('Het Eigentijdse Merk: Rust, Maatwerk & Wooncomfort (2026)', 'De afgeronde Scandinavische saliegroene boog omarmt de vorstelijke serif S. Daarnaast presenteert het woordmerk "Schipper Compact Wonen" zich in rust, balans en tijdloze kwaliteit.');
       }
 
       if (scrubber) scrubber.value = (t * 100).toFixed(1);
@@ -1183,9 +1157,9 @@
         if (progress >= 0.99) {
           progress = 0;
           direction = 1;
-          holdRemaining = 1600; // friendly initial hold at start
+          holdRemaining = 2200;
         } else if (progress <= 0.01) {
-          holdRemaining = 1600; // friendly initial hold at start
+          holdRemaining = 2200;
         } else {
           holdRemaining = 0;
         }
@@ -1221,15 +1195,14 @@
       const delta = Math.min(100, timestamp - lastTimestamp);
       lastTimestamp = timestamp;
 
-      // Handle pause/hold at extremities
       if (holdRemaining > 0) {
         holdRemaining -= delta * playSpeed;
         if (holdRemaining <= 0) {
           holdRemaining = 0;
           if (progress >= 0.99) {
-            direction = -1; // start reversing after holding at end
+            direction = -1;
           } else if (progress <= 0.01) {
-            direction = 1;  // start moving forward after holding at start
+            direction = 1;
           }
         }
         updateMorph(progress);
@@ -1242,7 +1215,7 @@
       if (progress >= 1) {
         progress = 1;
         if (isLooping) {
-          holdRemaining = HOLD_END; // hold at end
+          holdRemaining = HOLD_END;
         } else {
           updateMorph(1);
           togglePlay();
@@ -1251,7 +1224,7 @@
       } else if (progress <= 0) {
         progress = 0;
         if (isLooping) {
-          holdRemaining = HOLD_START; // hold at start
+          holdRemaining = HOLD_START;
         } else {
           updateMorph(0);
           togglePlay();
@@ -1262,23 +1235,13 @@
       updateMorph(progress);
       animFrameId = requestAnimationFrame(animStep);
     }
-    // Keyboard support: Space to play/pause
-    window.addEventListener('keydown', (e) => {
-      if (e.code === 'Space' && e.target.tagName !== 'INPUT') {
-        e.preventDefault();
-        togglePlay();
-      }
-    });
 
-    // --- VIEW SWITCHING ---
+    // View Switching
     function switchView(mode) {
       document.querySelectorAll('.view-tab').forEach((t, i) => {
-        t.classList.remove('active');
+        const modes = ['morph', 'xray', 'split'];
+        t.classList.toggle('active', modes[i] === mode);
       });
-      if (mode === 'morph') document.querySelectorAll('.view-tab')[0].classList.add('active');
-      if (mode === 'xray') document.querySelectorAll('.view-tab')[1].classList.add('active');
-      if (mode === 'split') document.querySelectorAll('.view-tab')[2].classList.add('active');
-
       document.getElementById('view-morph').style.display = mode === 'morph' ? 'block' : 'none';
       document.getElementById('view-xray').style.display = mode === 'xray' ? 'flex' : 'none';
       document.getElementById('view-split').style.display = mode === 'split' ? 'block' : 'none';
@@ -1288,72 +1251,60 @@
       }
     }
 
-    // X-Ray Fader
+    // X-Ray balancing
     function adjustXray(val) {
-      const pct = val / 100;
-      const c = document.getElementById('xray-cushion');
-      const a = document.getElementById('xray-arch');
+      const p = val / 100;
+      const cush = document.getElementById('xray-cushion');
+      const arch = document.getElementById('xray-arch');
       const lbl = document.getElementById('xray-label');
-      
-      c.setAttribute('stroke-opacity', 1 - pct * 0.7);
-      c.setAttribute('fill-opacity', (1 - pct) * 0.4);
-      
-      a.setAttribute('stroke-opacity', 0.3 + pct * 0.7);
-      a.setAttribute('fill-opacity', pct * 0.45);
-
-      if (pct < 0.35) lbl.textContent = '1989 Kussen Focus';
-      else if (pct > 0.65) lbl.textContent = '2026 Boog Focus';
-      else lbl.textContent = 'Perfecte Vormoverlay';
+      if (cush) cush.style.opacity = (1 - p * 0.7).toFixed(2);
+      if (arch) arch.style.opacity = (0.3 + p * 0.7).toFixed(2);
+      if (lbl) lbl.textContent = Math.round(val) + '% Balans';
     }
 
-    // Split-Screen Drag
-    const splitBox = document.getElementById('split-box');
-    const splitBefore = document.getElementById('split-before');
-    const splitHandle = document.getElementById('split-handle');
-    let isDraggingSplit = false;
+    // Curtain split-view slider
+    (function initCurtain() {
+      const splitBox = document.getElementById('split-box');
+      const splitBefore = document.getElementById('split-before');
+      const splitHandle = document.getElementById('split-handle');
+      if (!splitBox || !splitBefore || !splitHandle) return;
 
-    function handleSplitMove(x) {
-      const rect = splitBox.getBoundingClientRect();
-      let pos = (x - rect.left) / rect.width;
-      pos = Math.max(0.05, Math.min(0.95, pos));
-      splitBefore.style.width = (pos * 100) + '%';
-      splitHandle.style.left = (pos * 100) + '%';
-    }
+      let isDragging = false;
 
-    if (splitBox) {
-      splitBox.addEventListener('mousedown', (e) => {
-        isDraggingSplit = true;
-        handleSplitMove(e.clientX);
-      });
+      function updateSplit(clientX) {
+        const rect = splitBox.getBoundingClientRect();
+        let pos = (clientX - rect.left) / rect.width;
+        pos = Math.max(0.05, Math.min(0.95, pos));
+        splitBefore.style.width = (pos * 100) + '%';
+        splitHandle.style.left = (pos * 100) + '%';
+      }
+
+      splitHandle.addEventListener('mousedown', () => isDragging = true);
+      window.addEventListener('mouseup', () => isDragging = false);
       window.addEventListener('mousemove', (e) => {
-        if (isDraggingSplit) handleSplitMove(e.clientX);
+        if (!isDragging) return;
+        updateSplit(e.clientX);
       });
-      window.addEventListener('mouseup', () => { isDraggingSplit = false; });
 
-      // Touch support
-      splitBox.addEventListener('touchstart', (e) => {
-        isDraggingSplit = true;
-        handleSplitMove(e.touches[0].clientX);
+      splitBox.addEventListener('click', (e) => {
+        if (e.target.closest('#split-handle')) return;
+        updateSplit(e.clientX);
       });
+
+      // Touch
+      splitHandle.addEventListener('touchstart', () => isDragging = true);
+      window.addEventListener('touchend', () => isDragging = false);
       window.addEventListener('touchmove', (e) => {
-        if (isDraggingSplit) handleSplitMove(e.touches[0].clientX);
+        if (!isDragging || !e.touches[0]) return;
+        updateSplit(e.touches[0].clientX);
       });
-      window.addEventListener('touchend', () => { isDraggingSplit = false; });
-    }
+    })();
 
-    // Initialize morph on load
-    const urlParams = new URLSearchParams(window.location.search);
-    const pParam = urlParams.get('p');
-    const viewParam = urlParams.get('view');
-    if (pParam !== null) {
-      progress = parseFloat(pParam) / 100;
-      updateMorph(progress);
-    } else {
+    // Initialize on load
+    window.addEventListener('DOMContentLoaded', () => {
       updateMorph(0);
-    }
-    if (viewParam) {
-      switchView(viewParam);
-    }
+      togglePlay();
+    });
   </script>
 
 </body>
