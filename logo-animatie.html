@@ -627,19 +627,15 @@
       <div id="view-morph">
         <div class="stage-viewport">
           
-                    <!-- Dynamic SVG Morph Stage -->
+                              <!-- Dynamic SVG Morph Stage (Pure Canvas - No bounding capsule line) -->
           <svg id="morph-svg" viewBox="0 0 540 340">
             <defs>
               <filter id="cushion-shadow" x="-20%" y="-20%" width="140%" height="140%">
-                <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#2D3A2F" flood-opacity="0.08"/>
+                <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#2D3A2F" flood-opacity="0.08"/>
               </filter>
             </defs>
 
-            <!-- Background Pill Capsule (Starts as generous emblem plaque, morphs into sleek header capsule) -->
-            <rect id="bg-capsule" x="75" y="15" width="390" height="275" rx="36" 
-                  fill="#FAF7F2" stroke="#E2DBD0" stroke-width="1.5" filter="url(#cushion-shadow)" />
-
-            <!-- 1. Pure Vector Morphing Body (Cushion -> Scandinavian Arch) -->
+            <!-- 1. Pure Vector Morphing Body (Cushion -> Pure Scandinavian Arch) -->
             <path id="morph-body" d="" fill="#048C2B" stroke="#111111" stroke-width="4.0" stroke-linejoin="round" opacity="0" />
 
             <!-- 2. Authentic Raster Cushion (Emerald green, capitonnage stitches, authentic border) -->
@@ -648,9 +644,9 @@
             <!-- 3. Authentic Gothic S (glides from left into arch center, white inlines 100% intact) -->
             <image id="layer-gothic-s" href="assets/authentic_S.png" x="154.0" y="87.6" width="51.4" height="102.0" opacity="1" preserveAspectRatio="none" />
 
-            <!-- 4. Modern Serif S (crossfades in at arch center) -->
-            <text id="layer-serif-s" x="155" y="166" font-family="'Fraunces', serif" font-weight="700" 
-                  font-size="52" fill="#2D3A2F" text-anchor="middle" dominant-baseline="central" opacity="0">S</text>
+            <!-- 4. Modern Serif S (crossfades in at arch center: Fraunces 700 #27372B) -->
+            <text id="layer-serif-s" x="149" y="150" font-family="'Fraunces', serif" font-weight="700" 
+                  font-size="48" fill="#27372B" text-anchor="middle" dominant-baseline="central" opacity="0">S</text>
 
             <!-- 5. Authentic Gothic C (floats right and dissolves, white inlines 100% intact) -->
             <image id="layer-gothic-c" href="assets/authentic_C.png" x="332.1" y="86.3" width="54.0" height="101.4" opacity="1" preserveAspectRatio="none" />
@@ -658,12 +654,12 @@
             <!-- 6. Authentic Gothic W (floats down and dissolves, white inlines 100% intact) -->
             <image id="layer-gothic-w" href="assets/authentic_W.png" x="203.4" y="176.0" width="122.2" height="88.4" opacity="1" preserveAspectRatio="none" />
 
-            <!-- 7. NEW TYPOGRAPHY: Schipper Compact Wonen (Reveals to the right of the arch) -->
-            <g id="new-typography" transform="translate(225, 142)" opacity="0">
-              <text id="text-schipper" x="0" y="14" font-family="'Fraunces', serif" font-weight="700" 
-                    font-size="42" fill="#2D3A2F">Schipper</text>
-              <text id="text-compact" x="3" y="44" font-family="'Figtree', sans-serif" font-weight="700" 
-                    font-size="14" letter-spacing="0.22em" fill="#4B584E">COMPACT WONEN</text>
+            <!-- 7. NEW TYPOGRAPHY: Schipper Compact Wonen (Exact Brand Lockup, NO line around it) -->
+            <g id="new-typography" transform="translate(217, 138)" opacity="0">
+              <text id="text-schipper" x="0" y="8" font-family="'Fraunces', serif" font-weight="700" 
+                    font-size="44" fill="#27372B">Schipper</text>
+              <text id="text-compact" x="3" y="38" font-family="'Figtree', sans-serif" font-weight="700" 
+                    font-size="14.5" letter-spacing="0.20em" fill="#27372B">COMPACT WONEN</text>
             </g>
 
             <!-- Subtitle label at bottom showing year / status -->
@@ -864,10 +860,10 @@
     </div>
   </footer>
 
-    <script>
-    // --- MORPHING ENGINE (AUTHENTIC 1989 -> 2026 ARCH) ---
+      <script>
+    // --- MORPHING ENGINE (AUTHENTIC 1989 -> EXACT 2026 ARCH) ---
     // 10-Segment Cubic Bezier Model
-    // Cushion 1989 (at m=0)
+    // 1. Cushion 1989 (at m=0)
     const C_START = [270.0, 48.0];
     const C_SEGS = [
       [252.0, 48.0, 236.0, 39.0, 222.0, 39.0],
@@ -882,41 +878,40 @@
       [304.0, 39.0, 288.0, 48.0, 270.0, 48.0]
     ];
 
-    // Arch 2026 Centered (Intermediate)
-    const K = 12.2;
-    const AC_START = [270.0, 80.0];
+    // 2. Arch 2026 Centered (Intermediate before sliding left)
+    const AC_START = [270.0, 98.0];
     const AC_SEGS = [
-      [270.0 - K, 80.0, 270.0 - 32.53 + 8.63, 126.0 - 32.53 - 3.57, 270.0 - 32.53, 126.0 - 32.53],
-      [270.0 - 32.53 - 8.63, 126.0 - 32.53 + 3.57, 224.0, 126.0 - K, 224.0, 126.0],
-      [224.0, 145.0, 224.0, 165.0, 224.0, 178.0],
-      [224.0, 185.0, 224.0, 190.0, 232.0, 190.0],
-      [242.0, 190.0, 256.0, 190.0, 270.0, 190.0],
-      [284.0, 190.0, 298.0, 190.0, 308.0, 190.0],
-      [316.0, 190.0, 316.0, 185.0, 316.0, 178.0],
-      [316.0, 165.0, 316.0, 145.0, 316.0, 126.0],
-      [316.0, 126.0 - K, 270.0 + 32.53 + 8.63, 126.0 - 32.53 + 3.57, 270.0 + 32.53, 126.0 - 32.53],
-      [270.0 + 32.53 - 8.63, 126.0 - 32.53 - 3.57, 270.0 + K, 80.0, 270.0, 80.0]
+      [258.33, 98.0, 247.14, 102.64, 238.89, 110.89],
+      [230.64, 119.14, 226.0, 130.33, 226.0, 142.0],
+      [226.0, 152.0, 226.0, 162.0, 226.0, 172.0],
+      [226.0, 182.0, 226.0, 192.0, 226.0, 202.0],
+      [240.67, 202.0, 255.33, 202.0, 270.0, 202.0],
+      [284.67, 202.0, 299.33, 202.0, 314.0, 202.0],
+      [314.0, 192.0, 314.0, 182.0, 314.0, 172.0],
+      [314.0, 162.0, 314.0, 152.0, 314.0, 142.0],
+      [314.0, 130.33, 309.37, 119.14, 301.11, 110.89],
+      [292.86, 102.64, 281.67, 98.0, 270.0, 98.0]
     ];
 
-    // Arch 2026 Shifted Left (Final Brand Mark at m=1)
-    const AF_START = [155.0, 105.0];
+    // 3. Arch 2026 Shifted Left (Exact brand mark: pure semicircular dome + flat base)
+    const AF_START = [149.0, 98.0];
     const AF_SEGS = [
-      [155.0 - K, 105.0, 155.0 - 32.53 + 8.63, 151.0 - 32.53 - 3.57, 155.0 - 32.53, 151.0 - 32.53],
-      [155.0 - 32.53 - 8.63, 151.0 - 32.53 + 3.57, 109.0, 151.0 - K, 109.0, 151.0],
-      [109.0, 170.0, 109.0, 190.0, 109.0, 203.0],
-      [109.0, 210.0, 109.0, 215.0, 117.0, 215.0],
-      [127.0, 215.0, 141.0, 215.0, 155.0, 215.0],
-      [169.0, 215.0, 183.0, 215.0, 193.0, 215.0],
-      [201.0, 215.0, 201.0, 210.0, 201.0, 203.0],
-      [201.0, 190.0, 201.0, 170.0, 201.0, 151.0],
-      [201.0, 151.0 - K, 155.0 + 32.53 + 8.63, 151.0 - 32.53 + 3.57, 155.0 + 32.53, 151.0 - 32.53],
-      [155.0 + 32.53 - 8.63, 151.0 - 32.53 - 3.57, 155.0 + K, 105.0, 155.0, 105.0]
+      [137.33, 98.0, 126.14, 102.64, 117.89, 110.89],
+      [109.64, 119.14, 105.0, 130.33, 105.0, 142.0],
+      [105.0, 152.0, 105.0, 162.0, 105.0, 172.0],
+      [105.0, 182.0, 105.0, 192.0, 105.0, 202.0],
+      [119.67, 202.0, 134.33, 202.0, 149.0, 202.0],
+      [163.67, 202.0, 178.33, 202.0, 193.0, 202.0],
+      [193.0, 192.0, 193.0, 182.0, 193.0, 172.0],
+      [193.0, 162.0, 193.0, 152.0, 193.0, 142.0],
+      [193.0, 130.33, 188.37, 119.14, 180.11, 110.89],
+      [171.86, 102.64, 160.67, 98.0, 149.0, 98.0]
     ];
 
     function lerp(a, b, t) { return a + (b - a) * t; }
 
     function getMorphPath(m) {
-      const shiftT = Math.max(0.0, Math.min(1.0, (m - 0.35) / 0.65));
+      const shiftT = Math.max(0.0, Math.min(1.0, (m - 0.38) / 0.62));
       const targetStart = [
         lerp(AC_START[0], AF_START[0], shiftT),
         lerp(AC_START[1], AF_START[1], shiftT)
@@ -963,7 +958,7 @@
       return smootherstep(u);
     }
 
-    // Animation state
+    // State
     let progress = 0;
     let isPlaying = false;
     let playSpeed = 1.0;
@@ -985,10 +980,9 @@
       const layerGothicC = document.getElementById('layer-gothic-c');
       const layerGothicW = document.getElementById('layer-gothic-w');
       const newTypo = document.getElementById('new-typography');
-      const bgCapsule = document.getElementById('bg-capsule');
       const yearLabel = document.getElementById('year-label');
-      const scrubber = document.getElementById('scrubber');
-      const scrubVal = document.getElementById('scrub-val');
+      const scrubber = document.getElementById('scrub-slider') || document.getElementById('scrubber');
+      const scrubLabel = document.getElementById('scrub-label') || document.getElementById('scrub-val');
 
       const m = getMorphFactor(t);
 
@@ -1013,8 +1007,7 @@
       }
 
       // 2. Cushion Image to Vector Morph Body Transition
-      // Between m=0.10 and m=0.30, authentic cushion image crossfades into vector morph body
-      const cushFadeT = Math.max(0, Math.min(1, (m - 0.10) / 0.20));
+      const cushFadeT = Math.max(0, Math.min(1, (m - 0.08) / 0.22));
       if (layerCushionImg) {
         const cushImgOp = Math.max(0, 1.0 - cushFadeT);
         layerCushionImg.setAttribute('opacity', cushImgOp.toFixed(3));
@@ -1024,7 +1017,9 @@
         const morphBodyOp = Math.min(1.0, cushFadeT);
         morphBody.setAttribute('opacity', morphBodyOp.toFixed(3));
         morphBody.setAttribute('d', getMorphPath(m));
-        morphBody.setAttribute('fill', lerpColor(4, 140, 43, 163, 177, 138, m));
+        // Transition from emerald (#048C2B) to exact Scandinavian sage (#9BAE84)
+        morphBody.setAttribute('fill', lerpColor(4, 140, 43, 155, 174, 132, m));
+        // Stroke dissolves smoothly
         const strokeW = Math.max(0, 4.0 * (1.0 - m * 2.0));
         morphBody.setAttribute('stroke', '#111111');
         morphBody.setAttribute('stroke-width', strokeW.toFixed(2));
@@ -1032,12 +1027,12 @@
       }
 
       // 3. Letter S Transformation:
-      // Glides from start (154.0, 87.6) toward arch center (155 - 51.4/2, 166 - 102.0/2)
+      // Glides from start (154.0, 87.6) toward arch center (149 - 51.4/2, 150 - 102.0/2)
       const sMoveT = Math.min(1.0, m / 0.65);
-      const curSX = lerp(154.0, 155.0 - 51.4 / 2, sMoveT);
-      const curSY = lerp(87.6, 166.0 - 102.0 / 2, sMoveT);
+      const curSX = lerp(154.0, 149.0 - 51.4 / 2, sMoveT);
+      const curSY = lerp(87.6, 150.0 - 102.0 / 2, sMoveT);
 
-      // Crossfade between gothic S and modern serif S between m=0.35 and m=0.68
+      // Crossfade between gothic S and serif S between m=0.35 and m=0.68
       const sCrossfade = Math.max(0, Math.min(1, (m - 0.35) / 0.33));
       const gothicSOpacity = Math.max(0, 1.0 - sCrossfade);
       const serifSOpacity = sCrossfade;
@@ -1054,67 +1049,54 @@
       }
 
       // 4. Modern Typography ("Schipper Compact Wonen"):
-      // Slides from x=250 to x=225, fades in between m=0.50 and m=0.88
-      const typoT = Math.max(0, Math.min(1, (m - 0.50) / 0.38));
-      const typoSlideX = lerp(250, 225, typoT);
+      // Slides from x=240 to x=217, fades in between m=0.48 and m=0.86
+      const typoT = Math.max(0, Math.min(1, (m - 0.48) / 0.38));
+      const typoSlideX = lerp(240, 217, typoT);
       if (newTypo) {
         newTypo.setAttribute('opacity', typoT.toFixed(3));
-        newTypo.setAttribute('transform', `translate(${typoSlideX.toFixed(1)}, 142)`);
+        newTypo.setAttribute('transform', `translate(${typoSlideX.toFixed(1)}, 138)`);
         newTypo.style.display = typoT <= 0.005 ? 'none' : 'inline';
       }
 
-      // 5. Background Capsule Container:
-      // Starts as generous plaque (w=390, h=275, rx=36)
-      // Morphs into sleek header pill (w=460, h=150, rx=75)
-      const capW = lerp(390, 460, m);
-      const capH = lerp(275, 150, m);
-      const capX = lerp(75, 40, m);
-      const capY = lerp(15, 85, m);
-      const capR = lerp(36, 75, m);
-
-      if (bgCapsule) {
-        bgCapsule.setAttribute('x', capX.toFixed(1));
-        bgCapsule.setAttribute('y', capY.toFixed(1));
-        bgCapsule.setAttribute('width', capW.toFixed(1));
-        bgCapsule.setAttribute('height', capH.toFixed(1));
-        bgCapsule.setAttribute('rx', capR.toFixed(1));
-        bgCapsule.setAttribute('ry', capR.toFixed(1));
-      }
-
-      // 6. Labels & Narrative
+      // 5. Labels & Narrative
       if (t < 0.22) {
         const isHold = (holdRemaining > 0 && progress <= 0.01) || t <= 0.14;
         if (yearLabel) yearLabel.textContent = isHold ? 'AMBACHTELIJK EMBLEEM · 1989 (ORIGINEEL)' : 'AMBACHTELIJK EMBLEEM · 1989';
-        updateMilestoneActive(0);
-        updateBanner('De Oorsprong: Het Authentieke Ambachtelijke Fauteuilkussen (1989)', 'In het oorspronkelijke 1989-embleem staat het gecapitonneerde fauteuilkussen centraal, omringd door de gekalligrafeerde gotische letters S, C en W (Schipper Compact Wonen). De authentieke witte bieslijnen geven de letters diepte en karakter.');
+        updateStepActive(0);
+        updateExplainer('De Oorsprong: Het Authentieke Fauteuilkussen (1989)', 'In het oorspronkelijke 1989-embleem staat het gecapitonneerde fauteuilkussen centraal, omringd door de gekalligrafeerde gotische letters S, C en W (Schipper Compact Wonen). De authentieke witte bieslijnen geven de letters diepte en ambacht.');
       } else if (t < 0.52) {
         if (yearLabel) yearLabel.textContent = 'DECONSTRUCTIE · VORMONTLEDING';
-        updateMilestoneActive(1);
-        updateBanner('Fase 2: De Vormelementen Ontleed', 'De letters C en W geven zachtjes ruimte vrij, terwijl de authentieke letter S naar het centrum glijdt. De herkenbare kussenvorm blijft centraal bewaard.');
+        updateStepActive(1);
+        updateExplainer('Fase 2: De Vormelementen Ontleed', 'De letters C en W geven zachtjes ruimte vrij, terwijl de authentieke letter S naar het centrum glijdt. De herkenbare kussenvorm blijft centraal bewaard.');
       } else if (t < 0.82) {
         if (yearLabel) yearLabel.textContent = 'MORFING · GEOMETRISCHE VERSOEPELING';
-        updateMilestoneActive(2);
-        updateBanner('Fase 3: Geometrische Versoepeling naar Boog', 'De kussenflanken richten zich op en versmelten tot de zuivere harmonie van een architectonische boog. Het klassieke smaragdgroen verzacht naar rustgevend Scandinavisch saliegroen, terwijl de gotische S transformeert in een vorstelijke serif.');
+        updateStepActive(2);
+        updateExplainer('Fase 3: Geometrische Versoepeling naar Boog', 'De kussenflanken richten zich op en versmelten tot de zuivere geometrie van een Scandinavische boog. Het klassieke smaragdgroen verzacht naar rustgevend saliegroen, terwijl de gotische S transformeert in een vorstelijke serif.');
       } else {
         const isHold = (holdRemaining > 0 && progress >= 0.99) || t >= 0.86;
         if (yearLabel) yearLabel.textContent = isHold ? 'HET NIEUWE MERKTEKEN · 2026 (EINDSITUATIE)' : 'HET NIEUWE MERKTEKEN · 2026';
-        updateMilestoneActive(3);
-        updateBanner('Het Eigentijdse Merk: Rust, Maatwerk & Wooncomfort (2026)', 'De afgeronde Scandinavische saliegroene boog omarmt de vorstelijke serif S. Daarnaast presenteert het woordmerk "Schipper Compact Wonen" zich in rust, balans en tijdloze kwaliteit.');
+        updateStepActive(3);
+        updateExplainer('Het Eigentijdse Merk: Rust, Maatwerk & Wooncomfort (2026)', 'De zuivere Scandinavische boog omarmt de vorstelijke serif S. Daarnaast presenteert het woordmerk "Schipper Compact Wonen" zich in rust, balans en tijdloze kwaliteit.');
       }
 
       if (scrubber) scrubber.value = (t * 100).toFixed(1);
-      if (scrubVal) scrubVal.textContent = Math.round(t * 100) + '%';
+      if (scrubLabel) scrubLabel.textContent = Math.round(t * 100) + '%';
     }
 
-    function updateMilestoneActive(idx) {
-      document.querySelectorAll('.milestone-btn').forEach((b, i) => {
+    function updateStepActive(idx) {
+      document.querySelectorAll('.step-btn, .milestone-btn').forEach((b, i) => {
         b.classList.toggle('active', i === idx);
+        if (b.classList.contains('step-btn')) {
+          b.classList.toggle('bg-[#2D3A2F]', i === idx);
+          b.classList.toggle('text-white', i === idx);
+          b.classList.toggle('bg-white', i !== idx);
+        }
       });
     }
 
-    function updateBanner(title, desc) {
-      const t = document.getElementById('status-title');
-      const d = document.getElementById('status-desc');
+    function updateExplainer(title, desc) {
+      const t = document.getElementById('info-title') || document.getElementById('status-title');
+      const d = document.getElementById('info-desc') || document.getElementById('status-desc');
       if (t) t.textContent = title;
       if (d) d.textContent = desc;
     }
@@ -1126,32 +1108,30 @@
       updateMorph(progress);
     }
 
-    function setPhase(pct) {
+    function seekPhase(pct) {
       if (isPlaying) togglePlay();
       holdRemaining = 0;
       progress = pct / 100;
       updateMorph(progress);
     }
 
+    function setPhase(pct) {
+      seekPhase(pct);
+    }
+
     function resetToStart() {
-      if (isPlaying) togglePlay();
-      holdRemaining = 0;
-      progress = 0;
-      updateMorph(0);
+      seekPhase(0);
     }
 
     function jumpToEnd() {
-      if (isPlaying) togglePlay();
-      holdRemaining = 0;
-      progress = 1;
-      updateMorph(1);
+      seekPhase(100);
     }
 
     function togglePlay() {
       isPlaying = !isPlaying;
-      const btn = document.getElementById('btn-play-pause');
-      const icon = document.getElementById('play-icon');
-      const text = document.getElementById('play-text');
+      const btnPlay = document.getElementById('btn-play') || document.getElementById('btn-play-pause');
+      const playIc = document.getElementById('play-ic') || document.getElementById('play-icon');
+      const playText = document.getElementById('play-text');
 
       if (isPlaying) {
         if (progress >= 0.99) {
@@ -1163,20 +1143,33 @@
         } else {
           holdRemaining = 0;
         }
-        icon.innerHTML = '<use href="#i-pause"/>';
-        text.textContent = 'Pauzeren';
+        if (playIc) {
+          if (playIc.tagName.toLowerCase() === 'svg' && !playIc.querySelector('use')) {
+            playIc.innerHTML = '<rect x="4" y="3" width="3" height="18"/><rect x="13" y="3" width="3" height="18"/>';
+          } else {
+            playIc.innerHTML = '<use href="#i-pause"/>';
+          }
+        }
+        if (playText) playText.textContent = 'Pauzeren';
         lastTimestamp = performance.now();
         animFrameId = requestAnimationFrame(animStep);
       } else {
-        icon.innerHTML = '<use href="#i-play"/>';
-        text.textContent = 'Afspelen';
+        if (playIc) {
+          if (playIc.tagName.toLowerCase() === 'svg' && !playIc.querySelector('use')) {
+            playIc.innerHTML = '<polygon points="5 3 19 12 5 21 5 3"/>';
+          } else {
+            playIc.innerHTML = '<use href="#i-play"/>';
+          }
+        }
+        if (playText) playText.textContent = 'Afspelen';
         if (animFrameId) cancelAnimationFrame(animFrameId);
       }
     }
 
     function toggleLoop() {
       isLooping = !isLooping;
-      document.getElementById('loop-text').textContent = isLooping ? 'Loop: Aan' : 'Loop: Uit';
+      const loopText = document.getElementById('loop-text');
+      if (loopText) loopText.textContent = isLooping ? 'Loop: Aan' : 'Loop: Uit';
     }
 
     function setSpeed(spd) {
@@ -1236,7 +1229,6 @@
       animFrameId = requestAnimationFrame(animStep);
     }
 
-    // View Switching
     function switchView(mode) {
       document.querySelectorAll('.view-tab').forEach((t, i) => {
         const modes = ['morph', 'xray', 'split'];
@@ -1246,12 +1238,31 @@
       document.getElementById('view-xray').style.display = mode === 'xray' ? 'flex' : 'none';
       document.getElementById('view-split').style.display = mode === 'split' ? 'block' : 'none';
 
-      if (mode !== 'morph' && isPlaying) {
-        togglePlay();
-      }
+      if (mode !== 'morph' && isPlaying) togglePlay();
     }
 
-    // X-Ray balancing
+    function setMode(mode) {
+      document.getElementById('view-morph').classList.toggle('hidden', mode !== 'morph');
+      document.getElementById('view-morph').classList.toggle('block', mode === 'morph');
+      document.getElementById('view-xray').classList.toggle('hidden', mode !== 'xray');
+      document.getElementById('view-xray').classList.toggle('block', mode === 'xray');
+
+      const btnMorph = document.getElementById('tab-btn-morph');
+      const btnXray = document.getElementById('tab-btn-xray');
+      if (btnMorph) {
+        btnMorph.classList.toggle('bg-[#2D3A2F]', mode === 'morph');
+        btnMorph.classList.toggle('text-[#FAF7F2]', mode === 'morph');
+        btnMorph.classList.toggle('text-[#5C675E]', mode !== 'morph');
+      }
+      if (btnXray) {
+        btnXray.classList.toggle('bg-[#2D3A2F]', mode === 'xray');
+        btnXray.classList.toggle('text-[#FAF7F2]', mode === 'xray');
+        btnXray.classList.toggle('text-[#5C675E]', mode !== 'xray');
+      }
+
+      if (mode !== 'morph' && isPlaying) togglePlay();
+    }
+
     function adjustXray(val) {
       const p = val / 100;
       const cush = document.getElementById('xray-cushion');
@@ -1262,7 +1273,16 @@
       if (lbl) lbl.textContent = Math.round(val) + '% Balans';
     }
 
-    // Curtain split-view slider
+    function fadeXray(val) {
+      const p = val / 100;
+      const cush = document.getElementById('xray-cushion');
+      const arch = document.getElementById('xray-arch');
+      const lbl = document.getElementById('xray-val');
+      if (cush) cush.style.opacity = (1 - p * 0.7).toFixed(2);
+      if (arch) arch.style.opacity = (0.3 + p * 0.7).toFixed(2);
+      if (lbl) lbl.textContent = Math.round(val) + '% Balans';
+    }
+
     (function initCurtain() {
       const splitBox = document.getElementById('split-box');
       const splitBefore = document.getElementById('split-before');
@@ -1270,7 +1290,6 @@
       if (!splitBox || !splitBefore || !splitHandle) return;
 
       let isDragging = false;
-
       function updateSplit(clientX) {
         const rect = splitBox.getBoundingClientRect();
         let pos = (clientX - rect.left) / rect.width;
@@ -1291,7 +1310,6 @@
         updateSplit(e.clientX);
       });
 
-      // Touch
       splitHandle.addEventListener('touchstart', () => isDragging = true);
       window.addEventListener('touchend', () => isDragging = false);
       window.addEventListener('touchmove', (e) => {
@@ -1300,7 +1318,6 @@
       });
     })();
 
-    // Initialize on load
     window.addEventListener('DOMContentLoaded', () => {
       updateMorph(0);
       togglePlay();
