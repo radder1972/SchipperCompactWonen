@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Schipper Compact Wonen | Pijnvrij opstaan en perfect zitten</title>
+  <meta name="description" content="Eerlijk en deskundig advies over sta-op-stoelen en maatwerk zitsystemen. Wij meten uw perfecte zithouding tot op de millimeter na, bij u thuis of in onze showroom.">
+  <!-- Design variant: Scandinavisch interieur / huiselijk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..700,100;1,9..144,400..600,100&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --sage:#A3B18A; --sage-l:#DCE3CF; --sage-xl:#EEF1E6; --moss:#588157; --forest:#344E41;
+      --oat:#EDE6DA; --oat-d:#E2D8C6; --linen:#FAF7F1; --clay:#C4805F; --clay-d:#A9663F; --clay-l:#F1D9CB;
+      --ink:#3D3B36; --muted:#6E6A60; --line:#DDD3C2;
+    }
+    *,*::before,*::after{box-sizing:border-box}
+    html{scroll-behavior:smooth;overflow-x:clip}
+    body{margin:0;font-family:'Figtree',system-ui,sans-serif;color:var(--ink);background:var(--linen);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:clip;
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .3 0 0 0 0 .2 0 0 0 .05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+    img{max-width:100%;display:block}
+    a{color:inherit;text-decoration:none}
+    button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+    .ic{display:inline-block;flex-shrink:0;vertical-align:middle;width:1.15em;height:1.15em}
+    .hidden{display:none!important}
+    .wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+    h1,h2,h3,h4,.serif{font-family:'Fraunces',Georgia,serif;font-variation-settings:'SOFT' 100,'WONK' 0;font-weight:500;color:var(--forest);margin:0;letter-spacing:-.01em;line-height:1.15}
+    p{margin:0}
+    .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--moss)}
+    .eyebrow::before{content:"";width:28px;height:10px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 10'%3E%3Cpath d='M1 5c3-4 6-4 9 0s6 4 9 0 6-4 8 0' fill='none' stroke='%23C4805F' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat center/contain}
+    .squig{position:relative;white-space:nowrap;display:inline-block}
+    .squig svg{position:absolute;left:-2%;bottom:-.22em;width:104%;height:.45em;overflow:visible}
+    .squig path{fill:none;stroke:var(--clay);stroke-width:5;stroke-linecap:round}
+
+    /* Buttons */
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 28px;border-radius:999px;font-weight:600;font-size:16px;transition:transform .25s ease,background .25s ease,box-shadow .25s ease;white-space:nowrap}
+    .btn:hover{transform:translateY(-2px)}
+    .btn-primary{background:var(--forest);color:var(--linen);box-shadow:0 10px 24px -12px rgba(52,78,65,.7)}
+    .btn-primary:hover{background:var(--moss)}
+    .btn-clay{background:var(--clay);color:#fff;box-shadow:0 10px 24px -12px rgba(169,102,63,.8)}
+    .btn-clay:hover{background:var(--clay-d)}
+    .btn-ghost{background:transparent;color:var(--forest);border:1.5px solid var(--forest)}
+    .btn-ghost:hover{background:var(--forest);color:var(--linen)}
+    .btn-sm{padding:11px 20px;font-size:15px}
+
+    /* Top strip + header */
+    .strip{font-size:13px;color:var(--muted);padding:10px 0 0}
+    .strip .wrap{display:flex;justify-content:center;gap:28px;flex-wrap:wrap}
+    .strip span,.strip a{display:inline-flex;align-items:center;gap:6px}
+    .strip .ic{color:var(--moss)}
+    header#main-header{position:sticky;top:12px;z-index:40;margin:12px auto 0;max-width:1200px;padding:0 16px}
+    .navbar{display:flex;align-items:center;justify-content:space-between;gap:16px;background:rgba(250,247,241,.92);backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:999px;padding:10px 10px 10px 22px;transition:box-shadow .3s}
+    header.scrolled .navbar{box-shadow:0 14px 30px -18px rgba(61,59,54,.35)}
+    .logo{display:flex;align-items:center;gap:10px}
+    .logo-mark{width:34px;height:40px;border-radius:999px 999px 8px 8px;background:var(--sage);display:grid;place-items:center;color:var(--forest);font-family:'Fraunces',serif;font-weight:600;font-size:18px;padding-top:4px}
+    .logo b{font-family:'Fraunces',serif;font-variation-settings:'SOFT' 100;font-weight:600;font-size:21px;color:var(--forest);display:block;line-height:1}
+    .logo small{display:block;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-top:3px}
+    .nav{display:flex;gap:6px}
+    .nav a{padding:9px 16px;border-radius:999px;font-weight:500;font-size:15px;color:var(--ink);transition:background .2s}
+    .nav a:hover{background:var(--sage-xl);color:var(--forest)}
+    .hdr-right{display:flex;align-items:center;gap:6px}
+    .hdr-phone{display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:14px;color:var(--forest);padding:8px 12px}
+    .menu-btn{display:none;width:44px;height:44px;border-radius:50%;background:var(--sage-xl);color:var(--forest);place-items:center}
+    .menu-btn .ic{width:22px;height:22px}
+    #mobile-menu{margin-top:8px;background:var(--linen);border:1px solid var(--line);border-radius:28px;padding:14px;box-shadow:0 20px 40px -20px rgba(61,59,54,.35)}
+    #mobile-menu a.ml{display:block;padding:12px 14px;border-radius:16px;font-weight:500}
+    #mobile-menu a.ml:hover{background:var(--sage-xl)}
+    #mobile-menu .mm-cta{display:grid;gap:8px;margin-top:8px}
+    #mobile-menu .btn{width:100%}
+
+    /* Hero */
+    .hero{position:relative;padding:56px 0 40px}
+    .hero-blob{position:absolute;right:-10%;top:-40px;width:62%;height:100%;background:var(--sage-l);border-radius:58% 42% 46% 54% / 52% 44% 56% 48%;z-index:-1}
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+    .badge-soft{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:7px 16px 7px 8px;font-size:14px;font-weight:500;color:var(--forest)}
+    .badge-soft i{width:22px;height:22px;border-radius:50%;background:var(--sage);display:grid;place-items:center;color:var(--forest)}
+    .badge-soft i .ic{width:13px;height:13px}
+    .hero h1{font-size:clamp(36px,5.2vw,64px);margin:22px 0 22px;line-height:1.08}
+    .hero h1 em{font-style:italic;color:var(--moss);font-weight:400}
+    .hero .sub{font-size:19px;color:var(--muted);max-width:540px}
+    .cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
+    .micro{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:24px;font-size:14px;color:var(--muted);font-weight:500}
+    .micro span{display:inline-flex;align-items:center;gap:6px}
+    .micro .ic{color:var(--moss)}
+    .arch-stage{position:relative;justify-self:center;width:100%;max-width:440px}
+    .arch{position:relative;aspect-ratio:4/5;border-radius:999px 999px 36px 36px;background:linear-gradient(180deg,var(--oat) 0%,var(--clay-l) 100%);overflow:hidden;border:10px solid var(--linen);box-shadow:0 30px 60px -30px rgba(61,59,54,.4)}
+    .arch::before{content:"";position:absolute;width:70%;aspect-ratio:1;border-radius:50%;background:var(--linen);opacity:.55;left:15%;top:12%}
+    .arch img{position:absolute;inset:auto 0 0 0;width:100%;height:92%;object-fit:contain;object-position:bottom;mix-blend-mode:multiply}
+    .sticker{position:absolute;top:24px;left:-36px;width:132px;height:132px;border-radius:50%;background:var(--forest);color:var(--linen);display:grid;place-items:center;text-align:center;padding:16px;font-size:12px;font-weight:600;line-height:1.3;transform:rotate(-10deg);box-shadow:0 14px 30px -14px rgba(52,78,65,.7)}
+    .sticker .ic{width:26px;height:26px;color:var(--sage);margin:0 auto 4px;display:block}
+    .sticker small{display:block;font-weight:400;opacity:.8;font-size:10.5px;margin-top:2px}
+    .bubble{position:absolute;right:-28px;bottom:-26px;max-width:290px;background:#fff;border-radius:28px 28px 28px 6px;padding:18px 20px;box-shadow:0 20px 40px -22px rgba(61,59,54,.45);display:flex;gap:12px}
+    .bubble .ic{width:24px;height:24px;color:var(--clay)}
+    .bubble p{font-family:'Fraunces',serif;font-variation-settings:'SOFT' 100;font-size:16px;color:var(--forest);line-height:1.35}
+    .bubble small{display:block;font-size:12px;color:var(--muted);margin-top:6px}
+    .pebbles{display:flex;justify-content:center;flex-wrap:wrap;gap:16px;margin-top:84px}
+    .pebble{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid var(--line);padding:14px 28px 14px 14px;border-radius:999px}
+    .pebble .dot{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;flex-shrink:0}
+    .pebble .dot .ic{width:22px;height:22px}
+    .pebble b{display:block;font-family:'Fraunces',serif;font-variation-settings:'SOFT' 100;font-weight:600;color:var(--forest);font-size:17px;line-height:1.2}
+    .pebble small{color:var(--muted);font-size:13px}
+    .stars{display:flex;gap:1px;color:var(--clay)}
+    .stars .ic{width:15px;height:15px}
+
+    /* Section shells */
+    section{position:relative}
+    .sec{padding:110px 0}
+    .sec-head{text-align:center;max-width:720px;margin:0 auto 64px}
+    .sec-head h2{font-size:clamp(30px,3.8vw,46px);margin:14px 0 14px}
+    .sec-head p{color:var(--muted);font-size:18px}
+    .wave{display:block;width:100%;height:60px}
+    .wave-top{margin-top:60px}
+
+    /* Stappenpad */
+    .oat{background:var(--oat)}
+    .path{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+    .path-line{position:absolute;left:12%;right:12%;top:30px;height:90px;pointer-events:none}
+    .path-line path{fill:none;stroke:var(--clay);stroke-width:2.5;stroke-dasharray:1 12;stroke-linecap:round}
+    .step{position:relative;text-align:center;padding:0 8px}
+    .step-orb{position:relative;width:132px;height:132px;margin:0 auto 28px;border-radius:50%;background:var(--linen);display:grid;place-items:center;box-shadow:inset 0 0 0 10px var(--sage-l)}
+    .step-orb .ic{width:46px;height:46px;color:var(--moss)}
+    .step-num{position:absolute;top:-4px;right:-4px;width:40px;height:40px;border-radius:50%;background:var(--clay);color:#fff;font-family:'Fraunces',serif;font-weight:600;display:grid;place-items:center;font-size:18px}
+    .step h3{font-size:26px;margin-bottom:12px}
+    .step p{color:var(--muted);font-size:16px;max-width:340px;margin:0 auto}
+    .tags{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin-top:18px}
+    .tags span{font-size:12.5px;font-weight:600;color:var(--forest);background:var(--linen);padding:6px 12px;border-radius:999px}
+    .step-2{margin-top:72px}
+
+    /* Lead magnet */
+    .sage{background:var(--sage)}
+    .lead-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+    .doc-stage{position:relative;display:grid;place-items:center;padding:40px 0}
+    .doc-stage::before{content:"";position:absolute;width:88%;aspect-ratio:1;background:var(--clay-l);border-radius:44% 56% 62% 38% / 48% 40% 60% 52%}
+    .doc{position:relative;width:100%;max-width:370px;background:var(--linen);border-radius:20px;padding:30px 28px;transform:rotate(-4deg);box-shadow:0 30px 50px -25px rgba(52,78,65,.55);transition:transform .5s ease}
+    .doc:hover{transform:rotate(-1deg) translateY(-6px)}
+    .doc::before{content:"";position:absolute;top:-14px;left:50%;width:96px;height:28px;margin-left:-48px;background:rgba(237,230,218,.85);transform:rotate(3deg);border-radius:4px}
+    .doc-top{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);border-bottom:1px dashed var(--line);padding-bottom:12px;margin-bottom:16px}
+    .doc-top b{color:var(--clay-d);text-transform:uppercase;letter-spacing:.12em}
+    .doc .kick{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--moss)}
+    .doc h4{font-size:23px;margin:6px 0 6px}
+    .doc .lede{font-size:12.5px;color:var(--muted)}
+    .doc ul{list-style:none;padding:14px;margin:16px 0;background:var(--sage-xl);border-radius:16px;display:grid;gap:10px;font-size:12.5px}
+    .doc li{display:flex;gap:8px;align-items:flex-start}
+    .doc li i{width:18px;height:18px;border-radius:50%;background:var(--sage);color:var(--forest);display:grid;place-items:center;flex-shrink:0;margin-top:1px}
+    .doc li i .ic{width:12px;height:12px}
+    .doc-foot{display:flex;justify-content:space-between;font-size:11px;color:var(--muted)}
+    .doc-foot b{color:var(--forest)}
+    .free-tag{position:absolute;right:-30px;top:-30px;width:96px;height:96px;border-radius:50%;background:var(--clay);color:#fff;display:grid;place-items:center;text-align:center;font-size:12px;font-weight:700;line-height:1.2;transform:rotate(12deg);padding:10px}
+    .lead-copy h2{font-size:clamp(30px,3.6vw,44px);margin:14px 0 18px}
+    .lead-copy h2 em{font-style:italic;font-weight:400;color:var(--linen)}
+    .lead-copy .eyebrow{color:var(--forest)}
+    .lead-copy>p{font-size:17px;color:#2f3b30;max-width:520px}
+    .form-card{margin-top:28px;background:var(--linen);border-radius:32px;padding:26px}
+    .field label{display:block;font-size:13px;font-weight:600;color:var(--forest);margin:0 0 6px 14px}
+    .field input,.field select,.field textarea{width:100%;font:inherit;font-size:15px;color:var(--ink);background:#fff;border:1.5px solid var(--line);border-radius:999px;padding:13px 20px;outline:none;transition:border .2s,box-shadow .2s}
+    .field textarea{border-radius:22px;resize:vertical}
+    .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--moss);box-shadow:0 0 0 4px var(--sage-l)}
+    .f2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .form-card .btn{width:100%;margin-top:16px}
+    .fine{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:12px;color:var(--muted);margin-top:12px;padding:0 6px}
+    .fine span{display:inline-flex;align-items:center;gap:5px}
+    .fine .ic{color:var(--moss)}
+    #checklist-success{margin-top:16px;background:var(--linen);border-radius:24px;padding:16px 20px;font-size:15px;color:var(--forest)}
+    #checklist-success .ic{color:var(--clay)}
+    #checklist-success a{text-decoration:underline;font-weight:700}
+    .dim{opacity:.5}
+
+    /* Collectie arches */
+    .arches{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;align-items:start}
+    .tile{display:flex;flex-direction:column}
+    .tile:nth-child(2){margin-top:56px}
+    .tile-img{position:relative;aspect-ratio:5/6;border-radius:999px 999px 0 0;overflow:hidden;background:var(--oat)}
+    .tile-img img{width:100%;height:100%;object-fit:cover;transition:transform .7s ease}
+    .tile:hover .tile-img img{transform:scale(1.05)}
+    .tile-badge{position:absolute;left:50%;bottom:18px;transform:translateX(-50%);background:var(--linen);color:var(--forest);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:8px 16px;border-radius:999px;white-space:nowrap}
+    .tile-body{background:var(--oat);border-radius:0 0 36px 36px;padding:28px 28px 30px;flex:1;display:flex;flex-direction:column}
+    .tile-body h3{font-size:25px;margin-bottom:10px}
+    .tile-body>p{font-size:15px;color:var(--muted)}
+    .tile-body ul{list-style:none;padding:0;margin:16px 0 22px;display:grid;gap:8px;font-size:14px}
+    .tile-body li{display:flex;gap:8px;align-items:flex-start}
+    .tile-body li .ic{color:var(--moss);margin-top:3px;width:16px;height:16px}
+    .tile-link{margin-top:auto;display:inline-flex;align-items:center;justify-content:space-between;gap:12px;font-weight:600;color:var(--forest);padding:6px 6px 6px 20px;border-radius:999px;background:var(--linen);font-size:15px;text-align:left}
+    .tile-link i{width:38px;height:38px;border-radius:50%;background:var(--forest);color:var(--linen);display:grid;place-items:center;flex-shrink:0;transition:background .25s}
+    .tile-link:hover i{background:var(--clay)}
+
+    /* Ervaringen */
+    .spec{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center;margin-bottom:110px}
+    .blob-img{position:relative}
+    .blob-img .mask{aspect-ratio:1/1;border-radius:62% 38% 54% 46% / 48% 58% 42% 52%;overflow:hidden}
+    .blob-img img{width:100%;height:100%;object-fit:cover;object-position:60% center}
+    .blob-img::before{content:"";position:absolute;inset:-18px 18px 18px -18px;border-radius:44% 56% 40% 60% / 56% 42% 58% 44%;background:var(--sage-l);z-index:-1}
+    .name-pill{position:absolute;left:8%;bottom:6%;background:var(--linen);border-radius:999px;padding:9px 16px;font-size:13px;font-weight:600;color:var(--forest);display:flex;align-items:center;gap:8px;box-shadow:0 10px 20px -12px rgba(0,0,0,.3)}
+    .name-pill i{width:8px;height:8px;border-radius:50%;background:var(--moss)}
+    .spec blockquote{margin:18px 0 20px;font-family:'Fraunces',serif;font-variation-settings:'SOFT' 100;font-style:italic;font-size:clamp(24px,2.7vw,34px);line-height:1.3;color:var(--forest)}
+    .spec .q-ic{width:44px;height:44px;color:var(--clay)}
+    .spec p.body{color:var(--muted);font-size:16.5px}
+    .sig{margin-top:22px;display:flex;align-items:center;gap:14px}
+    .sig b{font-family:'Fraunces',serif;font-size:20px;color:var(--forest);font-weight:600;display:block}
+    .sig small{color:var(--muted);font-size:13px}
+    .rev-wrap{max-width:860px;margin:0 auto;text-align:center}
+    .rev-wrap h3{font-size:clamp(28px,3.4vw,40px);margin:12px 0 44px}
+    .speech{position:relative;background:var(--oat);border-radius:48px;padding:48px 56px 44px;min-height:250px;text-align:left}
+    .speech::after{content:"";position:absolute;left:50%;bottom:-30px;margin-left:-20px;width:44px;height:36px;background:var(--oat);clip-path:path('M0 0 H44 C 34 6 26 18 14 36 C 18 20 14 8 0 0 Z')}
+    .rev-top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:16px;flex-wrap:wrap}
+    .verified{font-size:12.5px;font-weight:600;color:var(--moss);background:var(--linen);padding:6px 12px;border-radius:999px;display:inline-flex;align-items:center;gap:5px}
+    .verified .ic{width:14px;height:14px}
+    .carousel-slide p{font-family:'Fraunces',serif;font-variation-settings:'SOFT' 100;font-size:clamp(17px,1.8vw,21px);line-height:1.55;color:var(--ink)}
+    .carousel-slide .who{margin-top:18px;font-size:14px;color:var(--muted)}
+    .carousel-slide .who b{color:var(--forest);font-size:15px}
+    .rev-nav{display:flex;align-items:center;justify-content:center;gap:18px;margin-top:56px}
+    .arrow{width:46px;height:46px;border-radius:50%;border:1.5px solid var(--line);display:grid;place-items:center;color:var(--forest);transition:background .2s}
+    .arrow:hover{background:var(--sage-l)}
+    .avatars{display:flex;gap:10px}
+    .av{width:54px;height:54px;border-radius:50%;background:var(--oat-d);color:var(--muted);font-family:'Fraunces',serif;font-weight:600;font-size:16px;transition:all .3s;border:3px solid transparent}
+    .av.active{background:var(--sage);color:var(--forest);border-color:var(--linen);box-shadow:0 0 0 2px var(--moss);transform:scale(1.08)}
+
+    /* Closing CTA */
+    .closing{background:var(--clay-l);border-radius:56px;display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;align-items:center;padding:48px 56px;overflow:hidden}
+    .closing .arch-sm{aspect-ratio:4/5;border-radius:999px 999px 28px 28px;overflow:hidden;border:8px solid var(--linen);max-width:300px;width:100%;justify-self:center}
+    .closing .arch-sm img{width:100%;height:100%;object-fit:cover}
+    .closing h3{font-size:clamp(28px,3.4vw,42px);margin-bottom:14px}
+    .closing p{color:#5c5248;font-size:17px;max-width:520px}
+
+    /* Footer */
+    footer{background:var(--oat);margin-top:110px;position:relative}
+    footer .wave{position:absolute;top:-59px;left:0;color:var(--oat)}
+    .fgrid{display:grid;grid-template-columns:1.2fr 1fr 1.1fr 1.1fr;gap:40px;padding:72px 0 48px;border-bottom:1px solid var(--line)}
+    footer h4{font-size:19px;margin-bottom:18px}
+    footer p,footer li,footer address{font-size:14.5px;color:var(--muted);font-style:normal}
+    footer ul{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+    footer ul a{display:inline-flex;align-items:center;gap:6px}
+    footer ul a:hover{color:var(--forest)}
+    footer .ic{color:var(--clay)}
+    .frow{display:flex;gap:10px;align-items:flex-start;margin-bottom:12px}
+    .frow .ic{margin-top:3px}
+    .shop-thumb{width:100%;height:110px;object-fit:cover;border-radius:999px 999px 18px 18px;margin-bottom:16px}
+    .seal{display:flex;gap:12px;align-items:center;background:var(--linen);border-radius:999px;padding:8px 18px 8px 8px;margin-bottom:10px}
+    .seal i{width:38px;height:38px;border-radius:50%;background:var(--sage-l);display:grid;place-items:center;flex-shrink:0}
+    .seal b{display:block;color:var(--forest);font-size:14px}
+    .seal small{font-size:12px;color:var(--muted)}
+    .pay{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+    .pay span{font-size:12.5px;font-weight:600;color:var(--forest);border:1.5px solid var(--oat-d);background:var(--linen);border-radius:999px;padding:5px 12px}
+    .fbottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:24px 0 32px;font-size:13px;color:var(--muted)}
+    .fbottom nav{display:flex;gap:18px;flex-wrap:wrap}
+    .fbottom a:hover{color:var(--forest)}
+
+    /* Mobile sticky */
+    .m-sticky{display:none;position:fixed;left:12px;right:12px;bottom:12px;z-index:40;background:rgba(250,247,241,.95);backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:999px;padding:6px;gap:6px;box-shadow:0 16px 30px -12px rgba(61,59,54,.45)}
+    .m-sticky a,.m-sticky button{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:12px 10px;border-radius:999px;font-weight:700;font-size:13px;white-space:nowrap}
+    .m-sticky a{background:var(--sage-xl);color:var(--forest)}
+    .m-sticky button{flex:1.5;background:var(--forest);color:var(--linen)}
+
+    /* Modals */
+    .modal{position:fixed;inset:0;z-index:50;overflow-y:auto}
+    .modal-in{min-height:100%;display:flex;align-items:center;justify-content:center;padding:24px 14px}
+    .modal-backdrop{position:fixed;inset:0;background:rgba(52,78,65,.45);backdrop-filter:blur(5px)}
+    .card{position:relative;z-index:1;background:var(--linen);border-radius:40px;max-width:540px;width:100%;padding:40px 36px 32px;box-shadow:0 40px 80px -30px rgba(30,40,30,.5);animation:pop .35s ease}
+    @keyframes pop{from{opacity:0;transform:translateY(16px) scale(.98)}to{opacity:1;transform:none}}
+    .card-x{position:absolute;top:18px;right:18px;width:42px;height:42px;border-radius:50%;background:var(--oat);display:grid;place-items:center;color:var(--forest)}
+    .card-x .ic{width:20px;height:20px}
+    .card h3{font-size:28px;margin:8px 0 8px;padding-right:40px}
+    .card .lede{color:var(--muted);font-size:14.5px;margin-bottom:22px}
+    .card form{display:grid;gap:14px}
+    .choice{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    .choice label{position:relative;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;padding:18px 10px 16px;border-radius:28px 28px 20px 20px;background:#fff;border:1.5px solid var(--line);font-size:14px;font-weight:600;color:var(--forest);transition:all .2s}
+    .choice label .orb{width:46px;height:46px;border-radius:50%;background:var(--oat);display:grid;place-items:center;transition:background .2s}
+    .choice label .orb .ic{width:22px;height:22px}
+    .choice input{position:absolute;opacity:0;pointer-events:none}
+    .choice label:has(input:checked){border-color:var(--moss);background:var(--sage-xl);box-shadow:0 0 0 3px var(--sage-l)}
+    .choice label:has(input:checked) .orb{background:var(--sage)}
+    .qlabel{font-size:13px;font-weight:700;color:var(--forest);margin:0 0 8px 6px;display:block}
+    .card .btn{width:100%}
+    .note{text-align:center;font-size:12px;color:var(--muted);display:flex;align-items:center;justify-content:center;gap:5px}
+    .note .ic{color:var(--moss)}
+    .success{text-align:center;padding:16px 0}
+    .success .orb-big{width:84px;height:84px;margin:0 auto 18px;border-radius:50%;background:var(--sage-l);display:grid;place-items:center;color:var(--forest)}
+    .success .orb-big .ic{width:40px;height:40px}
+    .success p{color:var(--muted);font-size:15px;max-width:380px;margin:10px auto 24px}
+    .shop-hero{height:150px;border-radius:999px 999px 24px 24px;overflow:hidden;margin:-8px 0 20px}
+    .shop-hero img{width:100%;height:100%;object-fit:cover;object-position:center 60%}
+    .info-list{background:var(--oat);border-radius:24px;padding:16px 20px;display:grid;gap:8px;font-size:14px;margin-bottom:16px}
+    .info-list div{display:flex;gap:10px;align-items:flex-start}
+    .info-list .ic{color:var(--clay);margin-top:3px}
+    .info-list a{color:var(--clay-d);font-weight:700}
+    .map{height:180px;border-radius:24px;overflow:hidden;background:var(--oat);margin-bottom:18px}
+    .map iframe{width:100%;height:100%;border:0}
+    .two{display:flex;gap:10px}
+    .two>*{flex:1}
+
+    /* Responsive */
+    @media (max-width:1080px){
+      .nav{display:none}
+      .menu-btn{display:grid}
+      .hdr-phone{display:none}
+    }
+    @media (max-width:900px){
+      .hero-grid,.lead-grid,.spec,.closing{grid-template-columns:1fr}
+      .hero{padding-top:36px}
+      .hero-blob{width:120%;right:-40%;top:auto;bottom:10%;height:60%}
+      .arch-stage{max-width:380px;margin-top:20px}
+      .path{grid-template-columns:1fr;gap:56px}
+      .path-line{display:none}
+      .step-2{margin-top:0}
+      .arches{grid-template-columns:1fr;max-width:440px;margin:0 auto}
+      .tile:nth-child(2){margin-top:0}
+      .spec{gap:48px;margin-bottom:80px}
+      .blob-img{max-width:440px;margin:0 auto;width:100%}
+      .closing{padding:40px 28px;text-align:center}
+      .closing p{margin:0 auto}
+      .closing .cta-row{justify-content:center}
+      .fgrid{grid-template-columns:1fr 1fr}
+      .sec{padding:80px 0}
+      .lead-copy{order:-1}
+      .lead-grid{gap:40px}
+    }
+    @media (max-width:640px){
+      .wrap{padding:0 18px}
+      .strip{display:none}
+      header#main-header{padding:0 10px;top:8px;margin-top:8px}
+      .navbar{padding:8px 8px 8px 16px}
+      .hdr-cta{display:none}
+      .hero h1{font-size:36px}
+      .hero .sub{font-size:17px}
+      .cta-row .btn{width:100%;white-space:normal}
+      .sticker{left:-6px;top:6px;width:108px;height:108px;font-size:10.5px;padding:12px}
+      .sticker small{display:none}
+      .sticker .ic{width:22px;height:22px}
+      .bubble{position:relative;right:auto;bottom:auto;margin:-40px 12px 0;max-width:none}
+      .pebbles{margin-top:48px;flex-direction:column;align-items:stretch}
+      .pebble{border-radius:999px}
+      .sec-head{margin-bottom:44px}
+      .f2,.fgrid{grid-template-columns:1fr}
+      .form-card{padding:20px;border-radius:28px}
+      .doc{max-width:300px;padding:24px 20px}
+      .free-tag{right:-10px;top:-24px;width:80px;height:80px;font-size:11px}
+      .speech{padding:32px 24px 30px;border-radius:36px}
+      .closing{border-radius:40px;padding:32px 20px}
+      .card{padding:32px 20px 24px;border-radius:32px}
+      .card h3{font-size:24px}
+      .m-sticky{display:flex}
+      body{padding-bottom:84px}
+      .two{flex-direction:column}
+      .tile-img{aspect-ratio:1/1}
+      .wave-top{margin-top:16px}
+      .hero{padding-bottom:24px}
+      .tile-body{padding:24px 22px 26px}
+    }
+  </style>
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <symbol id="i-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16" rx="3"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/><rect x="7" y="12.5" width="4" height="4" rx="1" fill="currentColor" fill-opacity=".18" stroke="none"/><path d="M7 12.5h4v4H7z"/></symbol>
+  <symbol id="i-calendar-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16" rx="3"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/><path d="M3 9.5h18v8a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3z" fill="currentColor" fill-opacity=".18" stroke="none"/><path d="M8.5 15l2.3 2.3 4.7-4.6"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3.5h3l1.6 4.2-2 1.3a11 11 0 0 0 7.4 7.4l1.3-2 4.2 1.6v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 3 5.7a2 2 0 0 1 2-2.2z" fill="currentColor" fill-opacity=".18" stroke="none"/><path d="M5 3.5h3l1.6 4.2-2 1.3a11 11 0 0 0 7.4 7.4l1.3-2 4.2 1.6v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 3 5.7a2 2 0 0 1 2-2.2z"/><path d="M15 3.5a5.5 5.5 0 0 1 5.5 5.5M15 7a2 2 0 0 1 2 2"/></symbol>
+  <symbol id="i-map-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21.5s-7-6.2-7-11.5a7 7 0 0 1 14 0c0 5.3-7 11.5-7 11.5z" fill="currentColor" fill-opacity=".18" stroke="none"/><path d="M12 21.5s-7-6.2-7-11.5a7 7 0 0 1 14 0c0 5.3-7 11.5-7 11.5z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+  <symbol id="i-store" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 4h15l1.5 5H3z" fill="currentColor" fill-opacity=".18" stroke="none"/><path d="M4.5 4h15l1.5 5H3z"/><path d="M3 9a3 3 0 0 0 6 0 3 3 0 0 0 6 0 3 3 0 0 0 6 0"/><path d="M5 11.5V20h14v-8.5M10 20v-4.5h4V20"/></symbol>
+  <symbol id="i-route" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 3.5l-17 7 7 2.5 2.5 7z" fill="currentColor" fill-opacity=".18" stroke="none"/><path d="M20.5 3.5l-17 7 7 2.5 2.5 7z"/><path d="M10.5 13l4-4"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.8l2.8 5.7 6.3.9-4.55 4.45 1.07 6.25L12 17.15 6.38 20.1l1.07-6.25L2.9 9.4l6.3-.9z" fill="currentColor"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-check-circle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9" fill="currentColor" fill-opacity=".18" stroke="none"/><circle cx="12" cy="12" r="9"/><path d="M8 12.3l2.7 2.7 5.3-5.5"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.8l7.5 3v5.7c0 4.7-3.2 8.3-7.5 9.7-4.3-1.4-7.5-5-7.5-9.7V5.8z" fill="currentColor" fill-opacity=".18" stroke="none"/><path d="M12 2.8l7.5 3v5.7c0 4.7-3.2 8.3-7.5 9.7-4.3-1.4-7.5-5-7.5-9.7V5.8z"/><path d="M12 7.5v9M8.5 11.5h7" /></symbol>
+  <symbol id="i-shield-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.8l7.5 3v5.7c0 4.7-3.2 8.3-7.5 9.7-4.3-1.4-7.5-5-7.5-9.7V5.8z" fill="currentColor" fill-opacity=".18" stroke="none"/><path d="M12 2.8l7.5 3v5.7c0 4.7-3.2 8.3-7.5 9.7-4.3-1.4-7.5-5-7.5-9.7V5.8z"/><path d="M8.5 12l2.5 2.5 4.5-4.8"/></symbol>
+  <symbol id="i-award" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6" fill="currentColor" fill-opacity=".18" stroke="none"/><circle cx="12" cy="9" r="6"/><path d="M8.5 13.9L7 21.5l5-2.5 5 2.5-1.5-7.6"/><path d="M9.7 9l1.6 1.6 3-3.2"/></symbol>
+  <symbol id="i-tape-measure" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="11" r="7" fill="currentColor" fill-opacity=".18" stroke="none"/><circle cx="10" cy="11" r="7"/><circle cx="10" cy="11" r="2.2"/><path d="M10 18h11.5v-3.5H16.6"/><path d="M14 18v-1.6M17 18v-1.6M20 18v-1.6"/></symbol>
+  <symbol id="i-home-coffee" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 11L12 4l8.5 7"/><path d="M5.5 9.5V20h13V9.5"/><path d="M8.8 13h5.4v2.6a2.7 2.7 0 0 1-5.4 0z" fill="currentColor" fill-opacity=".18" stroke="none"/><path d="M8.8 13h5.4v2.6a2.7 2.7 0 0 1-5.4 0z"/><path d="M14.2 13.6h.8a1.3 1.3 0 0 1 0 2.6h-1"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5.5 9.5V20h13V9.5L12 4z" fill="currentColor" fill-opacity=".18" stroke="none"/><path d="M3.5 11L12 4l8.5 7"/><path d="M5.5 9.5V20h4.5v-5.5h4V20h4.5V9.5"/></symbol>
+  <symbol id="i-van" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 6h10a1 1 0 0 1 1 1v9h-12V7a1 1 0 0 1 1-1z" fill="currentColor" fill-opacity=".18" stroke="none"/><path d="M3.5 6h10a1 1 0 0 1 1 1v9h-12V7a1 1 0 0 1 1-1z"/><path d="M14.5 9.5h3.7l3.3 3.6v2.9h-7"/><circle cx="7" cy="18" r="1.8"/><circle cx="17.5" cy="18" r="1.8"/><path d="M5 9.5h5"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5v11M7.5 10l4.5 4.5 4.5-4.5"/><path d="M4 16.5v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></symbol>
+  <symbol id="i-document" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M13.5 2.5v5h5" fill="currentColor" fill-opacity=".18" stroke="none"/><path d="M6.5 2.5h7l5 5v12a2 2 0 0 1-2 2h-10a2 2 0 0 1-2-2v-15a2 2 0 0 1 2-2z"/><path d="M13.5 2.5v5h5M8.5 12.5h7M8.5 16h5"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="10.5" width="14" height="10" rx="2.5" fill="currentColor" fill-opacity=".18" stroke="none"/><rect x="5" y="10.5" width="14" height="10" rx="2.5"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5M12 14.5v2"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5" fill="currentColor" fill-opacity=".18" stroke="none"/><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9" fill="currentColor" fill-opacity=".18" stroke="none"/><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-sparkles" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M11 3l1.8 4.7 4.7 1.8-4.7 1.8L11 16l-1.8-4.7L4.5 9.5l4.7-1.8z" fill="currentColor" fill-opacity=".18" stroke="none"/><path d="M11 3l1.8 4.7 4.7 1.8-4.7 1.8L11 16l-1.8-4.7L4.5 9.5l4.7-1.8z"/><path d="M18.5 14.5l.8 1.9 1.9.8-1.9.8-.8 1.9-.8-1.9-1.9-.8 1.9-.8z"/></symbol>
+  <symbol id="i-quote" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18v-5.5C4 8.6 6.2 6 10 5.5v2.6c-2 .5-3 1.9-3.1 3.9H10v6zM14 18v-5.5c0-3.9 2.2-6.5 6-7v2.6c-2 .5-3 1.9-3.1 3.9H20v6z" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-credit-card" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="2.5" fill="currentColor" fill-opacity=".18" stroke="none"/><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="M2.5 9.5h19M6 15h4"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h10"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="i-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-arrow-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></symbol>
+  <symbol id="i-chevron-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 6l6 6-6 6"/></symbol>
+</svg>
+
+  <!-- Zachte trust-strip -->
+  <div class="strip">
+    <div class="wrap">
+      <span><svg class="ic" aria-hidden="true"><use href="#i-shield-check"/></svg>Gecertificeerd Bewegingstechnoloog</span>
+      <span><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg>4.8 / 5 uit 300+ geverifieerde reviews</span>
+      <span><svg class="ic" aria-hidden="true"><use href="#i-map-pin"/></svg>Showroom Merwedestraat 239, Dordrecht</span>
+      <a href="tel:0786314858"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>078 - 631 4858</a>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header id="main-header">
+    <div class="navbar">
+      <a href="#" class="logo" aria-label="Schipper Compact Wonen">
+        <span class="logo-mark">S</span>
+        <span><b>Schipper</b><small>Compact Wonen</small></span>
+      </a>
+      <nav class="nav" aria-label="Hoofdmenu">
+        <a href="collectie.html">Collectie</a>
+        <a href="#werkwijze">Onze Werkwijze</a>
+        <a href="#ervaringen">Ervaringen</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="hdr-right">
+        <a href="tel:0786314858" class="hdr-phone"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>078 - 631 4858</a>
+        <button onclick="openBookingModal('header')" class="btn btn-clay btn-sm hdr-cta"><svg class="ic" aria-hidden="true"><use href="#i-calendar"/></svg>Plan Adviesgesprek</button>
+        <button id="mobile-menu-btn" class="menu-btn" aria-label="Menu openen"><svg class="ic" aria-hidden="true"><use href="#i-menu"/></svg></button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden">
+      <a class="ml" href="collectie.html">Collectie (40 Stoelen)</a>
+      <a class="ml" href="#werkwijze">Onze Werkwijze</a>
+      <a class="ml" href="#checklist">Zithouding Check (PDF)</a>
+      <a class="ml" href="#ervaringen">Ervaringen</a>
+      <a class="ml" href="#contact">Contact</a>
+      <div class="mm-cta">
+        <button onclick="openBookingModal('mobile-menu')" class="btn btn-clay"><svg class="ic" aria-hidden="true"><use href="#i-calendar"/></svg>Plan Adviesgesprek</button>
+        <a href="tel:0786314858" class="btn btn-ghost"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>Bel direct: 078 - 631 4858</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-blob" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <span class="badge-soft"><i><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg></i>Specialist in ergonomisch maatwerk &amp; sta-op stoelen</span>
+          <h1>Pijnvrij opstaan en perfect zitten. <em>Ontdek de stoel die <span class="squig">écht bij u past.<svg viewBox="0 0 200 14" preserveAspectRatio="none" aria-hidden="true"><path d="M3 9 C 28 2, 52 13, 78 7 S 128 2, 152 8 S 186 11, 197 5"/></svg></span></em></h1>
+          <p class="sub">Geen verkooppraatjes, maar eerlijk en deskundig advies. Wij meten uw perfecte zithouding tot op de millimeter na, gewoon bij u thuis of in onze showroom.</p>
+          <div class="cta-row">
+            <button onclick="openBookingModal('hero-thuisbezoek')" class="btn btn-primary"><svg class="ic" aria-hidden="true"><use href="#i-calendar"/></svg>Plan een gratis thuisbezoek<svg class="ic" aria-hidden="true"><use href="#i-arrow-right"/></svg></button>
+            <a href="#showroom" onclick="event.preventDefault();openShowroomModal()" class="btn btn-ghost"><svg class="ic" aria-hidden="true"><use href="#i-store"/></svg>Bekijk de showroom</a>
+          </div>
+          <div class="micro">
+            <span><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>100% Vrijblijvend advies</span>
+            <span><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Geen aanbetaling vooraf</span>
+            <span><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Vaste specialist aan tafel</span>
+          </div>
+        </div>
+
+        <div class="arch-stage">
+          <div class="arch">
+            <img src="assets/hero_person_chair.jpg" alt="Ontspannen zittend persoon in een comfortabele ergonomische sta-op stoel" loading="eager">
+          </div>
+          <div class="sticker"><div><svg class="ic" aria-hidden="true"><use href="#i-shield-check"/></svg>Medisch Zuiver Aangemeten<small>Zitdiepte, zithoogte &amp; armsteun exact op maat</small></div></div>
+          <div class="bubble">
+            <svg class="ic" aria-hidden="true"><use href="#i-quote"/></svg>
+            <div>
+              <p>Sinds ik deze stoel heb, sta ik weer fluitend op zonder rugpijn.</p>
+              <small>Mevr. Van Vliet — Thuis aangemeten in Dordrecht</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trust-bar -->
+      <div class="pebbles">
+        <div class="pebble">
+          <span class="dot" style="background:var(--clay-l)"><span class="stars" style="gap:0"><svg class="ic" style="width:22px;height:22px" aria-hidden="true"><use href="#i-star"/></svg></span></span>
+          <div><b>4.8 / 5 Score</b><span class="stars" aria-label="5 sterren"><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg></span><small>Gebaseerd op 300+ geverifieerde reviews</small></div>
+        </div>
+        <div class="pebble">
+          <span class="dot" style="background:var(--sage-l);color:var(--moss)"><svg class="ic" aria-hidden="true"><use href="#i-tape-measure"/></svg></span>
+          <div><b>100% Maatwerk</b><small>Lichaamsmeting tot op de millimeter</small></div>
+        </div>
+        <div class="pebble">
+          <span class="dot" style="background:var(--oat);color:var(--clay-d)"><svg class="ic" aria-hidden="true"><use href="#i-van"/></svg></span>
+          <div><b>Binnen 1 week geleverd</b><small>Ruime voorraad &amp; eigen bezorgdienst</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- USP: Stappenpad -->
+  <svg class="wave wave-top" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 60 C 240 10, 480 10, 720 34 S 1200 60, 1440 18 V60 Z" fill="#EDE6DA"/></svg>
+  <section id="werkwijze" class="oat sec" style="padding-top:70px">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Waarom Schipper Compact Wonen</span>
+        <h2>Geen standaard meubelwinkel, maar uw persoonlijke zitspecialist</h2>
+        <p>Wij nemen de tijd om naar uw lichaam en dagelijkse behoeften te luisteren.</p>
+      </div>
+      <div class="path">
+        <svg class="path-line" viewBox="0 0 800 90" preserveAspectRatio="none" aria-hidden="true"><path d="M10 40 C 150 -10, 250 120, 400 110 S 650 0, 790 40"/></svg>
+        <div class="step">
+          <div class="step-orb"><svg class="ic" aria-hidden="true"><use href="#i-tape-measure"/></svg><span class="step-num">1</span></div>
+          <h3>Volledig op maat</h3>
+          <p>U wordt geadviseerd door een specialist, niet door een snelle verkoper. Wij kijken naar uw medische behoeften, gewrichtsklachten en exacte lichaamsbouw.</p>
+          <div class="tags"><span>Zitdiepte</span><span>Zithoogte</span><span>Armhoogte</span><span>Lendensteun</span></div>
+        </div>
+        <div class="step step-2">
+          <div class="step-orb"><svg class="ic" aria-hidden="true"><use href="#i-home-coffee"/></svg><span class="step-num">2</span></div>
+          <h3>Advies aan huis</h3>
+          <p>Bent u minder mobiel of vindt u het prettiger om in uw eigen vertrouwde omgeving te testen? Wij komen geheel vrijblijvend naar u toe met een selectie passtoelen.</p>
+          <div class="tags"><span>Kosteloos in de gehele regio</span><span>Passtoelen bij u in de kamer</span></div>
+        </div>
+        <div class="step">
+          <div class="step-orb"><svg class="ic" aria-hidden="true"><use href="#i-van"/></svg><span class="step-num">3</span></div>
+          <h3>Zorgeloze installatie</h3>
+          <p>Van advies tot het moment dat onze eigen, herkenbare bezorgbussen voor uw deur staan: wij regelen alles, inclusief de fijnafstelling en duidelijke uitleg in uw woonkamer.</p>
+          <div class="tags"><span>Eigen bezorgers</span><span>Oude stoel direct retour indien gewenst</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true" style="background:#A3B18A"><path d="M0 0 H1440 V20 C 1200 60, 960 60, 720 30 S 240 0, 0 40 Z" fill="#EDE6DA"/></svg>
+
+  <!-- LEAD MAGNET -->
+  <section id="checklist" class="sage sec" style="padding-top:60px">
+    <div class="wrap">
+      <div class="lead-grid">
+        <div class="doc-stage">
+          <div class="doc">
+            <div class="doc-top"><span><b>PDF Gids</b> &nbsp;Uitgave 2026</span><span>Schipper Zorgadvies</span></div>
+            <span class="kick">Zelftest in 3 Minuten</span>
+            <h4>De Ergonomische Zithouding Checklist</h4>
+            <p class="lede">Herken de 5 meest voorkomende zitfouten en voorkom chronische klachten.</p>
+            <ul>
+              <li><i><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg></i><span><strong>Zithoogte:</strong> Rusten uw voeten plat op de vloer zonder druk in de knieholte?</span></li>
+              <li><i><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg></i><span><strong>Zitdiepte:</strong> Past er een vuist tussen uw knieholte en de zitting?</span></li>
+              <li><i><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg></i><span><strong>Lendensteun:</strong> Wordt uw onderrug actief ondersteund bij ontspannen zitten?</span></li>
+              <li><i><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg></i><span><strong>Opstaan:</strong> Kunt u zelfstandig opstaan zonder pijnlijke schouders of knieën?</span></li>
+            </ul>
+            <div class="doc-foot"><span>Samengesteld door bewegingstechnologen</span><b>Gratis PDF</b></div>
+            <div class="free-tag">100% Gratis Download</div>
+          </div>
+        </div>
+
+        <div class="lead-copy">
+          <span class="eyebrow"><svg class="ic" aria-hidden="true"><use href="#i-document"/></svg>Directe PDF Download</span>
+          <h2>Zit u wel echt goed? <em>Doe binnen 3 minuten de check.</em></h2>
+          <p>Een verkeerde zithouding kan sluipenderwijs leiden tot rug-, nek- en heupklachten of vermoeidheid bij het opstaan. Download onze gratis <strong>‘Zithouding Checklist’ (PDF)</strong> en ontdek direct of uw huidige stoel uw lichaam voldoende ondersteunt.</p>
+          <form id="checklist-form" onsubmit="handleChecklistSubmit(event)" class="form-card">
+            <div class="f2">
+              <div class="field"><label for="lead-name">Uw voornaam *</label><input type="text" id="lead-name" name="lead-name" required placeholder="Bijv. Geert"></div>
+              <div class="field"><label for="lead-email">Uw e-mailadres *</label><input type="email" id="lead-email" name="lead-email" required placeholder="naam@voorbeeld.nl"></div>
+            </div>
+            <button type="submit" class="btn btn-clay"><svg class="ic" aria-hidden="true"><use href="#i-download"/></svg>Download de PDF Checklist</button>
+            <div class="fine"><span><svg class="ic" aria-hidden="true"><use href="#i-lock"/></svg>Geen spam. Direct in uw mailbox én op uw scherm.</span><span>PDF bestand (1.2 MB)</span></div>
+          </form>
+          <div id="checklist-success" class="hidden"><svg class="ic" aria-hidden="true"><use href="#i-sparkles"/></svg> <strong>Bedankt voor uw aanvraag!</strong> De checklist download is direct gestart. <a href="assets/zithouding-checklist.pdf" download>Klik hier</a> als het downloaden niet automatisch begint.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0 H1440 V30 C 1150 0, 900 60, 620 40 S 200 10, 0 50 Z" fill="#A3B18A"/></svg>
+
+  <!-- COLLECTIE -->
+  <section id="collectie" class="sec">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Onze Collectie</span>
+        <h2>Voor iedere wens een <span class="squig">passende oplossing<svg viewBox="0 0 200 14" preserveAspectRatio="none" aria-hidden="true"><path d="M3 8 C 40 2, 70 12, 110 7 S 170 3, 197 8"/></svg></span></h2>
+        <p>Wij geloven in maatwerk en rust. Geen schreeuwerige kortingen of haast, maar doordachte stoelen die decennialang zitcomfort garanderen.</p>
+      </div>
+      <div class="arches">
+        <article class="tile">
+          <div class="tile-img"><img src="assets/chair_custom.png" alt="Nieuw &amp; Maatwerk sta-op stoel in een warme woonkamer" loading="lazy"><span class="tile-badge">100% Maatwerk</span></div>
+          <div class="tile-body">
+            <h3>Nieuw &amp; Maatwerk</h3>
+            <p>Stoelen die volledig naar uw wens qua kleur, stof, leder en functionaliteit worden gebouwd. Perfect afgestemd op uw lichaamsmaten en interieur.</p>
+            <ul>
+              <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Keuze uit 100+ premium stoffen en leersoorten</li>
+              <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>1, 2 of 3 motoren (onafhankelijke rug &amp; beensteun)</li>
+              <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Optionele accu (geen kabels over de vloer)</li>
+            </ul>
+            <a href="collectie.html?filter=nieuw" class="tile-link">Bekijk 29 nieuwe maatwerkstoelen<i><svg class="ic" aria-hidden="true"><use href="#i-arrow-right"/></svg></i></a>
+          </div>
+        </article>
+        <article class="tile">
+          <div class="tile-img"><img src="assets/chair_occasion.png" alt="Jong gebruikte en gereviseerde Fitform sta-op stoel" loading="lazy"><span class="tile-badge">Direct Leverbaar</span></div>
+          <div class="tile-body">
+            <h3>Jong Gebruikt (Occasions)</h3>
+            <p>Volledig gereviseerde, dieptereinigde A-merken (waaronder Fitform en Doge) met 1 jaar volledige garantie. Direct uit voorraad leverbaar binnen enkele dagen.</p>
+            <ul>
+              <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Technisch 100% gekeurd en gereconditioneerd</li>
+              <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Inclusief 1 jaar garantie aan huis</li>
+              <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Direct leverbaar (geen wekenlange levertijd)</li>
+            </ul>
+            <a href="collectie.html?filter=occasion" class="tile-link">Bekijk 11 actuele occasions<i><svg class="ic" aria-hidden="true"><use href="#i-arrow-right"/></svg></i></a>
+          </div>
+        </article>
+        <article class="tile">
+          <div class="tile-img"><img src="assets/chair_care.png" alt="Ergonomische zorgstoel voor vergoedingen" loading="lazy"><span class="tile-badge">Zorg &amp; Wmo / PGB</span></div>
+          <div class="tile-body">
+            <h3>Zorg &amp; Vergoeding</h3>
+            <p>Ontdek de mogelijkheden voor vergoedingen via uw zorgverzekeraar, de Wet maatschappelijke ondersteuning (Wmo) of een Persoonsgebonden Budget (PGB).</p>
+            <ul>
+              <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Gratis ondersteuning bij uw zorgaanvraag</li>
+              <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Erkende ergonomische maatwerk specificaties</li>
+              <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Samenwerking met ergotherapeuten in de regio</li>
+            </ul>
+            <a href="collectie.html" class="tile-link">Bekijk alle 40 modellen in catalogus<i><svg class="ic" aria-hidden="true"><use href="#i-arrow-right"/></svg></i></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ERVARINGEN -->
+  <section id="ervaringen" class="sec" style="padding-top:20px">
+    <div class="wrap">
+      <div class="spec">
+        <div class="blob-img">
+          <div class="mask"><img src="assets/geertjan_advies_showroom.jpg" alt="Geert-Jan Schipper, bewegingstechnoloog, adviseert een klant met ergonomisch meetadvies" loading="lazy"></div>
+          <span class="name-pill"><i></i>Geert-Jan Schipper • Bewegingstechnoloog</span>
+        </div>
+        <div>
+          <svg class="ic q-ic" aria-hidden="true"><use href="#i-quote"/></svg>
+          <blockquote>“Het gaat er niet om de duurste stoel te verkopen, maar de stoel te vinden waardoor u aan het eind van de dag <span class="squig">meer energie<svg viewBox="0 0 200 14" preserveAspectRatio="none" aria-hidden="true"><path d="M3 8 C 40 2, 70 12, 110 7 S 170 3, 197 8"/></svg></span> overhoudt.”</blockquote>
+          <p class="body">Een stoel is een medisch en ergonomisch verlengstuk van uw lichaam. Wanneer de zithoogte slechts 2 centimeter afwijkt, ontstaat er spanning in uw onderrug en moeite met opstaan. Daarom meten we altijd rustig ter plekke, zonder enige haast.</p>
+          <div class="sig"><div><b>Geert-Jan Schipper</b><small>Oprichter &amp; Ergonomie Specialist • Schipper Compact Wonen</small></div></div>
+        </div>
+      </div>
+
+      <div class="rev-wrap">
+        <span class="eyebrow">Echte Klantervaringen</span>
+        <h3>Wat onze klanten vertellen</h3>
+        <div class="speech">
+          <div id="review-0" class="carousel-slide">
+            <div class="rev-top"><span class="stars"><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg></span><span class="verified"><svg class="ic" aria-hidden="true"><use href="#i-check-circle"/></svg>Geverifieerde koper</span></div>
+            <p>“Wat een verademing vergeleken met de reguliere meubelgiganten. Geert-Jan kwam keurig op tijd aan huis met verschillende proefstoelen. Geen seconde gepusht om te kopen. De stoel werd binnen een week geleverd en perfect afgesteld. Mijn man kan na zijn heupoperatie eindelijk weer zelfstandig uit zijn stoel!”</p>
+            <div class="who"><b>Mevr. M. van Vliet</b> · Regio Dordrecht • Fitform 570 Vario</div>
+          </div>
+          <div id="review-1" class="carousel-slide hidden">
+            <div class="rev-top"><span class="stars"><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg></span><span class="verified"><svg class="ic" aria-hidden="true"><use href="#i-check-circle"/></svg>Geverifieerde koper</span></div>
+            <p>“We zochten een mooie stoel die niet direct als ‘ziekenhuisstoel’ oogt in onze gerenoveerde woonkamer. De deskundigheid viel meteen op: binnen 10 minuten legde de adviseur uit waarom mijn vorige stoel rugpijn gaf. De bekleding matcht perfect met ons interieur.”</p>
+            <div class="who"><b>Dhr. en Mw. De Jong</b> · Regio Papendrecht • Maatwerk Lounge Relaxfauteuil</div>
+          </div>
+          <div id="review-2" class="carousel-slide hidden">
+            <div class="rev-top"><span class="stars"><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg></span><span class="verified"><svg class="ic" aria-hidden="true"><use href="#i-check-circle"/></svg>Geverifieerde koper</span></div>
+            <p>“We hebben gekozen voor een gereconditioneerde Fitform occasion. De stoel is letterlijk niet van nieuw te onderscheiden, rook fris en werkt vlekkeloos. Binnen 4 dagen bezorgd en de bezorger heeft de tijd genomen om alles aan mijn vader uit te leggen.”</p>
+            <div class="who"><b>Dhr. H. Bakker</b> · Regio Sliedrecht • Jong Gebruikte Occasion</div>
+          </div>
+        </div>
+        <div class="rev-nav">
+          <button onclick="prevReview()" class="arrow" aria-label="Vorige review"><svg class="ic" aria-hidden="true"><use href="#i-arrow-left"/></svg></button>
+          <div class="avatars">
+            <button onclick="goToReview(0)" id="dot-0" class="av active" aria-label="Review 1">MV</button>
+            <button onclick="goToReview(1)" id="dot-1" class="av" aria-label="Review 2">DJ</button>
+            <button onclick="goToReview(2)" id="dot-2" class="av" aria-label="Review 3">HB</button>
+          </div>
+          <button onclick="nextReview()" class="arrow" aria-label="Volgende review"><svg class="ic" aria-hidden="true"><use href="#i-arrow-right"/></svg></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING CTA -->
+  <section>
+    <div class="wrap">
+      <div class="closing">
+        <div class="arch-sm"><img src="assets/stoel_interior.png" alt="Groene sta-op stoel in een lichte Scandinavische woonkamer" loading="lazy"></div>
+        <div>
+          <h3>Klaar om weer echt <span class="squig">comfortabel<svg viewBox="0 0 200 14" preserveAspectRatio="none" aria-hidden="true"><path d="M3 8 C 40 2, 70 12, 110 7 S 170 3, 197 8"/></svg></span> te zitten?</h3>
+          <p>Maak vrijblijvend een afspraak. We komen graag bij u langs of ontvangen u in Dordrecht met verse koffie.</p>
+          <div class="cta-row">
+            <button onclick="openBookingModal('bottom-cta')" class="btn btn-primary"><svg class="ic" aria-hidden="true"><use href="#i-calendar"/></svg>Plan gratis adviesgesprek</button>
+            <a href="tel:0786314858" class="btn btn-ghost"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>078 - 631 4858</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contact">
+    <svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 60 V30 C 300 0, 520 50, 760 34 S 1220 0, 1440 26 V60 Z" fill="#EDE6DA"/></svg>
+    <div class="wrap">
+      <div class="fgrid">
+        <div>
+          <a href="#" class="logo" style="margin-bottom:18px"><span class="logo-mark">S</span><span><b>Schipper</b><small>Compact Wonen</small></span></a>
+          <p>Dé regionale specialist in ergonomische sta-op-stoelen en op maat afgestemd zitcomfort. Eerlijk advies door gecertificeerde bewegingstechnologen, thuis of in de showroom.</p>
+          <p style="margin-top:14px;font-size:13px">KvK: 24391284<br>BTW: NL815610427B01</p>
+        </div>
+        <div>
+          <h4>Snelle Links</h4>
+          <ul>
+            <li><a href="collectie.html?filter=nieuw"><svg class="ic" aria-hidden="true"><use href="#i-chevron-right"/></svg>Collectie Maatwerk (29)</a></li>
+            <li><a href="collectie.html?filter=occasion"><svg class="ic" aria-hidden="true"><use href="#i-chevron-right"/></svg>Occasions &amp; Demo's (11)</a></li>
+            <li><a href="#checklist"><svg class="ic" aria-hidden="true"><use href="#i-chevron-right"/></svg>Zithouding Checklist (PDF)</a></li>
+            <li><a href="#werkwijze"><svg class="ic" aria-hidden="true"><use href="#i-chevron-right"/></svg>Werkwijze &amp; Thuisbezoek</a></li>
+            <li><a href="#ervaringen"><svg class="ic" aria-hidden="true"><use href="#i-chevron-right"/></svg>Klantbeoordelingen (4.8/5)</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Showroom &amp; Contact</h4>
+          <img class="shop-thumb" src="assets/bezorging.png" alt="Showroom en bezorgbus van Schipper Compact Wonen in Dordrecht" loading="lazy">
+          <address>
+            <div class="frow"><svg class="ic" aria-hidden="true"><use href="#i-map-pin"/></svg><div><strong style="color:var(--forest)">Showroom Dordrecht:</strong><br>Merwedestraat 239<br>3313 GT Dordrecht</div></div>
+            <div class="frow"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg><a href="tel:0786314858" style="color:var(--forest);font-weight:700">078 - 631 4858</a></div>
+            <div class="frow"><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg><a href="mailto:info@schippercompactwonen.nl" style="word-break:break-all">info@schippercompactwonen.nl</a></div>
+            <div class="frow" style="font-size:13px"><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg>Ma t/m Vr: 09:00 - 17:00 | Za: Op afspraak</div>
+          </address>
+        </div>
+        <div>
+          <h4>Zekerheid &amp; Garantie</h4>
+          <div class="seal"><i><svg class="ic" aria-hidden="true"><use href="#i-shield"/></svg></i><div><b>Tot 5 Jaar Garantie</b><small>Volledige service aan huis</small></div></div>
+          <div class="seal"><i><svg class="ic" aria-hidden="true"><use href="#i-award"/></svg></i><div><b>Thuiswinkel &amp; Ergonomie</b><small>Erkend vakspecialist</small></div></div>
+          <p style="margin-top:16px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:700"><svg class="ic" aria-hidden="true"><use href="#i-credit-card"/></svg> Veilig betalen:</p>
+          <div class="pay"><span>iDeal</span><span>PIN aan huis</span><span>Factuur na levering</span></div>
+        </div>
+      </div>
+      <div class="fbottom">
+        <div>© 2026 Schipper Compact Wonen. Alle rechten voorbehouden.</div>
+        <nav><a href="#">Algemene Voorwaarden</a><a href="#">Privacy Policy</a><a href="#">Cookieverklaring</a></nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobiele sticky balk -->
+  <div class="m-sticky">
+    <a href="tel:0786314858"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>078 - 631 4858</a>
+    <button onclick="openBookingModal('mobile-sticky')"><svg class="ic" aria-hidden="true"><use href="#i-calendar"/></svg>Plan Adviesgesprek</button>
+  </div>
+
+  <!-- MODAL: Adviesgesprek -->
+  <div id="booking-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="bm-title">
+    <div class="modal-in">
+      <div class="modal-backdrop" onclick="closeBookingModal()"></div>
+      <div class="card">
+        <button class="card-x" onclick="closeBookingModal()" aria-label="Sluiten"><svg class="ic" aria-hidden="true"><use href="#i-close"/></svg></button>
+        <div id="modal-form-container">
+          <span class="eyebrow">100% Vrijblijvend</span>
+          <h3 id="bm-title">Plan uw Persoonlijk Adviesgesprek</h3>
+          <p class="lede">Geef uw voorkeur aan. Wij nemen binnen 1 werkdag telefonisch contact met u op om het tijdstip af te stemmen.</p>
+          <form onsubmit="handleBookingSubmit(event)">
+            <div>
+              <span class="qlabel">Waar wilt u het advies ontvangen?</span>
+              <div class="choice">
+                <label><input type="radio" name="appointment-type" value="thuis" checked><span class="orb"><svg class="ic" aria-hidden="true"><use href="#i-home"/></svg></span>Gratis aan huis</label>
+                <label><input type="radio" name="appointment-type" value="showroom"><span class="orb"><svg class="ic" aria-hidden="true"><use href="#i-store"/></svg></span>In showroom Dordrecht</label>
+              </div>
+            </div>
+            <div class="field"><label for="book-name">Uw naam *</label><input type="text" id="book-name" required placeholder="Dhr. / Mw. Jansen"></div>
+            <div class="f2">
+              <div class="field"><label for="book-phone">Telefoonnummer *</label><input type="tel" id="book-phone" required placeholder="06 - 12345678"></div>
+              <div class="field"><label for="book-email">E-mailadres</label><input type="email" id="book-email" placeholder="uw@email.nl"></div>
+            </div>
+            <div class="f2">
+              <div class="field"><label for="book-postcode">Postcode / Woonplaats *</label><input type="text" id="book-postcode" required placeholder="3313 GT Dordrecht"></div>
+              <div class="field"><label for="book-prefday">Voorkeursdag</label>
+                <select id="book-prefday">
+                  <option value="zsm">Zo snel mogelijk</option>
+                  <option value="ochtend">Maandag of Dinsdag</option>
+                  <option value="middag">Woensdag of Donderdag</option>
+                  <option value="vrijdag">Vrijdag of Zaterdag</option>
+                </select>
+              </div>
+            </div>
+            <div class="field"><label for="book-notes">Eventuele klachten of wensen (optioneel)</label><textarea id="book-notes" rows="2" placeholder="Bijv. moeite met opstaan, rugklachten, voorkeur voor leder..."></textarea></div>
+            <button type="submit" class="btn btn-clay"><svg class="ic" aria-hidden="true"><use href="#i-calendar-check"/></svg>Bevestig Aanvraag Adviesgesprek</button>
+            <p class="note"><svg class="ic" aria-hidden="true"><use href="#i-lock"/></svg>Wij gaan zorgvuldig om met uw gegevens. Geen aankoopverplichting.</p>
+          </form>
+        </div>
+        <div id="modal-success-container" class="success hidden">
+          <div class="orb-big"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg></div>
+          <h3 style="padding:0">Hartelijk dank voor uw aanvraag!</h3>
+          <p>We hebben uw verzoek ontvangen. Specialist Geert-Jan Schipper of een van onze collega's neemt binnen 1 werkdag telefonisch contact op om een passend tijdstip af te stemmen.</p>
+          <button onclick="closeBookingModal()" class="btn btn-primary" style="width:auto">Venster sluiten</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: Showroom -->
+  <div id="showroom-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="sm-title">
+    <div class="modal-in">
+      <div class="modal-backdrop" onclick="closeShowroomModal()"></div>
+      <div class="card">
+        <button class="card-x" onclick="closeShowroomModal()" aria-label="Sluiten" style="z-index:2"><svg class="ic" aria-hidden="true"><use href="#i-close"/></svg></button>
+        <div class="shop-hero"><img src="assets/bezorging.png" alt="Gevel van de showroom in Dordrecht" loading="lazy"></div>
+        <span class="eyebrow">Welkom in Dordrecht</span>
+        <h3 id="sm-title">Showroom Schipper Compact Wonen</h3>
+        <p class="lede">U bent van harte welkom om al onze maatwerk- en occasion stoelen rustig uit te proberen. Gratis parkeren voor de deur.</p>
+        <div class="info-list">
+          <div><svg class="ic" aria-hidden="true"><use href="#i-map-pin"/></svg><span><strong>Adres:</strong> Merwedestraat 239, 3313 GT Dordrecht</span></div>
+          <div><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg><span><strong>Telefoon:</strong> <a href="tel:0786314858">078 - 631 4858</a></span></div>
+          <div><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg><span><strong>Openingstijden:</strong> Maandag t/m Vrijdag: 09:00 - 17:00 | Zaterdag: op afspraak</span></div>
+        </div>
+        <div class="map"><iframe data-src="https://maps.google.com/maps?q=Merwedestraat%20239,%20Dordrecht&t=&z=14&ie=UTF8&iwloc=&output=embed" title="Kaart showroom" allowfullscreen loading="lazy"></iframe></div>
+        <div class="two">
+          <a href="https://www.google.com/maps/dir/?api=1&destination=Merwedestraat+239,+Dordrecht" target="_blank" rel="noopener" class="btn btn-primary"><svg class="ic" aria-hidden="true"><use href="#i-route"/></svg>Route plannen</a>
+          <button onclick="closeShowroomModal(); openBookingModal('from-showroom-modal');" class="btn btn-clay"><svg class="ic" aria-hidden="true"><use href="#i-calendar"/></svg>Afspraak maken</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Header schaduw bij scrollen
+    const header = document.getElementById('main-header');
+    window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 20));
+
+    // Mobiel menu
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+
+    // Modals
+    const bookingModal = document.getElementById('booking-modal');
+    const showroomModal = document.getElementById('showroom-modal');
+    function openBookingModal(origin) {
+      mobileMenu.classList.add('hidden');
+      bookingModal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeBookingModal() {
+      bookingModal.classList.add('hidden');
+      document.body.style.overflow = '';
+      setTimeout(() => {
+        document.getElementById('modal-form-container').classList.remove('hidden');
+        document.getElementById('modal-success-container').classList.add('hidden');
+      }, 300);
+    }
+    function openShowroomModal() {
+      const frame = showroomModal.querySelector('iframe');
+      if (!frame.src) frame.src = frame.dataset.src;
+      showroomModal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeShowroomModal() {
+      showroomModal.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+    function handleBookingSubmit(e) {
+      e.preventDefault();
+      document.getElementById('modal-form-container').classList.add('hidden');
+      document.getElementById('modal-success-container').classList.remove('hidden');
+    }
+
+    // Checklist download
+    function handleChecklistSubmit(e) {
+      e.preventDefault();
+      document.getElementById('checklist-success').classList.remove('hidden');
+      document.getElementById('checklist-form').classList.add('dim');
+      const link = document.createElement('a');
+      link.href = 'assets/zithouding-checklist.pdf';
+      link.download = 'Schipper-Zithouding-Checklist.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
+    // Review carrousel
+    let currentReview = 0;
+    const totalReviews = 3;
+    function showReview(index) {
+      currentReview = (index + totalReviews) % totalReviews;
+      for (let i = 0; i < totalReviews; i++) {
+        document.getElementById('review-' + i).classList.toggle('hidden', i !== currentReview);
+        document.getElementById('dot-' + i).classList.toggle('active', i === currentReview);
+      }
+    }
+    function nextReview() { showReview(currentReview + 1); }
+    function prevReview() { showReview(currentReview - 1); }
+    function goToReview(i) { showReview(i); }
+    let reviewInterval = setInterval(nextReview, 8000);
+    const rc = document.getElementById('ervaringen');
+    rc.addEventListener('mouseenter', () => clearInterval(reviewInterval));
+    rc.addEventListener('mouseleave', () => { clearInterval(reviewInterval); reviewInterval = setInterval(nextReview, 8000); });
+
+    // Escape sluit modals
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') { closeBookingModal(); closeShowroomModal(); }
+    });
+  </script>
+</body>
+</html>

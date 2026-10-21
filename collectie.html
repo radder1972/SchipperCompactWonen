@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Collectie Sta-op Stoelen & Maatwerk | Schipper Compact Wonen</title>
+  <meta name="description" content="Bekijk onze actuele collectie sta-op stoelen en ergonomische relaxfauteuils. Zowel 100% nieuw maatwerk als gereviseerde occasions met garantie.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..700,100;1,9..144,400..600,100&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root{
+      --sage:#A3B18A; --sage-l:#DCE3CF; --sage-xl:#EEF1E6; --moss:#588157; --forest:#344E41;
+      --oat:#EDE6DA; --oat-d:#E2D8C6; --linen:#FAF7F1; --clay:#C4805F; --clay-d:#A9663F; --clay-l:#F1D9CB;
+      --ink:#3D3B36; --muted:#6E6A60; --line:#DDD3C2;
+    }
+    *,*::before,*::after{box-sizing:border-box}
+    html{scroll-behavior:smooth;overflow-x:clip}
+    body{margin:0;font-family:'Figtree',system-ui,sans-serif;color:var(--ink);background:var(--linen);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:clip;
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .3 0 0 0 0 .2 0 0 0 .05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+    img{max-width:100%;display:block}
+    a{color:inherit;text-decoration:none}
+    button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+    .ic{display:inline-block;flex-shrink:0;vertical-align:middle;width:1.15em;height:1.15em}
+    .hidden{display:none!important}
+    .wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+    h1,h2,h3,h4,.serif{font-family:'Fraunces',Georgia,serif;font-variation-settings:'SOFT' 100,'WONK' 0;font-weight:500;color:var(--forest);margin:0;letter-spacing:-.01em;line-height:1.15}
+    p{margin:0}
+    .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--moss)}
+    .eyebrow::before{content:"";width:28px;height:10px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 10'%3E%3Cpath d='M1 5c3-4 6-4 9 0s6 4 9 0 6-4 8 0' fill='none' stroke='%23C4805F' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat center/contain}
+    .squig{position:relative;white-space:nowrap;display:inline-block}
+    .squig svg{position:absolute;left:-2%;bottom:-.22em;width:104%;height:.45em;overflow:visible}
+    .squig path{fill:none;stroke:var(--clay);stroke-width:5;stroke-linecap:round}
+
+    /* Buttons */
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 26px;border-radius:999px;font-weight:600;font-size:15px;transition:transform .25s ease,background .25s ease,box-shadow .25s ease;white-space:nowrap}
+    .btn:hover{transform:translateY(-2px)}
+    .btn-primary{background:var(--forest);color:var(--linen);box-shadow:0 10px 24px -12px rgba(52,78,65,.7)}
+    .btn-primary:hover{background:var(--moss)}
+    .btn-clay{background:var(--clay);color:#fff;box-shadow:0 10px 24px -12px rgba(169,102,63,.8)}
+    .btn-clay:hover{background:var(--clay-d)}
+    .btn-ghost{background:transparent;color:var(--forest);border:1.5px solid var(--forest)}
+    .btn-ghost:hover{background:var(--forest);color:var(--linen)}
+    .btn-sm{padding:9px 18px;font-size:14px}
+
+    /* Header */
+    .strip{font-size:13px;color:var(--muted);padding:10px 0 0}
+    .strip .wrap{display:flex;justify-content:center;gap:28px;flex-wrap:wrap}
+    .strip span,.strip a{display:inline-flex;align-items:center;gap:6px}
+    .strip .ic{color:var(--moss)}
+    header#main-header{position:sticky;top:12px;z-index:40;margin:12px auto 0;max-width:1200px;padding:0 16px}
+    .navbar{display:flex;align-items:center;justify-content:space-between;gap:16px;background:rgba(250,247,241,.94);backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:999px;padding:10px 10px 10px 22px;transition:box-shadow .3s}
+    header.scrolled .navbar{box-shadow:0 14px 30px -18px rgba(61,59,54,.35)}
+    .logo{display:flex;align-items:center;gap:10px}
+    .logo-mark{width:34px;height:40px;border-radius:999px 999px 8px 8px;background:var(--sage);display:grid;place-items:center;color:var(--forest);font-family:'Fraunces',serif;font-weight:600;font-size:18px;padding-top:4px}
+    .logo b{font-family:'Fraunces',serif;font-variation-settings:'SOFT' 100;font-weight:600;font-size:21px;color:var(--forest);display:block;line-height:1}
+    .logo small{display:block;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-top:3px}
+    .nav{display:flex;gap:6px}
+    .nav a{padding:9px 16px;border-radius:999px;font-weight:500;font-size:15px;color:var(--ink);transition:background .2s}
+    .nav a:hover, .nav a.active{background:var(--sage-xl);color:var(--forest);font-weight:600}
+    .hdr-right{display:flex;align-items:center;gap:6px}
+    .hdr-phone{display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:14px;color:var(--forest);padding:8px 12px}
+    .menu-btn{display:none;width:44px;height:44px;border-radius:50%;background:var(--sage-xl);color:var(--forest);place-items:center}
+    .menu-btn .ic{width:22px;height:22px}
+    #mobile-menu{margin-top:8px;background:var(--linen);border:1px solid var(--line);border-radius:28px;padding:14px;box-shadow:0 20px 40px -20px rgba(61,59,54,.35)}
+    #mobile-menu a.ml{display:block;padding:12px 14px;border-radius:16px;font-weight:500}
+    #mobile-menu a.ml:hover{background:var(--sage-xl)}
+    #mobile-menu .mm-cta{display:grid;gap:8px;margin-top:8px}
+
+    /* Page Intro */
+    .catalog-hero{padding:48px 0 28px;text-align:center}
+    .catalog-hero h1{font-size:clamp(32px,4.5vw,56px);margin:14px 0 16px}
+    .catalog-hero p{font-size:18px;color:var(--muted);max-width:680px;margin:0 auto}
+
+    /* Filters Bar */
+    .filter-section{margin-bottom:36px}
+    .filter-tabs{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:24px}
+    .filter-tab{padding:12px 24px;border-radius:999px;background:#fff;border:1.5px solid var(--line);font-weight:600;font-size:15px;color:var(--forest);cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;gap:8px}
+    .filter-tab:hover{border-color:var(--sage);background:var(--sage-xl)}
+    .filter-tab.active{background:var(--forest);color:var(--linen);border-color:var(--forest);box-shadow:0 8px 20px -8px rgba(52,78,65,.6)}
+    .filter-tab .count{display:inline-block;padding:2px 8px;border-radius:999px;font-size:12px;background:rgba(255,255,255,.25)}
+    .filter-tab:not(.active) .count{background:var(--oat);color:var(--forest)}
+
+    .filter-controls{display:flex;gap:12px;flex-wrap:wrap;justify-content:space-between;align-items:center;background:#fff;border:1px solid var(--line);border-radius:24px;padding:14px 20px}
+    .search-box{position:relative;flex:1;min-width:240px}
+    .search-box input{width:100%;padding:10px 16px 10px 38px;border-radius:999px;border:1.5px solid var(--line);font:inherit;font-size:14px;background:var(--linen);outline:none;transition:border-color .2s}
+    .search-box input:focus{border-color:var(--moss)}
+    .search-box .ic{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--muted);width:16px;height:16px}
+    .select-group{display:flex;gap:10px;flex-wrap:wrap}
+    .select-group select{padding:10px 16px;border-radius:999px;border:1.5px solid var(--line);font:inherit;font-size:13.5px;color:var(--forest);background:var(--linen);cursor:pointer;outline:none;transition:border-color .2s}
+    .select-group select:focus{border-color:var(--moss)}
+
+    /* Chairs Grid */
+    .chairs-grid{display:grid;grid-template-columns:repeat(auto-fill, minmax(320px, 1fr));gap:32px;margin-bottom:80px}
+    .chair-card{display:flex;flex-direction:column;background:var(--oat);border-radius:36px;overflow:hidden;border:1px solid var(--line);transition:transform .3s ease,box-shadow .3s ease}
+    .chair-card:hover{transform:translateY(-4px);box-shadow:0 24px 44px -20px rgba(61,59,54,.25)}
+    .chair-thumb{position:relative;aspect-ratio:4/3.8;background:linear-gradient(180deg, #fff 0%, var(--oat) 100%);overflow:hidden;display:grid;place-items:center;padding:16px}
+    .chair-thumb img{width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply;transition:transform .4s ease}
+    .chair-card:hover .chair-thumb img{transform:scale(1.04)}
+    
+    .chair-badge{position:absolute;top:16px;left:16px;padding:6px 14px;border-radius:999px;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+    .badge-nieuw{background:var(--forest);color:var(--linen)}
+    .badge-occasion{background:var(--clay);color:#fff}
+    .badge-verkocht{background:var(--muted);color:#fff}
+    .chair-status-tag{position:absolute;top:16px;right:16px;background:rgba(255,255,255,.9);backdrop-filter:blur(4px);padding:4px 10px;border-radius:999px;font-size:11px;font-weight:600;color:var(--forest);border:1px solid var(--line)}
+
+    .chair-content{padding:24px 26px 28px;flex:1;display:flex;flex-direction:column}
+    .chair-brand{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--moss);margin-bottom:4px}
+    .chair-title{font-size:22px;color:var(--forest);margin-bottom:10px;font-family:'Fraunces',serif;line-height:1.2}
+    
+    .chair-price-row{display:flex;align-items:baseline;gap:10px;margin-bottom:14px}
+    .chair-price{font-family:'Fraunces',serif;font-size:24px;font-weight:600;color:var(--forest)}
+    .chair-old-price{font-size:15px;color:var(--muted);text-decoration:line-through}
+    
+    .chair-features{list-style:none;padding:0;margin:0 0 20px;display:grid;gap:6px;font-size:13px;color:var(--muted)}
+    .chair-features li{display:flex;gap:8px;align-items:flex-start}
+    .chair-features .ic{color:var(--moss);width:14px;height:14px;margin-top:3px}
+
+    .chair-specs-preview{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:14px;border-top:1px dashed var(--line);margin-bottom:18px}
+    .spec-pill{font-size:11.5px;font-weight:600;color:var(--forest);background:var(--linen);padding:4px 10px;border-radius:999px}
+
+    .btn-detail{width:100%;background:var(--linen);color:var(--forest);border:1.5px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:12px 18px;border-radius:999px;font-weight:600;font-size:14px;transition:all .2s}
+    .btn-detail:hover{background:var(--forest);color:var(--linen);border-color:var(--forest)}
+    .btn-detail i{width:28px;height:28px;border-radius:50%;background:var(--oat-d);color:var(--forest);display:grid;place-items:center;transition:background .2s}
+    .btn-detail:hover i{background:var(--clay);color:#fff}
+
+    /* Empty state */
+    .empty-state{text-align:center;padding:64px 20px;background:#fff;border-radius:32px;border:1px dashed var(--line);grid-column:1/-1}
+    .empty-state h3{font-size:24px;margin-bottom:8px}
+
+    /* Chair Detail Modal */
+    .modal-detail-card{position:relative;z-index:1;background:var(--linen);border-radius:40px;max-width:880px;width:100%;padding:40px;box-shadow:0 40px 80px -30px rgba(30,40,30,.5);animation:pop .35s ease;max-height:92vh;overflow-y:auto}
+    .modal-detail-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:36px;align-items:start}
+    .gallery-main{aspect-ratio:4/3;background:linear-gradient(180deg, #fff 0%, var(--oat) 100%);border-radius:28px;overflow:hidden;display:grid;place-items:center;padding:20px;border:1px solid var(--line);margin-bottom:12px}
+    .gallery-main img{max-height:100%;width:auto;object-fit:contain;mix-blend-mode:multiply}
+    .gallery-thumbs{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px}
+    .gallery-thumb{width:68px;height:68px;border-radius:14px;background:#fff;border:2px solid transparent;cursor:pointer;flex-shrink:0;padding:4px;display:grid;place-items:center;transition:border-color .2s}
+    .gallery-thumb.active{border-color:var(--moss)}
+    .gallery-thumb img{max-height:100%;width:auto;object-fit:contain;mix-blend-mode:multiply}
+
+    .modal-specs-table{width:100%;border-collapse:collapse;margin:18px 0;font-size:13.5px}
+    .modal-specs-table tr{border-bottom:1px solid var(--line)}
+    .modal-specs-table td{padding:8px 6px}
+    .modal-specs-table td:first-child{color:var(--muted);width:45%;font-weight:500}
+    .modal-specs-table td:last-child{color:var(--forest);font-weight:600}
+
+    /* Footer & Common */
+    footer{background:var(--oat);margin-top:60px;position:relative}
+    footer .wave{position:absolute;top:-59px;left:0;color:var(--oat)}
+    .fgrid{display:grid;grid-template-columns:1.2fr 1fr 1.1fr 1.1fr;gap:40px;padding:72px 0 48px;border-bottom:1px solid var(--line)}
+    footer h4{font-size:19px;margin-bottom:18px}
+    footer p,footer li,footer address{font-size:14.5px;color:var(--muted);font-style:normal}
+    footer ul{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+    footer ul a{display:inline-flex;align-items:center;gap:6px}
+    footer ul a:hover{color:var(--forest)}
+    footer .ic{color:var(--clay)}
+    .frow{display:flex;gap:10px;align-items:flex-start;margin-bottom:12px}
+    .frow .ic{margin-top:3px}
+    .shop-thumb{width:100%;height:110px;object-fit:cover;border-radius:999px 999px 18px 18px;margin-bottom:16px}
+    .seal{display:flex;gap:12px;align-items:center;background:var(--linen);border-radius:999px;padding:8px 18px 8px 8px;margin-bottom:10px}
+    .seal i{width:38px;height:38px;border-radius:50%;background:var(--sage-l);display:grid;place-items:center;flex-shrink:0}
+    .seal b{display:block;color:var(--forest);font-size:14px}
+    .seal small{font-size:12px;color:var(--muted)}
+    .pay{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+    .pay span{font-size:12.5px;font-weight:600;color:var(--forest);border:1.5px solid var(--oat-d);background:var(--linen);border-radius:999px;padding:5px 12px}
+    .fbottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:24px 0 32px;font-size:13px;color:var(--muted)}
+    .fbottom nav{display:flex;gap:18px;flex-wrap:wrap}
+
+    /* Modals base */
+    .modal{position:fixed;inset:0;z-index:50;overflow-y:auto}
+    .modal-in{min-height:100%;display:flex;align-items:center;justify-content:center;padding:24px 14px}
+    .modal-backdrop{position:fixed;inset:0;background:rgba(52,78,65,.45);backdrop-filter:blur(5px)}
+    .card{position:relative;z-index:1;background:var(--linen);border-radius:40px;max-width:540px;width:100%;padding:40px 36px 32px;box-shadow:0 40px 80px -30px rgba(30,40,30,.5);animation:pop .35s ease}
+    @keyframes pop{from{opacity:0;transform:translateY(16px) scale(.98)}to{opacity:1;transform:none}}
+    .card-x{position:absolute;top:18px;right:18px;width:42px;height:42px;border-radius:50%;background:var(--oat);display:grid;place-items:center;color:var(--forest);z-index:10}
+    .card-x .ic{width:20px;height:20px}
+    .field label{display:block;font-size:13px;font-weight:600;color:var(--forest);margin:0 0 6px 14px}
+    .field input,.field select,.field textarea{width:100%;font:inherit;font-size:15px;color:var(--ink);background:#fff;border:1.5px solid var(--line);border-radius:999px;padding:13px 20px;outline:none;transition:border .2s,box-shadow .2s}
+    .field textarea{border-radius:22px;resize:vertical}
+    .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--moss);box-shadow:0 0 0 4px var(--sage-l)}
+    .f2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .choice{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    .choice label{position:relative;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;padding:18px 10px 16px;border-radius:28px 28px 20px 20px;background:#fff;border:1.5px solid var(--line);font-size:14px;font-weight:600;color:var(--forest);transition:all .2s}
+    .choice label .orb{width:46px;height:46px;border-radius:50%;background:var(--oat);display:grid;place-items:center;transition:background .2s}
+    .choice label .orb .ic{width:22px;height:22px}
+    .choice input{position:absolute;opacity:0;pointer-events:none}
+    .choice label:has(input:checked){border-color:var(--moss);background:var(--sage-xl);box-shadow:0 0 0 3px var(--sage-l)}
+    .choice label:has(input:checked) .orb{background:var(--sage)}
+    .qlabel{font-size:13px;font-weight:700;color:var(--forest);margin:0 0 8px 6px;display:block}
+    .note{text-align:center;font-size:12px;color:var(--muted);display:flex;align-items:center;justify-content:center;gap:5px;margin-top:10px}
+    .note .ic{color:var(--moss)}
+    .success{text-align:center;padding:16px 0}
+    .success .orb-big{width:84px;height:84px;margin:0 auto 18px;border-radius:50%;background:var(--sage-l);display:grid;place-items:center;color:var(--forest)}
+    .success .orb-big .ic{width:40px;height:40px}
+    .shop-hero{height:150px;border-radius:999px 999px 24px 24px;overflow:hidden;margin:-8px 0 20px}
+    .shop-hero img{width:100%;height:100%;object-fit:cover;object-position:center 60%}
+    .info-list{background:var(--oat);border-radius:24px;padding:16px 20px;display:grid;gap:8px;font-size:14px;margin-bottom:16px}
+    .info-list div{display:flex;gap:10px;align-items:flex-start}
+    .info-list .ic{color:var(--clay);margin-top:3px}
+    .map{height:180px;border-radius:24px;overflow:hidden;background:var(--oat);margin-bottom:18px}
+    .map iframe{width:100%;height:100%;border:0}
+    .two{display:flex;gap:10px}
+    .two>*{flex:1}
+
+    /* Mobile sticky */
+    .m-sticky{display:none;position:fixed;left:12px;right:12px;bottom:12px;z-index:40;background:rgba(250,247,241,.95);backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:999px;padding:6px;gap:6px;box-shadow:0 16px 30px -12px rgba(61,59,54,.45)}
+    .m-sticky a,.m-sticky button{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:12px 10px;border-radius:999px;font-weight:700;font-size:13px;white-space:nowrap}
+    .m-sticky a{background:var(--sage-xl);color:var(--forest)}
+    .m-sticky button{flex:1.5;background:var(--forest);color:var(--linen)}
+
+    @media (max-width:900px){
+      .modal-detail-grid{grid-template-columns:1fr;gap:24px}
+      .modal-detail-card{padding:30px 24px}
+      .fgrid{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width:640px){
+      .wrap{padding:0 16px}
+      .strip{display:none}
+      .nav{display:none}
+      .menu-btn{display:grid}
+      .hdr-phone{display:none}
+      .hdr-cta{display:none}
+      .filter-controls{flex-direction:column;align-items:stretch}
+      .select-group{width:100%}
+      .select-group select{flex:1}
+      .fgrid,.f2{grid-template-columns:1fr}
+      .m-sticky{display:flex}
+      body{padding-bottom:80px}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- SVG Sprite -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+    <symbol id="i-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16" rx="3"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/><rect x="7" y="12.5" width="4" height="4" rx="1" fill="currentColor" fill-opacity=".18" stroke="none"/><path d="M7 12.5h4v4H7z"/></symbol>
+    <symbol id="i-calendar-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16" rx="3"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/><path d="M3 9.5h18v8a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3z" fill="currentColor" fill-opacity=".18" stroke="none"/><path d="M8.5 15l2.3 2.3 4.7-4.6"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3.5h3l1.6 4.2-2 1.3a11 11 0 0 0 7.4 7.4l1.3-2 4.2 1.6v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 3 5.7a2 2 0 0 1 2-2.2z" fill="currentColor" fill-opacity=".18" stroke="none"/><path d="M5 3.5h3l1.6 4.2-2 1.3a11 11 0 0 0 7.4 7.4l1.3-2 4.2 1.6v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 3 5.7a2 2 0 0 1 2-2.2z"/><path d="M15 3.5a5.5 5.5 0 0 1 5.5 5.5M15 7a2 2 0 0 1 2 2"/></symbol>
+    <symbol id="i-map-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21.5s-7-6.2-7-11.5a7 7 0 0 1 14 0c0 5.3-7 11.5-7 11.5z" fill="currentColor" fill-opacity=".18" stroke="none"/><path d="M12 21.5s-7-6.2-7-11.5a7 7 0 0 1 14 0c0 5.3-7 11.5-7 11.5z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="i-store" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 4h15l1.5 5H3z" fill="currentColor" fill-opacity=".18" stroke="none"/><path d="M4.5 4h15l1.5 5H3z"/><path d="M3 9a3 3 0 0 0 6 0 3 3 0 0 0 6 0 3 3 0 0 0 6 0"/><path d="M5 11.5V20h14v-8.5M10 20v-4.5h4V20"/></symbol>
+    <symbol id="i-route" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 3.5l-17 7 7 2.5 2.5 7z" fill="currentColor" fill-opacity=".18" stroke="none"/><path d="M20.5 3.5l-17 7 7 2.5 2.5 7z"/><path d="M10.5 13l4-4"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.8l2.8 5.7 6.3.9-4.55 4.45 1.07 6.25L12 17.15 6.38 20.1l1.07-6.25L2.9 9.4l6.3-.9z" fill="currentColor"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.8l7.5 3v5.7c0 4.7-3.2 8.3-7.5 9.7-4.3-1.4-7.5-5-7.5-9.7V5.8z" fill="currentColor" fill-opacity=".18" stroke="none"/><path d="M12 2.8l7.5 3v5.7c0 4.7-3.2 8.3-7.5 9.7-4.3-1.4-7.5-5-7.5-9.7V5.8z"/><path d="M12 7.5v9M8.5 11.5h7" /></symbol>
+    <symbol id="i-shield-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.8l7.5 3v5.7c0 4.7-3.2 8.3-7.5 9.7-4.3-1.4-7.5-5-7.5-9.7V5.8z" fill="currentColor" fill-opacity=".18" stroke="none"/><path d="M12 2.8l7.5 3v5.7c0 4.7-3.2 8.3-7.5 9.7-4.3-1.4-7.5-5-7.5-9.7V5.8z"/><path d="M8.5 12l2.5 2.5 4.5-4.8"/></symbol>
+    <symbol id="i-award" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6" fill="currentColor" fill-opacity=".18" stroke="none"/><circle cx="12" cy="9" r="6"/><path d="M8.5 13.9L7 21.5l5-2.5 5 2.5-1.5-7.6"/><path d="M9.7 9l1.6 1.6 3-3.2"/></symbol>
+    <symbol id="i-tape-measure" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="11" r="7" fill="currentColor" fill-opacity=".18" stroke="none"/><circle cx="10" cy="11" r="7"/><circle cx="10" cy="11" r="2.2"/><path d="M10 18h11.5v-3.5H16.6"/><path d="M14 18v-1.6M17 18v-1.6M20 18v-1.6"/></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5.5 9.5V20h13V9.5L12 4z" fill="currentColor" fill-opacity=".18" stroke="none"/><path d="M3.5 11L12 4l8.5 7"/><path d="M5.5 9.5V20h4.5v-5.5h4V20h4.5V9.5"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+    <symbol id="i-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-chevron-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 6l6 6-6 6"/></symbol>
+    <symbol id="i-credit-card" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="2.5" fill="currentColor" fill-opacity=".18" stroke="none"/><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="M2.5 9.5h19M6 15h4"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9" fill="currentColor" fill-opacity=".18" stroke="none"/><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5" fill="currentColor" fill-opacity=".18" stroke="none"/><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h10"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="10.5" width="14" height="10" rx="2.5" fill="currentColor" fill-opacity=".18" stroke="none"/><rect x="5" y="10.5" width="14" height="10" rx="2.5"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5M12 14.5v2"/></symbol>
+  </svg>
+
+  <!-- Top Strip -->
+  <div class="strip">
+    <div class="wrap">
+      <span><svg class="ic" aria-hidden="true"><use href="#i-shield-check"/></svg>Gecertificeerd Bewegingstechnoloog</span>
+      <span><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg>4.8 / 5 uit 300+ geverifieerde reviews</span>
+      <span><svg class="ic" aria-hidden="true"><use href="#i-map-pin"/></svg>Showroom Merwedestraat 239, Dordrecht</span>
+      <a href="tel:0786314858"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>078 - 631 4858</a>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header id="main-header">
+    <div class="navbar">
+      <a href="index.html" class="logo" aria-label="Schipper Compact Wonen">
+        <span class="logo-mark">S</span>
+        <span><b>Schipper</b><small>Compact Wonen</small></span>
+      </a>
+      <nav class="nav" aria-label="Hoofdmenu">
+        <a href="collectie.html" class="active">Collectie</a>
+        <a href="index.html#werkwijze">Onze Werkwijze</a>
+        <a href="index.html#checklist">Zithouding Check</a>
+        <a href="index.html#ervaringen">Ervaringen</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <div class="hdr-right">
+        <a href="tel:0786314858" class="hdr-phone"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>078 - 631 4858</a>
+        <button onclick="openBookingModal('header')" class="btn btn-clay btn-sm hdr-cta"><svg class="ic" aria-hidden="true"><use href="#i-calendar"/></svg>Plan Adviesgesprek</button>
+        <button id="mobile-menu-btn" class="menu-btn" aria-label="Menu openen"><svg class="ic" aria-hidden="true"><use href="#i-menu"/></svg></button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden">
+      <a class="ml" href="collectie.html">Collectie</a>
+      <a class="ml" href="index.html#werkwijze">Onze Werkwijze</a>
+      <a class="ml" href="index.html#checklist">Zithouding Check (PDF)</a>
+      <a class="ml" href="index.html#ervaringen">Ervaringen</a>
+      <a class="ml" href="index.html#contact">Contact</a>
+      <div class="mm-cta">
+        <button onclick="openBookingModal('mobile-menu')" class="btn btn-clay"><svg class="ic" aria-hidden="true"><use href="#i-calendar"/></svg>Plan Adviesgesprek</button>
+        <a href="tel:0786314858" class="btn btn-ghost"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>Bel direct: 078 - 631 4858</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="wrap">
+    
+    <!-- Hero Header -->
+    <div class="catalog-hero">
+      <span class="eyebrow">Actueel Assortiment &amp; Voorraad</span>
+      <h1>Onze Collectie <span class="squig">Sta-op Stoelen<svg viewBox="0 0 200 14" preserveAspectRatio="none" aria-hidden="true"><path d="M3 8 C 40 2, 70 12, 110 7 S 170 3, 197 8"/></svg></span></h1>
+      <p>Van 100% nieuw ergonomisch maatwerk tot grondig gereviseerde occasions met 1 jaar garantie aan huis. Probeer ze vrijblijvend uit bij u thuis of in onze showroom.</p>
+    </div>
+
+    <!-- Filters Section -->
+    <div class="filter-section">
+      
+      <!-- Primary Tabs -->
+      <div class="filter-tabs">
+        <button class="filter-tab active" onclick="setConditionFilter('all')">
+          Alle modellen <span class="count" id="count-all">0</span>
+        </button>
+        <button class="filter-tab" onclick="setConditionFilter('nieuw')">
+          Nieuw &amp; Maatwerk <span class="count" id="count-nieuw">0</span>
+        </button>
+        <button class="filter-tab" onclick="setConditionFilter('occasion')">
+          Jong Gebruikt (Occasions) <span class="count" id="count-occasion">0</span>
+        </button>
+      </div>
+
+      <!-- Controls: Search + Select dropdowns -->
+      <div class="filter-controls">
+        <div class="search-box">
+          <svg class="ic" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          <input type="text" id="search-input" placeholder="Zoek op merk of model (bijv. Fitform, Ravi...)" oninput="handleSearch(this.value)">
+        </div>
+        
+        <div class="select-group">
+          <select id="brand-select" onchange="handleBrandChange(this.value)">
+            <option value="all">Alle merken</option>
+          </select>
+          
+          <select id="type-select" onchange="handleTypeChange(this.value)">
+            <option value="all">Alle types</option>
+            <option value="staop">Sta-op stoelen</option>
+            <option value="relax">Relaxfauteuils</option>
+          </select>
+
+          <select id="sort-select" onchange="handleSortChange(this.value)">
+            <option value="featured">Aanbevolen</option>
+            <option value="price-asc">Prijs: laag naar hoog</option>
+            <option value="price-desc">Prijs: hoog naar laag</option>
+            <option value="name-asc">Naam: A - Z</option>
+          </select>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Chairs Grid Container -->
+    <div id="chairs-grid" class="chairs-grid">
+      <!-- Injected by JavaScript -->
+    </div>
+
+  </main>
+
+  <!-- CHAIR DETAIL MODAL -->
+  <div id="chair-modal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-in">
+      <div class="modal-backdrop" onclick="closeChairModal()"></div>
+      <div class="modal-detail-card">
+        <button class="card-x" onclick="closeChairModal()" aria-label="Sluiten"><svg class="ic" aria-hidden="true"><use href="#i-close"/></svg></button>
+        
+        <div class="modal-detail-grid">
+          
+          <!-- Left: Gallery -->
+          <div>
+            <div class="gallery-main" id="modal-gallery-main">
+              <img id="modal-main-img" src="" alt="Stoel foto">
+            </div>
+            <div class="gallery-thumbs" id="modal-gallery-thumbs"></div>
+            
+            <div style="background:var(--oat);border-radius:20px;padding:16px;margin-top:16px;display:flex;align-items:center;gap:12px;font-size:13px;color:var(--forest)">
+              <svg class="ic" style="color:var(--moss);width:22px;height:22px" aria-hidden="true"><use href="#i-shield-check"/></svg>
+              <div>
+                <strong>Kosteloos thuis uitproberen</strong><br>
+                <span style="color:var(--muted)">Wij nemen deze stoel vrijblijvend mee naar uw woonkamer.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Info & Specs -->
+          <div>
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+              <span id="modal-badge-condition" class="chair-badge badge-nieuw" style="position:static"></span>
+              <span id="modal-badge-custom" class="chair-status-tag" style="position:static"></span>
+            </div>
+            
+            <span id="modal-brand" style="font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--moss)"></span>
+            <h2 id="modal-name" class="serif" style="font-size:28px;margin:4px 0 10px"></h2>
+            
+            <div class="chair-price-row">
+              <span id="modal-price" class="chair-price" style="font-size:30px"></span>
+              <span id="modal-old-price" class="chair-old-price" style="font-size:18px"></span>
+            </div>
+
+            <p id="modal-description" style="color:var(--muted);font-size:14.5px;line-height:1.6;margin-bottom:18px"></p>
+
+            <h4 class="serif" style="font-size:17px;margin-bottom:8px">Belangrijkste eigenschappen:</h4>
+            <ul id="modal-features" class="chair-features" style="font-size:13.5px"></ul>
+
+            <h4 class="serif" style="font-size:17px;margin:20px 0 8px">Specificaties &amp; Pasvorm:</h4>
+            <table class="modal-specs-table" id="modal-specs-table"></table>
+
+            <div style="display:grid;gap:10px;margin-top:24px">
+              <button id="modal-btn-thuis" onclick="bookFromModal('thuis')" class="btn btn-clay" style="width:100%">
+                <svg class="ic" aria-hidden="true"><use href="#i-calendar"/></svg>
+                Proefzitten aan huis plannen
+              </button>
+              <button id="modal-btn-showroom" onclick="bookFromModal('showroom')" class="btn btn-ghost" style="width:100%">
+                <svg class="ic" aria-hidden="true"><use href="#i-store"/></svg>
+                In showroom Dordrecht bekijken
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BOOKING MODAL -->
+  <div id="booking-modal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-in">
+      <div class="modal-backdrop" onclick="closeBookingModal()"></div>
+      <div class="card">
+        <button class="card-x" onclick="closeBookingModal()" aria-label="Sluiten"><svg class="ic" aria-hidden="true"><use href="#i-close"/></svg></button>
+        <div id="modal-form-container">
+          <span class="eyebrow">100% Vrijblijvend</span>
+          <h3 id="bm-title">Plan uw Adviesgesprek / Proefzit</h3>
+          <p id="bm-subtitle" class="lede" style="color:var(--muted);font-size:14.5px;margin:6px 0 20px">Geef uw voorkeur aan. Wij nemen binnen 1 werkdag contact met u op.</p>
+          <form onsubmit="handleBookingSubmit(event)">
+            <div>
+              <span class="qlabel">Waar wilt u de stoel proberen?</span>
+              <div class="choice">
+                <label><input type="radio" name="appointment-type" id="apt-thuis" value="thuis" checked><span class="orb"><svg class="ic" aria-hidden="true"><use href="#i-home"/></svg></span>Gratis aan huis</label>
+                <label><input type="radio" name="appointment-type" id="apt-showroom" value="showroom"><span class="orb"><svg class="ic" aria-hidden="true"><use href="#i-store"/></svg></span>In showroom Dordrecht</label>
+              </div>
+            </div>
+            <div class="field" style="margin-top:14px"><label for="book-name">Uw naam *</label><input type="text" id="book-name" required placeholder="Dhr. / Mw. Jansen"></div>
+            <div class="f2" style="margin-top:10px">
+              <div class="field"><label for="book-phone">Telefoonnummer *</label><input type="tel" id="book-phone" required placeholder="06 - 12345678"></div>
+              <div class="field"><label for="book-email">E-mailadres</label><input type="email" id="book-email" placeholder="uw@email.nl"></div>
+            </div>
+            <div class="f2" style="margin-top:10px">
+              <div class="field"><label for="book-postcode">Postcode / Woonplaats *</label><input type="text" id="book-postcode" required placeholder="3313 GT Dordrecht"></div>
+              <div class="field"><label for="book-prefday">Voorkeursdag</label>
+                <select id="book-prefday">
+                  <option value="zsm">Zo snel mogelijk</option>
+                  <option value="ochtend">Maandag of Dinsdag</option>
+                  <option value="middag">Woensdag of Donderdag</option>
+                  <option value="vrijdag">Vrijdag of Zaterdag</option>
+                </select>
+              </div>
+            </div>
+            <div class="field" style="margin-top:10px"><label for="book-notes">Gekozen stoel / wensen</label><textarea id="book-notes" rows="2" placeholder="Geef eventuele klachten of wensen door..."></textarea></div>
+            <button type="submit" class="btn btn-clay" style="width:100%;margin-top:16px"><svg class="ic" aria-hidden="true"><use href="#i-calendar-check"/></svg>Bevestig Aanvraag</button>
+            <p class="note"><svg class="ic" aria-hidden="true"><use href="#i-lock"/></svg>Geen aankoopverplichting. Wij helpen u rustig op maat.</p>
+          </form>
+        </div>
+        <div id="modal-success-container" class="success hidden">
+          <div class="orb-big"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg></div>
+          <h3>Hartelijk dank voor uw aanvraag!</h3>
+          <p>We hebben uw verzoek ontvangen. Specialist Geert-Jan Schipper of een van onze collega's neemt binnen 1 werkdag telefonisch contact op om een passend tijdstip af te stemmen.</p>
+          <button onclick="closeBookingModal()" class="btn btn-primary" style="width:auto">Venster sluiten</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SHOWROOM MODAL -->
+  <div id="showroom-modal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-in">
+      <div class="modal-backdrop" onclick="closeShowroomModal()"></div>
+      <div class="card">
+        <button class="card-x" onclick="closeShowroomModal()" aria-label="Sluiten"><svg class="ic" aria-hidden="true"><use href="#i-close"/></svg></button>
+        <div class="shop-hero"><img src="assets/bezorging.png" alt="Gevel showroom Dordrecht" loading="lazy"></div>
+        <span class="eyebrow">Welkom in Dordrecht</span>
+        <h3>Showroom Schipper Compact Wonen</h3>
+        <p class="lede">Kom al onze maatwerk- en occasion stoelen rustig uitproberen. Gratis parkeren voor de deur.</p>
+        <div class="info-list">
+          <div><svg class="ic" aria-hidden="true"><use href="#i-map-pin"/></svg><span><strong>Adres:</strong> Merwedestraat 239, 3313 GT Dordrecht</span></div>
+          <div><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg><span><strong>Telefoon:</strong> <a href="tel:0786314858">078 - 631 4858</a></span></div>
+          <div><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg><span><strong>Openingstijden:</strong> Ma t/m Vr: 09:00 - 17:00 | Za: Op afspraak</span></div>
+        </div>
+        <div class="map"><iframe src="https://maps.google.com/maps?q=Merwedestraat%20239,%20Dordrecht&t=&z=14&ie=UTF8&iwloc=&output=embed" title="Kaart showroom" allowfullscreen loading="lazy"></iframe></div>
+        <div class="two">
+          <a href="https://www.google.com/maps/dir/?api=1&destination=Merwedestraat+239,+Dordrecht" target="_blank" rel="noopener" class="btn btn-primary"><svg class="ic" aria-hidden="true"><use href="#i-route"/></svg>Route plannen</a>
+          <button onclick="closeShowroomModal(); openBookingModal('from-showroom-modal');" class="btn btn-clay"><svg class="ic" aria-hidden="true"><use href="#i-calendar"/></svg>Afspraak maken</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <div class="wrap">
+      <div class="fgrid">
+        <div>
+          <a href="index.html" class="logo" style="margin-bottom:18px"><span class="logo-mark">S</span><span><b>Schipper</b><small>Compact Wonen</small></span></a>
+          <p>Dé regionale specialist in ergonomische sta-op-stoelen en op maat afgestemd zitcomfort. Eerlijk advies door gecertificeerde bewegingstechnologen, thuis of in de showroom.</p>
+          <p style="margin-top:14px;font-size:13px">KvK: 24391284<br>BTW: NL815610427B01</p>
+        </div>
+        <div>
+          <h4>Snelle Links</h4>
+          <ul>
+            <li><a href="collectie.html?filter=nieuw"><svg class="ic" aria-hidden="true"><use href="#i-chevron-right"/></svg>Collectie Maatwerk</a></li>
+            <li><a href="collectie.html?filter=occasion"><svg class="ic" aria-hidden="true"><use href="#i-chevron-right"/></svg>Occasions (Jong Gebruikt)</a></li>
+            <li><a href="index.html#checklist"><svg class="ic" aria-hidden="true"><use href="#i-chevron-right"/></svg>Zithouding Checklist (PDF)</a></li>
+            <li><a href="index.html#werkwijze"><svg class="ic" aria-hidden="true"><use href="#i-chevron-right"/></svg>Werkwijze &amp; Thuisbezoek</a></li>
+            <li><a href="index.html#ervaringen"><svg class="ic" aria-hidden="true"><use href="#i-chevron-right"/></svg>Klantbeoordelingen (4.8/5)</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Showroom &amp; Contact</h4>
+          <img class="shop-thumb" src="assets/bezorging.png" alt="Showroom en bezorgbus van Schipper Compact Wonen in Dordrecht" loading="lazy">
+          <address>
+            <div class="frow"><svg class="ic" aria-hidden="true"><use href="#i-map-pin"/></svg><div><strong style="color:var(--forest)">Showroom Dordrecht:</strong><br>Merwedestraat 239<br>3313 GT Dordrecht</div></div>
+            <div class="frow"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg><a href="tel:0786314858" style="color:var(--forest);font-weight:700">078 - 631 4858</a></div>
+            <div class="frow"><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg><a href="mailto:info@schippercompactwonen.nl" style="word-break:break-all">info@schippercompactwonen.nl</a></div>
+            <div class="frow" style="font-size:13px"><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg>Ma t/m Vr: 09:00 - 17:00 | Za: Op afspraak</div>
+          </address>
+        </div>
+        <div>
+          <h4>Zekerheid &amp; Garantie</h4>
+          <div class="seal"><i><svg class="ic" aria-hidden="true"><use href="#i-shield"/></svg></i><div><b>Tot 5 Jaar Garantie</b><small>Volledige service aan huis</small></div></div>
+          <div class="seal"><i><svg class="ic" aria-hidden="true"><use href="#i-award"/></svg></i><div><b>Thuiswinkel &amp; Ergonomie</b><small>Erkend vakspecialist</small></div></div>
+          <p style="margin-top:16px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:700"><svg class="ic" aria-hidden="true"><use href="#i-credit-card"/></svg> Veilig betalen:</p>
+          <div class="pay"><span>iDeal</span><span>PIN aan huis</span><span>Factuur na levering</span></div>
+        </div>
+      </div>
+      <div class="fbottom">
+        <div>© 2026 Schipper Compact Wonen. Alle rechten voorbehouden.</div>
+        <nav><a href="#">Algemene Voorwaarden</a><a href="#">Privacy Policy</a><a href="#">Cookieverklaring</a></nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Sticky Bar -->
+  <div class="m-sticky">
+    <a href="tel:0786314858"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>078 - 631 4858</a>
+    <button onclick="openBookingModal('mobile-sticky')"><svg class="ic" aria-hidden="true"><use href="#i-calendar"/></svg>Plan Adviesgesprek</button>
+  </div>
+
+  <!-- JavaScript: Database Loader, Filters, Modals -->
+  <script>
+    let allChairs = [];
+    let currentFilter = {
+      condition: 'all',
+      brand: 'all',
+      type: 'all',
+      search: '',
+      sort: 'featured'
+    };
+    let activeChair = null;
+
+    // Image error fallback: if not local, try live staopstoelen.nl server, then fallback to placeholder
+    function handleImgError(img) {
+      const src = img.getAttribute('src');
+      if (src && !src.startsWith('http://') && !src.startsWith('https://')) {
+        img.src = 'https://staopstoelen.nl/' + src.replace(/^\/+/, '');
+      } else {
+        img.src = 'assets/chair_custom.png';
+      }
+    }
+
+    // Clean HTML in description
+    function cleanDescription(raw) {
+      if (!raw) return 'Deze comfortabele sta-op stoel biedt optimale ondersteuning voor rug, nek en gewrichten. Volledig af te stellen op uw persoonlijke lichaamsmaten.';
+      const tmp = document.createElement('div');
+      tmp.innerHTML = raw;
+      const text = tmp.innerText || tmp.textContent || '';
+      return text.trim().replace(/\n\s*\n/g, '\n\n');
+    }
+
+    // Format currency in clean Dutch notation
+    function formatPrice(num) {
+      if (!num || isNaN(num)) return 'Prijs op aanvraag';
+      return '€ ' + num.toLocaleString('nl-NL') + ',-';
+    }
+
+    // Load Database from local database.json with live fallback/sync
+    async function loadDatabase() {
+      try {
+        // Try local database.json first
+        const res = await fetch('database.json');
+        if (res.ok) {
+          const data = await res.json();
+          allChairs = data.staopstoelen || [];
+        }
+      } catch (err) {
+        console.warn('Kon lokale database.json niet laden, fallback...', err);
+      }
+
+      // Live sync check with Staopstoelen.nl API if available
+      try {
+        const liveRes = await fetch('https://staopstoelen.nl/api/chairs.php');
+        if (liveRes.ok) {
+          const liveData = await liveRes.json();
+          if (liveData && liveData.staopstoelen && liveData.staopstoelen.length > 0) {
+            allChairs = liveData.staopstoelen;
+          }
+        }
+      } catch (e) {
+        // Offline / CORS fallback to local data, completely normal
+      }
+
+      // Initialize UI
+      populateBrandSelect();
+      updateCounts();
+
+      // Read query params (e.g. ?filter=occasion of ?filter=nieuw)
+      const urlParams = new URLSearchParams(window.location.search);
+      const filterParam = urlParams.get('filter');
+      if (filterParam === 'nieuw' || filterParam === 'occasion') {
+        setConditionFilter(filterParam);
+      } else {
+        renderChairs();
+      }
+    }
+
+    // Populate Brand Dropdown dynamically
+    function populateBrandSelect() {
+      const brandSelect = document.getElementById('brand-select');
+      const brands = new Set();
+      allChairs.forEach(c => {
+        if (c.brand) brands.add(c.brand);
+      });
+      const sorted = Array.from(brands).sort();
+      sorted.forEach(b => {
+        const opt = document.createElement('option');
+        opt.value = b;
+        opt.textContent = b;
+        brandSelect.appendChild(opt);
+      });
+    }
+
+    // Update Counter Badges
+    function updateCounts() {
+      const countAll = allChairs.length;
+      const countNieuw = allChairs.filter(c => c.condition === 'nieuw').length;
+      const countOccasion = allChairs.filter(c => c.condition === 'occasion').length;
+      document.getElementById('count-all').textContent = countAll;
+      document.getElementById('count-nieuw').textContent = countNieuw;
+      document.getElementById('count-occasion').textContent = countOccasion;
+    }
+
+    // Filter Handlers
+    function setConditionFilter(cond) {
+      currentFilter.condition = cond;
+      document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+      if (cond === 'all') document.querySelectorAll('.filter-tab')[0].classList.add('active');
+      if (cond === 'nieuw') document.querySelectorAll('.filter-tab')[1].classList.add('active');
+      if (cond === 'occasion') document.querySelectorAll('.filter-tab')[2].classList.add('active');
+      renderChairs();
+    }
+
+    function handleSearch(val) {
+      currentFilter.search = val.toLowerCase().trim();
+      renderChairs();
+    }
+
+    function handleBrandChange(val) {
+      currentFilter.brand = val;
+      renderChairs();
+    }
+
+    function handleTypeChange(val) {
+      currentFilter.type = val;
+      renderChairs();
+    }
+
+    function handleSortChange(val) {
+      currentFilter.sort = val;
+      renderChairs();
+    }
+
+    // Render Chairs Grid
+    function renderChairs() {
+      const grid = document.getElementById('chairs-grid');
+      let filtered = allChairs.filter(c => {
+        if (currentFilter.condition !== 'all' && c.condition !== currentFilter.condition) return false;
+        if (currentFilter.brand !== 'all' && c.brand !== currentFilter.brand) return false;
+        if (currentFilter.type !== 'all' && c.type !== currentFilter.type) return false;
+        if (currentFilter.search) {
+          const haystack = (c.name + ' ' + (c.brand || '') + ' ' + (c.model || '') + ' ' + (c.description || '')).toLowerCase();
+          if (!haystack.includes(currentFilter.search)) return false;
+        }
+        return true;
+      });
+
+      // Sorting
+      if (currentFilter.sort === 'price-asc') {
+        filtered.sort((a,b) => (a.price || 0) - (b.price || 0));
+      } else if (currentFilter.sort === 'price-desc') {
+        filtered.sort((a,b) => (b.price || 0) - (a.price || 0));
+      } else if (currentFilter.sort === 'name-asc') {
+        filtered.sort((a,b) => (a.name || '').localeCompare(b.name || ''));
+      }
+
+      if (filtered.length === 0) {
+        grid.innerHTML = `
+          <div class="empty-state">
+            <h3 class="serif">Geen stoelen gevonden</h3>
+            <p style="color:var(--muted);margin-bottom:18px">Er zijn geen stoelen die voldoen aan uw huidige filters.</p>
+            <button onclick="resetFilters()" class="btn btn-clay">Reset alle filters</button>
+          </div>
+        `;
+        return;
+      }
+
+      grid.innerHTML = filtered.map(c => {
+        const isNieuw = c.condition === 'nieuw';
+        const badgeClass = c.status === 'verkocht' ? 'badge-verkocht' : (isNieuw ? 'badge-nieuw' : 'badge-occasion');
+        const badgeText = c.status === 'verkocht' ? 'Verkocht' : (c.badge || (isNieuw ? 'Nieuw & Maatwerk' : 'Occasion'));
+        const statusText = isNieuw ? '100% Maatwerk' : 'Direct Leverbaar';
+
+        // Extract 2 key specifications for pills
+        const specPills = [];
+        if (c.specifications) {
+          if (c.specifications['Aantal motoren']) specPills.push(c.specifications['Aantal motoren']);
+          if (c.specifications['Bekleding']) specPills.push(c.specifications['Bekleding'].split(',')[0]);
+          if (c.specifications['Garantie']) specPills.push(c.specifications['Garantie'] + ' garantie');
+        } else if (c.material) {
+          specPills.push(c.material);
+        }
+
+        // 2 key features
+        const featuresHtml = (c.features || []).slice(0, 2).map(f => `
+          <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>${f}</span></li>
+        `).join('');
+
+        return `
+          <article class="chair-card">
+            <div class="chair-thumb">
+              <img src="${c.image || 'assets/chair_custom.png'}" alt="${c.name}" onerror="handleImgError(this)" loading="lazy">
+              <span class="chair-badge ${badgeClass}">${badgeText}</span>
+              <span class="chair-status-tag">${statusText}</span>
+            </div>
+            
+            <div class="chair-content">
+              <span class="chair-brand">${c.brand || 'Schipper Selectie'}</span>
+              <h3 class="chair-title">${c.name}</h3>
+              
+              <div class="chair-price-row">
+                <span class="chair-price">${formatPrice(c.price)}</span>
+                ${c.old_price ? `<span class="chair-old-price">${formatPrice(c.old_price)}</span>` : ''}
+              </div>
+
+              ${featuresHtml ? `<ul class="chair-features">${featuresHtml}</ul>` : ''}
+
+              ${specPills.length > 0 ? `
+                <div class="chair-specs-preview">
+                  ${specPills.map(s => `<span class="spec-pill">${s}</span>`).join('')}
+                </div>
+              ` : ''}
+
+              <button onclick="openChairDetail('${c.id}')" class="btn-detail">
+                <span>Bekijk details &amp; pasvorm</span>
+                <i><svg class="ic" aria-hidden="true"><use href="#i-arrow-right"/></svg></i>
+              </button>
+            </div>
+          </article>
+        `;
+      }).join('');
+    }
+
+    function resetFilters() {
+      currentFilter = { condition: 'all', brand: 'all', type: 'all', search: '', sort: 'featured' };
+      document.getElementById('search-input').value = '';
+      document.getElementById('brand-select').value = 'all';
+      document.getElementById('type-select').value = 'all';
+      document.getElementById('sort-select').value = 'featured';
+      setConditionFilter('all');
+    }
+
+    // Chair Detail Modal
+    function openChairDetail(id) {
+      activeChair = allChairs.find(c => c.id === id);
+      if (!activeChair) return;
+
+      const modal = document.getElementById('chair-modal');
+      const isNieuw = activeChair.condition === 'nieuw';
+
+      // Badges
+      const badgeCond = document.getElementById('modal-badge-condition');
+      badgeCond.className = 'chair-badge ' + (activeChair.status === 'verkocht' ? 'badge-verkocht' : (isNieuw ? 'badge-nieuw' : 'badge-occasion'));
+      badgeCond.textContent = activeChair.status === 'verkocht' ? 'Verkocht' : (isNieuw ? 'Nieuw & Maatwerk' : 'Occasion');
+
+      const badgeCustom = document.getElementById('modal-badge-custom');
+      badgeCustom.textContent = activeChair.badge || (isNieuw ? '100% Maatwerk' : 'Direct Leverbaar');
+
+      // Headings & Prices
+      document.getElementById('modal-brand').textContent = activeChair.brand || 'Schipper Selectie';
+      document.getElementById('modal-name').textContent = activeChair.name;
+      document.getElementById('modal-price').textContent = formatPrice(activeChair.price);
+      
+      const oldPriceEl = document.getElementById('modal-old-price');
+      if (activeChair.old_price) {
+        oldPriceEl.textContent = formatPrice(activeChair.old_price);
+        oldPriceEl.style.display = 'inline';
+      } else {
+        oldPriceEl.style.display = 'none';
+      }
+
+      // Description
+      document.getElementById('modal-description').textContent = cleanDescription(activeChair.description);
+
+      // Features
+      const featList = document.getElementById('modal-features');
+      featList.innerHTML = (activeChair.features || []).map(f => `
+        <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>${f}</span></li>
+      `).join('') || '<li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>100% Ergonomisch zitcomfort</span></li>';
+
+      // Specifications Table
+      const specsTable = document.getElementById('modal-specs-table');
+      let specsRows = '';
+      if (activeChair.specifications && Object.keys(activeChair.specifications).length > 0) {
+        for (const [key, val] of Object.entries(activeChair.specifications)) {
+          specsRows += `<tr><td>${key}</td><td>${val}</td></tr>`;
+        }
+      } else {
+        specsRows += `<tr><td>Merk</td><td>${activeChair.brand || 'Onbekend'}</td></tr>`;
+        specsRows += `<tr><td>Staat</td><td>${isNieuw ? 'Nieuw' : 'Gereconditioneerd'}</td></tr>`;
+        specsRows += `<tr><td>Garantie</td><td>${isNieuw ? 'Tot 5 jaar' : '1 jaar aan huis'}</td></tr>`;
+      }
+      specsTable.innerHTML = specsRows;
+
+      // Gallery Images
+      const gallery = [];
+      if (activeChair.image) gallery.push(activeChair.image);
+      if (activeChair.imageUp && !gallery.includes(activeChair.imageUp)) gallery.push(activeChair.imageUp);
+      if (activeChair.imageLie && !gallery.includes(activeChair.imageLie)) gallery.push(activeChair.imageLie);
+      if (activeChair.ambientImage && !gallery.includes(activeChair.ambientImage)) gallery.push(activeChair.ambientImage);
+      (activeChair.gallery || []).forEach(img => {
+        if (!gallery.includes(img)) gallery.push(img);
+      });
+
+      const mainImg = document.getElementById('modal-main-img');
+      mainImg.src = gallery[0] || 'assets/chair_custom.png';
+      mainImg.onerror = function() { handleImgError(this); };
+
+      const thumbsContainer = document.getElementById('modal-gallery-thumbs');
+      thumbsContainer.innerHTML = gallery.map((img, idx) => `
+        <div class="gallery-thumb ${idx === 0 ? 'active' : ''}" onclick="selectModalImg(this, '${img}')">
+          <img src="${img}" alt="Miniatuur ${idx + 1}" onerror="handleImgError(this)">
+        </div>
+      `).join('');
+
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function selectModalImg(el, src) {
+      document.getElementById('modal-main-img').src = src;
+      document.querySelectorAll('.gallery-thumb').forEach(t => t.classList.remove('active'));
+      el.classList.add('active');
+    }
+
+    function closeChairModal() {
+      document.getElementById('chair-modal').classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+
+    // Direct booking from chair detail modal
+    function bookFromModal(type) {
+      closeChairModal();
+      openBookingModal('chair-modal');
+      if (type === 'showroom') {
+        document.getElementById('apt-showroom').checked = true;
+      } else {
+        document.getElementById('apt-thuis').checked = true;
+      }
+      if (activeChair) {
+        document.getElementById('book-notes').value = `Interesse in stoel: ${activeChair.name} (${formatPrice(activeChair.price)})`;
+      }
+    }
+
+    // Booking modal handlers
+    const bookingModal = document.getElementById('booking-modal');
+    const showroomModal = document.getElementById('showroom-modal');
+
+    function openBookingModal(origin) {
+      bookingModal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeBookingModal() {
+      bookingModal.classList.add('hidden');
+      document.body.style.overflow = '';
+      setTimeout(() => {
+        document.getElementById('modal-form-container').classList.remove('hidden');
+        document.getElementById('modal-success-container').classList.add('hidden');
+      }, 300);
+    }
+
+    function openShowroomModal() {
+      showroomModal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeShowroomModal() {
+      showroomModal.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+
+    function handleBookingSubmit(e) {
+      e.preventDefault();
+      document.getElementById('modal-form-container').classList.add('hidden');
+      document.getElementById('modal-success-container').classList.remove('hidden');
+    }
+
+    // Mobile Menu
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    }
+
+    // Header scroll shadow
+    window.addEventListener('scroll', () => {
+      document.getElementById('main-header').classList.toggle('scrolled', window.scrollY > 20);
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeChairModal();
+        closeBookingModal();
+        closeShowroomModal();
+      }
+    });
+
+    // Init on load
+    loadDatabase(); setTimeout(()=>{ if(allChairs.length>0) openChairDetail(allChairs[0].id); }, 1000);
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Designvarianten — Schipper Compact Wonen</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: system-ui, -apple-system, sans-serif; background: #111; color: #eee; }
+    header { display: flex; align-items: center; gap: 12px; padding: 14px 20px; background: #000; position: sticky; top: 0; z-index: 2; flex-wrap: wrap; }
+    header h1 { font-size: 15px; margin: 0 16px 0 0; font-weight: 600; }
+    button { background: #222; color: #ddd; border: 1px solid #333; padding: 8px 14px; border-radius: 8px; cursor: pointer; font-size: 13px; }
+    button.active { background: #fff; color: #000; border-color: #fff; }
+    .sep { width: 1px; height: 24px; background: #333; margin: 0 6px; }
+    a.open { color: #9cf; font-size: 13px; margin-left: auto; }
+    .stage { display: flex; justify-content: center; padding: 20px; }
+    iframe { border: 0; background: #fff; height: calc(100vh - 100px); border-radius: 10px; transition: width .3s; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Schipper — kies een design</h1>
+    <button data-src="index.html" class="active">Homepage (Scandinavisch)</button>
+    <button data-src="collectie.html">🪑 Collectie Catalogus (Live DB)</button>
+    <button data-src="design-editorial.html">A · Editorial</button>
+    <button data-src="design-modern.html">Oud (Modern)</button>
+    <span class="sep"></span>
+    <button data-w="100%" class="active w">Desktop</button>
+    <button data-w="390px" class="w">Mobiel</button>
+    <a class="open" id="open" href="design-editorial.html" target="_blank">Open in nieuw tabblad ↗</a>
+  </header>
+  <div class="stage"><iframe id="f" src="design-editorial.html" style="width:100%"></iframe></div>
+  <script>
+    const f = document.getElementById('f'), open = document.getElementById('open');
+    document.querySelectorAll('button[data-src]').forEach(b => b.onclick = () => {
+      document.querySelectorAll('button[data-src]').forEach(x => x.classList.remove('active'));
+      b.classList.add('active'); f.src = b.dataset.src; open.href = b.dataset.src;
+    });
+    document.querySelectorAll('button.w').forEach(b => b.onclick = () => {
+      document.querySelectorAll('button.w').forEach(x => x.classList.remove('active'));
+      b.classList.add('active'); f.style.width = b.dataset.w;
+    });
+  </script>
+</body>
+</html>

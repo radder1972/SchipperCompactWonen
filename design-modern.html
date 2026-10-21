@@ -1,0 +1,1438 @@
+<!DOCTYPE html>
+<html lang="nl" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Schipper Compact Wonen | Pijnvrij opstaan en perfect zitten</title>
+  <meta name="description" content="Eerlijk en deskundig advies over sta-op-stoelen en maatwerk zitsystemen. Wij meten uw perfecte zithouding tot op de millimeter na, bij u thuis of in onze showroom.">
+
+  <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN with configuration -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            heading: ['Outfit', 'sans-serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              navy: '#0f172a',
+              slate: '#1e293b',
+              subtle: '#475569',
+              light: '#f8fafc',
+              warmgray: '#f1f5f9',
+              terracotta: '#c25e36',
+              amber: '#d97706',
+              amberdark: '#b45309',
+              amberlight: '#fef3c7',
+              accent: '#2563eb',
+              green: '#15803d',
+              greenlight: '#dcfce7'
+            }
+          },
+          boxShadow: {
+            'warm': '0 10px 30px -10px rgba(15, 23, 42, 0.08), 0 4px 6px -2px rgba(15, 23, 42, 0.04)',
+            'warm-lg': '0 20px 40px -15px rgba(15, 23, 42, 0.12), 0 8px 12px -4px rgba(15, 23, 42, 0.06)',
+            'gold': '0 10px 25px -5px rgba(217, 119, 6, 0.3)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom 3D Book & Document Perspective */
+    .perspective-container {
+      perspective: 1200px;
+    }
+    .document-3d {
+      transform: rotateY(-14deg) rotateX(7deg) rotateZ(-1deg);
+      transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.5s ease;
+      box-shadow: -15px 25px 45px -10px rgba(15, 23, 42, 0.25), 
+                  -5px 10px 15px -3px rgba(15, 23, 42, 0.12),
+                  inset 1px 1px 0 rgba(255,255,255,0.8);
+    }
+    .perspective-container:hover .document-3d {
+      transform: rotateY(-6deg) rotateX(3deg) rotateZ(0deg) translateY(-8px);
+      box-shadow: -20px 35px 55px -12px rgba(15, 23, 42, 0.32), 
+                  -5px 12px 20px -3px rgba(15, 23, 42, 0.15);
+    }
+    
+    /* Smooth carousel animation */
+    .carousel-slide {
+      transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+    }
+
+    /* Modal Backdrop */
+    .modal-backdrop {
+      background-color: rgba(15, 23, 42, 0.6);
+      backdrop-filter: blur(4px);
+    }
+    /* Icon set basis */
+    .ic { display: inline-block; flex-shrink: 0; vertical-align: middle; }
+  </style>
+</head>
+<body class="bg-[#FBFBFB] text-slate-800 font-sans antialiased selection:bg-amber-100 selection:text-amber-900 flex flex-col min-h-screen">
+
+  <!-- Schipper Icon Set (bron: assets/icons/) -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+    <symbol id="i-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16" rx="3"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/><rect x="7" y="12.5" width="4" height="4" rx="1" fill="currentColor" fill-opacity=".18" stroke="none"/><path d="M7 12.5h4v4H7z"/></symbol>
+    <symbol id="i-calendar-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16" rx="3"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/><path d="M3 9.5h18v8a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3z" fill="currentColor" fill-opacity=".18" stroke="none"/><path d="M8.5 15l2.3 2.3 4.7-4.6"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3.5h3l1.6 4.2-2 1.3a11 11 0 0 0 7.4 7.4l1.3-2 4.2 1.6v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 3 5.7a2 2 0 0 1 2-2.2z" fill="currentColor" fill-opacity=".18" stroke="none"/><path d="M5 3.5h3l1.6 4.2-2 1.3a11 11 0 0 0 7.4 7.4l1.3-2 4.2 1.6v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 3 5.7a2 2 0 0 1 2-2.2z"/><path d="M15 3.5a5.5 5.5 0 0 1 5.5 5.5M15 7a2 2 0 0 1 2 2"/></symbol>
+    <symbol id="i-map-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21.5s-7-6.2-7-11.5a7 7 0 0 1 14 0c0 5.3-7 11.5-7 11.5z" fill="currentColor" fill-opacity=".18" stroke="none"/><path d="M12 21.5s-7-6.2-7-11.5a7 7 0 0 1 14 0c0 5.3-7 11.5-7 11.5z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="i-store" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 4h15l1.5 5H3z" fill="currentColor" fill-opacity=".18" stroke="none"/><path d="M4.5 4h15l1.5 5H3z"/><path d="M3 9a3 3 0 0 0 6 0 3 3 0 0 0 6 0 3 3 0 0 0 6 0"/><path d="M5 11.5V20h14v-8.5M10 20v-4.5h4V20"/></symbol>
+    <symbol id="i-route" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 3.5l-17 7 7 2.5 2.5 7z" fill="currentColor" fill-opacity=".18" stroke="none"/><path d="M20.5 3.5l-17 7 7 2.5 2.5 7z"/><path d="M10.5 13l4-4"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.8l2.8 5.7 6.3.9-4.55 4.45 1.07 6.25L12 17.15 6.38 20.1l1.07-6.25L2.9 9.4l6.3-.9z" fill="currentColor"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-check-circle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9" fill="currentColor" fill-opacity=".18" stroke="none"/><circle cx="12" cy="12" r="9"/><path d="M8 12.3l2.7 2.7 5.3-5.5"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.8l7.5 3v5.7c0 4.7-3.2 8.3-7.5 9.7-4.3-1.4-7.5-5-7.5-9.7V5.8z" fill="currentColor" fill-opacity=".18" stroke="none"/><path d="M12 2.8l7.5 3v5.7c0 4.7-3.2 8.3-7.5 9.7-4.3-1.4-7.5-5-7.5-9.7V5.8z"/><path d="M12 7.5v9M8.5 11.5h7" /></symbol>
+    <symbol id="i-shield-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.8l7.5 3v5.7c0 4.7-3.2 8.3-7.5 9.7-4.3-1.4-7.5-5-7.5-9.7V5.8z" fill="currentColor" fill-opacity=".18" stroke="none"/><path d="M12 2.8l7.5 3v5.7c0 4.7-3.2 8.3-7.5 9.7-4.3-1.4-7.5-5-7.5-9.7V5.8z"/><path d="M8.5 12l2.5 2.5 4.5-4.8"/></symbol>
+    <symbol id="i-award" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6" fill="currentColor" fill-opacity=".18" stroke="none"/><circle cx="12" cy="9" r="6"/><path d="M8.5 13.9L7 21.5l5-2.5 5 2.5-1.5-7.6"/><path d="M9.7 9l1.6 1.6 3-3.2"/></symbol>
+    <symbol id="i-tape-measure" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="11" r="7" fill="currentColor" fill-opacity=".18" stroke="none"/><circle cx="10" cy="11" r="7"/><circle cx="10" cy="11" r="2.2"/><path d="M10 18h11.5v-3.5H16.6"/><path d="M14 18v-1.6M17 18v-1.6M20 18v-1.6"/></symbol>
+    <symbol id="i-home-coffee" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 11L12 4l8.5 7"/><path d="M5.5 9.5V20h13V9.5"/><path d="M8.8 13h5.4v2.6a2.7 2.7 0 0 1-5.4 0z" fill="currentColor" fill-opacity=".18" stroke="none"/><path d="M8.8 13h5.4v2.6a2.7 2.7 0 0 1-5.4 0z"/><path d="M14.2 13.6h.8a1.3 1.3 0 0 1 0 2.6h-1"/></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5.5 9.5V20h13V9.5L12 4z" fill="currentColor" fill-opacity=".18" stroke="none"/><path d="M3.5 11L12 4l8.5 7"/><path d="M5.5 9.5V20h4.5v-5.5h4V20h4.5V9.5"/></symbol>
+    <symbol id="i-van" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 6h10a1 1 0 0 1 1 1v9h-12V7a1 1 0 0 1 1-1z" fill="currentColor" fill-opacity=".18" stroke="none"/><path d="M3.5 6h10a1 1 0 0 1 1 1v9h-12V7a1 1 0 0 1 1-1z"/><path d="M14.5 9.5h3.7l3.3 3.6v2.9h-7"/><circle cx="7" cy="18" r="1.8"/><circle cx="17.5" cy="18" r="1.8"/><path d="M5 9.5h5"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5v11M7.5 10l4.5 4.5 4.5-4.5"/><path d="M4 16.5v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></symbol>
+    <symbol id="i-document" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M13.5 2.5v5h5" fill="currentColor" fill-opacity=".18" stroke="none"/><path d="M6.5 2.5h7l5 5v12a2 2 0 0 1-2 2h-10a2 2 0 0 1-2-2v-15a2 2 0 0 1 2-2z"/><path d="M13.5 2.5v5h5M8.5 12.5h7M8.5 16h5"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="10.5" width="14" height="10" rx="2.5" fill="currentColor" fill-opacity=".18" stroke="none"/><rect x="5" y="10.5" width="14" height="10" rx="2.5"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5M12 14.5v2"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5" fill="currentColor" fill-opacity=".18" stroke="none"/><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9" fill="currentColor" fill-opacity=".18" stroke="none"/><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-sparkles" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M11 3l1.8 4.7 4.7 1.8-4.7 1.8L11 16l-1.8-4.7L4.5 9.5l4.7-1.8z" fill="currentColor" fill-opacity=".18" stroke="none"/><path d="M11 3l1.8 4.7 4.7 1.8-4.7 1.8L11 16l-1.8-4.7L4.5 9.5l4.7-1.8z"/><path d="M18.5 14.5l.8 1.9 1.9.8-1.9.8-.8 1.9-.8-1.9-1.9-.8 1.9-.8z"/></symbol>
+    <symbol id="i-quote" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18v-5.5C4 8.6 6.2 6 10 5.5v2.6c-2 .5-3 1.9-3.1 3.9H10v6zM14 18v-5.5c0-3.9 2.2-6.5 6-7v2.6c-2 .5-3 1.9-3.1 3.9H20v6z" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-credit-card" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="2.5" fill="currentColor" fill-opacity=".18" stroke="none"/><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="M2.5 9.5h19M6 15h4"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h10"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+    <symbol id="i-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-arrow-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></symbol>
+    <symbol id="i-chevron-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 6l6 6-6 6"/></symbol>
+  </svg>
+
+
+  <!-- ========================================================= -->
+  <!-- TOP NOTIFICATION / TRUST STRIP                            -->
+  <!-- ========================================================= -->
+  <div class="bg-brand-slate text-slate-300 text-xs py-2 px-4 border-b border-slate-700/50 hidden md:block">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <div class="flex items-center gap-6">
+        <span class="flex items-center gap-1.5 text-slate-200">
+          <svg class="ic w-4 h-4 text-emerald-400" aria-hidden="true"><use href="#i-shield-check"/></svg>
+          Gecertificeerd Bewegingstechnoloog
+        </span>
+        <span class="flex items-center gap-1.5 text-slate-200">
+          <svg class="ic w-4 h-4 text-amber-400" aria-hidden="true"><use href="#i-star"/></svg>
+          4.8 / 5 uit 300+ geverifieerde reviews
+        </span>
+        <span class="flex items-center gap-1.5 text-slate-300">
+          <svg class="ic w-4 h-4 text-slate-400" aria-hidden="true"><use href="#i-map-pin"/></svg>
+          Showroom Merwedestraat 239, Dordrecht
+        </span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="tel:0786314858" class="font-semibold text-slate-200 hover:text-white transition flex items-center gap-1.5">
+          <svg class="ic w-3.5 h-3.5 text-amber-400" aria-hidden="true"><use href="#i-phone"/></svg>
+          078 - 631 4858
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- [ HEADER ]                                                -->
+  <!-- Links: Strak modern logo                                  -->
+  <!-- Rechts: Collectie | Onze Werkwijze | Ervaringen | Contact  -->
+  <!-- Uiterst Rechts: [ Plan Adviesgesprek ] (Sticky CTA)       -->
+  <!-- ========================================================= -->
+  <header id="main-header" class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/80 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="flex flex-col group focus:outline-none">
+        <div class="flex items-center gap-2">
+          <div class="w-8 h-8 rounded-lg bg-brand-slate flex items-center justify-center text-white font-extrabold text-sm tracking-tight shadow-sm group-hover:bg-slate-800 transition">
+            S
+          </div>
+          <div class="leading-none">
+            <span class="font-heading font-extrabold text-xl sm:text-2xl text-brand-navy tracking-tight uppercase">
+              Schipper
+            </span>
+            <span class="block text-[10px] tracking-[0.22em] uppercase font-semibold text-brand-subtle">
+              Compact Wonen
+            </span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Navigation Links -->
+      <nav class="hidden lg:flex items-center gap-8 font-medium text-slate-700">
+        <a href="#collectie" class="hover:text-brand-navy transition py-2 border-b-2 border-transparent hover:border-amber-600">Collectie</a>
+        <a href="#werkwijze" class="hover:text-brand-navy transition py-2 border-b-2 border-transparent hover:border-amber-600">Onze Werkwijze</a>
+        <a href="#checklist" class="hover:text-brand-navy transition py-2 border-b-2 border-transparent hover:border-amber-600">Zithouding Check</a>
+        <a href="#ervaringen" class="hover:text-brand-navy transition py-2 border-b-2 border-transparent hover:border-amber-600">Ervaringen</a>
+        <a href="#contact" class="hover:text-brand-navy transition py-2 border-b-2 border-transparent hover:border-amber-600">Contact</a>
+      </nav>
+
+      <!-- Primary CTA (Right Header) -->
+      <div class="flex items-center gap-3">
+        <a href="tel:0786314858" class="hidden sm:inline-flex lg:hidden xl:inline-flex items-center gap-2 px-3 py-2 text-sm font-semibold text-slate-700 hover:text-brand-navy">
+          <svg class="ic w-4 h-4 text-amber-600" aria-hidden="true"><use href="#i-phone"/></svg>
+          <span>078 - 631 4858</span>
+        </a>
+
+        <button onclick="openBookingModal('header')" class="hidden sm:inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-700 active:bg-amber-800 text-white font-semibold text-sm sm:text-base shadow-sm hover:shadow-gold transition-all duration-200 transform hover:-translate-y-0.5">
+          <svg class="ic w-4 h-4" aria-hidden="true"><use href="#i-calendar"/></svg>
+          <span>Plan Adviesgesprek</span>
+        </button>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-btn" aria-label="Menu openen" class="lg:hidden p-2 rounded-lg text-slate-700 hover:bg-slate-100 focus:outline-none">
+          <svg class="ic w-6 h-6" aria-hidden="true"><use href="#i-menu"/></svg>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Nav Drawer -->
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-200 bg-white px-4 pt-3 pb-6 space-y-3 shadow-lg">
+      <a href="#collectie" class="block py-2.5 text-base font-medium text-slate-800 hover:text-amber-600 border-b border-slate-100">Collectie</a>
+      <a href="#werkwijze" class="block py-2.5 text-base font-medium text-slate-800 hover:text-amber-600 border-b border-slate-100">Onze Werkwijze</a>
+      <a href="#checklist" class="block py-2.5 text-base font-medium text-slate-800 hover:text-amber-600 border-b border-slate-100">Zithouding Check (PDF)</a>
+      <a href="#ervaringen" class="block py-2.5 text-base font-medium text-slate-800 hover:text-amber-600 border-b border-slate-100">Ervaringen</a>
+      <a href="#contact" class="block py-2.5 text-base font-medium text-slate-800 hover:text-amber-600 border-b border-slate-100">Contact</a>
+      <div class="pt-3 space-y-2">
+        <button onclick="openBookingModal('mobile-menu')" class="w-full py-3 rounded-xl bg-amber-600 text-white font-semibold text-center shadow-md flex items-center justify-center">
+          <svg class="ic w-4 h-4 inline-block -mt-0.5 mr-1.5" aria-hidden="true"><use href="#i-calendar"/></svg>Plan Adviesgesprek
+        </button>
+        <a href="tel:0786314858" class="block w-full py-2.5 rounded-xl border border-slate-300 text-slate-800 font-semibold text-center hover:bg-slate-50">
+          <svg class="ic w-4 h-4 inline-block -mt-0.5 mr-1.5" aria-hidden="true"><use href="#i-phone"/></svg>Bel direct: 078 - 631 4858
+        </a>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- ========================================================= -->
+  <!-- [ HERO SECTIE: De eerste indruk (Boven de vouw) ]         -->
+  <!-- ========================================================= -->
+  <section class="relative bg-gradient-to-b from-[#F8FAFC] to-[#F1F5F9] pt-8 pb-16 lg:pt-14 lg:pb-24 overflow-hidden border-b border-slate-200">
+    <!-- Subtle Background Accents -->
+    <div class="absolute inset-0 pointer-events-none opacity-40">
+      <div class="absolute -top-32 -left-32 w-96 h-96 bg-amber-200/40 rounded-full blur-3xl"></div>
+      <div class="absolute top-1/2 -right-32 w-96 h-96 bg-blue-100/50 rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <!-- Left: Text Content & Dual CTA -->
+        <div class="lg:col-span-7 space-y-6 text-left">
+          
+          <!-- Badge -->
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-50 border border-amber-200/80 text-amber-900 text-xs sm:text-sm font-semibold tracking-wide">
+            <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
+            Specialist in ergonomisch maatwerk & sta-op stoelen
+          </div>
+
+          <!-- H1 -->
+          <h1 class="font-heading font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-[2.9rem] text-brand-navy leading-[1.15] tracking-tight">
+            Pijnvrij opstaan en perfect zitten. <br class="hidden sm:inline">
+            <span class="text-amber-700">Ontdek de stoel die écht bij u past.</span>
+          </h1>
+
+          <!-- Subkop -->
+          <p class="text-base sm:text-lg lg:text-xl text-slate-600 leading-relaxed max-w-2xl">
+            Geen verkooppraatjes, maar eerlijk en deskundig advies. Wij meten uw perfecte zithouding tot op de millimeter na, gewoon bij u thuis of in onze showroom.
+          </p>
+
+          <!-- Dual CTA Buttons -->
+          <div class="pt-2 flex flex-col sm:flex-row gap-4 items-stretch sm:items-center">
+            <!-- CTA 1: Harde conversie -->
+            <button onclick="openBookingModal('hero-thuisbezoek')" class="inline-flex items-center justify-center gap-3 px-6 py-4 rounded-xl bg-amber-600 hover:bg-amber-700 active:bg-amber-800 text-white font-bold text-base shadow-gold transition-all duration-200 transform hover:-translate-y-0.5 group">
+              <svg class="ic w-5 h-5" aria-hidden="true"><use href="#i-calendar"/></svg>
+              <span>Plan een gratis thuisbezoek</span>
+              <svg class="ic w-4 h-4 transform group-hover:translate-x-1 transition" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+            </button>
+
+            <!-- CTA 2: Secundair Laagdrempelig -->
+            <a href="#showroom" onclick="openShowroomModal()" class="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-white hover:bg-slate-50 border border-slate-300 text-slate-800 font-semibold text-base shadow-sm hover:border-slate-400 transition-all duration-200">
+              <svg class="ic w-5 h-5 text-amber-700" aria-hidden="true"><use href="#i-store"/></svg>
+              <span>Bekijk de showroom</span>
+            </a>
+          </div>
+
+          <!-- Micro USP list below buttons -->
+          <div class="pt-1 flex flex-wrap items-center gap-y-2 gap-x-6 text-xs sm:text-sm text-slate-600 font-medium">
+            <span class="flex items-center gap-1.5">
+              <svg class="ic w-4 h-4 text-emerald-600" aria-hidden="true"><use href="#i-check"/></svg>
+              100% Vrijblijvend advies
+            </span>
+            <span class="flex items-center gap-1.5">
+              <svg class="ic w-4 h-4 text-emerald-600" aria-hidden="true"><use href="#i-check"/></svg>
+              Geen aanbetaling vooraf
+            </span>
+            <span class="flex items-center gap-1.5">
+              <svg class="ic w-4 h-4 text-emerald-600" aria-hidden="true"><use href="#i-check"/></svg>
+              Vaste specialist aan tafel
+            </span>
+          </div>
+
+        </div>
+
+        <!-- Right: Warme foto van persoon in stijlvolle stoel in moderne woonkamer -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative mx-auto max-w-md lg:max-w-none">
+            
+            <!-- Warm lifestyle image card -->
+            <div class="relative rounded-2xl overflow-hidden shadow-warm-lg border border-slate-200/80 bg-white">
+              <!-- Warm achtergrond: de witte fotoachtergrond versmelt via mix-blend-multiply -->
+              <div class="bg-gradient-to-br from-amber-50 via-orange-50 to-stone-200/70 pt-8 px-6 flex justify-center">
+                <img 
+                  src="assets/hero_person_chair.jpg" 
+                  alt="Ontspannen zittend persoon in een comfortabele ergonomische sta-op stoel in een warme woonkamer" 
+                  class="w-auto h-auto max-h-[400px] object-contain mix-blend-multiply"
+                  loading="eager"
+                >
+              </div>
+              
+              <!-- Klantquote als vaste onderbalk (niet meer over de foto heen) -->
+              <div class="flex items-start gap-3 p-5 bg-white border-t border-slate-100">
+                <svg class="ic w-7 h-7 text-amber-600 mt-0.5" aria-hidden="true"><use href="#i-quote"/></svg>
+                <div>
+                  <p class="font-heading font-semibold text-sm sm:text-base text-brand-navy leading-snug">
+                    Sinds ik deze stoel heb, sta ik weer fluitend op zonder rugpijn.
+                  </p>
+                  <p class="text-xs text-slate-500 mt-1">
+                    Mevr. Van Vliet — Thuis aangemeten in Dordrecht
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating Authority Badge (linksboven, vrij van de quote) -->
+            <div class="absolute top-6 -left-4 sm:-left-8 bg-white/95 backdrop-blur-md rounded-xl p-3.5 shadow-xl border border-slate-200 hidden sm:flex items-center gap-3 max-w-[260px]">
+              <div class="w-10 h-10 rounded-lg bg-emerald-100 text-emerald-800 flex items-center justify-center text-xl font-bold flex-shrink-0"><svg class="ic w-6 h-6" aria-hidden="true"><use href="#i-shield-check"/></svg></div>
+              <div class="text-left text-xs">
+                <span class="font-bold text-slate-900 block">Medisch Zuiver Aangemeten</span>
+                <span class="text-slate-500">Zitdiepte, zithoogte & armsteun exact op maat</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Trust-bar (Onder de hero) -->
+      <!-- ⭐️⭐️⭐️⭐️⭐️ 4.8/5 uit 300+ reviews | ✅ 100% Maatwerk | ✅ Binnen 1 week geleverd -->
+      <div class="mt-14 sm:mt-20 pt-8 border-t border-slate-300/80">
+        <div class="bg-white rounded-2xl p-4 sm:p-6 shadow-sm border border-slate-200/80 grid grid-cols-1 md:grid-cols-3 gap-6 text-center md:text-left divide-y md:divide-y-0 md:divide-x divide-slate-100">
+          
+          <!-- Trust item 1: Reviews -->
+          <div class="flex items-center justify-center md:justify-start gap-4 px-3 py-1">
+            <div class="flex items-center gap-0.5 text-amber-500"><svg class="ic w-5 h-5" aria-hidden="true"><use href="#i-star"/></svg><svg class="ic w-5 h-5" aria-hidden="true"><use href="#i-star"/></svg><svg class="ic w-5 h-5" aria-hidden="true"><use href="#i-star"/></svg><svg class="ic w-5 h-5" aria-hidden="true"><use href="#i-star"/></svg><svg class="ic w-5 h-5" aria-hidden="true"><use href="#i-star"/></svg></div>
+            <div>
+              <div class="font-heading font-extrabold text-slate-900 text-base">4.8 / 5 Score</div>
+              <div class="text-xs text-slate-500 font-medium">Gebaseerd op 300+ geverifieerde reviews</div>
+            </div>
+          </div>
+
+          <!-- Trust item 2: 100% Maatwerk -->
+          <div class="flex items-center justify-center md:justify-start gap-4 px-3 py-1">
+            <div class="w-10 h-10 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center font-bold text-lg flex-shrink-0 border border-emerald-100"><svg class="ic w-5 h-5" aria-hidden="true"><use href="#i-tape-measure"/></svg></div>
+            <div>
+              <div class="font-heading font-extrabold text-slate-900 text-base">100% Maatwerk</div>
+              <div class="text-xs text-slate-500 font-medium">Lichaamsmeting tot op de millimeter</div>
+            </div>
+          </div>
+
+          <!-- Trust item 3: Binnen 1 week geleverd -->
+          <div class="flex items-center justify-center md:justify-start gap-4 px-3 py-1">
+            <div class="w-10 h-10 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center font-bold text-lg flex-shrink-0 border border-blue-100"><svg class="ic w-5 h-5" aria-hidden="true"><use href="#i-van"/></svg></div>
+            <div>
+              <div class="font-heading font-extrabold text-slate-900 text-base">Binnen 1 week geleverd</div>
+              <div class="text-xs text-slate-500 font-medium">Ruime voorraad & eigen bezorgdienst</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================= -->
+  <!-- [ SECTIE 1: De USP / De 'Waarom Wij' ]                     -->
+  <!-- ========================================================= -->
+  <section id="werkwijze" class="py-16 sm:py-24 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-xs sm:text-sm font-bold uppercase tracking-widest text-amber-700 mb-2">Waarom Schipper Compact Wonen</h2>
+        <p class="font-heading font-extrabold text-2xl sm:text-3xl lg:text-4xl text-brand-navy">
+          Geen standaard meubelwinkel, maar uw persoonlijke zitspecialist
+        </p>
+        <p class="mt-3 text-base sm:text-lg text-slate-600">
+          Wij nemen de tijd om naar uw lichaam en dagelijkse behoeften te luisteren.
+        </p>
+      </div>
+
+      <!-- 3 USP Kaarten met maatwerk iconen -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- USP 1: Volledig op maat -->
+        <div class="relative bg-slate-50/70 hover:bg-white rounded-2xl p-8 border border-slate-200 hover:border-amber-400 transition-all duration-300 hover:shadow-warm group flex flex-col justify-between">
+          <div>
+            <!-- Icoon Meetlint/Ergonomie -->
+            <div class="w-16 h-16 rounded-2xl bg-amber-100/70 text-amber-800 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-amber-600 group-hover:text-white transition duration-300">
+              <svg class="ic w-8 h-8" aria-hidden="true"><use href="#i-tape-measure"/></svg>
+            </div>
+            
+            <h3 class="font-heading font-extrabold text-xl text-brand-navy mb-3">
+              Volledig op maat
+            </h3>
+            
+            <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
+              U wordt geadviseerd door een specialist, niet door een snelle verkoper. Wij kijken naar uw medische behoeften, gewrichtsklachten en exacte lichaamsbouw.
+            </p>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-slate-200/60 text-xs font-semibold text-amber-800 flex items-center gap-1.5">
+            <span>Zitdiepte • Zithoogte • Armhoogte • Lendensteun</span>
+          </div>
+        </div>
+
+        <!-- USP 2: Advies aan huis -->
+        <div class="relative bg-slate-50/70 hover:bg-white rounded-2xl p-8 border border-slate-200 hover:border-amber-400 transition-all duration-300 hover:shadow-warm group flex flex-col justify-between">
+          <div>
+            <!-- Icoon Huis/Koffiekopje -->
+            <div class="w-16 h-16 rounded-2xl bg-amber-100/70 text-amber-800 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-amber-600 group-hover:text-white transition duration-300">
+              <svg class="ic w-8 h-8" aria-hidden="true"><use href="#i-home-coffee"/></svg>
+            </div>
+            
+            <h3 class="font-heading font-extrabold text-xl text-brand-navy mb-3">
+              Advies aan huis
+            </h3>
+            
+            <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
+              Bent u minder mobiel of vindt u het prettiger om in uw eigen vertrouwde omgeving te testen? Wij komen geheel vrijblijvend naar u toe met een selectie passtoelen.
+            </p>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-slate-200/60 text-xs font-semibold text-amber-800 flex items-center gap-1.5">
+            <span>Kosteloos in de gehele regio • Passtoelen bij u in de kamer</span>
+          </div>
+        </div>
+
+        <!-- USP 3: Zorgeloze installatie -->
+        <div class="relative bg-slate-50/70 hover:bg-white rounded-2xl p-8 border border-slate-200 hover:border-amber-400 transition-all duration-300 hover:shadow-warm group flex flex-col justify-between">
+          <div>
+            <!-- Icoon Bestelbus -->
+            <div class="w-16 h-16 rounded-2xl bg-amber-100/70 text-amber-800 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-amber-600 group-hover:text-white transition duration-300">
+              <svg class="ic w-8 h-8" aria-hidden="true"><use href="#i-van"/></svg>
+            </div>
+            
+            <h3 class="font-heading font-extrabold text-xl text-brand-navy mb-3">
+              Zorgeloze installatie
+            </h3>
+            
+            <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
+              Van advies tot het moment dat onze eigen, herkenbare bezorgbussen voor uw deur staan: wij regelen alles, inclusief de fijnafstelling en duidelijke uitleg in uw woonkamer.
+            </p>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-slate-200/60 text-xs font-semibold text-amber-800 flex items-center gap-1.5">
+            <span>Eigen bezorgers • Oude stoel direct retour indien gewenst</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================= -->
+  <!-- [ SECTIE 2: Lead-magnet (De Zachte Conversie) ]           -->
+  <!-- Layout: Split-screen                                      -->
+  <!-- Links: Aantrekkelijke 3D-mockup document/tablet           -->
+  <!-- Rechts: Kop, tekst, formulier [Voornaam] [E-mailadres]    -->
+  <!-- CTA: [ 📥 Download de PDF Checklist ]                     -->
+  <!-- ========================================================= -->
+  <section id="checklist" class="py-16 sm:py-24 bg-gradient-to-br from-slate-900 via-brand-slate to-slate-900 text-white relative overflow-hidden">
+    <!-- Background glow -->
+    <div class="absolute -top-40 right-10 w-96 h-96 bg-amber-600/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-0 left-0 w-80 h-80 bg-blue-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-12 items-center">
+        
+        <!-- Links: 3D Mockup van de Zithouding Checklist (PDF Document / Tablet) -->
+        <div class="lg:col-span-6 flex justify-center perspective-container">
+          <div class="document-3d relative w-full max-w-[380px] bg-white text-slate-800 rounded-xl p-6 sm:p-8 border border-slate-200">
+            
+            <!-- Document Header -->
+            <div class="flex items-center justify-between border-b border-slate-200 pb-4 mb-4">
+              <div class="flex items-center gap-2">
+                <span class="text-xs font-bold uppercase tracking-wider text-amber-800 bg-amber-50 px-2 py-1 rounded">PDF Gids</span>
+                <span class="text-[11px] text-slate-600 font-medium">Uitgave 2026</span>
+              </div>
+              <span class="text-xs font-semibold text-slate-600">Schipper Zorgadvies</span>
+            </div>
+
+            <!-- Document Title -->
+            <div class="mb-4">
+              <span class="text-xs uppercase tracking-widest font-extrabold text-amber-600">Zelftest in 3 Minuten</span>
+              <h4 class="font-heading font-extrabold text-xl text-brand-navy leading-tight mt-1">
+                De Ergonomische Zithouding Checklist
+              </h4>
+              <p class="text-xs text-slate-500 mt-1">
+                Herken de 5 meest voorkomende zitfouten en voorkom chronische klachten.
+              </p>
+            </div>
+
+            <!-- Visual Checklist Items -->
+            <div class="space-y-3 my-5 text-xs text-slate-700 bg-slate-50 p-3.5 rounded-lg border border-slate-100">
+              <div class="flex items-start gap-2.5">
+                <span class="w-4 h-4 rounded bg-emerald-100 text-emerald-700 flex items-center justify-center mt-0.5 flex-shrink-0"><svg class="ic w-3 h-3" aria-hidden="true"><use href="#i-check"/></svg></span>
+                <span><strong>Zithoogte:</strong> Rusten uw voeten plat op de vloer zonder druk in de knieholte?</span>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <span class="w-4 h-4 rounded bg-emerald-100 text-emerald-700 flex items-center justify-center mt-0.5 flex-shrink-0"><svg class="ic w-3 h-3" aria-hidden="true"><use href="#i-check"/></svg></span>
+                <span><strong>Zitdiepte:</strong> Past er een vuist tussen uw knieholte en de zitting?</span>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <span class="w-4 h-4 rounded bg-emerald-100 text-emerald-700 flex items-center justify-center mt-0.5 flex-shrink-0"><svg class="ic w-3 h-3" aria-hidden="true"><use href="#i-check"/></svg></span>
+                <span><strong>Lendensteun:</strong> Wordt uw onderrug actief ondersteund bij ontspannen zitten?</span>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <span class="w-4 h-4 rounded bg-emerald-100 text-emerald-700 flex items-center justify-center mt-0.5 flex-shrink-0"><svg class="ic w-3 h-3" aria-hidden="true"><use href="#i-check"/></svg></span>
+                <span><strong>Opstaan:</strong> Kunt u zelfstandig opstaan zonder pijnlijke schouders of knieën?</span>
+              </div>
+            </div>
+
+            <!-- Document Footer Preview -->
+            <div class="pt-3 border-t border-slate-200 flex items-center justify-between text-[11px] text-slate-600">
+              <span>Samengesteld door bewegingstechnologen</span>
+              <span class="font-bold text-brand-navy">Gratis PDF</span>
+            </div>
+
+            <!-- Floating 3D Badge -->
+            <div class="absolute -top-3 -right-3 bg-amber-500 text-white font-extrabold text-xs px-3 py-1.5 rounded-full shadow-lg transform rotate-6">
+              100% Gratis Download
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Rechts: Tekst & Formulier -->
+        <div class="lg:col-span-6 space-y-6">
+          
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800 border border-slate-700 text-amber-400 text-xs font-semibold">
+            <svg class="ic w-3.5 h-3.5" aria-hidden="true"><use href="#i-document"/></svg> Directe PDF Download
+          </div>
+
+          <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-white leading-tight">
+            Zit u wel echt goed? <br>
+            <span class="text-amber-400">Doe binnen 3 minuten de check.</span>
+          </h2>
+
+          <p class="text-slate-300 text-base sm:text-lg leading-relaxed">
+            Een verkeerde zithouding kan sluipenderwijs leiden tot rug-, nek- en heupklachten of vermoeidheid bij het opstaan. Download onze gratis <strong class="text-white">‘Zithouding Checklist’ (PDF)</strong> en ontdek direct of uw huidige stoel uw lichaam voldoende ondersteunt.
+          </p>
+
+          <!-- Formulier -->
+          <form id="checklist-form" onsubmit="handleChecklistSubmit(event)" class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/15 space-y-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="lead-name" class="block text-xs font-medium text-slate-300 mb-1">Uw voornaam *</label>
+                <input 
+                  type="text" 
+                  id="lead-name" 
+                  name="lead-name" 
+                  required 
+                  placeholder="Bijv. Geert" 
+                  class="w-full px-4 py-3 rounded-xl bg-white text-slate-900 placeholder-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-amber-500 border border-transparent"
+                >
+              </div>
+              <div>
+                <label for="lead-email" class="block text-xs font-medium text-slate-300 mb-1">Uw e-mailadres *</label>
+                <input 
+                  type="email" 
+                  id="lead-email" 
+                  name="lead-email" 
+                  required 
+                  placeholder="naam@voorbeeld.nl" 
+                  class="w-full px-4 py-3 rounded-xl bg-white text-slate-900 placeholder-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-amber-500 border border-transparent"
+                >
+              </div>
+            </div>
+
+            <!-- CTA Button -->
+            <button 
+              type="submit" 
+              class="w-full py-4 px-6 rounded-xl bg-amber-500 hover:bg-amber-600 active:bg-amber-700 text-slate-950 font-bold text-base shadow-gold transition-all duration-200 flex items-center justify-center gap-2 transform hover:-translate-y-0.5"
+            >
+              <svg class="ic w-5 h-5 text-slate-950" aria-hidden="true"><use href="#i-download"/></svg>
+              <span>Download de PDF Checklist</span>
+            </button>
+
+            <div class="flex items-center justify-between text-[11px] text-slate-400 pt-1">
+              <span class="flex items-center gap-1">
+                <svg class="ic w-3.5 h-3.5 text-emerald-400" aria-hidden="true"><use href="#i-lock"/></svg>
+                Geen spam. Direct in uw mailbox én op uw scherm.
+              </span>
+              <span>PDF bestand (1.2 MB)</span>
+            </div>
+          </form>
+
+          <!-- Feedback message placeholder -->
+          <div id="checklist-success" class="hidden p-4 rounded-xl bg-emerald-900/40 border border-emerald-500/40 text-emerald-200 text-sm">
+            <svg class="ic w-5 h-5 inline-block -mt-1 mr-1 text-emerald-300" aria-hidden="true"><use href="#i-sparkles"/></svg><strong>Bedankt voor uw aanvraag!</strong> De checklist download is direct gestart. <a href="assets/zithouding-checklist.pdf" download class="underline font-bold text-white ml-1">Klik hier</a> als het downloaden niet automatisch begint.
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================= -->
+  <!-- [ SECTIE 3: Het Assortiment (Zonder schreeuwerige prijzen)] -->
+  <!-- Kop: Voor iedere wens een passende oplossing.              -->
+  <!-- Grid van 3 elegante kaarten                               -->
+  <!-- ========================================================= -->
+  <section id="collectie" class="py-16 sm:py-24 bg-[#F8FAFC] border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-xs sm:text-sm font-bold uppercase tracking-widest text-amber-700 mb-2">Onze Collectie</h2>
+        <p class="font-heading font-extrabold text-2xl sm:text-3xl lg:text-4xl text-brand-navy">
+          Voor iedere wens een passende oplossing
+        </p>
+        <p class="mt-3 text-base sm:text-lg text-slate-600">
+          Wij geloven in maatwerk en rust. Geen schreeuwerige kortingen of haast, maar doordachte stoelen die decennialang zitcomfort garanderen.
+        </p>
+      </div>
+
+      <!-- Grid met 3 elegante kaarten -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Kaart 1: Nieuw & Maatwerk -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-slate-200/90 shadow-warm hover:shadow-warm-lg transition-all duration-300 flex flex-col group">
+          <div class="relative bg-slate-100 h-64 overflow-hidden flex items-center justify-center p-4">
+            <span class="absolute top-4 left-4 bg-brand-slate text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full z-10">
+              100% Maatwerk
+            </span>
+            <img 
+              src="assets/chair_custom.png" 
+              alt="Nieuw & Maatwerk sta-op stoel" 
+              class="max-h-56 w-auto object-contain transform group-hover:scale-105 transition duration-500"
+            >
+          </div>
+          
+          <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-heading font-extrabold text-xl text-brand-navy mb-2">
+                Nieuw & Maatwerk
+              </h3>
+              <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                Stoelen die volledig naar uw wens qua kleur, stof, leder en functionaliteit worden gebouwd. Perfect afgestemd op uw lichaamsmaten en interieur.
+              </p>
+              
+              <ul class="space-y-2 text-xs text-slate-600 mb-6">
+                <li class="flex items-center gap-2">
+                  <svg class="ic w-4 h-4 text-emerald-600 flex-shrink-0" aria-hidden="true"><use href="#i-check"/></svg> Keuze uit 100+ premium stoffen en leersoorten
+                </li>
+                <li class="flex items-center gap-2">
+                  <svg class="ic w-4 h-4 text-emerald-600 flex-shrink-0" aria-hidden="true"><use href="#i-check"/></svg> 1, 2 of 3 motoren (onafhankelijke rug & beensteun)
+                </li>
+                <li class="flex items-center gap-2">
+                  <svg class="ic w-4 h-4 text-emerald-600 flex-shrink-0" aria-hidden="true"><use href="#i-check"/></svg> Optionele accu (geen kabels over de vloer)
+                </li>
+              </ul>
+            </div>
+
+            <button onclick="openBookingModal('assortiment-nieuw')" class="w-full py-3 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-semibold text-sm transition text-center flex items-center justify-center gap-2 group-hover:bg-amber-600">
+              <span>Lees meer & ontdek opties</span>
+              <svg class="ic w-4 h-4" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Kaart 2: Jong Gebruikt (Occasions) -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-slate-200/90 shadow-warm hover:shadow-warm-lg transition-all duration-300 flex flex-col group">
+          <div class="relative bg-slate-100 h-64 overflow-hidden flex items-center justify-center p-4">
+            <span class="absolute top-4 left-4 bg-emerald-700 text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full z-10">
+              Direct Leverbaar
+            </span>
+            <img 
+              src="assets/chair_occasion.png" 
+              alt="Jong Gebruikte en gereviseerde Fitform sta-op stoel" 
+              class="max-h-56 w-auto object-contain transform group-hover:scale-105 transition duration-500"
+            >
+          </div>
+          
+          <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-heading font-extrabold text-xl text-brand-navy mb-2">
+                Jong Gebruikt (Occasions)
+              </h3>
+              <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                Volledig gereviseerde, dieptereinigde A-merken (waaronder Fitform en Doge) met 1 jaar volledige garantie. Direct uit voorraad leverbaar binnen enkele dagen.
+              </p>
+              
+              <ul class="space-y-2 text-xs text-slate-600 mb-6">
+                <li class="flex items-center gap-2">
+                  <svg class="ic w-4 h-4 text-emerald-600 flex-shrink-0" aria-hidden="true"><use href="#i-check"/></svg> Technisch 100% gekeurd en gereconditioneerd
+                </li>
+                <li class="flex items-center gap-2">
+                  <svg class="ic w-4 h-4 text-emerald-600 flex-shrink-0" aria-hidden="true"><use href="#i-check"/></svg> Inclusief 1 jaar garantie aan huis
+                </li>
+                <li class="flex items-center gap-2">
+                  <svg class="ic w-4 h-4 text-emerald-600 flex-shrink-0" aria-hidden="true"><use href="#i-check"/></svg> Direct leverbaar (geen wekenlange levertijd)
+                </li>
+              </ul>
+            </div>
+
+            <button onclick="openBookingModal('assortiment-occasions')" class="w-full py-3 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-semibold text-sm transition text-center flex items-center justify-center gap-2 group-hover:bg-amber-600">
+              <span>Bekijk actueel aanbod occasions</span>
+              <svg class="ic w-4 h-4" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Kaart 3: Zorg & Vergoeding -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-slate-200/90 shadow-warm hover:shadow-warm-lg transition-all duration-300 flex flex-col group">
+          <div class="relative bg-slate-100 h-64 overflow-hidden flex items-center justify-center p-4">
+            <span class="absolute top-4 left-4 bg-blue-800 text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full z-10">
+              Zorg & Wmo / PGB
+            </span>
+            <img 
+              src="assets/chair_care.png" 
+              alt="Ergonomische zorgstoel voor vergoedingen" 
+              class="max-h-56 w-auto object-contain transform group-hover:scale-105 transition duration-500"
+            >
+          </div>
+          
+          <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-heading font-extrabold text-xl text-brand-navy mb-2">
+                Zorg & Vergoeding
+              </h3>
+              <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                Ontdek de mogelijkheden voor vergoedingen via uw zorgverzekeraar, de Wet maatschappelijke ondersteuning (Wmo) of een Persoonsgebonden Budget (PGB).
+              </p>
+              
+              <ul class="space-y-2 text-xs text-slate-600 mb-6">
+                <li class="flex items-center gap-2">
+                  <svg class="ic w-4 h-4 text-emerald-600 flex-shrink-0" aria-hidden="true"><use href="#i-check"/></svg> Gratis ondersteuning bij uw zorgaanvraag
+                </li>
+                <li class="flex items-center gap-2">
+                  <svg class="ic w-4 h-4 text-emerald-600 flex-shrink-0" aria-hidden="true"><use href="#i-check"/></svg> Erkende ergonomische maatwerk specificaties
+                </li>
+                <li class="flex items-center gap-2">
+                  <svg class="ic w-4 h-4 text-emerald-600 flex-shrink-0" aria-hidden="true"><use href="#i-check"/></svg> Samenwerking met ergotherapeuten in de regio
+                </li>
+              </ul>
+            </div>
+
+            <button onclick="openBookingModal('assortiment-vergoeding')" class="w-full py-3 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-semibold text-sm transition text-center flex items-center justify-center gap-2 group-hover:bg-amber-600">
+              <span>Bekijk de regels & vergoedingen</span>
+              <svg class="ic w-4 h-4" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================= -->
+  <!-- [ SECTIE 4: Social Proof & Autoriteit ]                   -->
+  <!-- Beeld/Video: specialist bewegingstechnoloog aan het werk   -->
+  <!-- Quote: "Het gaat er niet om de duurste stoel..."          -->
+  <!-- Reviews: Carrousel met 3 uitgelichte klantervaringen      -->
+  <!-- ========================================================= -->
+  <section id="ervaringen" class="py-16 sm:py-24 bg-white border-b border-slate-200 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Top: Specialist Quote & Foto/Video Citaat -->
+      <div class="bg-gradient-to-br from-slate-50 to-slate-100/90 rounded-3xl p-8 sm:p-12 border border-slate-200 mb-16 shadow-warm">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          
+          <!-- Foto van specialist aan het werk -->
+          <div class="lg:col-span-5 relative">
+            <div class="relative rounded-2xl overflow-hidden shadow-md border-2 border-white">
+              <img 
+                src="assets/geertjan_advies_showroom.jpg" 
+                alt="Geert-Jan Schipper, bewegingstechnoloog adviseert een klant met ergonomisch meetadvies" 
+                class="w-full h-auto object-cover max-h-[380px]"
+              >
+              <div class="absolute bottom-3 left-3 bg-brand-slate/90 backdrop-blur text-white text-xs px-3 py-1.5 rounded-lg flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                <span>Geert-Jan Schipper • Bewegingstechnoloog</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quote & Visie -->
+          <div class="lg:col-span-7 space-y-4">
+            <svg class="ic w-10 h-10 text-amber-600" aria-hidden="true"><use href="#i-quote"/></svg>
+            <blockquote class="font-heading font-bold text-xl sm:text-2xl text-brand-navy leading-snug italic">
+              "Het gaat er niet om de duurste stoel te verkopen, maar de stoel te vinden waardoor u aan het eind van de dag meer energie overhoudt."
+            </blockquote>
+            <p class="text-slate-600 text-sm sm:text-base leading-relaxed pt-2">
+              Een stoel is een medisch en ergonomisch verlengstuk van uw lichaam. Wanneer de zithoogte slechts 2 centimeter afwijkt, ontstaat er spanning in uw onderrug en moeite met opstaan. Daarom meten we altijd rustig ter plekke, zonder enige haast.
+            </p>
+            <div class="pt-2 flex items-center gap-4">
+              <div>
+                <div class="font-heading font-extrabold text-brand-navy text-base">Geert-Jan Schipper</div>
+                <div class="text-xs text-slate-500">Oprichter & Ergonomie Specialist • Schipper Compact Wonen</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Bottom: Review Carrousel met 3 authentieke klantervaringen -->
+      <div class="max-w-4xl mx-auto">
+        
+        <div class="flex items-center justify-between mb-8">
+          <div>
+            <h3 class="text-xs sm:text-sm font-bold uppercase tracking-widest text-amber-700">Echte Klantervaringen</h3>
+            <h4 class="font-heading font-extrabold text-2xl sm:text-3xl text-brand-navy">Wat onze klanten vertellen</h4>
+          </div>
+          
+          <!-- Carrousel Nav Controls -->
+          <div class="flex items-center gap-2">
+            <button onclick="prevReview()" aria-label="Vorige review" class="w-10 h-10 rounded-full border border-slate-300 flex items-center justify-center text-slate-700 hover:bg-slate-100 transition">
+              <svg class="ic w-5 h-5" aria-hidden="true"><use href="#i-arrow-left"/></svg>
+            </button>
+            <button onclick="nextReview()" aria-label="Volgende review" class="w-10 h-10 rounded-full border border-slate-300 flex items-center justify-center text-slate-700 hover:bg-slate-100 transition">
+              <svg class="ic w-5 h-5" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Review Slides Container -->
+        <div class="relative bg-slate-50 rounded-2xl p-6 sm:p-10 border border-slate-200 min-h-[220px]">
+          
+          <!-- Review 1 -->
+          <div id="review-0" class="carousel-slide block space-y-4">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-0.5 text-amber-500"><svg class="ic w-5 h-5" aria-hidden="true"><use href="#i-star"/></svg><svg class="ic w-5 h-5" aria-hidden="true"><use href="#i-star"/></svg><svg class="ic w-5 h-5" aria-hidden="true"><use href="#i-star"/></svg><svg class="ic w-5 h-5" aria-hidden="true"><use href="#i-star"/></svg><svg class="ic w-5 h-5" aria-hidden="true"><use href="#i-star"/></svg></div>
+              <span class="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-100">Geverifieerde koper</span>
+            </div>
+            <p class="text-slate-700 text-base sm:text-lg leading-relaxed italic">
+              "Wat een verademing vergeleken met de reguliere meubelgiganten. Geert-Jan kwam keurig op tijd aan huis met verschillende proefstoelen. Geen seconde gepusht om te kopen. De stoel werd binnen een week geleverd en perfect afgesteld. Mijn man kan na zijn heupoperatie eindelijk weer zelfstandig uit zijn stoel!"
+            </p>
+            <div class="pt-2 flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-brand-slate text-white flex items-center justify-center font-bold text-sm">
+                MV
+              </div>
+              <div>
+                <div class="font-heading font-bold text-slate-900 text-sm">Mevr. M. van Vliet</div>
+                <div class="text-xs text-slate-500">Regio Dordrecht • Fitform 570 Vario</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 2 -->
+          <div id="review-1" class="carousel-slide hidden space-y-4">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-0.5 text-amber-500"><svg class="ic w-5 h-5" aria-hidden="true"><use href="#i-star"/></svg><svg class="ic w-5 h-5" aria-hidden="true"><use href="#i-star"/></svg><svg class="ic w-5 h-5" aria-hidden="true"><use href="#i-star"/></svg><svg class="ic w-5 h-5" aria-hidden="true"><use href="#i-star"/></svg><svg class="ic w-5 h-5" aria-hidden="true"><use href="#i-star"/></svg></div>
+              <span class="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-100">Geverifieerde koper</span>
+            </div>
+            <p class="text-slate-700 text-base sm:text-lg leading-relaxed italic">
+              "We zochten een mooie stoel die niet direct als ‘ziekenhuisstoel’ oogt in onze gerenoveerde woonkamer. De deskundigheid viel meteen op: binnen 10 minuten legde de adviseur uit waarom mijn vorige stoel rugpijn gaf. De bekleding matcht perfect met ons interieur."
+            </p>
+            <div class="pt-2 flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-brand-slate text-white flex items-center justify-center font-bold text-sm">
+                DJ
+              </div>
+              <div>
+                <div class="font-heading font-bold text-slate-900 text-sm">Dhr. en Mw. De Jong</div>
+                <div class="text-xs text-slate-500">Regio Papendrecht • Maatwerk Lounge Relaxfauteuil</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 3 -->
+          <div id="review-2" class="carousel-slide hidden space-y-4">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-0.5 text-amber-500"><svg class="ic w-5 h-5" aria-hidden="true"><use href="#i-star"/></svg><svg class="ic w-5 h-5" aria-hidden="true"><use href="#i-star"/></svg><svg class="ic w-5 h-5" aria-hidden="true"><use href="#i-star"/></svg><svg class="ic w-5 h-5" aria-hidden="true"><use href="#i-star"/></svg><svg class="ic w-5 h-5" aria-hidden="true"><use href="#i-star"/></svg></div>
+              <span class="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-100">Geverifieerde koper</span>
+            </div>
+            <p class="text-slate-700 text-base sm:text-lg leading-relaxed italic">
+              "We hebben gekozen voor een gereconditioneerde Fitform occasion. De stoel is letterlijk niet van nieuw te onderscheiden, rook fris en werkt vlekkeloos. Binnen 4 dagen bezorgd en de bezorger heeft de tijd genomen om alles aan mijn vader uit te leggen."
+            </p>
+            <div class="pt-2 flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-brand-slate text-white flex items-center justify-center font-bold text-sm">
+                HB
+              </div>
+              <div>
+                <div class="font-heading font-bold text-slate-900 text-sm">Dhr. H. Bakker</div>
+                <div class="text-xs text-slate-500">Regio Sliedrecht • Jong Gebruikte Occasion</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Carousel Dots -->
+          <div class="flex justify-center gap-2 mt-6">
+            <button onclick="goToReview(0)" id="dot-0" aria-label="Review 1" class="w-3 h-3 rounded-full bg-amber-600 transition"></button>
+            <button onclick="goToReview(1)" id="dot-1" aria-label="Review 2" class="w-3 h-3 rounded-full bg-slate-300 transition"></button>
+            <button onclick="goToReview(2)" id="dot-2" aria-label="Review 3" class="w-3 h-3 rounded-full bg-slate-300 transition"></button>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================= -->
+  <!-- CTA BANNER: AFSPRAAK PLANNEN                              -->
+  <!-- ========================================================= -->
+  <section class="bg-brand-navy py-12 px-4 sm:px-6 lg:px-8 text-white relative overflow-hidden">
+    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
+      <div>
+        <h3 class="font-heading font-extrabold text-2xl sm:text-3xl text-white">
+          Klaar om weer echt comfortabel te zitten?
+        </h3>
+        <p class="text-slate-300 text-sm sm:text-base mt-2">
+          Maak vrijblijvend een afspraak. We komen graag bij u langs of ontvangen u in Dordrecht met verse koffie.
+        </p>
+      </div>
+      <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto flex-shrink-0">
+        <button onclick="openBookingModal('bottom-cta')" class="px-6 py-3.5 rounded-xl bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold text-sm sm:text-base shadow-gold transition whitespace-nowrap">
+          <svg class="ic w-4 h-4 inline-block -mt-0.5 mr-1.5" aria-hidden="true"><use href="#i-calendar"/></svg>Plan gratis adviesgesprek
+        </button>
+        <a href="tel:0786314858" class="px-6 py-3.5 rounded-xl border border-slate-600 hover:bg-slate-800 text-white font-semibold text-sm sm:text-base transition whitespace-nowrap">
+          <svg class="ic w-4 h-4 inline-block -mt-0.5 mr-1.5" aria-hidden="true"><use href="#i-phone"/></svg>078 - 631 4858
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================= -->
+  <!-- [ FOOTER: Clean & Vertrouwd ]                             -->
+  <!-- Layout: 4 Kolommen                                        -->
+  <!-- Kolom 1: Logo + Korte over ons                            -->
+  <!-- Kolom 2: Snel links                                       -->
+  <!-- Kolom 3: Contact                                          -->
+  <!-- Kolom 4: Keurmerken, Garantie-logo's en Betaalmethoden    -->
+  <!-- Bottom bar: Copyright | Algemene Voorwaarden | Privacy    -->
+  <!-- ========================================================= -->
+  <footer id="contact" class="bg-brand-slate text-slate-300 pt-16 pb-12 border-t border-slate-700">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8 pb-12 border-b border-slate-700/80">
+        
+        <!-- Kolom 1: Logo + Korte over ons -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-2">
+            <div class="w-8 h-8 rounded-lg bg-amber-600 flex items-center justify-center text-white font-extrabold text-sm">
+              S
+            </div>
+            <div>
+              <span class="font-heading font-extrabold text-xl text-white tracking-tight uppercase block">
+                Schipper
+              </span>
+              <span class="text-[10px] tracking-[0.2em] uppercase font-semibold text-slate-400 block -mt-1">
+                Compact Wonen
+              </span>
+            </div>
+          </div>
+          
+          <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+            Dé regionale specialist in ergonomische sta-op-stoelen en op maat afgestemd zitcomfort. Eerlijk advies door gecertificeerde bewegingstechnologen, thuis of in de showroom.
+          </p>
+
+          <div class="text-xs text-slate-400 space-y-1 pt-1">
+            <div>KvK: 24391284</div>
+            <div>BTW: NL815610427B01</div>
+          </div>
+        </div>
+
+        <!-- Kolom 2: Snel links -->
+        <div>
+          <h4 class="font-heading font-bold text-white text-base mb-4 tracking-wide">
+            Snelle Links
+          </h4>
+          <ul class="space-y-2.5 text-xs sm:text-sm text-slate-400">
+            <li>
+              <a href="#collectie" class="hover:text-amber-400 transition flex items-center gap-1.5">
+                <svg class="ic w-3.5 h-3.5 text-amber-500" aria-hidden="true"><use href="#i-chevron-right"/></svg> Collectie Maatwerk
+              </a>
+            </li>
+            <li>
+              <a href="#collectie" class="hover:text-amber-400 transition flex items-center gap-1.5">
+                <svg class="ic w-3.5 h-3.5 text-amber-500" aria-hidden="true"><use href="#i-chevron-right"/></svg> Occasions (Jong Gebruikt)
+              </a>
+            </li>
+            <li>
+              <a href="#checklist" class="hover:text-amber-400 transition flex items-center gap-1.5">
+                <svg class="ic w-3.5 h-3.5 text-amber-500" aria-hidden="true"><use href="#i-chevron-right"/></svg> Zithouding Checklist (PDF)
+              </a>
+            </li>
+            <li>
+              <a href="#werkwijze" class="hover:text-amber-400 transition flex items-center gap-1.5">
+                <svg class="ic w-3.5 h-3.5 text-amber-500" aria-hidden="true"><use href="#i-chevron-right"/></svg> Werkwijze & Thuisbezoek
+              </a>
+            </li>
+            <li>
+              <a href="#ervaringen" class="hover:text-amber-400 transition flex items-center gap-1.5">
+                <svg class="ic w-3.5 h-3.5 text-amber-500" aria-hidden="true"><use href="#i-chevron-right"/></svg> Klantbeoordelingen (4.8/5)
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Kolom 3: Contact & Showroom -->
+        <div>
+          <h4 class="font-heading font-bold text-white text-base mb-4 tracking-wide">
+            Showroom & Contact
+          </h4>
+          <address class="not-italic text-xs sm:text-sm text-slate-400 space-y-2.5">
+            <div class="flex items-start gap-2">
+              <svg class="ic w-4 h-4 text-amber-500 mt-0.5 flex-shrink-0" aria-hidden="true"><use href="#i-map-pin"/></svg>
+              <div>
+                <strong class="text-slate-200">Showroom Dordrecht:</strong><br>
+                Merwedestraat 239<br>
+                3313 GT Dordrecht
+              </div>
+            </div>
+
+            <div class="flex items-center gap-2">
+              <svg class="ic w-4 h-4 text-amber-500 flex-shrink-0" aria-hidden="true"><use href="#i-phone"/></svg>
+              <a href="tel:0786314858" class="text-white hover:text-amber-400 font-semibold transition">
+                078 - 631 4858
+              </a>
+            </div>
+
+            <div class="flex items-center gap-2">
+              <svg class="ic w-4 h-4 text-amber-500 flex-shrink-0" aria-hidden="true"><use href="#i-mail"/></svg>
+              <a href="mailto:info@schippercompactwonen.nl" class="hover:text-amber-400 transition">
+                info@schippercompactwonen.nl
+              </a>
+            </div>
+
+            <div class="pt-2 text-[11px] text-slate-500 flex items-center gap-2">
+              <svg class="ic w-4 h-4 text-amber-500 flex-shrink-0" aria-hidden="true"><use href="#i-clock"/></svg>Ma t/m Vr: 09:00 - 17:00 | Za: Op afspraak
+            </div>
+          </address>
+        </div>
+
+        <!-- Kolom 4: Keurmerken, Garantie-logo's en Betaalmethoden -->
+        <div class="space-y-4">
+          <h4 class="font-heading font-bold text-white text-base mb-4 tracking-wide">
+            Zekerheid & Garantie
+          </h4>
+          
+          <!-- Badges Grid -->
+          <div class="space-y-2.5 text-xs text-slate-300">
+            <div class="flex items-center gap-2.5 p-2 bg-slate-800/80 rounded-lg border border-slate-700">
+              <svg class="ic w-5 h-5 text-amber-400 flex-shrink-0" aria-hidden="true"><use href="#i-shield"/></svg>
+              <div>
+                <strong class="text-white block">Tot 5 Jaar Garantie</strong>
+                <span class="text-[11px] text-slate-400">Volledige service aan huis</span>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-2.5 p-2 bg-slate-800/80 rounded-lg border border-slate-700">
+              <svg class="ic w-5 h-5 text-emerald-400 flex-shrink-0" aria-hidden="true"><use href="#i-award"/></svg>
+              <div>
+                <strong class="text-white block">Thuiswinkel & Ergonomie</strong>
+                <span class="text-[11px] text-slate-400">Erkend vakspecialist</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Betaalmethoden -->
+          <div class="pt-2">
+            <div class="text-[11px] uppercase tracking-wider text-slate-400 font-semibold mb-2">
+              <svg class="ic w-3.5 h-3.5 inline-block -mt-0.5 mr-1" aria-hidden="true"><use href="#i-credit-card"/></svg>Veilig betalen:
+            </div>
+            <div class="flex flex-wrap gap-2 text-xs">
+              <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded border border-slate-700 font-semibold">iDeal</span>
+              <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded border border-slate-700 font-semibold">PIN aan huis</span>
+              <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded border border-slate-700 font-semibold">Factuur na levering</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Bottom bar: Copyright | Algemene Voorwaarden | Privacy Policy -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+        <div>
+          © 2026 Schipper Compact Wonen. Alle rechten voorbehouden.
+        </div>
+        <div class="flex items-center gap-6">
+          <a href="#" class="hover:text-slate-300 transition">Algemene Voorwaarden</a>
+          <span>•</span>
+          <a href="#" class="hover:text-slate-300 transition">Privacy Policy</a>
+          <span>•</span>
+          <a href="#" class="hover:text-slate-300 transition">Cookieverklaring</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- ========================================================= -->
+  <!-- MOBILE BOTTOM STICKY BAR (Optimized Conversion Funnel)    -->
+  <!-- ========================================================= -->
+  <div class="sm:hidden fixed bottom-0 inset-x-0 bg-white/95 backdrop-blur-md border-t border-slate-200 p-3 z-40 flex items-center gap-2 shadow-2xl">
+    <a href="tel:0786314858" class="flex-1 py-3 px-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-900 font-bold text-xs text-center flex items-center justify-center gap-1.5 whitespace-nowrap">
+      <svg class="ic w-4 h-4" aria-hidden="true"><use href="#i-phone"/></svg>
+      <span>078 - 631 4858</span>
+    </a>
+    <button onclick="openBookingModal('mobile-sticky')" class="flex-[2] py-3 px-4 rounded-xl bg-amber-600 active:bg-amber-700 text-white font-bold text-xs text-center flex items-center justify-center gap-1.5 shadow-md">
+      <svg class="ic w-4 h-4" aria-hidden="true"><use href="#i-calendar"/></svg>
+      <span>Plan Adviesgesprek</span>
+    </button>
+  </div>
+
+
+  <!-- ========================================================= -->
+  <!-- MODAL 1: ADVIESGESPREK PLANNER (Harde Conversie Modal)      -->
+  <!-- ========================================================= -->
+  <div id="booking-modal" class="hidden fixed inset-0 z-50 overflow-y-auto">
+    <div class="min-h-screen px-4 text-center flex items-center justify-center">
+      <!-- Backdrop -->
+      <div onclick="closeBookingModal()" class="fixed inset-0 modal-backdrop transition-opacity"></div>
+
+      <!-- Modal Card -->
+      <div class="relative bg-white rounded-2xl max-w-lg w-full p-6 sm:p-8 text-left shadow-2xl z-10 my-8 border border-slate-200 transform transition-all">
+        
+        <!-- Close button -->
+        <button onclick="closeBookingModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 p-1.5 rounded-lg hover:bg-slate-100 focus:outline-none">
+          <svg class="ic w-6 h-6" aria-hidden="true"><use href="#i-close"/></svg>
+        </button>
+
+        <div id="modal-form-container">
+          <div class="mb-5">
+            <span class="text-xs uppercase tracking-widest font-extrabold text-amber-700">100% Vrijblijvend</span>
+            <h3 class="font-heading font-extrabold text-2xl text-brand-navy mt-1">Plan uw Persoonlijk Adviesgesprek</h3>
+            <p class="text-slate-600 text-xs sm:text-sm mt-1">
+              Geef uw voorkeur aan. Wij nemen binnen 1 werkdag telefonisch contact met u op om het tijdstip af te stemmen.
+            </p>
+          </div>
+
+          <form onsubmit="handleBookingSubmit(event)" class="space-y-4">
+            
+            <!-- Type afspraak keuze -->
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-1.5">Waar wilt u het advies ontvangen?</label>
+              <div class="grid grid-cols-2 gap-3">
+                <label class="flex items-center gap-2 p-3 rounded-xl border border-slate-200 cursor-pointer hover:border-amber-500 bg-slate-50/50 has-[:checked]:border-amber-600 has-[:checked]:bg-amber-50">
+                  <input type="radio" name="appointment-type" value="thuis" checked class="text-amber-600 focus:ring-amber-500">
+                  <span class="text-xs font-semibold text-slate-800"><svg class="ic w-4 h-4 inline-block -mt-0.5 mr-1 text-amber-700" aria-hidden="true"><use href="#i-home"/></svg>Gratis aan huis</span>
+                </label>
+                <label class="flex items-center gap-2 p-3 rounded-xl border border-slate-200 cursor-pointer hover:border-amber-500 bg-slate-50/50 has-[:checked]:border-amber-600 has-[:checked]:bg-amber-50">
+                  <input type="radio" name="appointment-type" value="showroom" class="text-amber-600 focus:ring-amber-500">
+                  <span class="text-xs font-semibold text-slate-800"><svg class="ic w-4 h-4 inline-block -mt-0.5 mr-1 text-amber-700" aria-hidden="true"><use href="#i-store"/></svg>In showroom Dordrecht</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Contactgegevens -->
+            <div>
+              <label for="book-name" class="block text-xs font-semibold text-slate-700 mb-1">Uw naam *</label>
+              <input type="text" id="book-name" required placeholder="Dhr. / Mw. Jansen" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-slate-900 text-sm focus:ring-2 focus:ring-amber-500 focus:border-amber-500">
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div>
+                <label for="book-phone" class="block text-xs font-semibold text-slate-700 mb-1">Telefoonnummer *</label>
+                <input type="tel" id="book-phone" required placeholder="06 - 12345678" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-slate-900 text-sm focus:ring-2 focus:ring-amber-500 focus:border-amber-500">
+              </div>
+              <div>
+                <label for="book-email" class="block text-xs font-semibold text-slate-700 mb-1">E-mailadres</label>
+                <input type="email" id="book-email" placeholder="uw@email.nl" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-slate-900 text-sm focus:ring-2 focus:ring-amber-500 focus:border-amber-500">
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div>
+                <label for="book-postcode" class="block text-xs font-semibold text-slate-700 mb-1">Postcode / Woonplaats *</label>
+                <input type="text" id="book-postcode" required placeholder="3313 GT Dordrecht" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-slate-900 text-sm focus:ring-2 focus:ring-amber-500 focus:border-amber-500">
+              </div>
+              <div>
+                <label for="book-prefday" class="block text-xs font-semibold text-slate-700 mb-1">Voorkeursdag</label>
+                <select id="book-prefday" class="w-full px-3 py-2.5 rounded-lg border border-slate-300 text-slate-900 text-sm focus:ring-2 focus:ring-amber-500 focus:border-amber-500 bg-white">
+                  <option value="zsm">Zo snel mogelijk</option>
+                  <option value="ochtend">Maandag of Dinsdag</option>
+                  <option value="middag">Woensdag of Donderdag</option>
+                  <option value="vrijdag">Vrijdag of Zaterdag</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label for="book-notes" class="block text-xs font-semibold text-slate-700 mb-1">Eventuele klachten of wensen (optioneel)</label>
+              <textarea id="book-notes" rows="2" placeholder="Bijv. moeite met opstaan, rugklachten, voorkeur voor leder..." class="w-full px-3 py-2 rounded-lg border border-slate-300 text-slate-900 text-xs focus:ring-2 focus:ring-amber-500 focus:border-amber-500"></textarea>
+            </div>
+
+            <button type="submit" class="w-full py-3.5 px-4 rounded-xl bg-amber-600 hover:bg-amber-700 text-white font-bold text-sm sm:text-base shadow-gold transition flex items-center justify-center gap-2">
+              <svg class="ic w-5 h-5" aria-hidden="true"><use href="#i-calendar-check"/></svg><span>Bevestig Aanvraag Adviesgesprek</span>
+            </button>
+
+            <div class="text-[11px] text-slate-500 text-center">
+              🔒 Wij gaan zorgvuldig om met uw gegevens. Geen aankoopverplichting.
+            </div>
+
+          </form>
+        </div>
+
+        <!-- Success confirmation state -->
+        <div id="modal-success-container" class="hidden text-center py-6 space-y-4">
+          <div class="w-16 h-16 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-3xl mx-auto"><svg class="ic w-8 h-8" aria-hidden="true"><use href="#i-check"/></svg></div>
+          <h3 class="font-heading font-extrabold text-2xl text-brand-navy">
+            Hartelijk dank voor uw aanvraag!
+          </h3>
+          <p class="text-slate-600 text-sm leading-relaxed max-w-sm mx-auto">
+            We hebben uw verzoek ontvangen. Specialist Geert-Jan Schipper of een van onze collega's neemt binnen 1 werkdag telefonisch contact op om een passend tijdstip af te stemmen.
+          </p>
+          <div class="pt-4">
+            <button onclick="closeBookingModal()" class="px-6 py-2.5 rounded-xl bg-slate-900 text-white font-semibold text-sm hover:bg-slate-800 transition">
+              Venster sluiten
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ========================================================= -->
+  <!-- MODAL 2: SHOWROOM INFO                                    -->
+  <!-- ========================================================= -->
+  <div id="showroom-modal" class="hidden fixed inset-0 z-50 overflow-y-auto">
+    <div class="min-h-screen px-4 text-center flex items-center justify-center">
+      <div onclick="closeShowroomModal()" class="fixed inset-0 modal-backdrop transition-opacity"></div>
+      
+      <div class="relative bg-white rounded-2xl max-w-lg w-full p-6 sm:p-8 text-left shadow-2xl z-10 my-8 border border-slate-200">
+        <button onclick="closeShowroomModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 p-1.5 rounded-lg hover:bg-slate-100">
+          <svg class="ic w-6 h-6" aria-hidden="true"><use href="#i-close"/></svg>
+        </button>
+
+        <div class="mb-4">
+          <span class="text-xs uppercase tracking-widest font-extrabold text-amber-700">Welkom in Dordrecht</span>
+          <h3 class="font-heading font-extrabold text-2xl text-brand-navy mt-1">Showroom Schipper Compact Wonen</h3>
+          <p class="text-slate-600 text-xs sm:text-sm mt-1">
+            U bent van harte welkom om al onze maatwerk- en occasion stoelen rustig uit te proberen. Gratis parkeren voor de deur.
+          </p>
+        </div>
+
+        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-xs sm:text-sm space-y-2 mb-4">
+          <div><strong>Adres:</strong> Merwedestraat 239, 3313 GT Dordrecht</div>
+          <div><strong>Telefoon:</strong> <a href="tel:0786314858" class="text-amber-700 font-bold hover:underline">078 - 631 4858</a></div>
+          <div><strong>Openingstijden:</strong> Maandag t/m Vrijdag: 09:00 - 17:00 | Zaterdag: op afspraak</div>
+        </div>
+
+        <div class="rounded-xl overflow-hidden border border-slate-200 mb-5 h-44 bg-slate-100 flex items-center justify-center text-slate-400">
+          <iframe 
+            src="https://maps.google.com/maps?q=Merwedestraat%20239,%20Dordrecht&t=&z=14&ie=UTF8&iwloc=&output=embed" 
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy">
+          </iframe>
+        </div>
+
+        <div class="flex gap-3">
+          <a href="https://www.google.com/maps/dir/?api=1&destination=Merwedestraat+239,+Dordrecht" target="_blank" class="flex-1 py-3 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-semibold text-xs sm:text-sm text-center">
+            <svg class="ic w-4 h-4 inline-block -mt-0.5 mr-1.5" aria-hidden="true"><use href="#i-route"/></svg>Route plannen
+          </a>
+          <button onclick="closeShowroomModal(); openBookingModal('from-showroom-modal');" class="flex-1 py-3 px-4 rounded-xl bg-amber-600 hover:bg-amber-700 text-white font-semibold text-xs sm:text-sm text-center">
+            <svg class="ic w-4 h-4 inline-block -mt-0.5 mr-1.5" aria-hidden="true"><use href="#i-calendar"/></svg>Afspraak maken
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ========================================================= -->
+  <!-- JAVASCRIPT: LOGIC & INTERACTIONS                          -->
+  <!-- ========================================================= -->
+  <script>
+    // Header shadow on scroll
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('main-header');
+      if (window.scrollY > 20) {
+        header.classList.add('shadow-md');
+      } else {
+        header.classList.remove('shadow-md');
+      }
+    });
+
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+      // Close mobile menu on anchor click
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+        });
+      });
+    }
+
+    // Modal Handling
+    const bookingModal = document.getElementById('booking-modal');
+    const showroomModal = document.getElementById('showroom-modal');
+
+    function openBookingModal(origin) {
+      if (bookingModal) {
+        bookingModal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeBookingModal() {
+      if (bookingModal) {
+        bookingModal.classList.add('hidden');
+        document.body.style.overflow = '';
+        setTimeout(() => {
+          const formBox = document.getElementById('modal-form-container');
+          const succBox = document.getElementById('modal-success-container');
+          if (formBox && succBox) {
+            formBox.classList.remove('hidden');
+            succBox.classList.add('hidden');
+          }
+        }, 300);
+      }
+    }
+
+    function openShowroomModal() {
+      if (showroomModal) {
+        showroomModal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeShowroomModal() {
+      if (showroomModal) {
+        showroomModal.classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+    }
+
+    // Booking Submit Handler
+    function handleBookingSubmit(e) {
+      e.preventDefault();
+      const formBox = document.getElementById('modal-form-container');
+      const succBox = document.getElementById('modal-success-container');
+      if (formBox && succBox) {
+        formBox.classList.add('hidden');
+        succBox.classList.remove('hidden');
+      }
+    }
+
+    // Checklist Lead-Magnet Submit Handler
+    function handleChecklistSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('lead-name').value;
+      const email = document.getElementById('lead-email').value;
+      const successBox = document.getElementById('checklist-success');
+      const form = document.getElementById('checklist-form');
+
+      if (successBox) {
+        successBox.classList.remove('hidden');
+        form.classList.add('opacity-50');
+
+        // Automatically trigger PDF download
+        const downloadLink = document.createElement('a');
+        downloadLink.href = 'assets/zithouding-checklist.pdf';
+        downloadLink.download = 'Schipper-Zithouding-Checklist.pdf';
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+        document.body.removeChild(downloadLink);
+      }
+    }
+
+    // Review Carousel
+    let currentReview = 0;
+    const totalReviews = 3;
+
+    function showReview(index) {
+      currentReview = (index + totalReviews) % totalReviews;
+      for (let i = 0; i < totalReviews; i++) {
+        const slide = document.getElementById(`review-${i}`);
+        const dot = document.getElementById(`dot-${i}`);
+        if (slide && dot) {
+          if (i === currentReview) {
+            slide.classList.remove('hidden');
+            slide.classList.add('block');
+            dot.classList.remove('bg-slate-300');
+            dot.classList.add('bg-amber-600');
+          } else {
+            slide.classList.add('hidden');
+            slide.classList.remove('block');
+            dot.classList.remove('bg-amber-600');
+            dot.classList.add('bg-slate-300');
+          }
+        }
+      }
+    }
+
+    function nextReview() {
+      showReview(currentReview + 1);
+    }
+
+    function prevReview() {
+      showReview(currentReview - 1);
+    }
+
+    function goToReview(index) {
+      showReview(index);
+    }
+
+    // Autoplay reviews every 8 seconds
+    let reviewInterval = setInterval(nextReview, 8000);
+    const reviewContainer = document.getElementById('ervaringen');
+    if (reviewContainer) {
+      reviewContainer.addEventListener('mouseenter', () => clearInterval(reviewInterval));
+      reviewContainer.addEventListener('mouseleave', () => {
+        clearInterval(reviewInterval);
+        reviewInterval = setInterval(nextReview, 8000);
+      });
+    }
+
+    // Close modals on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeBookingModal();
+        closeShowroomModal();
+      }
+    });
+  </script>
+
+</body>
+</html>
