@@ -44,210 +44,30 @@
     .btn-ghost:hover{background:var(--forest);color:var(--linen)}
     .btn-sm{padding:11px 20px;font-size:15px}
 
-    /* Top Strip */
-    .strip {
-      font-size: 12.5px;
-      color: var(--muted);
-      background: var(--oat);
-      border-bottom: 1px solid var(--line);
-      padding: 7px 0;
-    }
-    .strip-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-    .strip-left {
-      display: flex;
-      align-items: center;
-      gap: 22px;
-    }
-    .strip-right {
-      display: flex;
-      align-items: center;
-    }
-    .strip span, .strip a {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
-    .strip a {
-      color: var(--forest);
-      font-weight: 500;
-    }
-    .strip a:hover {
-      text-decoration: underline;
-    }
-    .strip .ic {
-      color: var(--moss);
-      width: 14px;
-      height: 14px;
-    }
-
-    /* Main Header - Clean Architectural Bar */
-    header#main-header {
-      position: sticky;
-      top: 0;
-      z-index: 40;
-      background: rgba(250, 247, 241, 0.95);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--line);
-      transition: background 0.25s ease, box-shadow 0.25s ease;
-    }
-    header#main-header.scrolled {
-      background: rgba(250, 247, 241, 0.98);
-      box-shadow: 0 10px 30px -15px rgba(61, 59, 54, 0.12);
-    }
-    .navbar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 76px;
-      gap: 24px;
-    }
-
-    /* Logo */
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      text-decoration: none;
-      flex-shrink: 0;
-    }
-    .logo-mark {
-      width: 38px;
-      height: 38px;
-      border-radius: 11px;
-      background: var(--forest);
-      color: var(--linen);
-      display: grid;
-      place-items: center;
-      font-family: 'Fraunces', serif;
-      font-weight: 600;
-      font-size: 19px;
-      box-shadow: 0 4px 12px -3px rgba(52, 78, 65, 0.35);
-    }
-    .logo b {
-      font-family: 'Fraunces', serif;
-      font-variation-settings: 'SOFT' 100;
-      font-weight: 600;
-      font-size: 21px;
-      color: var(--forest);
-      display: block;
-      line-height: 1;
-      letter-spacing: -0.01em;
-    }
-    .logo small {
-      display: block;
-      font-size: 9.5px;
-      letter-spacing: 0.24em;
-      text-transform: uppercase;
-      color: var(--muted);
-      font-weight: 600;
-      margin-top: 3px;
-    }
-
-    /* Nav Links */
-    .nav {
-      display: flex;
-      align-items: center;
-      gap: 28px;
-    }
-    .nav a {
-      font-size: 15px;
-      font-weight: 500;
-      color: var(--ink);
-      padding: 10px 0;
-      position: relative;
-      transition: color 0.2s ease;
-      white-space: nowrap;
-    }
-    .nav a:hover {
-      color: var(--forest);
-    }
-    .nav a.active {
-      color: var(--forest);
-      font-weight: 600;
-    }
-    .nav a.active::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 2.5px;
-      background: var(--clay);
-      border-radius: 999px;
-    }
-
-    /* Right side */
-    .hdr-right {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      flex-shrink: 0;
-    }
-    .hdr-phone {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      font-weight: 600;
-      font-size: 14.5px;
-      color: var(--forest);
-      padding: 8px 14px;
-      border-radius: 999px;
-      transition: background 0.2s ease;
-    }
-    .hdr-phone:hover {
-      background: var(--sage-xl);
-    }
-    .hdr-cta {
-      padding: 11px 22px;
-      font-size: 14.5px;
-    }
-
-    /* Mobile Menu Drawer */
-    .menu-btn {
-      display: none;
-      width: 42px;
-      height: 42px;
-      border-radius: 12px;
-      background: var(--oat);
-      color: var(--forest);
-      place-items: center;
-      border: 1px solid var(--line);
-    }
-    .menu-btn .ic {
-      width: 20px;
-      height: 20px;
-    }
-    #mobile-menu {
-      border-top: 1px solid var(--line);
-      background: var(--linen);
-      padding: 16px 0 24px;
-      box-shadow: 0 20px 40px -20px rgba(61, 59, 54, 0.2);
-    }
-    #mobile-menu a.ml {
-      display: block;
-      padding: 12px 14px;
-      border-radius: 14px;
-      font-weight: 500;
-      font-size: 16px;
-    }
-    #mobile-menu a.ml:hover {
-      background: var(--sage-xl);
-      color: var(--forest);
-    }
-    #mobile-menu .mm-cta {
-      display: grid;
-      gap: 10px;
-      margin-top: 14px;
-      padding-top: 14px;
-      border-top: 1px solid var(--line);
-    }
+    /* Top strip + header */
+    .strip{font-size:13px;color:var(--muted);padding:10px 0 0}
+    .strip .wrap{display:flex;justify-content:center;gap:28px;flex-wrap:wrap}
+    .strip span,.strip a{display:inline-flex;align-items:center;gap:6px}
+    .strip .ic{color:var(--moss)}
+    header#main-header{position:sticky;top:12px;z-index:40;margin:12px auto 0;max-width:1200px;padding:0 16px}
+    .navbar{display:flex;align-items:center;justify-content:space-between;gap:16px;background:rgba(250,247,241,.92);backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:999px;padding:10px 10px 10px 22px;transition:box-shadow .3s}
+    header.scrolled .navbar{box-shadow:0 14px 30px -18px rgba(61,59,54,.35)}
+    .logo{display:flex;align-items:center;gap:10px}
+    .logo-mark{width:34px;height:40px;border-radius:999px 999px 8px 8px;background:var(--sage);display:grid;place-items:center;color:var(--forest);font-family:'Fraunces',serif;font-weight:600;font-size:18px;padding-top:4px}
+    .logo b{font-family:'Fraunces',serif;font-variation-settings:'SOFT' 100;font-weight:600;font-size:21px;color:var(--forest);display:block;line-height:1}
+    .logo small{display:block;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-top:3px}
+    .nav{display:flex;gap:6px}
+    .nav a{padding:9px 16px;border-radius:999px;font-weight:500;font-size:15px;color:var(--ink);transition:background .2s}
+    .nav a:hover{background:var(--sage-xl);color:var(--forest)}
+    .hdr-right{display:flex;align-items:center;gap:6px}
+    .hdr-phone{display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:14px;color:var(--forest);padding:8px 12px}
+    .menu-btn{display:none;width:44px;height:44px;border-radius:50%;background:var(--sage-xl);color:var(--forest);place-items:center}
+    .menu-btn .ic{width:22px;height:22px}
+    #mobile-menu{margin-top:8px;background:var(--linen);border:1px solid var(--line);border-radius:28px;padding:14px;box-shadow:0 20px 40px -20px rgba(61,59,54,.35)}
+    #mobile-menu a.ml{display:block;padding:12px 14px;border-radius:16px;font-weight:500}
+    #mobile-menu a.ml:hover{background:var(--sage-xl)}
+    #mobile-menu .mm-cta{display:grid;gap:8px;margin-top:8px}
+    #mobile-menu .btn{width:100%}
 
     /* Hero */
     .hero{position:relative;padding:56px 0 40px}
@@ -497,6 +317,8 @@
     @media (max-width:640px){
       .wrap{padding:0 18px}
       .strip{display:none}
+      header#main-header{padding:0 10px;top:8px;margin-top:8px}
+      .navbar{padding:8px 8px 8px 16px}
       .hdr-cta{display:none}
       .hero h1{font-size:36px}
       .hero .sub{font-size:17px}
@@ -559,53 +381,44 @@
   <symbol id="i-chevron-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 6l6 6-6 6"/></symbol>
 </svg>
 
-  <!-- Top Strip -->
+  <!-- Zachte trust-strip -->
   <div class="strip">
-    <div class="wrap strip-inner">
-      <div class="strip-left">
-        <span><svg class="ic" aria-hidden="true"><use href="#i-shield-check"/></svg>Gecertificeerd Bewegingstechnoloog</span>
-        <span><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg>4.8 / 5 uit 300+ reviews</span>
-        <span><svg class="ic" aria-hidden="true"><use href="#i-map-pin"/></svg>Showroom Merwedestraat 239, Dordrecht</span>
-      </div>
-      <div class="strip-right">
-        <a href="tel:0786314858"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>Direct advies: 078 - 631 4858</a>
-      </div>
+    <div class="wrap">
+      <span><svg class="ic" aria-hidden="true"><use href="#i-shield-check"/></svg>Gecertificeerd Bewegingstechnoloog</span>
+      <span><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg>4.8 / 5 uit 300+ geverifieerde reviews</span>
+      <span><svg class="ic" aria-hidden="true"><use href="#i-map-pin"/></svg>Showroom Merwedestraat 239, Dordrecht</span>
+      <a href="tel:0786314858"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>078 - 631 4858</a>
     </div>
   </div>
 
   <!-- HEADER -->
   <header id="main-header">
-    <div class="wrap">
-      <div class="navbar">
-        <a href="#" class="logo" aria-label="Schipper Compact Wonen">
-          <span class="logo-mark">S</span>
-          <span><b>Schipper</b><small>Compact Wonen</small></span>
-        </a>
-        <nav class="nav" aria-label="Hoofdmenu">
-          <a href="collectie.html">Collectie</a>
-          <a href="#werkwijze">Onze Werkwijze</a>
-          <a href="#checklist">Zithouding Check</a>
-          <a href="#ervaringen">Ervaringen</a>
-          <a href="#contact">Contact</a>
-        </nav>
-        <div class="hdr-right">
-          <a href="tel:0786314858" class="hdr-phone"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>078 - 631 4858</a>
-          <button onclick="openBookingModal('header')" class="btn btn-clay btn-sm hdr-cta"><svg class="ic" aria-hidden="true"><use href="#i-calendar"/></svg>Plan Adviesgesprek</button>
-          <button id="mobile-menu-btn" class="menu-btn" aria-label="Menu openen"><svg class="ic" aria-hidden="true"><use href="#i-menu"/></svg></button>
-        </div>
+    <div class="navbar">
+      <a href="#" class="logo" aria-label="Schipper Compact Wonen">
+        <span class="logo-mark">S</span>
+        <span><b>Schipper</b><small>Compact Wonen</small></span>
+      </a>
+      <nav class="nav" aria-label="Hoofdmenu">
+        <a href="collectie.html">Collectie</a>
+        <a href="#werkwijze">Onze Werkwijze</a>
+        <a href="#ervaringen">Ervaringen</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="hdr-right">
+        <a href="tel:0786314858" class="hdr-phone"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>078 - 631 4858</a>
+        <button onclick="openBookingModal('header')" class="btn btn-clay btn-sm hdr-cta"><svg class="ic" aria-hidden="true"><use href="#i-calendar"/></svg>Plan Adviesgesprek</button>
+        <button id="mobile-menu-btn" class="menu-btn" aria-label="Menu openen"><svg class="ic" aria-hidden="true"><use href="#i-menu"/></svg></button>
       </div>
     </div>
     <div id="mobile-menu" class="hidden">
-      <div class="wrap">
-        <a class="ml" href="collectie.html">Collectie (40 Stoelen)</a>
-        <a class="ml" href="#werkwijze">Onze Werkwijze</a>
-        <a class="ml" href="#checklist">Zithouding Check (PDF)</a>
-        <a class="ml" href="#ervaringen">Ervaringen</a>
-        <a class="ml" href="#contact">Contact</a>
-        <div class="mm-cta">
-          <button onclick="openBookingModal('mobile-menu')" class="btn btn-clay"><svg class="ic" aria-hidden="true"><use href="#i-calendar"/></svg>Plan Adviesgesprek</button>
-          <a href="tel:0786314858" class="btn btn-ghost"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>Bel direct: 078 - 631 4858</a>
-        </div>
+      <a class="ml" href="collectie.html">Collectie (40 Stoelen)</a>
+      <a class="ml" href="#werkwijze">Onze Werkwijze</a>
+      <a class="ml" href="#checklist">Zithouding Check (PDF)</a>
+      <a class="ml" href="#ervaringen">Ervaringen</a>
+      <a class="ml" href="#contact">Contact</a>
+      <div class="mm-cta">
+        <button onclick="openBookingModal('mobile-menu')" class="btn btn-clay"><svg class="ic" aria-hidden="true"><use href="#i-calendar"/></svg>Plan Adviesgesprek</button>
+        <a href="tel:0786314858" class="btn btn-ghost"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>Bel direct: 078 - 631 4858</a>
       </div>
     </div>
   </header>
