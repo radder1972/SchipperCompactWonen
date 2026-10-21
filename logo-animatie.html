@@ -1,0 +1,1300 @@
+<!DOCTYPE html>
+<html lang="nl-NL">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logo Evolutie: Van Kussen naar Boog · Schipper Compact Wonen</title>
+  
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  
+  <!-- Google Fonts: Fraunces & Figtree -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..800;1,300..800&family=Fraunces:ital,opsz,wght@0,9..144,300..800;1,9..144,300..800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --linen: #FAF7F2;
+      --forest: #2D3A2F;
+      --moss: #3A5A40;
+      --sage: #A3B18A;
+      --sage-l: #CCD5C3;
+      --sage-xl: #E7ECE3;
+      --clay: #BC6C4D;
+      --clay-l: #D48B6E;
+      --clay-xl: #F4E7E1;
+      --oat: #EDE6DA;
+      --oat-d: #DDD4C4;
+      --ink: #1C231E;
+      --muted: #5C675E;
+      --line: #E2DBD0;
+      --shadow-sm: 0 4px 16px -4px rgba(45,58,47,.08);
+      --shadow-md: 0 16px 36px -12px rgba(45,58,47,.12);
+      --shadow-lg: 0 24px 48px -14px rgba(45,58,47,.16);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Figtree', sans-serif;
+      background-color: var(--linen);
+      color: var(--ink);
+      line-height: 1.6;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.03'/%3E%3C/svg%3E");
+    }
+
+    .serif { font-family: 'Fraunces', Georgia, serif; font-optical-sizing: auto; }
+    .wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+    /* Top Strip & Navigation */
+    .top-strip {
+      background: var(--forest);
+      color: var(--linen);
+      font-size: 13px;
+      padding: 8px 0;
+    }
+    .top-strip .wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+    .top-strip a { color: var(--sage-l); text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }
+    .top-strip a:hover { color: #fff; }
+
+    header#main-header {
+      position: sticky;
+      top: 14px;
+      z-index: 40;
+      margin-top: 14px;
+      padding: 0 24px;
+    }
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      background: rgba(250, 247, 241, .92);
+      backdrop-filter: blur(14px);
+      border: 1.5px solid var(--line);
+      border-radius: 999px;
+      padding: 10px 14px 10px 24px;
+      box-shadow: var(--shadow-sm);
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--forest);
+    }
+    .logo-mark {
+      width: 44px;
+      height: 52px;
+      border-radius: 999px 999px 12px 12px;
+      background: var(--sage);
+      color: var(--forest);
+      display: grid;
+      place-items: center;
+      font-family: 'Fraunces', serif;
+      font-size: 26px;
+      font-weight: 700;
+      box-shadow: 0 4px 12px -2px rgba(92,107,76,.3);
+    }
+    .logo b { display: block; font-family: 'Fraunces', serif; font-size: 22px; line-height: 1; color: var(--forest); }
+    .logo small { display: block; font-size: 11.5px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--moss); margin-top: 3px; }
+
+    .nav { display: flex; gap: 28px; }
+    .nav a {
+      font-weight: 600;
+      font-size: 15px;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color .2s;
+    }
+    .nav a:hover, .nav a.active { color: var(--forest); }
+
+    .hdr-right { display: flex; align-items: center; gap: 12px; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-weight: 600;
+      font-size: 14.5px;
+      border-radius: 999px;
+      padding: 11px 22px;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: all .2s ease;
+    }
+    .btn-clay { background: var(--clay); color: #fff; }
+    .btn-clay:hover { background: #ab5b3d; transform: translateY(-1px); }
+    .btn-forest { background: var(--forest); color: var(--linen); }
+    .btn-forest:hover { background: #1f2820; transform: translateY(-1px); }
+    .btn-ghost { background: transparent; color: var(--forest); border: 1.5px solid var(--line); }
+    .btn-ghost:hover { background: var(--oat); border-color: var(--muted); }
+    .btn-sm { padding: 8px 16px; font-size: 13px; }
+
+    /* Icons */
+    .ic { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      padding: 56px 0 32px;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12.5px;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--moss);
+      background: var(--sage-xl);
+      padding: 6px 16px;
+      border-radius: 999px;
+      margin-bottom: 16px;
+      border: 1px solid rgba(163, 177, 138, .3);
+    }
+    .hero h1 {
+      font-size: clamp(34px, 4.5vw, 54px);
+      line-height: 1.15;
+      color: var(--forest);
+      max-width: 820px;
+      margin: 0 auto 16px;
+    }
+    .squig { position: relative; display: inline-block; }
+    .squig svg {
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 100%;
+      height: 12px;
+      fill: none;
+      stroke: var(--clay);
+      stroke-width: 3.5;
+      stroke-linecap: round;
+    }
+    .hero p {
+      font-size: 17px;
+      color: var(--muted);
+      max-width: 720px;
+      margin: 0 auto 28px;
+    }
+
+    /* Tab switcher for view modes */
+    .view-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+    }
+    .view-tab {
+      padding: 10px 22px;
+      border-radius: 999px;
+      background: #fff;
+      border: 1.5px solid var(--line);
+      color: var(--muted);
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all .2s;
+    }
+    .view-tab:hover { background: var(--sage-xl); border-color: var(--sage); color: var(--forest); }
+    .view-tab.active { background: var(--forest); color: var(--linen); border-color: var(--forest); box-shadow: var(--shadow-sm); }
+
+    /* The Main Animation Stage Card */
+    .stage-card {
+      background: #fff;
+      border: 1.5px solid var(--line);
+      border-radius: 40px;
+      padding: 48px;
+      box-shadow: var(--shadow-md);
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 40px;
+    }
+
+    .stage-viewport {
+      width: 100%;
+      height: 380px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      background: radial-gradient(circle at center, rgba(231, 236, 227, 0.6) 0%, rgba(250, 247, 241, 0.3) 70%, transparent 100%);
+      border-radius: 28px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+    }
+
+    /* Grid overlay in stage background */
+    .stage-viewport::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-size: 24px 24px;
+      background-image: 
+        linear-gradient(to right, rgba(163, 177, 138, 0.08) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(163, 177, 138, 0.08) 1px, transparent 1px);
+      pointer-events: none;
+    }
+
+    /* Canvas / SVG container */
+    #morph-svg {
+      width: 540px;
+      max-width: 95%;
+      height: 320px;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Controls Panel */
+    .controls-panel {
+      margin-top: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    /* Scrub Slider */
+    .scrub-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: var(--linen);
+      padding: 14px 24px;
+      border-radius: 999px;
+      border: 1.5px solid var(--line);
+    }
+    .scrub-track-box {
+      flex: 1;
+      position: relative;
+    }
+    input[type=range].scrub-slider {
+      width: 100%;
+      height: 10px;
+      -webkit-appearance: none;
+      appearance: none;
+      background: var(--oat);
+      border-radius: 999px;
+      outline: none;
+      cursor: pointer;
+    }
+    input[type=range].scrub-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--forest);
+      border: 3px solid #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,.25);
+      cursor: grab;
+      transition: transform .15s, background .15s;
+    }
+    input[type=range].scrub-slider::-webkit-slider-thumb:hover {
+      transform: scale(1.15);
+      background: var(--clay);
+    }
+    .scrub-percent {
+      font-family: 'Fraunces', serif;
+      font-weight: 700;
+      font-size: 18px;
+      color: var(--forest);
+      min-width: 56px;
+      text-align: right;
+    }
+
+    /* Buttons Row */
+    .btn-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .btn-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    /* Milestone pill markers */
+    .milestones {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-top: 10px;
+    }
+    .milestone-btn {
+      background: var(--linen);
+      border: 1.5px solid var(--line);
+      border-radius: 18px;
+      padding: 12px 14px;
+      text-align: left;
+      cursor: pointer;
+      transition: all .2s;
+    }
+    .milestone-btn:hover {
+      border-color: var(--sage);
+      background: #fff;
+      transform: translateY(-2px);
+    }
+    .milestone-btn.active {
+      background: var(--forest);
+      color: var(--linen);
+      border-color: var(--forest);
+      box-shadow: var(--shadow-sm);
+    }
+    .milestone-btn .m-pct {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      opacity: .7;
+      display: block;
+      margin-bottom: 2px;
+    }
+    .milestone-btn .m-title {
+      font-family: 'Fraunces', serif;
+      font-size: 14.5px;
+      font-weight: 600;
+      line-height: 1.25;
+      display: block;
+    }
+
+    /* Explainer card below */
+    .explainer-banner {
+      background: var(--oat);
+      border-radius: 24px;
+      padding: 24px 30px;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      border: 1px solid var(--line);
+    }
+    .explainer-banner .orb {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: var(--sage-xl);
+      color: var(--forest);
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+    }
+    .explainer-banner h4 {
+      font-family: 'Fraunces', serif;
+      font-size: 20px;
+      color: var(--forest);
+      margin-bottom: 4px;
+    }
+    .explainer-banner p {
+      font-size: 14.5px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    /* Split-screen comparison section */
+    .split-view-container {
+      display: none;
+      position: relative;
+      width: 100%;
+      height: 400px;
+      border-radius: 28px;
+      overflow: hidden;
+      border: 1.5px solid var(--line);
+      background: #FAF7F2;
+      user-select: none;
+    }
+    .split-pane {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .split-pane-before {
+      left: 0;
+      width: 50%;
+      background: #fff;
+      border-right: 2px solid var(--forest);
+      z-index: 2;
+    }
+    .split-pane-after {
+      right: 0;
+      left: 0;
+      background: var(--linen);
+      z-index: 1;
+    }
+    .split-content {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 1000px;
+      max-width: 100vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .split-handle {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 4px;
+      background: var(--forest);
+      z-index: 10;
+      cursor: ew-resize;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .split-handle-btn {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--forest);
+      color: var(--linen);
+      display: grid;
+      place-items: center;
+      box-shadow: 0 4px 14px rgba(0,0,0,.3);
+      border: 3px solid #fff;
+    }
+
+    /* X-Ray Blueprint View */
+    .xray-view-container {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+    .blueprint-stage {
+      width: 100%;
+      height: 400px;
+      border-radius: 28px;
+      background: #1C231E;
+      border: 1.5px solid #2D3A2F;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .blueprint-stage::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-size: 20px 20px;
+      background-image: 
+        linear-gradient(to right, rgba(163, 177, 138, 0.12) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(163, 177, 138, 0.12) 1px, transparent 1px);
+    }
+
+    /* Details Grid */
+    .insights-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .insight-card {
+      background: #fff;
+      border: 1.5px solid var(--line);
+      border-radius: 28px;
+      padding: 32px 28px;
+      transition: transform .2s;
+    }
+    .insight-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-sm); }
+    .insight-badge {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      background: var(--sage-xl);
+      color: var(--forest);
+      display: grid;
+      place-items: center;
+      margin-bottom: 18px;
+    }
+    .insight-card h3 {
+      font-family: 'Fraunces', serif;
+      font-size: 22px;
+      color: var(--forest);
+      margin-bottom: 10px;
+    }
+    .insight-card p {
+      color: var(--muted);
+      font-size: 14.5px;
+      line-height: 1.6;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .stage-card { padding: 24px 18px; border-radius: 28px; }
+      .stage-viewport { height: 320px; }
+      .milestones { grid-template-columns: 1fr 1fr; }
+      .insights-grid { grid-template-columns: 1fr; }
+      .explainer-banner { flex-direction: column; text-align: center; }
+      .btn-row { flex-direction: column; align-items: stretch; }
+      .btn-group { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Strip -->
+  <div class="top-strip">
+    <div class="wrap">
+      <span><svg class="ic" style="width:14px;height:14px;vertical-align:-2px"><use href="#i-award"/></svg> Schipper Compact Wonen · Specialist sinds 1989</span>
+      <a href="collectie.html">Terug naar Collectie →</a>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header id="main-header">
+    <div class="navbar">
+      <a href="index.html" class="logo" aria-label="Schipper Compact Wonen">
+        <span class="logo-mark">S</span>
+        <span><b>Schipper</b><small>Compact Wonen</small></span>
+      </a>
+      <nav class="nav" aria-label="Hoofdmenu">
+        <a href="index.html">Home</a>
+        <a href="collectie.html">Collectie</a>
+        <a href="index.html#werkwijze">Werkwijze</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <div class="hdr-right">
+        <a href="collectie.html" class="btn btn-clay btn-sm">Bekijk Collectie</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- SVG Sprite -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+    <symbol id="i-play" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3" fill="currentColor"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><rect x="6" y="4" width="4" height="16" fill="currentColor"/><rect x="14" y="4" width="4" height="16" fill="currentColor"/></symbol>
+    <symbol id="i-rewind" viewBox="0 0 24 24"><path d="M11 19l-9-7 9-7v14zM22 19l-9-7 9-7v14z" fill="currentColor"/></symbol>
+    <symbol id="i-repeat" viewBox="0 0 24 24"><path d="M17 1l4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></symbol>
+    <symbol id="i-compare" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="12" y1="3" x2="12" y2="21"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="i-sparkles" viewBox="0 0 24 24"><path d="M12 3l1.9 5.8a2 2 0 0 0 1.3 1.3L21 12l-5.8 1.9a2 2 0 0 0-1.3 1.3L12 21l-1.9-5.8a2 2 0 0 0-1.3-1.3L3 12l5.8-1.9a2 2 0 0 0 1.3-1.3L12 3z"/></symbol>
+    <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></symbol>
+  </svg>
+
+  <!-- Main Content -->
+  <main class="wrap">
+    
+    <div class="hero">
+      <span class="eyebrow"><svg class="ic" style="width:14px;height:14px"><use href="#i-sparkles"/></svg> Brand Identity &amp; Evolutie</span>
+      <h1 class="serif">Van Ambachtelijk Kussen naar <span class="squig">Serene Boog<svg viewBox="0 0 200 14" preserveAspectRatio="none" aria-hidden="true"><path d="M3 8 C 40 2, 70 12, 110 7 S 170 3, 197 8"/></svg></span></h1>
+      <p>Het nieuwe beeldmerk van Schipper Compact Wonen is een doordachte gestileerde evolutie van het oorspronkelijke 1989-embleem. Het gecapitonneerde fauteuilkussen transformeert naar een serene Scandinavische boog, terwijl de gotische monogramletters zich openvouwen tot een eigentijds woordmerk.</p>
+    </div>
+
+    <!-- View Mode Switcher -->
+    <div class="view-tabs">
+      <button class="view-tab active" onclick="switchView('morph')">
+        <svg class="ic"><use href="#i-play"/></svg> Morf-Animatie
+      </button>
+      <button class="view-tab" onclick="switchView('xray')">
+        <svg class="ic"><use href="#i-layers"/></svg> Vormvariant &amp; X-Ray Blauwdruk
+      </button>
+      <button class="view-tab" onclick="switchView('split')">
+        <svg class="ic"><use href="#i-compare"/></svg> Gordijn-Slider (Voor / Na)
+      </button>
+    </div>
+
+    <!-- STAGE CARD -->
+    <div class="stage-card">
+
+      <!-- VIEW 1: MORPH ANIMATION STAGE -->
+      <div id="view-morph">
+        <div class="stage-viewport">
+          
+          <!-- Dynamic SVG Morph Stage -->
+          <svg id="morph-svg" viewBox="0 0 540 340">
+            <defs>
+              <!-- Drop shadows and filters -->
+              <filter id="cushion-shadow" x="-20%" y="-20%" width="140%" height="140%">
+                <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#2D3A2F" flood-opacity="0.16"/>
+              </filter>
+              <filter id="soft-glow" x="-20%" y="-20%" width="140%" height="140%">
+                <feGaussianBlur stdDeviation="8" result="blur"/>
+                <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+              </filter>
+            </defs>
+
+            <!-- Background Pill Capsule (Morphs from circular badge to horizontal header capsule) -->
+            <rect id="bg-capsule" x="140" y="30" width="260" height="280" rx="130" ry="130" 
+                  fill="#FAF7F2" stroke="#E2DBD0" stroke-width="1.5" filter="url(#cushion-shadow)" />
+
+            <!-- The Main Morphing Silhouette (Cushion -> Arch) -->
+            <path id="morph-body" d="" fill="#048C2B" stroke="#111111" stroke-width="4.5" stroke-linejoin="round" />
+
+            <!-- Authentic Vintage Drawing Overlay (Crossfades seamlessly at the start) -->
+            <image id="real-old-logo" href="assets/logo_oud_transparant.png" x="135" y="25" width="270" height="270" opacity="1" pointer-events="none" />
+
+            <!-- Tufting diamond stitches (Visible at start, fades out during transition) -->
+            <g id="tufting-lines" stroke="#111111" stroke-width="2.8" stroke-linecap="round" opacity="1">
+              <path d="M 215 130 L 305 240" />
+              <path d="M 255 130 L 335 220" />
+              <path d="M 325 130 L 235 240" />
+              <path d="M 285 130 L 205 220" />
+              <!-- Accent upper stitches -->
+              <path d="M 195 150 L 230 190" />
+              <path d="M 345 150 L 310 190" />
+            </g>
+
+            <!-- GOTHIC LETTERS (OLD EMBLEM) -->
+            <!-- Gothic S (left) -->
+            <g id="gothic-s" transform="translate(135, 185)">
+              <image href="assets/logo_oud_transparant.png" x="-140" y="-140" width="280" height="280" 
+                     clip-path="url(#clip-s)" style="display:none" />
+              <!-- Vector representation for smooth morphing -->
+              <text id="letter-s-gothic" x="0" y="0" font-family="'Fraunces', serif" font-weight="900" 
+                    font-size="68" fill="#111" text-anchor="middle" dominant-baseline="central">S</text>
+            </g>
+
+            <!-- Gothic C (right) -->
+            <g id="gothic-c" transform="translate(405, 185)">
+              <text id="letter-c-gothic" x="0" y="0" font-family="'Fraunces', serif" font-weight="900" 
+                    font-size="64" fill="#111" text-anchor="middle" dominant-baseline="central">C</text>
+            </g>
+
+            <!-- Gothic W (bottom) -->
+            <g id="gothic-w" transform="translate(270, 295)">
+              <text id="letter-w-gothic" x="0" y="0" font-family="'Fraunces', serif" font-weight="900" 
+                    font-size="64" fill="#111" text-anchor="middle" dominant-baseline="central">W</text>
+            </g>
+
+            <!-- NEW TYPOGRAPHY: Schipper Compact Wonen (Reveals to the right of the arch) -->
+            <g id="new-typography" transform="translate(230, 160)" opacity="0">
+              <text id="text-schipper" x="0" y="6" font-family="'Fraunces', serif" font-weight="700" 
+                    font-size="44" fill="#2D3A2F">Schipper</text>
+              <text id="text-compact" x="4" y="34" font-family="'Figtree', sans-serif" font-weight="700" 
+                    font-size="14.5" letter-spacing="0.22em" fill="#4B584E">COMPACT WONEN</text>
+            </g>
+
+            <!-- Subtitle label at bottom showing year / status -->
+            <text id="year-label" x="270" y="325" font-family="'Figtree', sans-serif" font-size="12" 
+                  font-weight="700" letter-spacing="0.18em" fill="#5C675E" text-anchor="middle">
+              AMBACHTELIJK EMBLEEM · 1989
+            </text>
+          </svg>
+
+        </div>
+
+        <!-- Controls: Scrubber & Playback -->
+        <div class="controls-panel">
+          
+          <div class="scrub-wrapper">
+            <button id="btn-play-pause" class="btn btn-forest btn-sm" onclick="togglePlay()">
+              <svg class="ic" id="play-icon"><use href="#i-play"/></svg>
+              <span id="play-text">Afspelen</span>
+            </button>
+            <div class="scrub-track-box">
+              <input type="range" id="scrubber" class="scrub-slider" min="0" max="100" value="0" step="0.1" oninput="onScrub(this.value)">
+            </div>
+            <span class="scrub-percent" id="scrub-val">0%</span>
+          </div>
+
+          <div class="btn-row">
+            <div class="btn-group">
+              <button class="btn btn-ghost btn-sm" onclick="resetToStart()"><svg class="ic"><use href="#i-rewind"/></svg> Begin (1989)</button>
+              <button class="btn btn-ghost btn-sm" onclick="jumpToEnd()"><svg class="ic"><use href="#i-sparkles"/></svg> Einde (2026)</button>
+              <button class="btn btn-ghost btn-sm" id="btn-loop" onclick="toggleLoop()"><svg class="ic"><use href="#i-repeat"/></svg> <span id="loop-text">Loop: Aan</span></button>
+            </div>
+
+            <div class="btn-group">
+              <span style="font-size:13px;font-weight:600;color:var(--muted)">Snelheid:</span>
+              <button class="btn btn-ghost btn-sm" onclick="setSpeed(0.5)">0.5x</button>
+              <button class="btn btn-ghost btn-sm" style="background:var(--oat)" onclick="setSpeed(1.0)">1.0x</button>
+              <button class="btn btn-ghost btn-sm" onclick="setSpeed(2.0)">2.0x</button>
+            </div>
+          </div>
+
+          <!-- Milestones Grid -->
+          <div class="milestones">
+            <button class="milestone-btn active" onclick="setPhase(0)">
+              <span class="m-pct">Fase 1 · 0%</span>
+              <span class="m-title">Klassiek Ambacht (1989)</span>
+            </button>
+            <button class="milestone-btn" onclick="setPhase(33)">
+              <span class="m-pct">Fase 2 · 33%</span>
+              <span class="m-title">Vorm Ontrafeld</span>
+            </button>
+            <button class="milestone-btn" onclick="setPhase(66)">
+              <span class="m-pct">Fase 3 · 66%</span>
+              <span class="m-title">Morfing naar Boog</span>
+            </button>
+            <button class="milestone-btn" onclick="setPhase(100)">
+              <span class="m-pct">Fase 4 · 100%</span>
+              <span class="m-title">Modern Merkteken (2026)</span>
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- VIEW 2: X-RAY BLUEPRINT VIEW -->
+      <div id="view-xray" class="xray-view-container">
+        <div class="blueprint-stage">
+          <svg viewBox="0 0 600 400" style="width:100%;height:100%;max-width:540px">
+            <!-- Grid Center Lines -->
+            <line x1="300" y1="20" x2="300" y2="380" stroke="rgba(163,177,138,0.2)" stroke-dasharray="4 4" />
+            <line x1="40" y1="200" x2="560" y2="200" stroke="rgba(163,177,138,0.2)" stroke-dasharray="4 4" />
+
+            <!-- Old Cushion Outline (Cyan/Emerald Wireframe) -->
+            <path id="xray-cushion" d="M 210 115 C 240 105, 270 135, 300 135 C 330 135, 360 105, 390 115 C 405 125, 395 160, 380 185 C 370 205, 390 235, 380 260 C 370 275, 335 268, 300 268 C 265 268, 230 275, 220 260 C 210 235, 230 205, 220 185 C 205 160, 195 125, 210 115 Z" 
+                  fill="rgba(4, 140, 43, 0.25)" stroke="#048C2B" stroke-width="3" />
+
+            <!-- Old Stitching (Wireframe) -->
+            <g stroke="#048C2B" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.6">
+              <path d="M 245 130 L 335 240" />
+              <path d="M 285 130 L 365 220" />
+              <path d="M 355 130 L 265 240" />
+              <path d="M 315 130 L 235 220" />
+            </g>
+
+            <!-- New Arch Outline (Warm Sage Wireframe) -->
+            <path id="xray-arch" d="M 240 180 C 240 146.9, 266.9 120, 300 120 C 333.1 120, 360 146.9, 360 180 C 360 205, 360 230, 360 255 C 360 270, 360 282, 346 282 C 330 282, 315 282, 300 282 C 285 282, 270 282, 254 282 C 240 282, 240 270, 240 255 C 240 230, 240 205, 240 180 Z" 
+                  fill="rgba(163, 177, 138, 0.35)" stroke="#A3B18A" stroke-width="3.5" />
+
+            <!-- Dimension Annotations -->
+            <text x="300" y="85" font-family="'Figtree', sans-serif" font-size="12" font-weight="700" fill="#CCD5C3" text-anchor="middle">
+              Gedeelde krommingsas &amp; symmetrische basis
+            </text>
+            <circle cx="300" cy="120" r="4" fill="#A3B18A" />
+            <circle cx="300" cy="135" r="4" fill="#048C2B" />
+
+            <path d="M 190 185 L 235 185" stroke="#A3B18A" stroke-width="1.5" marker-end="url(#arrow)" />
+            <text x="180" y="189" font-family="'Figtree', sans-serif" font-size="11" font-weight="600" fill="#CCD5C3" text-anchor="end">
+              Kussenflank → Boogkolom
+            </text>
+
+            <path d="M 410 185 L 365 185" stroke="#A3B18A" stroke-width="1.5" />
+            <text x="420" y="189" font-family="'Figtree', sans-serif" font-size="11" font-weight="600" fill="#CCD5C3" text-anchor="start">
+              Rechte architectonische lijn
+            </text>
+          </svg>
+        </div>
+
+        <div style="width:100%;max-width:540px;background:var(--linen);border-radius:20px;padding:16px 24px;border:1px solid var(--line);display:flex;align-items:center;gap:16px">
+          <span style="font-size:13px;font-weight:700;color:var(--forest)">Overvloeiing vergelijken:</span>
+          <input type="range" min="0" max="100" value="50" style="flex:1" oninput="adjustXray(this.value)">
+          <span id="xray-label" style="font-weight:700;font-size:13px;color:var(--moss)">50% Balans</span>
+        </div>
+      </div>
+
+      <!-- VIEW 3: SPLIT-SCREEN CURTAIN VIEW -->
+      <div id="view-split">
+        <div class="split-view-container" id="split-box">
+          <!-- After (New Logo) -->
+          <div class="split-pane split-pane-after">
+            <div class="split-content">
+              <div style="background:#FAF7F2;padding:24px 36px;border-radius:999px;border:1.5px solid var(--line);display:flex;align-items:center;gap:16px;box-shadow:var(--shadow-md)">
+                <div style="width:52px;height:62px;border-radius:999px 999px 14px 14px;background:var(--sage);color:var(--forest);display:grid;place-items:center;font-family:'Fraunces',serif;font-size:32px;font-weight:700">S</div>
+                <div>
+                  <div style="font-family:'Fraunces',serif;font-size:32px;font-weight:700;color:var(--forest);line-height:1">Schipper</div>
+                  <div style="font-size:13px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--moss);margin-top:4px">COMPACT WONEN</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Before (Old Logo) -->
+          <div class="split-pane split-pane-before" id="split-before">
+            <div class="split-content">
+              <img src="assets/logo_oud_transparant.png" alt="Oud Schipper Compact Wonen embleem 1989" style="max-height:260px;width:auto">
+            </div>
+          </div>
+
+          <!-- Handle -->
+          <div class="split-handle" id="split-handle">
+            <div class="split-handle-btn">
+              <svg class="ic" style="width:16px;height:16px"><use href="#i-compare"/></svg>
+            </div>
+          </div>
+        </div>
+
+        <p style="text-align:center;font-size:13px;color:var(--muted);margin-top:14px">
+          ← Sleep de schuifknop naar links of rechts om het originele 1989-embleem met het 2026-beeldmerk te vergelijken →
+        </p>
+      </div>
+
+    </div>
+
+    <!-- EXPLAINER BANNER -->
+    <div class="explainer-banner">
+      <div class="orb">
+        <svg class="ic" style="width:26px;height:26px"><use href="#i-award"/></svg>
+      </div>
+      <div>
+        <h4 id="status-title">De Oorsprong: Het Ambachtelijke Fauteuilkussen (1989)</h4>
+        <p id="status-desc">In het oorspronkelijke merkteken staat het gecapitonneerde kussen van een klassieke relax- en sta-op stoel centraal, omarmd door de gotische initialen S, C en W (Schipper Compact Wonen). Het straalt degelijkheid en 35+ jaar zorgambacht uit.</p>
+      </div>
+    </div>
+
+    <!-- 3 DESIGN INSIGHTS -->
+    <div class="insights-grid">
+      <div class="insight-card">
+        <div class="insight-badge">
+          <svg class="ic"><use href="#i-layers"/></svg>
+        </div>
+        <h3>1. Vormtransformatie</h3>
+        <p>De zachte, ingesnoerde kussenflanken zijn strakgetrokken tot de zuivere geometrie van een <strong>architectonische boog</strong>. De ruitstiksels vervagen naar een rustgevend egaal vlak, wat rust en ruimtelijkheid creëert.</p>
+      </div>
+
+      <div class="insight-card">
+        <div class="insight-badge">
+          <svg class="ic"><use href="#i-sparkles"/></svg>
+        </div>
+        <h3>2. Kleurharmonie</h3>
+        <p>Van het felle medische smaragdgroen (<code>#048C2B</code>) naar een warm Scandinavisch <strong>saliegroen</strong> (<code>#A3B18A</code>) gecombineerd met diep bosgroen (<code>#2D3A2F</code>) en linnen, passend bij modern interieur.</p>
+      </div>
+
+      <div class="insight-card">
+        <div class="insight-badge">
+          <svg class="ic"><use href="#i-award"/></svg>
+        </div>
+        <h3>3. Monogram &amp; Typografie</h3>
+        <p>De zware gotische 'S', 'C' en 'W' initialen transformeren: de centrale <strong>'S'</strong> verhuist naar het hart van de boog in een vorstelijke serif, terwijl <em>Compact Wonen</em> als volwaardig woordmerk ernaast straalt.</p>
+      </div>
+    </div>
+
+  </main>
+
+  <footer style="margin-top:80px;padding:32px 0;text-align:center;border-top:1px solid var(--line);font-size:13.5px;color:var(--muted)">
+    <div class="wrap">
+      © 2026 Schipper Compact Wonen BV · Merwedestraat 239, Dordrecht · 
+      <a href="index.html" style="color:var(--forest);font-weight:600;text-decoration:none">Naar Homepage</a> · 
+      <a href="collectie.html" style="color:var(--forest);font-weight:600;text-decoration:none">Bekijk Collectie (49)</a>
+    </div>
+  </footer>
+
+  <script>
+    // --- MORPHING ENGINE ---
+    // Cubic bezier definitions for Cushion (at 0%) and Arch (at 100%)
+    // Centered in a 540x340 stage
+    // Center point: (270, 170)
+
+    const cushion_p = [
+      [180, 85], // start top-left
+      [210, 75, 240, 105, 270, 105], // 0: top dip left
+      [300, 105, 330, 75, 360, 85],   // 1: top dip right
+      [375, 95, 365, 130, 350, 155],  // 2: top-right to waist
+      [340, 175, 360, 205, 350, 230], // 3: waist to bottom-right
+      [340, 245, 305, 238, 270, 238], // 4: bottom-right to center
+      [235, 238, 200, 245, 190, 230], // 5: center to bottom-left
+      [180, 205, 200, 175, 190, 155], // 6: bottom-left to waist
+      [175, 130, 165, 95, 180, 85]    // 7: waist to top-left
+    ];
+
+    // Arch (at 100%): width 100, height 120, centered at (150, 170) when typography is revealed!
+    // Notice: as morph progresses, the arch shifts slightly to the left (center x=160) to make room for "Schipper Compact Wonen"!
+    const arch_p_centered = [
+      [220, 170],
+      [220, 142.4, 242.4, 120, 270, 120],
+      [297.6, 120, 320, 142.4, 320, 170],
+      [320, 195, 320, 220, 320, 245],
+      [320, 255, 320, 260, 310, 260],
+      [290, 260, 280, 260, 270, 260],
+      [260, 260, 250, 260, 230, 260],
+      [220, 260, 220, 255, 220, 245],
+      [220, 220, 220, 195, 220, 170]
+    ];
+
+    // Left-shifted arch when typography arrives
+    const arch_p = [
+      [110, 170],
+      [110, 142.4, 132.4, 120, 160, 120],
+      [187.6, 120, 210, 142.4, 210, 170],
+      [210, 195, 210, 220, 210, 245],
+      [210, 255, 210, 260, 200, 260],
+      [180, 260, 170, 260, 160, 260],
+      [150, 260, 140, 260, 120, 260],
+      [110, 260, 110, 255, 110, 245],
+      [110, 220, 110, 195, 110, 170]
+    ];
+
+    function lerp(a, b, t) { return a + (b - a) * t; }
+
+    function getInterpolatedPath(t) {
+      // Choose target arch points based on t
+      // Shift left smoothly in the second half of animation (t > 0.4)
+      const targetArch = [];
+      const shiftT = Math.max(0, Math.min(1, (t - 0.4) / 0.6));
+      
+      const startP = [
+        lerp(cushion_p[0][0], lerp(arch_p_centered[0][0], arch_p[0][0], shiftT), t),
+        lerp(cushion_p[0][1], lerp(arch_p_centered[0][1], arch_p[0][1], shiftT), t)
+      ];
+
+      let d = `M ${startP[0].toFixed(2)} ${startP[1].toFixed(2)}`;
+
+      for (let i = 1; i <= 8; i++) {
+        const targetC1x = lerp(arch_p_centered[i][0], arch_p[i][0], shiftT);
+        const targetC1y = lerp(arch_p_centered[i][1], arch_p[i][1], shiftT);
+        const targetC2x = lerp(arch_p_centered[i][2], arch_p[i][2], shiftT);
+        const targetC2y = lerp(arch_p_centered[i][3], arch_p[i][3], shiftT);
+        const targetP3x = lerp(arch_p_centered[i][4], arch_p[i][4], shiftT);
+        const targetP3y = lerp(arch_p_centered[i][5], arch_p[i][5], shiftT);
+
+        const c1x = lerp(cushion_p[i][0], targetC1x, t);
+        const c1y = lerp(cushion_p[i][1], targetC1y, t);
+        const c2x = lerp(cushion_p[i][2], targetC2x, t);
+        const c2y = lerp(cushion_p[i][3], targetC2y, t);
+        const p3x = lerp(cushion_p[i][4], targetP3x, t);
+        const p3y = lerp(cushion_p[i][5], targetP3y, t);
+
+        d += ` C ${c1x.toFixed(2)} ${c1y.toFixed(2)}, ${c2x.toFixed(2)} ${c2y.toFixed(2)}, ${p3x.toFixed(2)} ${p3y.toFixed(2)}`;
+      }
+      d += ' Z';
+      return d;
+    }
+
+    // Color interpolation
+    function lerpColor(r1, g1, b1, r2, g2, b2, t) {
+      const r = Math.round(lerp(r1, r2, t));
+      const g = Math.round(lerp(g1, g2, t));
+      const b = Math.round(lerp(b1, b2, t));
+      return `rgb(${r}, ${g}, ${b})`;
+    }
+
+    // Animation state
+    let progress = 0; // 0.0 to 1.0
+    let isPlaying = false;
+    let playSpeed = 1.0;
+    let isLooping = true;
+    let direction = 1; // 1 = forward, -1 = reverse
+    let animFrameId = null;
+    let lastTimestamp = 0;
+
+    const DURATION = 3600; // ms for full forward morph
+
+    const morphBody = document.getElementById('morph-body');
+    const tufting = document.getElementById('tufting-lines');
+    const gothicS = document.getElementById('gothic-s');
+    const gothicC = document.getElementById('gothic-c');
+    const gothicW = document.getElementById('gothic-w');
+    const letterSGothic = document.getElementById('letter-s-gothic');
+    const newTypo = document.getElementById('new-typography');
+    const bgCapsule = document.getElementById('bg-capsule');
+    const yearLabel = document.getElementById('year-label');
+    const scrubber = document.getElementById('scrubber');
+    const scrubVal = document.getElementById('scrub-val');
+
+    function updateMorph(t) {
+      // 0. Authentic image overlay fadeout
+      const realOld = document.getElementById('real-old-logo');
+      if (realOld) {
+        const oldImgOpacity = Math.max(0, 1 - t * 3.2);
+        realOld.setAttribute('opacity', oldImgOpacity);
+        realOld.style.display = oldImgOpacity <= 0.01 ? 'none' : 'inline';
+      }
+
+      // 1. Update Path
+      morphBody.setAttribute('d', getInterpolatedPath(t));
+
+      // 2. Color Transition: Emerald (#048C2B: 4, 140, 43) -> Sage (#A3B18A: 163, 177, 138)
+      morphBody.setAttribute('fill', lerpColor(4, 140, 43, 163, 177, 138, t));
+
+      // 3. Stroke width: 4.5px down to 0px
+      const strokeW = Math.max(0, 4.5 * (1 - t * 1.3));
+      morphBody.setAttribute('stroke-width', strokeW);
+      morphBody.setAttribute('stroke-opacity', Math.max(0, 1 - t * 1.2));
+
+      // 4. Tufting lines: fade out early (0 to 0.45)
+      const tuftOpacity = Math.max(0, 1 - t * 2.2);
+      tufting.setAttribute('opacity', tuftOpacity);
+      tufting.setAttribute('transform', `translate(${(t * -60).toFixed(1)}, 0) scale(${(1 - t * 0.15).toFixed(2)})`);
+
+      // 5. Gothic 'S': moves from left (x=135, y=185) to center of arch
+      // Target arch center is (160, 205) at end
+      const sTargetX = lerp(270, 160, Math.max(0, Math.min(1, (t - 0.3) / 0.7)));
+      const sTargetY = 205;
+      const sCurX = lerp(135, sTargetX, Math.min(1, t * 1.3));
+      const sCurY = lerp(185, sTargetY, Math.min(1, t * 1.3));
+      gothicS.setAttribute('transform', `translate(${sCurX.toFixed(1)}, ${sCurY.toFixed(1)})`);
+
+      // 'S' style transition from Gothic to Serif Fraunces:
+      if (t > 0.45) {
+        letterSGothic.setAttribute('fill', '#2D3A2F');
+        letterSGothic.setAttribute('font-size', lerp(68, 56, (t - 0.45) / 0.55).toFixed(1));
+        letterSGothic.setAttribute('font-weight', '700');
+      } else {
+        letterSGothic.setAttribute('fill', '#111111');
+        letterSGothic.setAttribute('font-size', '68');
+        letterSGothic.setAttribute('font-weight', '900');
+      }
+
+      // 6. Gothic 'C' and 'W': float out and fade
+      const lettersOutOpacity = Math.max(0, 1 - t * 2.6);
+      gothicC.setAttribute('opacity', lettersOutOpacity);
+      gothicC.setAttribute('transform', `translate(${(405 + t * 40).toFixed(1)}, ${(185 - t * 15).toFixed(1)})`);
+
+      gothicW.setAttribute('opacity', lettersOutOpacity);
+      gothicW.setAttribute('transform', `translate(${(270).toFixed(1)}, ${(295 + t * 35).toFixed(1)})`);
+
+      // 7. New Typography ("Schipper Compact Wonen"): fades in and slides into place
+      const typoOpacity = Math.max(0, Math.min(1, (t - 0.5) / 0.45));
+      const typoSlideX = lerp(260, 235, Math.max(0, Math.min(1, (t - 0.5) / 0.5)));
+      newTypo.setAttribute('opacity', typoOpacity);
+      newTypo.setAttribute('transform', `translate(${typoSlideX.toFixed(1)}, 165)`);
+
+      // 8. Background Capsule: from circular badge to horizontal pill
+      // Width: 260 -> 460
+      // Height: 280 -> 160
+      // X: 140 -> 40
+      // Y: 30 -> 90
+      // Radius: 130 -> 80
+      const capW = lerp(260, 480, t);
+      const capH = lerp(280, 160, t);
+      const capX = lerp(140, 30, t);
+      const capY = lerp(30, 90, t);
+      const capR = lerp(130, 80, t);
+      bgCapsule.setAttribute('x', capX.toFixed(1));
+      bgCapsule.setAttribute('y', capY.toFixed(1));
+      bgCapsule.setAttribute('width', capW.toFixed(1));
+      bgCapsule.setAttribute('height', capH.toFixed(1));
+      bgCapsule.setAttribute('rx', capR.toFixed(1));
+      bgCapsule.setAttribute('ry', capR.toFixed(1));
+
+      // 9. Status label & milestone buttons
+      if (t < 0.25) {
+        yearLabel.textContent = 'AMBACHTELIJK EMBLEEM · 1989';
+        updateMilestoneActive(0);
+        updateBanner('De Oorsprong: Het Ambachtelijke Fauteuilkussen (1989)', 'In het oorspronkelijke merkteken staat het gecapitonneerde kussen van een klassieke relax- en sta-op stoel centraal, omarmd door de gotische initialen S, C en W (Schipper Compact Wonen). Het straalt degelijkheid en 35+ jaar zorgambacht uit.');
+      } else if (t < 0.55) {
+        yearLabel.textContent = 'DECONSTRUCTIE · VORMONTLEDING';
+        updateMilestoneActive(1);
+        updateBanner('Fase 2: De Vormelementen Ontleed', 'De zware contourlijnen en ruitstiksels maken zich los. De gotische letters C en W geven ruimte vrij, terwijl de letter S de centrale positie inneemt. De essentie van de kussenvorm blijft herkenbaar bewaard.');
+      } else if (t < 0.85) {
+        yearLabel.textContent = 'MORFING · GEOMETRISCHE VERSOEPELING';
+        updateMilestoneActive(2);
+        updateBanner('Fase 3: Geometrische Versoepeling naar Boog', 'De kussenflanken richten zich op en versmelten tot de zuivere harmonie van een architectonische boog. Het schrille medisch groen verzacht naar rustgevend Scandinavisch saliegroen.');
+      } else {
+        yearLabel.textContent = 'HET NIEUWE MERKTEKEN · 2026';
+        updateMilestoneActive(3);
+        updateBanner('Het Eigentijdse Merk: Rust, Maatwerk & Wooncomfort (2026)', 'De afgeronde boog omarmt de vorstelijke serif S. Daarnaast presenteert het woordmerk "Schipper Compact Wonen" zich evenwichtig en tijdloos. Een logo dat vertrouwen geeft en prachtig aansluit bij de hedendaagse woonstijl.');
+      }
+
+      // UI Scrubber Sync
+      scrubber.value = (t * 100).toFixed(1);
+      scrubVal.textContent = Math.round(t * 100) + '%';
+    }
+
+    function updateMilestoneActive(idx) {
+      document.querySelectorAll('.milestone-btn').forEach((b, i) => {
+        b.classList.toggle('active', i === idx);
+      });
+    }
+
+    function updateBanner(title, desc) {
+      const t = document.getElementById('status-title');
+      const d = document.getElementById('status-desc');
+      if (t) t.textContent = title;
+      if (d) d.textContent = desc;
+    }
+
+    function onScrub(val) {
+      if (isPlaying) togglePlay();
+      progress = parseFloat(val) / 100;
+      updateMorph(progress);
+    }
+
+    function setPhase(pct) {
+      if (isPlaying) togglePlay();
+      progress = pct / 100;
+      updateMorph(progress);
+    }
+
+    function resetToStart() {
+      if (isPlaying) togglePlay();
+      progress = 0;
+      updateMorph(0);
+    }
+
+    function jumpToEnd() {
+      if (isPlaying) togglePlay();
+      progress = 1;
+      updateMorph(1);
+    }
+
+    function togglePlay() {
+      isPlaying = !isPlaying;
+      const btn = document.getElementById('btn-play-pause');
+      const icon = document.getElementById('play-icon');
+      const text = document.getElementById('play-text');
+
+      if (isPlaying) {
+        if (progress >= 1) progress = 0;
+        icon.innerHTML = '<use href="#i-pause"/>';
+        text.textContent = 'Pauzeren';
+        lastTimestamp = performance.now();
+        animFrameId = requestAnimationFrame(animStep);
+      } else {
+        icon.innerHTML = '<use href="#i-play"/>';
+        text.textContent = 'Afspelen';
+        if (animFrameId) cancelAnimationFrame(animFrameId);
+      }
+    }
+
+    function toggleLoop() {
+      isLooping = !isLooping;
+      document.getElementById('loop-text').textContent = isLooping ? 'Loop: Aan' : 'Loop: Uit';
+    }
+
+    function setSpeed(spd) {
+      playSpeed = spd;
+      document.querySelectorAll('.btn-group .btn-ghost').forEach(b => {
+        if (b.textContent.includes(spd + 'x')) {
+          b.style.background = 'var(--oat)';
+        } else if (b.textContent.includes('0.5x') || b.textContent.includes('1.0x') || b.textContent.includes('2.0x')) {
+          b.style.background = 'transparent';
+        }
+      });
+    }
+
+    function animStep(timestamp) {
+      if (!isPlaying) return;
+      const delta = timestamp - lastTimestamp;
+      lastTimestamp = timestamp;
+
+      progress += (delta / (DURATION / playSpeed)) * direction;
+
+      if (progress >= 1) {
+        progress = 1;
+        if (isLooping) {
+          direction = -1; // Reverse for seamless ping-pong loop
+        } else {
+          togglePlay();
+          return;
+        }
+      } else if (progress <= 0) {
+        progress = 0;
+        if (isLooping) {
+          direction = 1;
+        } else {
+          togglePlay();
+          return;
+        }
+      }
+
+      updateMorph(progress);
+      animFrameId = requestAnimationFrame(animStep);
+    }
+
+    // Keyboard support: Space to play/pause
+    window.addEventListener('keydown', (e) => {
+      if (e.code === 'Space' && e.target.tagName !== 'INPUT') {
+        e.preventDefault();
+        togglePlay();
+      }
+    });
+
+    // --- VIEW SWITCHING ---
+    function switchView(mode) {
+      document.querySelectorAll('.view-tab').forEach((t, i) => {
+        t.classList.remove('active');
+      });
+      if (mode === 'morph') document.querySelectorAll('.view-tab')[0].classList.add('active');
+      if (mode === 'xray') document.querySelectorAll('.view-tab')[1].classList.add('active');
+      if (mode === 'split') document.querySelectorAll('.view-tab')[2].classList.add('active');
+
+      document.getElementById('view-morph').style.display = mode === 'morph' ? 'block' : 'none';
+      document.getElementById('view-xray').style.display = mode === 'xray' ? 'flex' : 'none';
+      document.getElementById('view-split').style.display = mode === 'split' ? 'block' : 'none';
+
+      if (mode !== 'morph' && isPlaying) {
+        togglePlay();
+      }
+    }
+
+    // X-Ray Fader
+    function adjustXray(val) {
+      const pct = val / 100;
+      const c = document.getElementById('xray-cushion');
+      const a = document.getElementById('xray-arch');
+      const lbl = document.getElementById('xray-label');
+      
+      c.setAttribute('stroke-opacity', 1 - pct * 0.7);
+      c.setAttribute('fill-opacity', (1 - pct) * 0.4);
+      
+      a.setAttribute('stroke-opacity', 0.3 + pct * 0.7);
+      a.setAttribute('fill-opacity', pct * 0.45);
+
+      if (pct < 0.35) lbl.textContent = '1989 Kussen Focus';
+      else if (pct > 0.65) lbl.textContent = '2026 Boog Focus';
+      else lbl.textContent = 'Perfecte Vormoverlay';
+    }
+
+    // Split-Screen Drag
+    const splitBox = document.getElementById('split-box');
+    const splitBefore = document.getElementById('split-before');
+    const splitHandle = document.getElementById('split-handle');
+    let isDraggingSplit = false;
+
+    function handleSplitMove(x) {
+      const rect = splitBox.getBoundingClientRect();
+      let pos = (x - rect.left) / rect.width;
+      pos = Math.max(0.05, Math.min(0.95, pos));
+      splitBefore.style.width = (pos * 100) + '%';
+      splitHandle.style.left = (pos * 100) + '%';
+    }
+
+    if (splitBox) {
+      splitBox.addEventListener('mousedown', (e) => {
+        isDraggingSplit = true;
+        handleSplitMove(e.clientX);
+      });
+      window.addEventListener('mousemove', (e) => {
+        if (isDraggingSplit) handleSplitMove(e.clientX);
+      });
+      window.addEventListener('mouseup', () => { isDraggingSplit = false; });
+
+      // Touch support
+      splitBox.addEventListener('touchstart', (e) => {
+        isDraggingSplit = true;
+        handleSplitMove(e.touches[0].clientX);
+      });
+      window.addEventListener('touchmove', (e) => {
+        if (isDraggingSplit) handleSplitMove(e.touches[0].clientX);
+      });
+      window.addEventListener('touchend', () => { isDraggingSplit = false; });
+    }
+
+    // Initialize morph on load
+    const urlParams = new URLSearchParams(window.location.search);
+    const pParam = urlParams.get('p');
+    const viewParam = urlParams.get('view');
+    if (pParam !== null) {
+      progress = parseFloat(pParam) / 100;
+      updateMorph(progress);
+    } else {
+      updateMorph(0);
+    }
+    if (viewParam) {
+      switchView(viewParam);
+    }
+  </script>
+
+</body>
+</html>
