@@ -630,69 +630,44 @@
           <!-- Dynamic SVG Morph Stage -->
           <svg id="morph-svg" viewBox="0 0 540 340">
             <defs>
-              <!-- Drop shadows and filters -->
               <filter id="cushion-shadow" x="-20%" y="-20%" width="140%" height="140%">
-                <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#2D3A2F" flood-opacity="0.16"/>
-              </filter>
-              <filter id="soft-glow" x="-20%" y="-20%" width="140%" height="140%">
-                <feGaussianBlur stdDeviation="8" result="blur"/>
-                <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+                <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#2D3A2F" flood-opacity="0.12"/>
               </filter>
             </defs>
 
             <!-- Background Pill Capsule (Morphs from circular badge to horizontal header capsule) -->
-            <rect id="bg-capsule" x="140" y="30" width="260" height="280" rx="130" ry="130" 
+            <rect id="bg-capsule" x="136" y="26" width="268" height="268" rx="134" ry="134" 
                   fill="#FAF7F2" stroke="#E2DBD0" stroke-width="1.5" filter="url(#cushion-shadow)" />
 
-            <!-- The Main Morphing Silhouette (Cushion -> Arch) -->
-            <path id="morph-body" d="" fill="#048C2B" stroke="#111111" stroke-width="4.5" stroke-linejoin="round" />
+            <!-- Authentic Cushion Layer (at t=0, fades out smoothly into vector arch) -->
+            <image id="layer-cushion" href="assets/cushion_oud.png" x="188.4" y="52.4" width="159.9" height="140.4" opacity="1" />
 
-            <!-- Authentic Vintage Drawing Overlay (Crossfades seamlessly at the start) -->
-            <image id="real-old-logo" href="assets/logo_oud_transparant.png" x="135" y="25" width="270" height="270" opacity="1" pointer-events="none" />
+            <!-- Dynamic Vector Morphing Arch (smoothly morphs and takes over from cushion) -->
+            <path id="morph-body" d="" fill="#048C2B" opacity="0" />
 
-            <!-- Tufting diamond stitches (Visible at start, fades out during transition) -->
-            <g id="tufting-lines" stroke="#111111" stroke-width="2.8" stroke-linecap="round" opacity="1">
-              <path d="M 215 130 L 305 240" />
-              <path d="M 255 130 L 335 220" />
-              <path d="M 325 130 L 235 240" />
-              <path d="M 285 130 L 205 220" />
-              <!-- Accent upper stitches -->
-              <path d="M 195 150 L 230 190" />
-              <path d="M 345 150 L 310 190" />
-            </g>
+            <!-- Authentic Gothic S (glides from left into center of arch) -->
+            <image id="layer-gothic-s" href="assets/letter_oud_S.png" x="149.4" y="97.9" width="55.2" height="110.5" opacity="1" />
 
-            <!-- GOTHIC LETTERS (OLD EMBLEM) -->
-            <!-- Gothic S (left) -->
-            <g id="gothic-s" transform="translate(135, 185)">
-              <image href="assets/logo_oud_transparant.png" x="-140" y="-140" width="280" height="280" 
-                     clip-path="url(#clip-s)" style="display:none" />
-              <!-- Vector representation for smooth morphing -->
-              <text id="letter-s-gothic" x="0" y="0" font-family="'Fraunces', serif" font-weight="900" 
-                    font-size="68" fill="#111" text-anchor="middle" dominant-baseline="central">S</text>
-            </g>
+            <!-- Modern Serif S (crossfades in at center of arch) -->
+            <text id="layer-serif-s" x="160" y="196" font-family="'Fraunces', serif" font-weight="700" 
+                  font-size="54" fill="#2D3A2F" text-anchor="middle" dominant-baseline="central" opacity="0">S</text>
 
-            <!-- Gothic C (right) -->
-            <g id="gothic-c" transform="translate(405, 185)">
-              <text id="letter-c-gothic" x="0" y="0" font-family="'Fraunces', serif" font-weight="900" 
-                    font-size="64" fill="#111" text-anchor="middle" dominant-baseline="central">C</text>
-            </g>
+            <!-- Authentic Gothic C (floats right and dissolves) -->
+            <image id="layer-gothic-c" href="assets/letter_oud_C.png" x="331.4" y="97.9" width="58.5" height="110.5" opacity="1" />
 
-            <!-- Gothic W (bottom) -->
-            <g id="gothic-w" transform="translate(270, 295)">
-              <text id="letter-w-gothic" x="0" y="0" font-family="'Fraunces', serif" font-weight="900" 
-                    font-size="64" fill="#111" text-anchor="middle" dominant-baseline="central">W</text>
-            </g>
+            <!-- Authentic Gothic W (floats down and dissolves) -->
+            <image id="layer-gothic-w" href="assets/letter_oud_W.png" x="198.2" y="182.4" width="136.5" height="104.0" opacity="1" />
 
             <!-- NEW TYPOGRAPHY: Schipper Compact Wonen (Reveals to the right of the arch) -->
-            <g id="new-typography" transform="translate(230, 160)" opacity="0">
-              <text id="text-schipper" x="0" y="6" font-family="'Fraunces', serif" font-weight="700" 
+            <g id="new-typography" transform="translate(235, 155)" opacity="0">
+              <text id="text-schipper" x="0" y="8" font-family="'Fraunces', serif" font-weight="700" 
                     font-size="44" fill="#2D3A2F">Schipper</text>
-              <text id="text-compact" x="4" y="34" font-family="'Figtree', sans-serif" font-weight="700" 
+              <text id="text-compact" x="3" y="36" font-family="'Figtree', sans-serif" font-weight="700" 
                     font-size="14.5" letter-spacing="0.22em" fill="#4B584E">COMPACT WONEN</text>
             </g>
 
             <!-- Subtitle label at bottom showing year / status -->
-            <text id="year-label" x="270" y="325" font-family="'Figtree', sans-serif" font-size="12" 
+            <text id="year-label" x="270" y="318" font-family="'Figtree', sans-serif" font-size="11.5" 
                   font-weight="700" letter-spacing="0.18em" fill="#5C675E" text-anchor="middle">
               AMBACHTELIJK EMBLEEM · 1989
             </text>
@@ -1002,103 +977,142 @@
     const scrubVal = document.getElementById('scrub-val');
 
     function updateMorph(t) {
-      // 0. Authentic image overlay fadeout
-      const realOld = document.getElementById('real-old-logo');
-      if (realOld) {
-        const oldImgOpacity = Math.max(0, 1 - t * 3.2);
-        realOld.setAttribute('opacity', oldImgOpacity);
-        realOld.style.display = oldImgOpacity <= 0.01 ? 'none' : 'inline';
+      // Elements
+      const layerCushion = document.getElementById('layer-cushion');
+      const morphBody = document.getElementById('morph-body');
+      const layerGothicS = document.getElementById('layer-gothic-s');
+      const layerSerifS = document.getElementById('layer-serif-s');
+      const layerGothicC = document.getElementById('layer-gothic-c');
+      const layerGothicW = document.getElementById('layer-gothic-w');
+      const newTypo = document.getElementById('new-typography');
+      const bgCapsule = document.getElementById('bg-capsule');
+      const yearLabel = document.getElementById('year-label');
+      const scrubber = document.getElementById('scrubber');
+      const scrubVal = document.getElementById('scrub-val');
+
+      // 1. Letters C & W: At t=0 100% visible in exact original position.
+      // Between t=0.0 and 0.35, they gently float outward and fade out.
+      const cwT = Math.min(1.0, t / 0.35);
+      const cwOpacity = Math.max(0, 1.0 - cwT);
+      const cShiftX = cwT * 50;
+      const cShiftY = -cwT * 15;
+      const wShiftY = cwT * 40;
+
+      if (layerGothicC) {
+        layerGothicC.setAttribute('opacity', cwOpacity);
+        layerGothicC.setAttribute('transform', `translate(${cShiftX.toFixed(1)}, ${cShiftY.toFixed(1)})`);
+        layerGothicC.style.display = cwOpacity <= 0.01 ? 'none' : 'inline';
+      }
+      if (layerGothicW) {
+        layerGothicW.setAttribute('opacity', cwOpacity);
+        layerGothicW.setAttribute('transform', `translate(0, ${wShiftY.toFixed(1)})`);
+        layerGothicW.style.display = cwOpacity <= 0.01 ? 'none' : 'inline';
       }
 
-      // 1. Update Path
-      morphBody.setAttribute('d', getInterpolatedPath(t));
+      // 2. Cushion & Arch Transformation:
+      // At t=0: Cushion image is 100% visible, vector arch is 0% (NO doubling!).
+      // Between t=0.15 and 0.55: The cushion smoothly fades into the vector morphing path.
+      // The morph path morphs its geometry from cushion contour to modern arch contour!
+      const cushionFade = Math.max(0, Math.min(1, (t - 0.12) / 0.40));
+      const cushionOpacity = Math.max(0, 1.0 - cushionFade);
+      const archOpacity = cushionFade;
 
-      // 2. Color Transition: Emerald (#048C2B: 4, 140, 43) -> Sage (#A3B18A: 163, 177, 138)
-      morphBody.setAttribute('fill', lerpColor(4, 140, 43, 163, 177, 138, t));
+      // Position shift to left when typography arrives (t > 0.25)
+      const shiftLeftT = Math.max(0, Math.min(1, (t - 0.25) / 0.75));
+      const cushionShiftX = lerp(0, -78.4, shiftLeftT);
+      const cushionShiftY = lerp(0, 47.6, shiftLeftT);
 
-      // 3. Stroke width: 4.5px down to 0px
-      const strokeW = Math.max(0, 4.5 * (1 - t * 1.3));
-      morphBody.setAttribute('stroke-width', strokeW);
-      morphBody.setAttribute('stroke-opacity', Math.max(0, 1 - t * 1.2));
-
-      // 4. Tufting lines: fade out early (0 to 0.45)
-      const tuftOpacity = Math.max(0, 1 - t * 2.2);
-      tufting.setAttribute('opacity', tuftOpacity);
-      tufting.setAttribute('transform', `translate(${(t * -60).toFixed(1)}, 0) scale(${(1 - t * 0.15).toFixed(2)})`);
-
-      // 5. Gothic 'S': moves from left (x=135, y=185) to center of arch
-      // Target arch center is (160, 205) at end
-      const sTargetX = lerp(270, 160, Math.max(0, Math.min(1, (t - 0.3) / 0.7)));
-      const sTargetY = 205;
-      const sCurX = lerp(135, sTargetX, Math.min(1, t * 1.3));
-      const sCurY = lerp(185, sTargetY, Math.min(1, t * 1.3));
-      gothicS.setAttribute('transform', `translate(${sCurX.toFixed(1)}, ${sCurY.toFixed(1)})`);
-
-      // 'S' style transition from Gothic to Serif Fraunces:
-      if (t > 0.45) {
-        letterSGothic.setAttribute('fill', '#2D3A2F');
-        letterSGothic.setAttribute('font-size', lerp(68, 56, (t - 0.45) / 0.55).toFixed(1));
-        letterSGothic.setAttribute('font-weight', '700');
-      } else {
-        letterSGothic.setAttribute('fill', '#111111');
-        letterSGothic.setAttribute('font-size', '68');
-        letterSGothic.setAttribute('font-weight', '900');
+      if (layerCushion) {
+        layerCushion.setAttribute('opacity', cushionOpacity);
+        layerCushion.setAttribute('transform', `translate(${cushionShiftX.toFixed(1)}, ${cushionShiftY.toFixed(1)})`);
+        layerCushion.style.display = cushionOpacity <= 0.01 ? 'none' : 'inline';
       }
 
-      // 6. Gothic 'C' and 'W': float out and fade
-      const lettersOutOpacity = Math.max(0, 1 - t * 2.6);
-      gothicC.setAttribute('opacity', lettersOutOpacity);
-      gothicC.setAttribute('transform', `translate(${(405 + t * 40).toFixed(1)}, ${(185 - t * 15).toFixed(1)})`);
+      if (morphBody) {
+        morphBody.setAttribute('d', getInterpolatedPath(t));
+        morphBody.setAttribute('fill', lerpColor(4, 140, 43, 163, 177, 138, t));
+        morphBody.setAttribute('opacity', archOpacity);
+        morphBody.style.display = archOpacity <= 0.01 ? 'none' : 'inline';
+      }
 
-      gothicW.setAttribute('opacity', lettersOutOpacity);
-      gothicW.setAttribute('transform', `translate(${(270).toFixed(1)}, ${(295 + t * 35).toFixed(1)})`);
+      // 3. Letter S Transformation:
+      // At t=0: Authentic gothic S at original left position (149.4, 97.9).
+      // Between t=0.0 and 0.6: Glides smoothly into the center of the arch.
+      // Between t=0.4 and 0.75: Crossfades into the refined serif S (Fraunces).
+      const sMoveT = Math.min(1.0, t / 0.65);
+      // Arch center in stage coordinates is (160, 185) at the end, and (270, 148) in the middle
+      const targetArchCenterX = lerp(270 - 55.2/2, 160 - 55.2/2, shiftLeftT);
+      const targetArchCenterY = lerp(148 - 110.5/2, 185 - 110.5/2, shiftLeftT);
 
-      // 7. New Typography ("Schipper Compact Wonen"): fades in and slides into place
-      const typoOpacity = Math.max(0, Math.min(1, (t - 0.5) / 0.45));
-      const typoSlideX = lerp(260, 235, Math.max(0, Math.min(1, (t - 0.5) / 0.5)));
-      newTypo.setAttribute('opacity', typoOpacity);
-      newTypo.setAttribute('transform', `translate(${typoSlideX.toFixed(1)}, 165)`);
+      const curSX = lerp(149.4, targetArchCenterX, sMoveT);
+      const curSY = lerp(97.9, targetArchCenterY, sMoveT);
 
-      // 8. Background Capsule: from circular badge to horizontal pill
-      // Width: 260 -> 460
-      // Height: 280 -> 160
-      // X: 140 -> 40
-      // Y: 30 -> 90
-      // Radius: 130 -> 80
-      const capW = lerp(260, 480, t);
-      const capH = lerp(280, 160, t);
-      const capX = lerp(140, 30, t);
-      const capY = lerp(30, 90, t);
-      const capR = lerp(130, 80, t);
-      bgCapsule.setAttribute('x', capX.toFixed(1));
-      bgCapsule.setAttribute('y', capY.toFixed(1));
-      bgCapsule.setAttribute('width', capW.toFixed(1));
-      bgCapsule.setAttribute('height', capH.toFixed(1));
-      bgCapsule.setAttribute('rx', capR.toFixed(1));
-      bgCapsule.setAttribute('ry', capR.toFixed(1));
+      const sCrossfade = Math.max(0, Math.min(1, (t - 0.38) / 0.34));
+      const gothicSOpacity = Math.max(0, 1.0 - sCrossfade);
+      const serifSOpacity = sCrossfade;
 
-      // 9. Status label & milestone buttons
+      if (layerGothicS) {
+        layerGothicS.setAttribute('opacity', gothicSOpacity);
+        layerGothicS.setAttribute('x', curSX.toFixed(1));
+        layerGothicS.setAttribute('y', curSY.toFixed(1));
+        layerGothicS.style.display = gothicSOpacity <= 0.01 ? 'none' : 'inline';
+      }
+
+      if (layerSerifS) {
+        layerSerifS.setAttribute('opacity', serifSOpacity);
+        const serifCenterX = lerp(270, 160, shiftLeftT);
+        const serifCenterY = lerp(155, 195, shiftLeftT);
+        layerSerifS.setAttribute('x', serifCenterX.toFixed(1));
+        layerSerifS.setAttribute('y', serifCenterY.toFixed(1));
+        layerSerifS.style.display = serifSOpacity <= 0.01 ? 'none' : 'inline';
+      }
+
+      // 4. Modern Typography ("Schipper Compact Wonen"):
+      // Reveals to the right of the arch between t=0.50 and 1.0
+      const typoT = Math.max(0, Math.min(1, (t - 0.50) / 0.50));
+      const typoSlideX = lerp(255, 235, typoT);
+      if (newTypo) {
+        newTypo.setAttribute('opacity', typoT);
+        newTypo.setAttribute('transform', `translate(${typoSlideX.toFixed(1)}, 155)`);
+        newTypo.style.display = typoT <= 0.01 ? 'none' : 'inline';
+      }
+
+      // 5. Background Capsule: from circular badge to horizontal pill
+      const capW = lerp(268, 480, t);
+      const capH = lerp(268, 160, t);
+      const capX = lerp(136, 30, t);
+      const capY = lerp(26, 90, t);
+      const capR = lerp(134, 80, t);
+      if (bgCapsule) {
+        bgCapsule.setAttribute('x', capX.toFixed(1));
+        bgCapsule.setAttribute('y', capY.toFixed(1));
+        bgCapsule.setAttribute('width', capW.toFixed(1));
+        bgCapsule.setAttribute('height', capH.toFixed(1));
+        bgCapsule.setAttribute('rx', capR.toFixed(1));
+        bgCapsule.setAttribute('ry', capR.toFixed(1));
+      }
+
+      // 6. Labels & Narrative
       if (t < 0.25) {
-        yearLabel.textContent = 'AMBACHTELIJK EMBLEEM · 1989';
+        if (yearLabel) yearLabel.textContent = 'AMBACHTELIJK EMBLEEM · 1989';
         updateMilestoneActive(0);
         updateBanner('De Oorsprong: Het Ambachtelijke Fauteuilkussen (1989)', 'In het oorspronkelijke merkteken staat het gecapitonneerde kussen van een klassieke relax- en sta-op stoel centraal, omarmd door de gotische initialen S, C en W (Schipper Compact Wonen). Het straalt degelijkheid en 35+ jaar zorgambacht uit.');
       } else if (t < 0.55) {
-        yearLabel.textContent = 'DECONSTRUCTIE · VORMONTLEDING';
+        if (yearLabel) yearLabel.textContent = 'DECONSTRUCTIE · VORMONTLEDING';
         updateMilestoneActive(1);
-        updateBanner('Fase 2: De Vormelementen Ontleed', 'De zware contourlijnen en ruitstiksels maken zich los. De gotische letters C en W geven ruimte vrij, terwijl de letter S de centrale positie inneemt. De essentie van de kussenvorm blijft herkenbaar bewaard.');
+        updateBanner('Fase 2: De Vormelementen Ontleed', 'De letters C en W geven ruimte vrij, terwijl de authentieke letter S naar het centrum beweegt. De essentie van de kussenvorm blijft herkenbaar bewaard.');
       } else if (t < 0.85) {
-        yearLabel.textContent = 'MORFING · GEOMETRISCHE VERSOEPELING';
+        if (yearLabel) yearLabel.textContent = 'MORFING · GEOMETRISCHE VERSOEPELING';
         updateMilestoneActive(2);
-        updateBanner('Fase 3: Geometrische Versoepeling naar Boog', 'De kussenflanken richten zich op en versmelten tot de zuivere harmonie van een architectonische boog. Het schrille medisch groen verzacht naar rustgevend Scandinavisch saliegroen.');
+        updateBanner('Fase 3: Geometrische Versoepeling naar Boog', 'De kussenflanken richten zich op en versmelten tot de zuivere harmonie van een architectonische boog. Het authentieke smaragdgroen verzacht naar rustgevend Scandinavisch saliegroen.');
       } else {
-        yearLabel.textContent = 'HET NIEUWE MERKTEKEN · 2026';
+        if (yearLabel) yearLabel.textContent = 'HET NIEUWE MERKTEKEN · 2026';
         updateMilestoneActive(3);
-        updateBanner('Het Eigentijdse Merk: Rust, Maatwerk & Wooncomfort (2026)', 'De afgeronde boog omarmt de vorstelijke serif S. Daarnaast presenteert het woordmerk "Schipper Compact Wonen" zich evenwichtig en tijdloos. Een logo dat vertrouwen geeft en prachtig aansluit bij de hedendaagse woonstijl.');
+        updateBanner('Het Eigentijdse Merk: Rust, Maatwerk & Wooncomfort (2026)', 'De afgeronde boog omarmt de vorstelijke serif S. Daarnaast presenteert het woordmerk "Schipper Compact Wonen" zich evenwichtig en tijdloos.');
       }
 
-      // UI Scrubber Sync
-      scrubber.value = (t * 100).toFixed(1);
-      scrubVal.textContent = Math.round(t * 100) + '%';
+      if (scrubber) scrubber.value = (t * 100).toFixed(1);
+      if (scrubVal) scrubVal.textContent = Math.round(t * 100) + '%';
     }
 
     function updateMilestoneActive(idx) {
