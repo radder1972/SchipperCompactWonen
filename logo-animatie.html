@@ -710,12 +710,12 @@
               <span class="m-pct">Fase 1 · 0%</span>
               <span class="m-title">Klassiek Ambacht (1989)</span>
             </button>
-            <button class="milestone-btn" onclick="setPhase(33)">
-              <span class="m-pct">Fase 2 · 33%</span>
+            <button class="milestone-btn" onclick="setPhase(35)">
+              <span class="m-pct">Fase 2 · 35%</span>
               <span class="m-title">Vorm Ontrafeld</span>
             </button>
-            <button class="milestone-btn" onclick="setPhase(66)">
-              <span class="m-pct">Fase 3 · 66%</span>
+            <button class="milestone-btn" onclick="setPhase(68)">
+              <span class="m-pct">Fase 3 · 68%</span>
               <span class="m-title">Morfing naar Boog</span>
             </button>
             <button class="milestone-btn" onclick="setPhase(100)">
@@ -953,6 +953,21 @@
       return `rgb(${r}, ${g}, ${b})`;
     }
 
+    // Easing & buffer helpers for holds at extremities
+    function smootherstep(u) {
+      return u * u * u * (u * (u * 6 - 15) + 10);
+    }
+
+    function getMorphFactor(t) {
+      // Buffer zone at beginning (0% to 14%): motionless at 1989 starting emblem
+      if (t <= 0.14) return 0;
+      // Buffer zone at ending (86% to 100%): motionless at 2026 brand mark
+      if (t >= 0.86) return 1;
+      // Smooth continuous quintic transition in between (14% -> 86%)
+      const u = (t - 0.14) / (0.86 - 0.14);
+      return smootherstep(u);
+    }
+
     // Animation state
     let progress = 0; // 0.0 to 1.0
     let isPlaying = false;
@@ -961,8 +976,11 @@
     let direction = 1; // 1 = forward, -1 = reverse
     let animFrameId = null;
     let lastTimestamp = 0;
+    let holdRemaining = 0; // ms remaining during pause at start or end
 
-    const DURATION = 3600; // ms for full forward morph
+    const DURATION = 4600;    // ms for the active transition
+    const HOLD_START = 2200;  // ms pause at 1989 starting emblem
+    const HOLD_END = 2600;    // ms pause at 2026 new logo
 
     const morphBody = document.getElementById('morph-body');
     const tufting = document.getElementById('tufting-lines');
@@ -990,9 +1008,12 @@
       const scrubber = document.getElementById('scrubber');
       const scrubVal = document.getElementById('scrub-val');
 
-      // 1. Letters C & W: At t=0 100% visible in exact original position.
-      // Between t=0.0 and 0.35, they gently float outward and fade out.
-      const cwT = Math.min(1.0, t / 0.35);
+      // m is the effective morph progress (0.0 at beginning buffer, 1.0 at ending buffer)
+      const m = getMorphFactor(t);
+
+      // 1. Letters C & W: At t <= 0.14 100% visible in exact original position.
+      // Between m=0.0 and 0.35, they gently float outward and fade out.
+      const cwT = Math.min(1.0, m / 0.35);
       const cwOpacity = Math.max(0, 1.0 - cwT);
       const cShiftX = cwT * 50;
       const cShiftY = -cwT * 15;
@@ -1010,15 +1031,13 @@
       }
 
       // 2. Cushion & Arch Transformation:
-      // At t=0: Cushion image is 100% visible, vector arch is 0% (NO doubling!).
-      // Between t=0.15 and 0.55: The cushion smoothly fades into the vector morphing path.
-      // The morph path morphs its geometry from cushion contour to modern arch contour!
-      const cushionFade = Math.max(0, Math.min(1, (t - 0.12) / 0.40));
+      // At m=0: Cushion image is 100% visible, vector arch is 0% (NO doubling!).
+      // Between m=0.12 and 0.52: The cushion smoothly fades into the vector morphing path.
+      const cushionFade = Math.max(0, Math.min(1, (m - 0.12) / 0.40));
       const cushionOpacity = Math.max(0, 1.0 - cushionFade);
       const archOpacity = cushionFade;
 
-      // Position shift to left when typography arrives (t > 0.25)
-      const shiftLeftT = Math.max(0, Math.min(1, (t - 0.25) / 0.75));
+      const shiftLeftT = Math.max(0, Math.min(1, (m - 0.25) / 0.75));
       const cushionShiftX = lerp(0, -78.4, shiftLeftT);
       const cushionShiftY = lerp(0, 47.6, shiftLeftT);
 
@@ -1029,25 +1048,21 @@
       }
 
       if (morphBody) {
-        morphBody.setAttribute('d', getInterpolatedPath(t));
-        morphBody.setAttribute('fill', lerpColor(4, 140, 43, 163, 177, 138, t));
+        morphBody.setAttribute('d', getInterpolatedPath(m));
+        morphBody.setAttribute('fill', lerpColor(4, 140, 43, 163, 177, 138, m));
         morphBody.setAttribute('opacity', archOpacity);
         morphBody.style.display = archOpacity <= 0.01 ? 'none' : 'inline';
       }
 
       // 3. Letter S Transformation:
-      // At t=0: Authentic gothic S at original left position (149.4, 97.9).
-      // Between t=0.0 and 0.6: Glides smoothly into the center of the arch.
-      // Between t=0.4 and 0.75: Crossfades into the refined serif S (Fraunces).
-      const sMoveT = Math.min(1.0, t / 0.65);
-      // Arch center in stage coordinates is (160, 185) at the end, and (270, 148) in the middle
+      const sMoveT = Math.min(1.0, m / 0.65);
       const targetArchCenterX = lerp(270 - 55.2/2, 160 - 55.2/2, shiftLeftT);
       const targetArchCenterY = lerp(148 - 110.5/2, 185 - 110.5/2, shiftLeftT);
 
       const curSX = lerp(149.4, targetArchCenterX, sMoveT);
       const curSY = lerp(97.9, targetArchCenterY, sMoveT);
 
-      const sCrossfade = Math.max(0, Math.min(1, (t - 0.38) / 0.34));
+      const sCrossfade = Math.max(0, Math.min(1, (m - 0.38) / 0.34));
       const gothicSOpacity = Math.max(0, 1.0 - sCrossfade);
       const serifSOpacity = sCrossfade;
 
@@ -1068,8 +1083,7 @@
       }
 
       // 4. Modern Typography ("Schipper Compact Wonen"):
-      // Reveals to the right of the arch between t=0.50 and 1.0
-      const typoT = Math.max(0, Math.min(1, (t - 0.50) / 0.50));
+      const typoT = Math.max(0, Math.min(1, (m - 0.50) / 0.50));
       const typoSlideX = lerp(255, 235, typoT);
       if (newTypo) {
         newTypo.setAttribute('opacity', typoT);
@@ -1078,11 +1092,11 @@
       }
 
       // 5. Background Capsule: from circular badge to horizontal pill
-      const capW = lerp(268, 480, t);
-      const capH = lerp(268, 160, t);
-      const capX = lerp(136, 30, t);
-      const capY = lerp(26, 90, t);
-      const capR = lerp(134, 80, t);
+      const capW = lerp(268, 480, m);
+      const capH = lerp(268, 160, m);
+      const capX = lerp(136, 30, m);
+      const capY = lerp(26, 90, m);
+      const capR = lerp(134, 80, m);
       if (bgCapsule) {
         bgCapsule.setAttribute('x', capX.toFixed(1));
         bgCapsule.setAttribute('y', capY.toFixed(1));
@@ -1093,20 +1107,22 @@
       }
 
       // 6. Labels & Narrative
-      if (t < 0.25) {
-        if (yearLabel) yearLabel.textContent = 'AMBACHTELIJK EMBLEEM · 1989';
+      if (t < 0.22) {
+        const isHold = (holdRemaining > 0 && progress <= 0.01) || t <= 0.14;
+        if (yearLabel) yearLabel.textContent = isHold ? 'AMBACHTELIJK EMBLEEM · 1989 (UITGANGSSITUATIE)' : 'AMBACHTELIJK EMBLEEM · 1989';
         updateMilestoneActive(0);
         updateBanner('De Oorsprong: Het Ambachtelijke Fauteuilkussen (1989)', 'In het oorspronkelijke merkteken staat het gecapitonneerde kussen van een klassieke relax- en sta-op stoel centraal, omarmd door de gotische initialen S, C en W (Schipper Compact Wonen). Het straalt degelijkheid en 35+ jaar zorgambacht uit.');
-      } else if (t < 0.55) {
+      } else if (t < 0.52) {
         if (yearLabel) yearLabel.textContent = 'DECONSTRUCTIE · VORMONTLEDING';
         updateMilestoneActive(1);
         updateBanner('Fase 2: De Vormelementen Ontleed', 'De letters C en W geven ruimte vrij, terwijl de authentieke letter S naar het centrum beweegt. De essentie van de kussenvorm blijft herkenbaar bewaard.');
-      } else if (t < 0.85) {
+      } else if (t < 0.82) {
         if (yearLabel) yearLabel.textContent = 'MORFING · GEOMETRISCHE VERSOEPELING';
         updateMilestoneActive(2);
         updateBanner('Fase 3: Geometrische Versoepeling naar Boog', 'De kussenflanken richten zich op en versmelten tot de zuivere harmonie van een architectonische boog. Het authentieke smaragdgroen verzacht naar rustgevend Scandinavisch saliegroen.');
       } else {
-        if (yearLabel) yearLabel.textContent = 'HET NIEUWE MERKTEKEN · 2026';
+        const isHold = (holdRemaining > 0 && progress >= 0.99) || t >= 0.86;
+        if (yearLabel) yearLabel.textContent = isHold ? 'HET NIEUWE MERKTEKEN · 2026 (EINDSITUATIE)' : 'HET NIEUWE MERKTEKEN · 2026';
         updateMilestoneActive(3);
         updateBanner('Het Eigentijdse Merk: Rust, Maatwerk & Wooncomfort (2026)', 'De afgeronde boog omarmt de vorstelijke serif S. Daarnaast presenteert het woordmerk "Schipper Compact Wonen" zich evenwichtig en tijdloos.');
       }
@@ -1130,24 +1146,28 @@
 
     function onScrub(val) {
       if (isPlaying) togglePlay();
+      holdRemaining = 0;
       progress = parseFloat(val) / 100;
       updateMorph(progress);
     }
 
     function setPhase(pct) {
       if (isPlaying) togglePlay();
+      holdRemaining = 0;
       progress = pct / 100;
       updateMorph(progress);
     }
 
     function resetToStart() {
       if (isPlaying) togglePlay();
+      holdRemaining = 0;
       progress = 0;
       updateMorph(0);
     }
 
     function jumpToEnd() {
       if (isPlaying) togglePlay();
+      holdRemaining = 0;
       progress = 1;
       updateMorph(1);
     }
@@ -1159,7 +1179,15 @@
       const text = document.getElementById('play-text');
 
       if (isPlaying) {
-        if (progress >= 1) progress = 0;
+        if (progress >= 0.99) {
+          progress = 0;
+          direction = 1;
+          holdRemaining = 1600; // friendly initial hold at start
+        } else if (progress <= 0.01) {
+          holdRemaining = 1600; // friendly initial hold at start
+        } else {
+          holdRemaining = 0;
+        }
         icon.innerHTML = '<use href="#i-pause"/>';
         text.textContent = 'Pauzeren';
         lastTimestamp = performance.now();
@@ -1189,24 +1217,42 @@
 
     function animStep(timestamp) {
       if (!isPlaying) return;
-      const delta = timestamp - lastTimestamp;
+      const delta = Math.min(100, timestamp - lastTimestamp);
       lastTimestamp = timestamp;
+
+      // Handle pause/hold at extremities
+      if (holdRemaining > 0) {
+        holdRemaining -= delta * playSpeed;
+        if (holdRemaining <= 0) {
+          holdRemaining = 0;
+          if (progress >= 0.99) {
+            direction = -1; // start reversing after holding at end
+          } else if (progress <= 0.01) {
+            direction = 1;  // start moving forward after holding at start
+          }
+        }
+        updateMorph(progress);
+        animFrameId = requestAnimationFrame(animStep);
+        return;
+      }
 
       progress += (delta / (DURATION / playSpeed)) * direction;
 
       if (progress >= 1) {
         progress = 1;
         if (isLooping) {
-          direction = -1; // Reverse for seamless ping-pong loop
+          holdRemaining = HOLD_END; // hold at end
         } else {
+          updateMorph(1);
           togglePlay();
           return;
         }
       } else if (progress <= 0) {
         progress = 0;
         if (isLooping) {
-          direction = 1;
+          holdRemaining = HOLD_START; // hold at start
         } else {
+          updateMorph(0);
           togglePlay();
           return;
         }
