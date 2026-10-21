@@ -97,8 +97,28 @@
     .search-box input:focus{border-color:var(--moss)}
     .search-box .ic{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--muted);width:16px;height:16px}
     .select-group{display:flex;gap:10px;flex-wrap:wrap}
-    .select-group select{padding:10px 16px;border-radius:999px;border:1.5px solid var(--line);font:inherit;font-size:13.5px;color:var(--forest);background:var(--linen);cursor:pointer;outline:none;transition:border-color .2s}
-    .select-group select:focus{border-color:var(--moss)}
+    .select-group select{
+      appearance:none;
+      -webkit-appearance:none;
+      -moz-appearance:none;
+      padding:10px 46px 10px 20px;
+      border-radius:999px;
+      border:1.5px solid var(--line);
+      font:inherit;
+      font-size:13.5px;
+      font-weight:500;
+      color:var(--forest);
+      background-color:var(--linen);
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23344E41' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+      background-repeat:no-repeat;
+      background-position:right 20px center;
+      background-size:13px 13px;
+      cursor:pointer;
+      outline:none;
+      transition:border-color .2s,background-color .2s,box-shadow .2s;
+    }
+    .select-group select:hover{border-color:var(--moss);background-color:#fff}
+    .select-group select:focus{border-color:var(--moss);box-shadow:0 0 0 3px var(--sage-l);background-color:#fff}
 
     /* Chairs Grid */
     .chairs-grid{display:grid;grid-template-columns:repeat(auto-fill, minmax(320px, 1fr));gap:32px;margin-bottom:80px}
@@ -186,6 +206,17 @@
     .card-x .ic{width:20px;height:20px}
     .field label{display:block;font-size:13px;font-weight:600;color:var(--forest);margin:0 0 6px 14px}
     .field input,.field select,.field textarea{width:100%;font:inherit;font-size:15px;color:var(--ink);background:#fff;border:1.5px solid var(--line);border-radius:999px;padding:13px 20px;outline:none;transition:border .2s,box-shadow .2s}
+    .field select{
+      appearance:none;
+      -webkit-appearance:none;
+      -moz-appearance:none;
+      padding-right:44px;
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23344E41' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+      background-repeat:no-repeat;
+      background-position:right 18px center;
+      background-size:14px 14px;
+      cursor:pointer;
+    }
     .field textarea{border-radius:22px;resize:vertical}
     .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--moss);box-shadow:0 0 0 4px var(--sage-l)}
     .f2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
