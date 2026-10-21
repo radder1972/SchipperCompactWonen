@@ -312,9 +312,9 @@
     
     <!-- Hero Header -->
     <div class="catalog-hero">
-      <span class="eyebrow">Actueel Assortiment &amp; Voorraad</span>
-      <h1>Onze Collectie <span class="squig">Sta-op Stoelen<svg viewBox="0 0 200 14" preserveAspectRatio="none" aria-hidden="true"><path d="M3 8 C 40 2, 70 12, 110 7 S 170 3, 197 8"/></svg></span></h1>
-      <p>Al ruim 35 jaar dé specialist in sta-op stoelen (o.a. Fitform Elevo &amp; Vario) en zorghulpmiddelen in de regio. Van 100% nieuw ergonomisch maatwerk tot grondig gereviseerde occasions met 1 jaar garantie aan huis. Probeer ze vrijblijvend uit bij u thuis of in onze showroom in Dordrecht.</p>
+      <span class="eyebrow">Actueel Assortiment · Merwedestraat 239 Dordrecht</span>
+      <h1>Onze Complete <span class="squig">Collectie<svg viewBox="0 0 200 14" preserveAspectRatio="none" aria-hidden="true"><path d="M3 8 C 40 2, 70 12, 110 7 S 170 3, 197 8"/></svg></span></h1>
+      <p>Al ruim 35 jaar dé specialist in zelfstandig en comfortabel wonen in de regio Drechtsteden &amp; Rijnmond. Ontdek onze 49 modellen verdeeld over drie disciplines: ergonomische maatwerk sta-op stoelen (o.a. Fitform &amp; Farstrup), hoog/laag bedden en seniorenledikanten, en betrouwbare loophulpmiddelen. Vrijblijvend uit te proberen in onze showroom of bij u thuis.</p>
     </div>
 
     <!-- Filters Section -->
@@ -322,14 +322,17 @@
       
       <!-- Primary Tabs -->
       <div class="filter-tabs">
-        <button class="filter-tab active" onclick="setConditionFilter('all')">
-          Alle modellen <span class="count" id="count-all">0</span>
+        <button class="filter-tab active" onclick="setCategoryFilter('all')">
+          Alle producten <span class="count" id="count-all">0</span>
         </button>
-        <button class="filter-tab" onclick="setConditionFilter('nieuw')">
-          Nieuw &amp; Maatwerk <span class="count" id="count-nieuw">0</span>
+        <button class="filter-tab" onclick="setCategoryFilter('Zitcomfort')">
+          Zitcomfort <span class="count" id="count-zit">0</span>
         </button>
-        <button class="filter-tab" onclick="setConditionFilter('occasion')">
-          Jong Gebruikt (Occasions) <span class="count" id="count-occasion">0</span>
+        <button class="filter-tab" onclick="setCategoryFilter('Ligcomfort')">
+          Ligcomfort <span class="count" id="count-lig">0</span>
+        </button>
+        <button class="filter-tab" onclick="setCategoryFilter('Zorgcomfort')">
+          Zorgcomfort <span class="count" id="count-zorg">0</span>
         </button>
       </div>
 
@@ -337,18 +340,29 @@
       <div class="filter-controls">
         <div class="search-box">
           <svg class="ic" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-          <input type="text" id="search-input" placeholder="Zoek op merk of model (bijv. Fitform, Ravi...)" oninput="handleSearch(this.value)">
+          <input type="text" id="search-input" placeholder="Zoek product, merk of model..." oninput="handleSearch(this.value)">
         </div>
         
         <div class="select-group">
+          <select id="subcat-select" onchange="handleSubcatChange(this.value)">
+            <option value="all">Alle categorieën</option>
+            <option value="Sta-op stoelen">Sta-op stoelen</option>
+            <option value="Seniorenstoelen">Seniorenstoelen</option>
+            <option value="Hoog/laag bedden">Hoog/laag bedden</option>
+            <option value="Senioren ledikanten">Senioren ledikanten</option>
+            <option value="Bed toebehoren">Bed-toebehoren</option>
+            <option value="Loophulpmiddelen">Rollators &amp; Loophulp</option>
+            <option value="Trapliften">Trapliften</option>
+          </select>
+
           <select id="brand-select" onchange="handleBrandChange(this.value)">
             <option value="all">Alle merken</option>
           </select>
           
-          <select id="type-select" onchange="handleTypeChange(this.value)">
-            <option value="all">Alle types</option>
-            <option value="staop">Sta-op stoelen</option>
-            <option value="relax">Relaxfauteuils</option>
+          <select id="condition-select" onchange="handleConditionChange(this.value)">
+            <option value="all">Nieuw &amp; Occasions</option>
+            <option value="nieuw">Alleen Nieuw</option>
+            <option value="occasion">Alleen Occasions</option>
           </select>
 
           <select id="sort-select" onchange="handleSortChange(this.value)">
@@ -381,23 +395,24 @@
           <!-- Left: Gallery -->
           <div>
             <div class="gallery-main" id="modal-gallery-main">
-              <img id="modal-main-img" src="" alt="Stoel foto">
+              <img id="modal-main-img" src="" alt="Product foto">
             </div>
             <div class="gallery-thumbs" id="modal-gallery-thumbs"></div>
             
             <div style="background:var(--oat);border-radius:20px;padding:16px;margin-top:16px;display:flex;align-items:center;gap:12px;font-size:13px;color:var(--forest)">
-              <svg class="ic" style="color:var(--moss);width:22px;height:22px" aria-hidden="true"><use href="#i-shield-check"/></svg>
+              <svg class="ic" style="color:var(--moss);width:22px;height:22px;flex-shrink:0" aria-hidden="true"><use href="#i-shield-check"/></svg>
               <div>
-                <strong>Kosteloos thuis uitproberen</strong><br>
-                <span style="color:var(--muted)">Wij nemen deze stoel vrijblijvend mee naar uw woonkamer.</span>
+                <strong id="modal-service-title">Persoonlijk advies aan huis of showroom</strong><br>
+                <span id="modal-service-desc" style="color:var(--muted)">Deskundig advies en passing door bewegingstechnoloog Geert-Jan Schipper.</span>
               </div>
             </div>
           </div>
 
           <!-- Right: Info & Specs -->
           <div>
-            <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
-              <span id="modal-badge-condition" class="chair-badge badge-nieuw" style="position:static"></span>
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap">
+              <span id="modal-category-tag" class="spec-pill" style="background:var(--sage-xl);color:var(--forest);font-size:11.5px"></span>
+              <span id="modal-badge-condition" class="chair-badge" style="position:static"></span>
               <span id="modal-badge-custom" class="chair-status-tag" style="position:static"></span>
             </div>
             
@@ -414,13 +429,13 @@
             <h4 class="serif" style="font-size:17px;margin-bottom:8px">Belangrijkste eigenschappen:</h4>
             <ul id="modal-features" class="chair-features" style="font-size:13.5px"></ul>
 
-            <h4 class="serif" style="font-size:17px;margin:20px 0 8px">Specificaties &amp; Pasvorm:</h4>
+            <h4 class="serif" style="font-size:17px;margin:20px 0 8px">Specificaties &amp; Eigenschappen:</h4>
             <table class="modal-specs-table" id="modal-specs-table"></table>
 
             <div style="display:grid;gap:10px;margin-top:24px">
               <button id="modal-btn-thuis" onclick="bookFromModal('thuis')" class="btn btn-clay" style="width:100%">
                 <svg class="ic" aria-hidden="true"><use href="#i-calendar"/></svg>
-                Proefzitten aan huis plannen
+                <span id="modal-btn-thuis-text">Proefzitten aan huis plannen</span>
               </button>
               <button id="modal-btn-showroom" onclick="bookFromModal('showroom')" class="btn btn-ghost" style="width:100%">
                 <svg class="ic" aria-hidden="true"><use href="#i-store"/></svg>
@@ -520,9 +535,9 @@
         <div>
           <h4>Assortiment &amp; Info</h4>
           <ul>
-            <li><a href="collectie.html"><svg class="ic" aria-hidden="true"><use href="#i-chevron-right"/></svg>Zitcomfort: Sta-op Stoelen (40+)</a></li>
-            <li><a href="index.html#collectie"><svg class="ic" aria-hidden="true"><use href="#i-chevron-right"/></svg>Ligcomfort: Hoog/laag Bedden</a></li>
-            <li><a href="index.html#collectie"><svg class="ic" aria-hidden="true"><use href="#i-chevron-right"/></svg>Zorgcomfort: Trapliften &amp; Rollators</a></li>
+            <li><a href="javascript:void(0)" onclick="setCategoryFilter('Zitcomfort'); window.scrollTo({top: 300, behavior: 'smooth'});"><svg class="ic" aria-hidden="true"><use href="#i-chevron-right"/></svg>Zitcomfort: Sta-op Stoelen (27)</a></li>
+            <li><a href="javascript:void(0)" onclick="setCategoryFilter('Ligcomfort'); window.scrollTo({top: 300, behavior: 'smooth'});"><svg class="ic" aria-hidden="true"><use href="#i-chevron-right"/></svg>Ligcomfort: Hoog/laag Bedden (16)</a></li>
+            <li><a href="javascript:void(0)" onclick="setCategoryFilter('Zorgcomfort'); window.scrollTo({top: 300, behavior: 'smooth'});"><svg class="ic" aria-hidden="true"><use href="#i-chevron-right"/></svg>Zorgcomfort: Rollators &amp; Trapliften (6)</a></li>
             <li><a href="index.html#werkwijze"><svg class="ic" aria-hidden="true"><use href="#i-chevron-right"/></svg>Werkwijze &amp; Gratis Thuisadvies</a></li>
             <li><a href="index.html#ervaringen"><svg class="ic" aria-hidden="true"><use href="#i-chevron-right"/></svg>Klantbeoordelingen (4.8/5)</a></li>
           </ul>
@@ -562,27 +577,24 @@
   <script>
     let allChairs = [];
     let currentFilter = {
+      category: 'all',
+      subcategory: 'all',
       condition: 'all',
       brand: 'all',
-      type: 'all',
       search: '',
       sort: 'featured'
     };
     let activeChair = null;
 
-    // Image error fallback: if not local, try live staopstoelen.nl server, then fallback to placeholder
+    // Graceful Image fallback
     function handleImgError(img) {
-      const src = img.getAttribute('src');
-      if (src && !src.startsWith('http://') && !src.startsWith('https://')) {
-        img.src = 'https://staopstoelen.nl/' + src.replace(/^\/+/, '');
-      } else {
-        img.src = 'assets/chair_custom.png';
-      }
+      img.onerror = null;
+      img.src = 'assets/chair_custom.png';
     }
 
     // Clean HTML in description
     function cleanDescription(raw) {
-      if (!raw) return 'Deze comfortabele sta-op stoel biedt optimale ondersteuning voor rug, nek en gewrichten. Volledig af te stellen op uw persoonlijke lichaamsmaten.';
+      if (!raw) return 'Deskundig comfort en ondersteuning, geselecteerd door bewegingstechnoloog Geert-Jan Schipper.';
       const tmp = document.createElement('div');
       tmp.innerHTML = raw;
       const text = tmp.innerText || tmp.textContent || '';
@@ -591,45 +603,45 @@
 
     // Format currency in clean Dutch notation
     function formatPrice(num) {
-      if (!num || isNaN(num)) return 'Prijs op aanvraag';
+      if (!num || isNaN(num) || num === 0) return 'Prijs op aanvraag';
       return '€ ' + num.toLocaleString('nl-NL') + ',-';
     }
 
-    // Load Database from local database.json with live fallback/sync
+    // Load Database strictly from local database.json (49 authentic Schipper Compact Wonen products)
     async function loadDatabase() {
       try {
-        // Try local database.json first
         const res = await fetch('database.json');
         if (res.ok) {
           const data = await res.json();
           allChairs = data.staopstoelen || [];
+        } else {
+          console.error('database.json response not ok:', res.status);
         }
       } catch (err) {
-        console.warn('Kon lokale database.json niet laden, fallback...', err);
-      }
-
-      // Live sync check with Staopstoelen.nl API if available
-      try {
-        const liveRes = await fetch('https://staopstoelen.nl/api/chairs.php');
-        if (liveRes.ok) {
-          const liveData = await liveRes.json();
-          if (liveData && liveData.staopstoelen && liveData.staopstoelen.length > 0) {
-            allChairs = liveData.staopstoelen;
-          }
-        }
-      } catch (e) {
-        // Offline / CORS fallback to local data, completely normal
+        console.error('Kon database.json niet laden:', err);
       }
 
       // Initialize UI
       populateBrandSelect();
       updateCounts();
 
-      // Read query params (e.g. ?filter=occasion of ?filter=nieuw)
+      // Read query params (e.g. ?cat=zitcomfort, ?cat=ligcomfort, ?cat=zorgcomfort, ?filter=occasion)
       const urlParams = new URLSearchParams(window.location.search);
-      const filterParam = urlParams.get('filter');
-      if (filterParam === 'nieuw' || filterParam === 'occasion') {
-        setConditionFilter(filterParam);
+      const catParam = (urlParams.get('cat') || urlParams.get('category') || '').toLowerCase();
+      const filterParam = (urlParams.get('filter') || '').toLowerCase();
+
+      if (catParam.includes('zit')) {
+        setCategoryFilter('Zitcomfort');
+      } else if (catParam.includes('lig') || catParam.includes('bed')) {
+        setCategoryFilter('Ligcomfort');
+      } else if (catParam.includes('zorg') || catParam.includes('roll') || catParam.includes('trap')) {
+        setCategoryFilter('Zorgcomfort');
+      } else if (filterParam === 'nieuw' || filterParam === 'occasion') {
+        currentFilter.condition = filterParam;
+        if (document.getElementById('condition-select')) {
+          document.getElementById('condition-select').value = filterParam;
+        }
+        renderChairs();
       } else {
         renderChairs();
       }
@@ -638,11 +650,13 @@
     // Populate Brand Dropdown dynamically
     function populateBrandSelect() {
       const brandSelect = document.getElementById('brand-select');
+      if (!brandSelect) return;
       const brands = new Set();
       allChairs.forEach(c => {
         if (c.brand) brands.add(c.brand);
       });
       const sorted = Array.from(brands).sort();
+      brandSelect.innerHTML = '<option value="all">Alle merken</option>';
       sorted.forEach(b => {
         const opt = document.createElement('option');
         opt.value = b;
@@ -654,25 +668,45 @@
     // Update Counter Badges
     function updateCounts() {
       const countAll = allChairs.length;
-      const countNieuw = allChairs.filter(c => c.condition === 'nieuw').length;
-      const countOccasion = allChairs.filter(c => c.condition === 'occasion').length;
-      document.getElementById('count-all').textContent = countAll;
-      document.getElementById('count-nieuw').textContent = countNieuw;
-      document.getElementById('count-occasion').textContent = countOccasion;
+      const countZit = allChairs.filter(c => c.category === 'Zitcomfort').length;
+      const countLig = allChairs.filter(c => c.category === 'Ligcomfort').length;
+      const countZorg = allChairs.filter(c => c.category === 'Zorgcomfort').length;
+
+      const elAll = document.getElementById('count-all');
+      const elZit = document.getElementById('count-zit');
+      const elLig = document.getElementById('count-lig');
+      const elZorg = document.getElementById('count-zorg');
+
+      if (elAll) elAll.textContent = countAll;
+      if (elZit) elZit.textContent = countZit;
+      if (elLig) elLig.textContent = countLig;
+      if (elZorg) elZorg.textContent = countZorg;
     }
 
     // Filter Handlers
-    function setConditionFilter(cond) {
-      currentFilter.condition = cond;
+    function setCategoryFilter(cat) {
+      currentFilter.category = cat;
+      currentFilter.subcategory = 'all';
+      const subSelect = document.getElementById('subcat-select');
+      if (subSelect) subSelect.value = 'all';
+
       document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
-      if (cond === 'all') document.querySelectorAll('.filter-tab')[0].classList.add('active');
-      if (cond === 'nieuw') document.querySelectorAll('.filter-tab')[1].classList.add('active');
-      if (cond === 'occasion') document.querySelectorAll('.filter-tab')[2].classList.add('active');
+      const tabs = document.querySelectorAll('.filter-tab');
+      if (cat === 'all' && tabs[0]) tabs[0].classList.add('active');
+      if (cat === 'Zitcomfort' && tabs[1]) tabs[1].classList.add('active');
+      if (cat === 'Ligcomfort' && tabs[2]) tabs[2].classList.add('active');
+      if (cat === 'Zorgcomfort' && tabs[3]) tabs[3].classList.add('active');
+
       renderChairs();
     }
 
-    function handleSearch(val) {
-      currentFilter.search = val.toLowerCase().trim();
+    function handleSubcatChange(val) {
+      currentFilter.subcategory = val;
+      renderChairs();
+    }
+
+    function handleConditionChange(val) {
+      currentFilter.condition = val;
       renderChairs();
     }
 
@@ -681,8 +715,8 @@
       renderChairs();
     }
 
-    function handleTypeChange(val) {
-      currentFilter.type = val;
+    function handleSearch(val) {
+      currentFilter.search = val.toLowerCase().trim();
       renderChairs();
     }
 
@@ -691,15 +725,18 @@
       renderChairs();
     }
 
-    // Render Chairs Grid
+    // Render Products Grid
     function renderChairs() {
       const grid = document.getElementById('chairs-grid');
+      if (!grid) return;
+
       let filtered = allChairs.filter(c => {
+        if (currentFilter.category !== 'all' && c.category !== currentFilter.category) return false;
+        if (currentFilter.subcategory !== 'all' && c.subcategory !== currentFilter.subcategory) return false;
         if (currentFilter.condition !== 'all' && c.condition !== currentFilter.condition) return false;
         if (currentFilter.brand !== 'all' && c.brand !== currentFilter.brand) return false;
-        if (currentFilter.type !== 'all' && c.type !== currentFilter.type) return false;
         if (currentFilter.search) {
-          const haystack = (c.name + ' ' + (c.brand || '') + ' ' + (c.model || '') + ' ' + (c.description || '')).toLowerCase();
+          const haystack = (c.name + ' ' + (c.brand || '') + ' ' + (c.model || '') + ' ' + (c.category || '') + ' ' + (c.subcategory || '') + ' ' + (c.description || '')).toLowerCase();
           if (!haystack.includes(currentFilter.search)) return false;
         }
         return true;
@@ -717,8 +754,8 @@
       if (filtered.length === 0) {
         grid.innerHTML = `
           <div class="empty-state">
-            <h3 class="serif">Geen stoelen gevonden</h3>
-            <p style="color:var(--muted);margin-bottom:18px">Er zijn geen stoelen die voldoen aan uw huidige filters.</p>
+            <h3 class="serif">Geen producten gevonden</h3>
+            <p style="color:var(--muted);margin-bottom:18px">Er zijn geen artikelen die voldoen aan uw huidige selectie.</p>
             <button onclick="resetFilters()" class="btn btn-clay">Reset alle filters</button>
           </div>
         `;
@@ -727,18 +764,20 @@
 
       grid.innerHTML = filtered.map(c => {
         const isNieuw = c.condition === 'nieuw';
-        const badgeClass = c.status === 'verkocht' ? 'badge-verkocht' : (isNieuw ? 'badge-nieuw' : 'badge-occasion');
-        const badgeText = c.status === 'verkocht' ? 'Verkocht' : (c.badge || (isNieuw ? 'Nieuw & Maatwerk' : 'Occasion'));
-        const statusText = isNieuw ? '100% Maatwerk' : 'Direct Leverbaar';
+        const badgeClass = isNieuw ? 'badge-nieuw' : 'badge-occasion';
+        const badgeText = isNieuw ? (c.badge || 'Nieuw') : 'Occasion';
+        const statusText = c.subcategory || (isNieuw ? 'Maatwerk' : 'Revisie');
 
-        // Extract 2 key specifications for pills
+        // Extract 2-3 key specifications for pills
         const specPills = [];
+        if (c.subcategory) specPills.push(c.subcategory);
         if (c.specifications) {
-          if (c.specifications['Aantal motoren']) specPills.push(c.specifications['Aantal motoren']);
-          if (c.specifications['Bekleding']) specPills.push(c.specifications['Bekleding'].split(',')[0]);
-          if (c.specifications['Garantie']) specPills.push(c.specifications['Garantie'] + ' garantie');
-        } else if (c.material) {
-          specPills.push(c.material);
+          for (const [k, v] of Object.entries(c.specifications)) {
+            if (specPills.length >= 3) break;
+            if (!k.toLowerCase().includes('garantie') && !k.toLowerCase().includes('prijs') && !k.toLowerCase().includes('afmeting')) {
+              specPills.push(v);
+            }
+          }
         }
 
         // 2 key features
@@ -746,20 +785,24 @@
           <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>${f}</span></li>
         `).join('');
 
+        const priceDisplay = (c.price && c.price > 0)
+          ? `<span class="chair-price">${formatPrice(c.price)}</span>`
+          : `<span class="chair-price" style="font-size:18px;font-weight:700;color:var(--forest)">Prijs op aanvraag</span>`;
+
         return `
           <article class="chair-card">
-            <div class="chair-thumb">
+            <div class="chair-thumb" onclick="openChairDetail('${c.id}')" style="cursor:pointer">
               <img src="${c.image || 'assets/chair_custom.png'}" alt="${c.name}" onerror="handleImgError(this)" loading="lazy">
               <span class="chair-badge ${badgeClass}">${badgeText}</span>
               <span class="chair-status-tag">${statusText}</span>
             </div>
             
             <div class="chair-content">
-              <span class="chair-brand">${c.brand || 'Schipper Selectie'}</span>
-              <h3 class="chair-title">${c.name}</h3>
+              <span class="chair-brand">${c.brand || 'Schipper Compact Wonen'}</span>
+              <h3 class="chair-title" onclick="openChairDetail('${c.id}')" style="cursor:pointer">${c.name}</h3>
               
               <div class="chair-price-row">
-                <span class="chair-price">${formatPrice(c.price)}</span>
+                ${priceDisplay}
                 ${c.old_price ? `<span class="chair-old-price">${formatPrice(c.old_price)}</span>` : ''}
               </div>
 
@@ -772,7 +815,7 @@
               ` : ''}
 
               <button onclick="openChairDetail('${c.id}')" class="btn-detail">
-                <span>Bekijk details &amp; pasvorm</span>
+                <span>Bekijk details</span>
                 <i><svg class="ic" aria-hidden="true"><use href="#i-arrow-right"/></svg></i>
               </button>
             </div>
@@ -782,15 +825,23 @@
     }
 
     function resetFilters() {
-      currentFilter = { condition: 'all', brand: 'all', type: 'all', search: '', sort: 'featured' };
-      document.getElementById('search-input').value = '';
-      document.getElementById('brand-select').value = 'all';
-      document.getElementById('type-select').value = 'all';
-      document.getElementById('sort-select').value = 'featured';
-      setConditionFilter('all');
+      currentFilter = {
+        category: 'all',
+        subcategory: 'all',
+        condition: 'all',
+        brand: 'all',
+        search: '',
+        sort: 'featured'
+      };
+      if (document.getElementById('search-input')) document.getElementById('search-input').value = '';
+      if (document.getElementById('brand-select')) document.getElementById('brand-select').value = 'all';
+      if (document.getElementById('subcat-select')) document.getElementById('subcat-select').value = 'all';
+      if (document.getElementById('condition-select')) document.getElementById('condition-select').value = 'all';
+      if (document.getElementById('sort-select')) document.getElementById('sort-select').value = 'featured';
+      setCategoryFilter('all');
     }
 
-    // Chair Detail Modal
+    // Product Detail Modal
     function openChairDetail(id) {
       activeChair = allChairs.find(c => c.id === id);
       if (!activeChair) return;
@@ -798,18 +849,52 @@
       const modal = document.getElementById('chair-modal');
       const isNieuw = activeChair.condition === 'nieuw';
 
-      // Badges
+      // Category Tag & Badges
+      const catTag = document.getElementById('modal-category-tag');
+      if (catTag) catTag.textContent = activeChair.subcategory || activeChair.category || 'Collectie';
+
       const badgeCond = document.getElementById('modal-badge-condition');
-      badgeCond.className = 'chair-badge ' + (activeChair.status === 'verkocht' ? 'badge-verkocht' : (isNieuw ? 'badge-nieuw' : 'badge-occasion'));
-      badgeCond.textContent = activeChair.status === 'verkocht' ? 'Verkocht' : (isNieuw ? 'Nieuw & Maatwerk' : 'Occasion');
+      if (badgeCond) {
+        badgeCond.className = 'chair-badge ' + (isNieuw ? 'badge-nieuw' : 'badge-occasion');
+        badgeCond.textContent = isNieuw ? 'Nieuw & Maatwerk' : 'Occasion Revisie';
+      }
 
       const badgeCustom = document.getElementById('modal-badge-custom');
-      badgeCustom.textContent = activeChair.badge || (isNieuw ? '100% Maatwerk' : 'Direct Leverbaar');
+      if (badgeCustom) {
+        badgeCustom.textContent = activeChair.badge || (isNieuw ? '100% Maatwerk' : 'Direct Leverbaar');
+      }
+
+      // Dynamic service box & CTA text depending on category
+      const srvTitle = document.getElementById('modal-service-title');
+      const srvDesc = document.getElementById('modal-service-desc');
+      const btnThuisText = document.getElementById('modal-btn-thuis-text');
+
+      if (activeChair.category === 'Zitcomfort') {
+        if (srvTitle) srvTitle.textContent = 'Kosteloos thuis uitproberen';
+        if (srvDesc) srvDesc.textContent = 'Wij nemen deze stoel vrijblijvend mee naar uw woonkamer voor een pasafspraak.';
+        if (btnThuisText) btnThuisText.textContent = 'Proefzitten aan huis plannen';
+      } else if (activeChair.category === 'Ligcomfort') {
+        if (srvTitle) srvTitle.textContent = 'Vakkundige levering & montage';
+        if (srvDesc) srvDesc.textContent = 'Deskundig advies over comforthoogte, inbouwbodems en zorgfuncties.';
+        if (btnThuisText) btnThuisText.textContent = 'Vrijblijvend adviesgesprek plannen';
+      } else {
+        if (srvTitle) srvTitle.textContent = 'Veilig & zelfstandig thuis';
+        if (srvDesc) srvDesc.textContent = 'Direct leverbaar of op maat ingemeten. Vrijblijvend uitproberen in Dordrecht.';
+        if (btnThuisText) btnThuisText.textContent = 'Advies & offerte aanvragen';
+      }
 
       // Headings & Prices
-      document.getElementById('modal-brand').textContent = activeChair.brand || 'Schipper Selectie';
+      document.getElementById('modal-brand').textContent = activeChair.brand || 'Schipper Compact Wonen';
       document.getElementById('modal-name').textContent = activeChair.name;
-      document.getElementById('modal-price').textContent = formatPrice(activeChair.price);
+      
+      const priceEl = document.getElementById('modal-price');
+      if (activeChair.price && activeChair.price > 0) {
+        priceEl.textContent = formatPrice(activeChair.price);
+        priceEl.style.fontSize = '30px';
+      } else {
+        priceEl.textContent = 'Prijs op aanvraag';
+        priceEl.style.fontSize = '22px';
+      }
       
       const oldPriceEl = document.getElementById('modal-old-price');
       if (activeChair.old_price) {
@@ -826,7 +911,7 @@
       const featList = document.getElementById('modal-features');
       featList.innerHTML = (activeChair.features || []).map(f => `
         <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>${f}</span></li>
-      `).join('') || '<li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>100% Ergonomisch zitcomfort</span></li>';
+      `).join('') || '<li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>100% Kwaliteit en ergonomie</span></li>';
 
       // Specifications Table
       const specsTable = document.getElementById('modal-specs-table');
@@ -836,8 +921,8 @@
           specsRows += `<tr><td>${key}</td><td>${val}</td></tr>`;
         }
       } else {
-        specsRows += `<tr><td>Merk</td><td>${activeChair.brand || 'Onbekend'}</td></tr>`;
-        specsRows += `<tr><td>Staat</td><td>${isNieuw ? 'Nieuw' : 'Gereconditioneerd'}</td></tr>`;
+        specsRows += `<tr><td>Categorie</td><td>${activeChair.category || 'Zorgmeubilair'}</td></tr>`;
+        specsRows += `<tr><td>Merk</td><td>${activeChair.brand || 'Schipper'}</td></tr>`;
         specsRows += `<tr><td>Garantie</td><td>${isNieuw ? 'Tot 5 jaar' : '1 jaar aan huis'}</td></tr>`;
       }
       specsTable.innerHTML = specsRows;
@@ -845,9 +930,6 @@
       // Gallery Images
       const gallery = [];
       if (activeChair.image) gallery.push(activeChair.image);
-      if (activeChair.imageUp && !gallery.includes(activeChair.imageUp)) gallery.push(activeChair.imageUp);
-      if (activeChair.imageLie && !gallery.includes(activeChair.imageLie)) gallery.push(activeChair.imageLie);
-      if (activeChair.ambientImage && !gallery.includes(activeChair.ambientImage)) gallery.push(activeChair.ambientImage);
       (activeChair.gallery || []).forEach(img => {
         if (!gallery.includes(img)) gallery.push(img);
       });
@@ -878,17 +960,22 @@
       document.body.style.overflow = '';
     }
 
-    // Direct booking from chair detail modal
+    // Direct booking from product detail modal
     function bookFromModal(type) {
       closeChairModal();
-      openBookingModal('chair-modal');
+      openBookingModal('product-modal');
       if (type === 'showroom') {
-        document.getElementById('apt-showroom').checked = true;
+        const rad = document.getElementById('apt-showroom');
+        if (rad) rad.checked = true;
       } else {
-        document.getElementById('apt-thuis').checked = true;
+        const rad = document.getElementById('apt-thuis');
+        if (rad) rad.checked = true;
       }
       if (activeChair) {
-        document.getElementById('book-notes').value = `Interesse in stoel: ${activeChair.name} (${formatPrice(activeChair.price)})`;
+        const notes = document.getElementById('book-notes');
+        if (notes) {
+          notes.value = `Interesse in: ${activeChair.name} (${formatPrice(activeChair.price)})`;
+        }
       }
     }
 
@@ -897,33 +984,45 @@
     const showroomModal = document.getElementById('showroom-modal');
 
     function openBookingModal(origin) {
-      bookingModal.classList.remove('hidden');
-      document.body.style.overflow = 'hidden';
+      if (bookingModal) {
+        bookingModal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
     }
 
     function closeBookingModal() {
-      bookingModal.classList.add('hidden');
-      document.body.style.overflow = '';
-      setTimeout(() => {
-        document.getElementById('modal-form-container').classList.remove('hidden');
-        document.getElementById('modal-success-container').classList.add('hidden');
-      }, 300);
+      if (bookingModal) {
+        bookingModal.classList.add('hidden');
+        document.body.style.overflow = '';
+        setTimeout(() => {
+          const formC = document.getElementById('modal-form-container');
+          const succC = document.getElementById('modal-success-container');
+          if (formC) formC.classList.remove('hidden');
+          if (succC) succC.classList.add('hidden');
+        }, 300);
+      }
     }
 
     function openShowroomModal() {
-      showroomModal.classList.remove('hidden');
-      document.body.style.overflow = 'hidden';
+      if (showroomModal) {
+        showroomModal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
     }
 
     function closeShowroomModal() {
-      showroomModal.classList.add('hidden');
-      document.body.style.overflow = '';
+      if (showroomModal) {
+        showroomModal.classList.add('hidden');
+        document.body.style.overflow = '';
+      }
     }
 
     function handleBookingSubmit(e) {
       e.preventDefault();
-      document.getElementById('modal-form-container').classList.add('hidden');
-      document.getElementById('modal-success-container').classList.remove('hidden');
+      const formC = document.getElementById('modal-form-container');
+      const succC = document.getElementById('modal-success-container');
+      if (formC) formC.classList.add('hidden');
+      if (succC) succC.classList.remove('hidden');
     }
 
     // Mobile Menu
@@ -935,7 +1034,8 @@
 
     // Header scroll shadow
     window.addEventListener('scroll', () => {
-      document.getElementById('main-header').classList.toggle('scrolled', window.scrollY > 20);
+      const hdr = document.getElementById('main-header');
+      if (hdr) hdr.classList.toggle('scrolled', window.scrollY > 20);
     });
 
     // Close on Escape key
