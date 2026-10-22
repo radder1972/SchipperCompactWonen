@@ -95,14 +95,23 @@
     .arch-stage{position:relative;justify-self:center;width:100%;max-width:440px}
     .arch{position:relative;aspect-ratio:4/5;border-radius:999px 999px 36px 36px;background:linear-gradient(180deg,var(--oat) 0%,var(--clay-l) 100%);overflow:hidden;border:10px solid var(--linen);box-shadow:0 30px 60px -30px rgba(61,59,54,.4)}
     .arch::before{content:"";position:absolute;width:70%;aspect-ratio:1;border-radius:50%;background:var(--linen);opacity:.55;left:15%;top:12%}
-    .arch img{position:absolute;inset:auto 0 0 0;width:100%;height:92%;object-fit:contain;object-position:bottom;mix-blend-mode:multiply}
-    .sticker{position:absolute;top:24px;left:-36px;width:132px;height:132px;border-radius:50%;background:var(--forest);color:var(--linen);display:grid;place-items:center;text-align:center;padding:16px;font-size:12px;font-weight:600;line-height:1.3;transform:rotate(-10deg);box-shadow:0 14px 30px -14px rgba(52,78,65,.7)}
+    .hero-slide{position:absolute;inset:0;opacity:0;transition:opacity .65s cubic-bezier(.4,0,.2,1),transform .65s cubic-bezier(.4,0,.2,1);transform:scale(.97);pointer-events:none}
+    .hero-slide.active{opacity:1;transform:scale(1);pointer-events:auto}
+    .hero-slide img{position:absolute;inset:auto 0 0 0;width:100%;height:92%;object-fit:contain;object-position:bottom}
+    .sticker{position:absolute;top:24px;left:-36px;width:132px;height:132px;border-radius:50%;background:var(--forest);color:var(--linen);display:grid;place-items:center;text-align:center;padding:16px;font-size:12px;font-weight:600;line-height:1.3;transform:rotate(-10deg);box-shadow:0 14px 30px -14px rgba(52,78,65,.7);z-index:3}
     .sticker .ic{width:26px;height:26px;color:var(--sage);margin:0 auto 4px;display:block}
     .sticker small{display:block;font-weight:400;opacity:.8;font-size:10.5px;margin-top:2px}
-    .bubble{position:absolute;right:-28px;bottom:-26px;max-width:290px;background:#fff;border-radius:28px 28px 28px 6px;padding:18px 20px;box-shadow:0 20px 40px -22px rgba(61,59,54,.45);display:flex;gap:12px}
-    .bubble .ic{width:24px;height:24px;color:var(--clay)}
-    .bubble p{font-family:'Fraunces',serif;font-variation-settings:'SOFT' 100;font-size:16px;color:var(--forest);line-height:1.35}
-    .bubble small{display:block;font-size:12px;color:var(--muted);margin-top:6px}
+    .bubble{position:absolute;right:-28px;bottom:-26px;width:315px;background:#fff;border-radius:28px 28px 28px 6px;padding:16px 20px;box-shadow:0 20px 40px -22px rgba(61,59,54,.45);display:flex;gap:12px;z-index:4}
+    .bubble .ic{width:24px;height:24px;color:var(--clay);flex-shrink:0;margin-top:2px}
+    .bubble-slider{position:relative;flex:1;min-height:76px}
+    .quote-pane{position:absolute;inset:0;opacity:0;transform:translateY(6px);transition:opacity .45s ease,transform .45s ease;pointer-events:none}
+    .quote-pane.active{position:relative;opacity:1;transform:translateY(0);pointer-events:auto}
+    .quote-pane p{font-family:'Fraunces',serif;font-variation-settings:'SOFT' 100;font-size:15px;color:var(--forest);line-height:1.35;margin:0}
+    .quote-pane small{display:block;font-size:12px;color:var(--muted);margin-top:5px;line-height:1.3}
+    .hero-dots{position:absolute;bottom:-44px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:8px;padding:6px 14px;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-radius:99px;border:1px solid var(--line);box-shadow:0 6px 16px -4px rgba(61,59,54,.15);z-index:5}
+    .h-dot{width:20px;height:5px;border-radius:99px;background:var(--line);border:none;cursor:pointer;padding:0;transition:all .3s ease}
+    .h-dot:hover{background:var(--moss)}
+    .h-dot.active{background:var(--forest);width:36px}
     .pebbles{display:flex;justify-content:center;flex-wrap:wrap;gap:16px;margin-top:84px}
     .pebble{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid var(--line);padding:14px 28px 14px 14px;border-radius:999px}
     .pebble .dot{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;flex-shrink:0}
@@ -363,7 +372,8 @@
       .sticker{left:-6px;top:6px;width:108px;height:108px;font-size:10.5px;padding:12px}
       .sticker small{display:none}
       .sticker .ic{width:22px;height:22px}
-      .bubble{position:relative;right:auto;bottom:auto;margin:-40px 12px 0;max-width:none}
+      .bubble{position:relative;right:auto;bottom:auto;margin:-30px 12px 0;width:auto;max-width:none}
+      .hero-dots{position:relative;bottom:auto;left:auto;transform:none;margin:16px auto 0;width:fit-content}
       .pebbles{margin-top:48px;flex-direction:column;align-items:stretch}
       .pebble{border-radius:999px}
       .sec-head{margin-bottom:44px}
@@ -478,17 +488,55 @@
           </div>
         </div>
 
-        <div class="arch-stage">
-          <div class="arch">
-            <img src="assets/hero_person_chair.jpg" alt="Ontspannen zittend persoon in een comfortabele ergonomische sta-op stoel" loading="eager">
-          </div>
-          <div class="sticker"><div><svg class="ic" aria-hidden="true"><use href="#i-shield-check"/></svg>Ergonomisch Maatwerk<small>Zitdiepte, zithoogte &amp; armsteun exact op maat</small></div></div>
-          <div class="bubble">
-            <svg class="ic" aria-hidden="true"><use href="#i-quote"/></svg>
-            <div>
-              <p>Sinds ik deze stoel heb, sta ik weer fluitend op zonder rugpijn.</p>
-              <small>Mevr. Van Vliet — Thuis aangemeten in Dordrecht</small>
+        <div class="arch-stage" id="hero-stage">
+          <div class="arch" id="hero-arch">
+            <!-- Slide 0: Mevr. Van Vliet (Transparante PNG - geen wit vlak) -->
+            <div class="hero-slide active" data-slide="0">
+              <img src="assets/hero_person_chair.png" alt="Mevr. Van Vliet ontspannen in Fitform maatwerk sta-op stoel" loading="eager">
             </div>
+            <!-- Slide 1: Dhr. Bakker (Transparante PNG - geen wit vlak) -->
+            <div class="hero-slide" data-slide="1">
+              <img src="assets/hero_slide_man.png" alt="Dhr. Bakker ontspannen in ergonomische relaxstoel" loading="lazy">
+            </div>
+            <!-- Slide 2: Mevr. De Jong (Transparante PNG - geen wit vlak) -->
+            <div class="hero-slide" data-slide="2">
+              <img src="assets/hero_slide_woman2.png" alt="Mevr. De Jong genietend van ergonomisch zitcomfort" loading="lazy">
+            </div>
+          </div>
+
+          <div class="sticker">
+            <div>
+              <svg class="ic" aria-hidden="true"><use href="#i-shield-check"/></svg>
+              Ergonomisch Maatwerk
+              <small>Zitdiepte, zithoogte &amp; armsteun exact op maat</small>
+            </div>
+          </div>
+
+          <div class="bubble" id="hero-bubble">
+            <svg class="ic" aria-hidden="true"><use href="#i-quote"/></svg>
+            <div class="bubble-slider">
+              <!-- Quote 0 -->
+              <div class="quote-pane active" data-slide="0">
+                <p>“Sinds ik deze stoel heb, sta ik weer fluitend op zonder rugpijn.”</p>
+                <small><b>Mevr. M. van Vliet (72)</b> — Thuis aangemeten in Dordrecht</small>
+              </div>
+              <!-- Quote 1 -->
+              <div class="quote-pane" data-slide="1">
+                <p>“Eindelijk een stoel die mijn onderrug steunt én soepel mee omhoog helpt.”</p>
+                <small><b>Dhr. H. Bakker (78)</b> — Regio Sliedrecht</small>
+              </div>
+              <!-- Quote 2 -->
+              <div class="quote-pane" data-slide="2">
+                <p>“Prachtige bekleding passend bij ons interieur. Geen ziekenhuisgevoel, maar puur comfort!”</p>
+                <small><b>Mevr. E. de Jong (69)</b> — Regio Papendrecht</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-dots" role="tablist" aria-label="Slideshow klanten">
+            <button class="h-dot active" onclick="setHeroSlide(0)" aria-label="Klant 1: Mevr. Van Vliet"></button>
+            <button class="h-dot" onclick="setHeroSlide(1)" aria-label="Klant 2: Dhr. Bakker"></button>
+            <button class="h-dot" onclick="setHeroSlide(2)" aria-label="Klant 3: Mevr. De Jong"></button>
           </div>
         </div>
       </div>
@@ -949,6 +997,49 @@
     const rc = document.getElementById('ervaringen');
     rc.addEventListener('mouseenter', () => clearInterval(reviewInterval));
     rc.addEventListener('mouseleave', () => { clearInterval(reviewInterval); reviewInterval = setInterval(nextReview, 8000); });
+
+    // Hero Slideshow Controller (Pristine transparent PNGs)
+    let currentHeroSlide = 0;
+    const totalHeroSlides = 3;
+    let heroInterval = null;
+
+    function setHeroSlide(idx) {
+      currentHeroSlide = (idx + totalHeroSlides) % totalHeroSlides;
+      document.querySelectorAll('.hero-slide').forEach(s => {
+        s.classList.toggle('active', parseInt(s.getAttribute('data-slide')) === currentHeroSlide);
+      });
+      document.querySelectorAll('.quote-pane').forEach(q => {
+        q.classList.toggle('active', parseInt(q.getAttribute('data-slide')) === currentHeroSlide);
+      });
+      document.querySelectorAll('.h-dot').forEach((d, i) => {
+        d.classList.toggle('active', i === currentHeroSlide);
+      });
+    }
+
+    function nextHeroSlide() {
+      setHeroSlide(currentHeroSlide + 1);
+    }
+
+    function startHeroSlider() {
+      stopHeroSlider();
+      heroInterval = setInterval(nextHeroSlide, 5000);
+    }
+
+    function stopHeroSlider() {
+      if (heroInterval) {
+        clearInterval(heroInterval);
+        heroInterval = null;
+      }
+    }
+
+    const heroStageEl = document.getElementById('hero-stage');
+    if (heroStageEl) {
+      heroStageEl.addEventListener('mouseenter', stopHeroSlider);
+      heroStageEl.addEventListener('mouseleave', startHeroSlider);
+      heroStageEl.addEventListener('touchstart', stopHeroSlider, { passive: true });
+      heroStageEl.addEventListener('touchend', startHeroSlider, { passive: true });
+    }
+    startHeroSlider();
 
     // Escape sluit modals
     document.addEventListener('keydown', e => {
