@@ -234,8 +234,26 @@
     .success{text-align:center;padding:16px 0}
     .success .orb-big{width:84px;height:84px;margin:0 auto 18px;border-radius:50%;background:var(--sage-l);display:grid;place-items:center;color:var(--forest)}
     .success .orb-big .ic{width:40px;height:40px}
-    .shop-hero{height:150px;border-radius:999px 999px 24px 24px;overflow:hidden;margin:-8px 0 20px}
-    .shop-hero img{width:100%;height:100%;object-fit:cover;object-position:center 35%}
+    .shop-hero{position:relative;height:190px;border-radius:999px 999px 24px 24px;overflow:hidden;margin:-8px 0 20px}
+    .shop-hero img{width:100%;height:100%;object-fit:cover;object-position:center;transition:opacity .25s ease}
+    .modal-photo-toggle{position:absolute;bottom:12px;right:14px;background:rgba(45,62,52,0.88);backdrop-filter:blur(8px);padding:4px;border-radius:999px;display:flex;gap:4px;z-index:2}
+    .photo-btn{background:transparent;border:0;color:rgba(255,255,255,0.8);font-size:12px;font-weight:700;font-family:inherit;padding:5px 12px;border-radius:999px;cursor:pointer;transition:all .2s ease}
+    .photo-btn.active{background:var(--linen);color:var(--forest);box-shadow:0 2px 6px rgba(0,0,0,0.2)}
+    
+    /* Collection Showroom Banner */
+    .col-showroom-banner{background:var(--linen);border:1px solid var(--line);border-radius:36px;display:grid;grid-template-columns:1fr 1.2fr;gap:36px;align-items:center;padding:28px 36px;margin:56px 0 20px;box-shadow:0 12px 32px rgba(45,62,52,0.06)}
+    .col-sr-img{position:relative;border-radius:24px;overflow:hidden;aspect-ratio:16/10;box-shadow:0 8px 24px rgba(45,62,52,0.12)}
+    .col-sr-img img{width:100%;height:100%;object-fit:cover;display:block}
+    .col-sr-tag{position:absolute;bottom:12px;left:12px;background:rgba(45,62,52,0.9);backdrop-filter:blur(6px);color:#faf7f1;font-size:12px;font-weight:600;padding:6px 14px;border-radius:999px;display:inline-flex;align-items:center;gap:6px}
+    .col-sr-tag .ic{color:var(--sage)}
+    .col-sr-content h3{font-size:clamp(22px,2.4vw,28px);margin-bottom:10px}
+    .col-sr-content p{color:var(--muted);font-size:15px;line-height:1.55;margin-bottom:18px}
+    .col-sr-usps{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:20px;font-size:14px;font-weight:600;color:var(--forest)}
+    .col-sr-usps span{display:inline-flex;align-items:center;gap:6px}
+    .col-sr-usps .ic{color:var(--clay)}
+    @media (max-width:860px){
+      .col-showroom-banner{grid-template-columns:1fr;padding:24px;gap:20px}
+    }
     .info-list{background:var(--oat);border-radius:24px;padding:16px 20px;display:grid;gap:8px;font-size:14px;margin-bottom:16px}
     .info-list div{display:flex;gap:10px;align-items:flex-start}
     .info-list .ic{color:var(--clay);margin-top:3px}
@@ -413,6 +431,28 @@
       <!-- Injected by JavaScript -->
     </div>
 
+    <!-- Collection Showroom Banner -->
+    <div class="col-showroom-banner">
+      <div class="col-sr-img">
+        <img src="assets/winkel_interieur.jpg" alt="Showroom van Schipper Compact Wonen in Dordrecht met sta-op stoelen" loading="lazy">
+        <span class="col-sr-tag"><svg class="ic" aria-hidden="true"><use href="#i-map-pin"/></svg>Merwedestraat 239, Dordrecht</span>
+      </div>
+      <div class="col-sr-content">
+        <span class="eyebrow">Persoonlijk uitproberen</span>
+        <h3>Wilt u onze stoelen in alle rust ervaren?</h3>
+        <p>In onze sfeervolle showroom aan de Merwedestraat 239 kunt u al onze maatwerk- en occasion stoelen vrijblijvend proefzitten onder het genot van een kopje verse koffie. Onze bewegingstechnoloog meet direct uw ideale zithouding op.</p>
+        <div class="col-sr-usps">
+          <span><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Ruim 40 modellen direct testen</span>
+          <span><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Gratis parkeren voor de deur</span>
+          <span><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Geen aankoopverplichting</span>
+        </div>
+        <div class="two" style="max-width:420px">
+          <button onclick="openShowroomModal()" class="btn btn-primary"><svg class="ic" aria-hidden="true"><use href="#i-store"/></svg>Bekijk showroom</button>
+          <button onclick="openBookingModal('collection-banner')" class="btn btn-ghost"><svg class="ic" aria-hidden="true"><use href="#i-calendar"/></svg>Plan advies</button>
+        </div>
+      </div>
+    </div>
+
   </main>
 
   <!-- CHAIR DETAIL MODAL -->
@@ -537,7 +577,13 @@
       <div class="modal-backdrop" onclick="closeShowroomModal()"></div>
       <div class="card">
         <button class="card-x" onclick="closeShowroomModal()" aria-label="Sluiten" style="z-index:2"><svg class="ic" aria-hidden="true"><use href="#i-close"/></svg></button>
-        <div class="shop-hero"><img src="assets/winkel_showroom_nieuw.jpg" alt="Winkel en showroom Schipper Compact Wonen Merwedestraat 239 Dordrecht" loading="lazy"></div>
+        <div class="shop-hero">
+          <img id="modal-shop-img" src="assets/winkel_interieur.jpg" alt="Sfeervolle showroom Schipper Compact Wonen van binnen" loading="lazy">
+          <div class="modal-photo-toggle">
+            <button type="button" id="m-btn-in" class="photo-btn active" onclick="switchModalPhoto('interieur')">Binnenkijken</button>
+            <button type="button" id="m-btn-ex" class="photo-btn" onclick="switchModalPhoto('gevel')">Voorgevel &amp; Parkeren</button>
+          </div>
+        </div>
         <span class="eyebrow">Welkom in Dordrecht</span>
         <h3>Showroom Schipper Compact Wonen BV</h3>
         <p class="lede">Al vele jaren gevestigd aan de Merwedestraat 239. U bent van harte welkom om al onze maatwerk- en occasion stoelen rustig uit te proberen. Gratis parkeren voor de deur.</p>
@@ -1039,6 +1085,24 @@
       if (showroomModal) {
         showroomModal.classList.remove('hidden');
         document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function switchModalPhoto(type) {
+      const img = document.getElementById('modal-shop-img');
+      const btnIn = document.getElementById('m-btn-in');
+      const btnEx = document.getElementById('m-btn-ex');
+      if (!img) return;
+      if (type === 'interieur') {
+        img.src = 'assets/winkel_interieur.jpg';
+        img.alt = 'Sfeervolle showroom Schipper Compact Wonen van binnen';
+        if (btnIn) btnIn.classList.add('active');
+        if (btnEx) btnEx.classList.remove('active');
+      } else {
+        img.src = 'assets/winkel_showroom_nieuw.jpg';
+        img.alt = 'Winkel en showroom Schipper Compact Wonen Merwedestraat 239 Dordrecht';
+        if (btnEx) btnEx.classList.add('active');
+        if (btnIn) btnIn.classList.remove('active');
       }
     }
 
