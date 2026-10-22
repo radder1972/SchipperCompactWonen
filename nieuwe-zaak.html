@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>De Nieuwe Zaak — Storyboard & Huisstijl Concept | Schipper Compact Wonen</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..800,0..100;1,9..144,300..700,0..100&family=Figtree:ital,wght@0,300..900;1,300..800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+<style>
+  :root {
+    --forest: #2C3E35;
+    --forest-d: #1F2D26;
+    --forest-l: #3C5448;
+    --sage: #A3B18A;
+    --sage-d: #73886C;
+    --sage-l: #E3E9DE;
+    --clay: #C4805F;
+    --clay-l: #F4EDE4;
+    --clay-d: #A66344;
+    --linen: #FAF7F1;
+    --oat: #EDE6DA;
+    --oat-d: #DFD5C4;
+    --dark: #1E2822;
+    --muted: #5C6A61;
+    --line: rgba(44, 62, 53, 0.12);
+    --shadow-sm: 0 4px 12px rgba(31, 45, 38, 0.05);
+    --shadow-md: 0 12px 30px rgba(31, 45, 38, 0.08);
+    --shadow-lg: 0 24px 50px rgba(31, 45, 38, 0.12);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--linen);
+    color: var(--dark);
+    font-family: 'Figtree', system-ui, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  /* Typography */
+  h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; font-weight: 600; color: var(--forest); }
+  .serif-italic { font-style: italic; font-weight: 400; }
+  .eyebrow {
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--clay);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+  .eyebrow::before { content: ""; width: 24px; height: 2px; background: var(--clay); }
+
+  /* Layout */
+  .container { max-width: 1240px; margin: 0 auto; padding: 0 28px; }
+  .sec { padding: 90px 0; border-bottom: 1px solid var(--line); }
+  .sec-header { max-width: 760px; margin-bottom: 48px; }
+  .sec-header h2 { font-size: clamp(32px, 3.8vw, 48px); line-height: 1.15; margin-bottom: 16px; }
+  .sec-header p { font-size: 18px; color: var(--muted); }
+
+  /* Navigation Bar */
+  .top-bar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(250, 247, 241, 0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--line);
+    padding: 14px 0;
+  }
+  .top-bar-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+  .brand-lockup {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+    color: var(--forest);
+  }
+  .brand-arch-badge {
+    width: 38px;
+    height: 48px;
+    background: var(--sage);
+    border-radius: 999px 999px 6px 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--forest-d);
+    font-family: 'Fraunces', serif;
+    font-size: 24px;
+    font-weight: 700;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  }
+  .brand-text h1 { font-size: 22px; font-weight: 700; line-height: 1; letter-spacing: -0.01em; margin: 0; }
+  .brand-text small { font-size: 10.5px; font-weight: 800; letter-spacing: 0.22em; text-transform: uppercase; color: var(--sage-d); display: block; margin-top: 2px; }
+
+  .confidential-pill {
+    background: var(--clay-l);
+    border: 1px solid rgba(196, 128, 95, 0.35);
+    color: var(--clay-d);
+    font-size: 12.5px;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .confidential-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--clay); }
+
+  .nav-links {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+  }
+  .nav-links a {
+    color: var(--forest);
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color .2s ease;
+  }
+  .nav-links a:hover { color: var(--clay); }
+
+  .btn-website {
+    background: var(--forest);
+    color: var(--linen);
+    font-size: 13px;
+    font-weight: 700;
+    padding: 9px 18px;
+    border-radius: 999px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all .2s ease;
+  }
+  .btn-website:hover { background: var(--forest-l); transform: translateY(-1px); }
+
+  /* Hero Banner */
+  .hero-concept {
+    padding: 80px 0 60px;
+    background: linear-gradient(180deg, #F4EFE6 0%, #FAF7F1 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 56px;
+    align-items: center;
+  }
+  .hero-content h1 {
+    font-size: clamp(40px, 4.8vw, 64px);
+    line-height: 1.08;
+    margin-bottom: 24px;
+    letter-spacing: -0.015em;
+  }
+  .hero-content p.lead {
+    font-size: 20px;
+    color: var(--muted);
+    line-height: 1.55;
+    margin-bottom: 32px;
+  }
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    border-top: 1px solid var(--line);
+    padding-top: 28px;
+  }
+  .stat-item b {
+    display: block;
+    font-family: 'Fraunces', serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--forest);
+    line-height: 1;
+  }
+  .stat-item span {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--muted);
+    margin-top: 6px;
+    display: block;
+  }
+
+  .hero-card-preview {
+    position: relative;
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    border: 8px solid #fff;
+    aspect-ratio: 4/3;
+  }
+  .hero-card-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .hero-preview-tag {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(44, 62, 53, 0.92);
+    backdrop-filter: blur(8px);
+    color: #fff;
+    font-size: 13.5px;
+    font-weight: 600;
+    padding: 8px 18px;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  /* Section 1: Huisstijl & Kleuren */
+  .swatches-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-bottom: 48px;
+  }
+  .swatch-card {
+    background: #fff;
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--line);
+    transition: transform .25s ease, box-shadow .25s ease;
+  }
+  .swatch-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+  .swatch-color {
+    height: 150px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    padding: 16px;
+  }
+  .swatch-hex {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(6px);
+    color: var(--dark);
+    font-family: monospace;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 999px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  .swatch-body { padding: 22px; }
+  .swatch-body h3 { font-size: 20px; margin-bottom: 6px; }
+  .swatch-role { font-size: 12px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--clay); margin-bottom: 8px; }
+  .swatch-body p { font-size: 14px; color: var(--muted); line-height: 1.5; }
+
+  /* Section 2: Full Width Interactive Mockups */
+  .mockup-hero {
+    position: relative;
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    border: 8px solid #fff;
+    margin-bottom: 32px;
+  }
+  .mockup-hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .mockup-overlay-badge {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    background: rgba(44, 62, 53, 0.94);
+    backdrop-filter: blur(8px);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 10px 22px;
+    border-radius: 999px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+  }
+
+  /* Hotspots */
+  .hotspot-card {
+    position: absolute;
+    background: rgba(250, 247, 241, 0.96);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 12px 18px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    max-width: 280px;
+    pointer-events: none;
+    animation: fadeIn .4s ease;
+  }
+  .hotspot-card b { display: block; font-size: 14px; color: var(--forest); margin-bottom: 4px; }
+  .hotspot-card p { font-size: 12.5px; color: var(--muted); line-height: 1.4; margin: 0; }
+
+  /* Gallery Grid */
+  .details-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    margin-top: 36px;
+  }
+  .detail-card {
+    background: #fff;
+    border-radius: 28px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow-sm);
+    transition: transform .25s ease;
+  }
+  .detail-card:hover { transform: translateY(-4px); }
+  .detail-thumb {
+    aspect-ratio: 16/10;
+    overflow: hidden;
+    position: relative;
+  }
+  .detail-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform .4s ease;
+  }
+  .detail-card:hover .detail-thumb img { transform: scale(1.04); }
+  .detail-info { padding: 22px; }
+  .detail-num { font-size: 12px; font-weight: 800; color: var(--clay); letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 4px; display: block; }
+  .detail-info h3 { font-size: 20px; margin-bottom: 8px; }
+  .detail-info p { font-size: 14px; color: var(--muted); line-height: 1.5; }
+
+  /* Before / After Section */
+  .compare-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-top: 36px;
+  }
+  .compare-card {
+    background: #fff;
+    border-radius: 32px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow-sm);
+  }
+  .compare-img {
+    aspect-ratio: 16/10;
+    overflow: hidden;
+    position: relative;
+  }
+  .compare-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .compare-tag {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    border-radius: 999px;
+  }
+  .tag-before { background: rgba(220, 53, 69, 0.9); color: #fff; }
+  .tag-after { background: rgba(44, 62, 53, 0.95); color: #fff; }
+  .compare-body { padding: 24px; }
+  .compare-body h3 { font-size: 22px; margin-bottom: 8px; }
+  .compare-body p { font-size: 15px; color: var(--muted); line-height: 1.55; }
+  .compare-bullets { margin-top: 14px; list-style: none; display: grid; gap: 8px; font-size: 14px; }
+  .compare-bullets li { display: flex; align-items: center; gap: 8px; }
+  .compare-bullets li.cross { color: #8A4032; }
+  .compare-bullets li.check { color: var(--forest); font-weight: 600; }
+
+  /* Storyboard Vision / Quote Block */
+  .vision-card {
+    background: var(--forest);
+    color: var(--linen);
+    border-radius: 48px;
+    padding: 64px 72px;
+    margin: 60px 0 0;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+  }
+  .vision-card::after {
+    content: "“";
+    position: absolute;
+    right: 40px;
+    bottom: -60px;
+    font-family: 'Fraunces', serif;
+    font-size: 280px;
+    color: rgba(255, 255, 255, 0.05);
+    line-height: 1;
+    pointer-events: none;
+  }
+  .vision-card h2 { color: var(--linen); font-size: clamp(32px, 3.5vw, 46px); line-height: 1.2; margin-bottom: 24px; }
+  .vision-card p { font-size: 18.5px; color: rgba(250, 247, 241, 0.88); line-height: 1.65; max-width: 820px; margin-bottom: 36px; }
+  .vision-sig { display: flex; align-items: center; gap: 18px; }
+  .vision-sig-badge {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: var(--sage);
+    color: var(--forest);
+    font-family: 'Fraunces', serif;
+    font-size: 22px;
+    font-weight: 700;
+    display: grid;
+    place-items: center;
+  }
+  .vision-sig div b { display: block; font-size: 17px; color: var(--linen); }
+  .vision-sig div small { font-size: 13.5px; color: var(--sage); }
+
+  /* Footer */
+  footer {
+    padding: 60px 0;
+    text-align: center;
+    background: var(--oat);
+    color: var(--muted);
+    font-size: 14px;
+    margin-top: 80px;
+  }
+  footer p { margin-bottom: 12px; }
+
+  /* Responsive */
+  @media (max-width: 960px) {
+    .hero-grid { grid-template-columns: 1fr; }
+    .swatches-grid { grid-template-columns: 1fr 1fr; }
+    .details-grid { grid-template-columns: 1fr; }
+    .compare-container { grid-template-columns: 1fr; }
+    .nav-links { display: none; }
+    .vision-card { padding: 40px 28px; }
+  }
+  @media (max-width: 600px) {
+    .confidential-pill { display: none; }
+    .swatches-grid { grid-template-columns: 1fr; }
+    .stat-grid { grid-template-columns: 1fr; gap: 14px; }
+    .btn-website { padding: 7px 14px; font-size: 12px; }
+  }
+</style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <nav class="top-bar">
+    <div class="container top-bar-inner">
+      <a href="index.html" class="brand-lockup">
+        <div class="brand-arch-badge">S</div>
+        <div class="brand-text">
+          <h1>Schipper</h1>
+          <small>Compact Wonen</small>
+        </div>
+      </a>
+
+      <div class="confidential-pill">
+        <span class="confidential-dot"></span>
+        Storyboard &amp; Concept • Vertrouwelijk
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="#huisstijl">01. Huisstijl &amp; Kleuren</a></li>
+        <li><a href="#exterieur">02. Exterieur &amp; Gevel</a></li>
+        <li><a href="#interieur">03. Interieur &amp; Zaak</a></li>
+        <li><a href="#transformatie">04. Voor &amp; Na</a></li>
+      </ul>
+
+      <a href="index.html" class="btn-website">
+        <span>Naar live website</span> &rarr;
+      </a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero-concept">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <span class="eyebrow">Merkidentiteit &amp; Showroom Storyboard</span>
+          <h1>De Nieuwe Zaak: <span class="serif-italic">Rust, warmte &amp; ergonomie</span></h1>
+          <p class="lead">
+            Een complete visuele en ruimtelijke metamorfose voor <strong>Schipper Compact Wonen</strong>. Van de traditionele meubelwinkel met gedateerde uitsnedes naar een eigentijdse, gastvrije ergonomische belevingszaak aan de <strong>Merwedestraat 239 in Dordrecht</strong>.
+          </p>
+
+          <div class="stat-grid">
+            <div class="stat-item">
+              <b>35+ Jaar</b>
+              <span>Vertrouwde vakkennis</span>
+            </div>
+            <div class="stat-item">
+              <b>4 Tinten</b>
+              <span>Scandinavisch kleurenpalet</span>
+            </div>
+            <div class="stat-item">
+              <b>100%</b>
+              <span>Warmte, rust &amp; maatwerk</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-card-preview">
+          <img src="assets/winkel_interieur.jpg" alt="Showroom interieur van Schipper Compact Wonen in Dordrecht">
+          <div class="hero-preview-tag">
+            <span>&#9679;</span> Merwedestraat 239, Dordrecht
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- SECTION 01: Huisstijl & Kleuren -->
+  <section class="sec" id="huisstijl">
+    <div class="container">
+      <div class="sec-header">
+        <span class="eyebrow">01 • Huisstijl &amp; Merkkleuren</span>
+        <h2>Het Natuurlijke Kleurenpalet</h2>
+        <p>Gekozen om rust, geborgenheid en deskundigheid uit te stralen. Weg van het kille medische wit of felle actiekleuren, naar een warm Scandinavisch interieurgevoel.</p>
+      </div>
+
+      <div class="swatches-grid">
+        <!-- Swatch 1: Diep Bosgroen -->
+        <div class="swatch-card">
+          <div class="swatch-color" style="background:#2C3E35; color:#fff">
+            <span class="swatch-hex">#2C3E35</span>
+          </div>
+          <div class="swatch-body">
+            <div class="swatch-role">Primaire Hoofdkleur</div>
+            <h3>Diep Bosgroen</h3>
+            <p>De basis voor de gevelband en de grote accentwand in de showroom. Straalt diepe rust, geborgenheid en medisch-technische autoriteit uit.</p>
+          </div>
+        </div>
+
+        <!-- Swatch 2: Scandinavisch Saliegroen -->
+        <div class="swatch-card">
+          <div class="swatch-color" style="background:#A3B18A; color:#1F2D26">
+            <span class="swatch-hex">#A3B18A</span>
+          </div>
+          <div class="swatch-body">
+            <div class="swatch-role">Beeldmerk &amp; Details</div>
+            <h3>Saliegroen</h3>
+            <p>Het kenmerkende boog-icoon met de letter 'S', de markiezen buiten en stofferingen binnen. Zacht, licht en natuurlijk.</p>
+          </div>
+        </div>
+
+        <!-- Swatch 3: Warm Terracotta -->
+        <div class="swatch-card">
+          <div class="swatch-color" style="background:#C4805F; color:#fff">
+            <span class="swatch-hex">#C4805F</span>
+          </div>
+          <div class="swatch-body">
+            <div class="swatch-role">Warme Accentbies</div>
+            <h3>Terracotta / Klei</h3>
+            <p>Subtiele accentlijn langs de gevelcassette, decoratieve bollen en actieknoppen. Zorgt voor menselijke warmte en tactiel ambacht.</p>
+          </div>
+        </div>
+
+        <!-- Swatch 4: Linnen Warmwit -->
+        <div class="swatch-card">
+          <div class="swatch-color" style="background:#FAF7F1; border-bottom:1px solid var(--line)">
+            <span class="swatch-hex">#FAF7F1</span>
+          </div>
+          <div class="swatch-body">
+            <div class="swatch-role">Achtergrond &amp; Typo</div>
+            <h3>Linnen &amp; Haver</h3>
+            <p>De zachte basis van alle dragers. Geeft een hoogwaardig papiergevoel en zorgt dat letters op de donkere wand kraakhelder leesbaar zijn.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 02: Exterieur & Gevelontwerp -->
+  <section class="sec" id="exterieur">
+    <div class="container">
+      <div class="sec-header">
+        <span class="eyebrow">02 • Exterieur &amp; Gevelarchitectuur</span>
+        <h2>De Nieuwe Gevel aan de Merwedestraat 239</h2>
+        <p>Alle gedateerde fotocollages zijn vervangen door een strakke, doorlopende architectonische cassette met verhoogde reliëfletters, saliegroene markiezen en drempelvrije entree.</p>
+      </div>
+
+      <div class="mockup-hero">
+        <img src="assets/winkel_showroom_nieuw.jpg" alt="Volledige gevel van Schipper Compact Wonen aan de Merwedestraat 239 Dordrecht">
+        <div class="mockup-overlay-badge">&#10003; Definitieve Gevelmockup Merwedestraat 239</div>
+      </div>
+
+      <div class="details-grid">
+        <div class="detail-card">
+          <div class="detail-thumb">
+            <img src="assets/storyboard_detail_gevel.jpg" alt="Gevelband detail">
+          </div>
+          <div class="detail-info">
+            <span class="detail-num">Onderdeel 01</span>
+            <h3>Architectonische Gevelband</h3>
+            <p>Diep bosgroen cassettepaneel met verhoogde witte reliëfletters: links <em>Zitcomfort • Ligcomfort • Zorgcomfort</em>, rechts het nieuwe <em>Schipper</em> beeldmerk.</p>
+          </div>
+        </div>
+
+        <div class="detail-card">
+          <div class="detail-thumb">
+            <img src="assets/storyboard_detail_entree.jpg" alt="Entree en zonwering detail">
+          </div>
+          <div class="detail-info">
+            <span class="detail-num">Onderdeel 02</span>
+            <h3>Markiezen &amp; Drempelvrij</h3>
+            <p>Saliegroene zonwerende markiezen boven beide ramen met subtiele logo-opdruk, geflankeerd door een drempelvrije aluminium hellingbaan voor rollators.</p>
+          </div>
+        </div>
+
+        <div class="detail-card">
+          <div class="detail-thumb">
+            <img src="assets/winkel_showroom_dordrecht_clean.png" alt="Winkelpui overzicht">
+          </div>
+          <div class="detail-info">
+            <span class="detail-num">Onderdeel 03</span>
+            <h3>Klinkerstraat &amp; Groen</h3>
+            <p>Ronde buxuspotten op het trottoir en schone Hollandse klinkers met gratis parkeergelegenheid direct voor de deur.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 03: Interieur & Showroom Beleving -->
+  <section class="sec" id="interieur">
+    <div class="container">
+      <div class="sec-header">
+        <span class="eyebrow">03 • Interieur &amp; Showroom Beleving</span>
+        <h2>Binnenkijken in de Showroom</h2>
+        <p>Een sfeervolle, gastvrije showroomomgeving waar klanten zich direct thuis voelen. Voorzien van een markante merkmuur, presentatiepodium, erfgoedgalerij en comfortabele overlegtafels.</p>
+      </div>
+
+      <div class="mockup-hero">
+        <img src="assets/winkel_interieur.jpg" alt="Interieur van de showroom van Schipper Compact Wonen in Dordrecht">
+        <div class="mockup-overlay-badge">&#10003; Showroom Interieur &amp; Adviesruimte</div>
+      </div>
+
+      <div class="details-grid">
+        <div class="detail-card">
+          <div class="detail-thumb">
+            <img src="assets/storyboard_detail_logowand.jpg" alt="Bosgroene logowand in showroom">
+          </div>
+          <div class="detail-info">
+            <span class="detail-num">Interieurdetail 01</span>
+            <h3>3D Merkmuur</h3>
+            <p>De matte bosgroene wand met verlicht saliegroen boog-embleem en 3D messing-matte belettering <em>Schipper COMPACT WONEN</em> als herkenbaar merkanchor.</p>
+          </div>
+        </div>
+
+        <div class="detail-card">
+          <div class="detail-thumb">
+            <img src="assets/storyboard_detail_etalage.jpg" alt="Etalagepodium en bezorgbus">
+          </div>
+          <div class="detail-info">
+            <span class="detail-num">Interieurdetail 02</span>
+            <h3>Etalagepodium &amp; Bezorging</h3>
+            <p>Een verhoogd houten podium met de nieuwste fauteuil in het raam, met buiten direct zicht op de herkenbare Schipper-bezorgbus.</p>
+          </div>
+        </div>
+
+        <div class="detail-card">
+          <div class="detail-thumb">
+            <img src="assets/storyboard_detail_historie.jpg" alt="35+ jaar vakmanschap galerij">
+          </div>
+          <div class="detail-info">
+            <span class="detail-num">Interieurdetail 03</span>
+            <h3>35+ Jaar Vakmanschap</h3>
+            <p>De fotowand met historische beelden van de zaak, gecombineerd met een koffiehoek en adviestafels voor persoonlijke zithoudingsmetingen.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 04: Voor en Na Transformatie -->
+  <section class="sec" id="transformatie">
+    <div class="container">
+      <div class="sec-header">
+        <span class="eyebrow">04 • Transformatie &amp; Vergelijking</span>
+        <h2>De Kwaliteitssprong: Voor &amp; Na</h2>
+        <p>Vergelijk de historische situatie met de nieuwe visuele identiteit. De rommelige elementen maken plaats voor pure rust, autoriteit en hedendaags design.</p>
+      </div>
+
+      <div class="compare-container">
+        <!-- Before -->
+        <div class="compare-card">
+          <div class="compare-img">
+            <img src="assets/winkel_showroom_dordrecht.png" alt="Oude situatie winkelpand met fotocollage">
+            <span class="compare-tag tag-before">Oude Situatie (Voor)</span>
+          </div>
+          <div class="compare-body">
+            <h3>Traditionele Uitstraling</h3>
+            <p>Verouderde 90s uitsnedes van meubels, losse reclamevlaggen en een gedateerde grafische stijl.</p>
+            <ul class="compare-bullets">
+              <li class="cross">&#10005; Fotocollage met losse meubeluitsnedes boven het raam</li>
+              <li class="cross">&#10005; Gedateerd groen golfpatroon</li>
+              <li class="cross">&#10005; Grote brochure-tekstblokken op de stoep</li>
+              <li class="cross">&#10005; Onduidelijke splitsing tussen zorg en wonen</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- After -->
+        <div class="compare-card">
+          <div class="compare-img">
+            <img src="assets/winkel_showroom_nieuw.jpg" alt="Nieuwe situatie winkelpand met rustige gevelband en markiezen">
+            <span class="compare-tag tag-after">Nieuwe Situatie (Nu)</span>
+          </div>
+          <div class="compare-body">
+            <h3>Eigentijdse Belevingszaak</h3>
+            <p>Eén rustige, architectonische eenheid in officiële merkkleuren met een warm, hoogwaardig interieur.</p>
+            <ul class="compare-bullets">
+              <li class="check">&#10003; Rustige bosgroene gevelcassette met reliëf typografie</li>
+              <li class="check">&#10003; Saliegroene markiezen en terracotta accentbies</li>
+              <li class="check">&#10003; Schone klinkers, buxuspotten en drempelvrije entree</li>
+              <li class="check">&#10003; Schitterend interieur met 3D logowand en erfgoedgalerij</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Vision Quote Card -->
+      <div class="vision-card">
+        <span class="eyebrow" style="color:var(--sage)">De Filosofie Achter Het Concept</span>
+        <h2>“Een sta-op stoel koop je niet uit een folder; die moet je voelen, ervaren en rustig uitproberen in een vertrouwde, warme omgeving.”</h2>
+        <p>
+          Met de nieuwe gevel en het vernieuwde interieur sluit het fysieke pand aan de Merwedestraat naadloos aan bij de hoogwaardige online beleving. Klanten die online binnenstappen, ervaren offline exact hetzelfde warme welkom, de geur van verse koffie en het deskundige advies van bewegingstechnoloog Geertjan.
+        </p>
+        <div class="vision-sig">
+          <div class="vision-sig-badge">S</div>
+          <div>
+            <b>Schipper Compact Wonen</b>
+            <small>Merwedestraat 239 • 3313 GT Dordrecht</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p><strong>Schipper Compact Wonen BV</strong> &bull; Merwedestraat 239, 3313 GT Dordrecht &bull; Tel: <a href="tel:0786314858" style="color:inherit">078 - 631 4858</a></p>
+      <p style="font-size:12px;opacity:0.7">Dit is een intern presentatie- en storyboarddocument. Niet geïndexeerd voor zoekmachines (noindex, nofollow).</p>
+      <p style="margin-top:20px"><a href="index.html" class="btn-website" style="background:var(--forest)">Terug naar de website &rarr;</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>
