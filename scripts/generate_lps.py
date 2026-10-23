@@ -262,6 +262,7 @@ def generate_lp_html(lp_item, is_rotterdam=False):
   <link rel="apple-touch-icon" sizes="180x180" href="{root_rel}apple-touch-icon.png">
   <link rel="manifest" href="{root_rel}site.webmanifest">
   <meta name="theme-color" content="#A3B18A">
+  <meta name="version" content="3.2.0">
   
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -808,13 +809,14 @@ def generate_lp_html(lp_item, is_rotterdam=False):
         </div>
       </div>
       <div class="fbot">
-        <span>&copy; 2026 Schipper Compact Wonen BV · Alle rechten voorbehouden</span>
+        <span>&copy; 2026 Schipper Compact Wonen BV · Alle rechten voorbehouden <span class="site-version" style="display:inline-block;margin-left:8px;padding:2px 8px;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.22);border-radius:999px;font-size:11px;font-weight:600;letter-spacing:0.04em;">v3.2.0</span></span>
         <span>Specialist in Zit-, Lig- en Zorgcomfort</span>
       </div>
     </div>
   </footer>
 
   <script>
+    console.log('%c Schipper Compact Wonen • v3.2.0 (okt 2026) ', 'background: #344E41; color: #FAF7F1; font-weight: bold; padding: 4px 8px; border-radius: 4px;');
     const bookingModal = document.getElementById('booking-modal');
     const mobileMenu = document.getElementById('mobile-menu');
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
@@ -958,7 +960,14 @@ def generate_lp_overview(lps):
       <h2>Lig- en Zorgcomfort</h2>
       {render_links(care_lps)}
     </section>
+
+    <footer style="text-align:center; padding:32px 0; font-size:13px; color:var(--muted)">
+      &copy; 2026 Schipper Compact Wonen BV · Alle rechten voorbehouden <span class="site-version" style="display:inline-block;margin-left:8px;padding:2px 8px;background:var(--oat);border:1px solid var(--line);border-radius:999px;font-size:11px;font-weight:600;letter-spacing:0.04em;">v3.2.0</span>
+    </footer>
   </main>
+  <script>
+    console.log('%c Schipper Compact Wonen • v3.2.0 (okt 2026) ', 'background: #344E41; color: #FAF7F1; font-weight: bold; padding: 4px 8px; border-radius: 4px;');
+  </script>
 </body>
 </html>
 """

@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Schipper Compact Wonen | Dé Zit- en Zorgspecialist in Dordrecht</title>
   <meta name="description" content="Al ruim 35 jaar dé zit- en zorgspecialist van Drechtsteden &amp; Rijnmond. Ergonomische maatwerk sta-op stoelen, hoog-laag bedden en betrouwbare zorghulpmiddelen.">
+  <meta name="version" content="3.2.0">
   
   <!-- Favicons -->
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -817,7 +818,7 @@
         </div>
       </div>
       <div class="fbottom">
-        <div>© 2026 Schipper Compact Wonen. Alle rechten voorbehouden.</div>
+        <div>© 2026 Schipper Compact Wonen. Alle rechten voorbehouden. <span class="site-version" style="display:inline-block;margin-left:8px;padding:2px 8px;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.22);border-radius:999px;font-size:11px;font-weight:600;letter-spacing:0.04em;">v3.2.0</span></div>
         <nav><a href="#">Algemene Voorwaarden</a><a href="#">Privacy Policy</a><a href="#">Cookieverklaring</a></nav>
       </div>
     </div>
@@ -1046,6 +1047,8 @@
     document.addEventListener('keydown', e => {
       if (e.key === 'Escape') { closeBookingModal(); closeShowroomModal(); }
     });
+
+    console.log('%c Schipper Compact Wonen • v3.2.0 (okt 2026) ', 'background: #344E41; color: #FAF7F1; font-weight: bold; padding: 4px 8px; border-radius: 4px;');
   </script>
 </body>
 </html>
