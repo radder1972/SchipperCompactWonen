@@ -1,8 +1,494 @@
 {
-  "version": "2.1.0",
-  "updated": "2026-10-22",
-  "source": "Schipper Compact Wonen · Dé Zit- en Zorgspecialist (Dordrecht)",
+  "version": "3.0.0",
+  "updated": "2026-10-23",
+  "source": "Schipper Compact Wonen · Real-time Live Sync (Staopstoelen.nl MySQL)",
   "staopstoelen": [
+    {
+      "id": "seniorenstoel-farstrup-plus-sta-op",
+      "name": "Seniorenstoel Farstrup PLUS sta-op",
+      "brand": "Farstrup",
+      "model": "Plus sta-op",
+      "price": 2995,
+      "old_price": null,
+      "condition": "nieuw",
+      "status": "beschikbaar",
+      "type": "relax",
+      "material": "stof",
+      "badge": "seniorenstoel met sta-op",
+      "badgeType": "new",
+      "image": "assets/Senioren_stoelFarstrup_Plus_sta-op_1.jpg",
+      "imageUp": null,
+      "imageLie": null,
+      "ambientImage": "assets/Senioren_stoelFarstrup_Plus_sta-op_sfeer.jpg",
+      "gallery": [
+        "assets/Senioren_stoelFarstrup_Plus_sta-op_1.jpg",
+        "assets/Senioren_stoelFarstrup_Plus_sta-op_2.jpg",
+        "assets/Senioren_stoelFarstrup_Plus_sta-op_3.jpg"
+      ],
+      "features": [
+        "100% Ergonomisch zitcomfort",
+        "Geleverd met kwaliteitsgarantie",
+        "Volledig op uw lichaamsmaat afgesteld"
+      ],
+      "specifications": {
+        "Bekleding": "Stof / Leer, zeer veel mogelijkheden",
+        "Garantie": "10 jaar",
+        "Maatwerk": "Geheel op maat gemaakt",
+        "Maximaal gebruikersgewicht": "120 kg",
+        "Merk": "Farstrup Comfort",
+        "Opties": "Diverse opties mogelijk"
+      },
+      "is_offer": false,
+      "description": "<p><span style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">De </span><strong style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">seniorenstoel Plus sta-op</strong><span style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\"> garandeert elke dag zitcomfort. De Plus sta-op is beschikbaar met zowel open als gesloten zijkanten. Als je extra comfort voor je relaxfauteuil wilt, raden we de bijpassende voetenbank uit de Plus-serie aan, zodat je nooit hoeft in te leveren op zitcomfort.</span></p><p><span style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">Het frame wordt op maat gemaakt van massief eiken- of beukenhout, dat extreem duurzaam is, volgens jouw wensen. Bovendien kun je kiezen uit verschillende kleuren beits.</span></p><p><span style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">De zitting en rugleuning worden gevormd voor een optimale pasvorm en de juiste ergonomische positie.</span></p><p><span style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">De </span><strong style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">seniorenstoel Plus sta-op</strong><span style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\"> is, net als al onze fauteuils, verkrijgbaar in vele hoogwaardige textiel- en leren materialen in talloze verschillende kleuren, zodat je precies de stoel kunt krijgen waarvan je droomt, met jouw persoonlijke uitstraling. Met het lichte, strakke en tijdloze ontwerp van de stoel is de Plus sta-op eenvoudig te combineren met de meeste andere meubels en inrichtingen. Als je een uniforme inrichting in je woonkamer wilt, kun je bijpassende </span><span style=\"background-color: transparent; color: rgb(0, 0, 0);\">banken uit de Plus-serie</span><span style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\"> vinden.</span></p>",
+      "created_at": "2026-10-09 14:16:16",
+      "category": "Zitcomfort",
+      "subcategory": "Relaxstoelen"
+    },
+    {
+      "id": "sta-op-stoel-dfm-bentley-dicht",
+      "name": "Sta-op stoel DFM Bentley (dicht)",
+      "brand": "DFM",
+      "model": "DFM Bentley (dicht)",
+      "price": 1945,
+      "old_price": null,
+      "condition": "nieuw",
+      "status": "beschikbaar",
+      "type": "staop",
+      "material": "leer",
+      "badge": "Premium Leer",
+      "badgeType": "sale",
+      "image": "assets/stoelen/Sta-op-stoel-DFM-Bentley-dicht-1-Copy.jpg",
+      "imageUp": "assets/stoelen/Sta-op-stoel-DFM-Bentley-dicht-2-Copy.jpg",
+      "imageLie": null,
+      "ambientImage": null,
+      "gallery": [
+        "assets/stoelen/Sta-op-stoel-DFM-Bentley-dicht-1-Copy.jpg",
+        "assets/stoelen/Sta-op-stoel-DFM-Bentley-dicht-2-Copy.jpg",
+        "assets/stoelen/Sta-op-stoel-DFM-Bentley-dicht-3-Copy.jpg",
+        "assets/stoelen/Sta-op-stoel-DFM-Bentley-dicht-5-Copy.jpg"
+      ],
+      "features": [
+        "100% Ergonomisch zitcomfort",
+        "Geleverd met kwaliteitsgarantie",
+        "Volledig op uw lichaamsmaat afgesteld"
+      ],
+      "specifications": {
+        "Aantal motoren": "2 motoren",
+        "Bediening": "Handbediening in armleuning (4 knoppen)",
+        "Bekleding": "Stof / Leer, zeer veel mogelijkheden",
+        "Garantie": "3 jaar",
+        "Maatwerk": "3 maten, Small / Medium / Large",
+        "Maximaal gebruikersgewicht": "120 kg",
+        "Merk": "DFM",
+        "Opties": "Diverse opties mogelijk"
+      },
+      "is_offer": false,
+      "description": "<h4>Sta-op stoel DFM Bentley is een zeer veelzijdige fauteuil met sta-op functie, waarbij comfort en uitstraling voorop staan.</h4><p>Deze sta-op stoel van topkwaliteit is leverbaar met een groot aantal functies en opties. De Sta-op stoel Bentley staat dan ook bekend om de vele mogelijkheden om de stoel aan te passen op voorkeuren, maar ook de hoge kwaliteit in afwerking en materialen. Een topmodel in onze collectie, met focus op ultiem comfort voor de gebruiker.</p><p>&nbsp;</p><p>Sta-op stoel DFM Bentley is zeer comfortabel. Naast de sta-op functie is de Bentley tevens te kiezen als vaste of draaifauteuil en met verschillende comfortfuncties en -opties. Denk hierbij aan de uitklapbare voetensteun, verstelbare hoofd-nek steun, verstelbare lendesteun, elektrische bediening en een USB-oplaadpunt voor tablet en telefoon.</p><p>&nbsp;</p><p>De zithoogte en zitdiepte zijn bij Sta-op stoel DFM Bentley niet standaard, maar worden op maat afgestemd doordat er met verschillende maten wordt gewerkt. Samen met onze zitadviseurs wordt de definitieve maatvoering bepaald. Hierdoor zit je niet alleen heerlijk, maar profiteer je door de optimale ondersteuning gegarandeerd van een uitgerust lichaam.</p><p>&nbsp;</p><p>De Bentley heeft een functionele vormgeving in combinatie met ultiem zitcomfort. Ondanks een ingetogen uiterlijk biedt de Bentley veel mogelijkheden met kleur en materialen. Welke smaak je ook hebt, de Bentley is hierop samen te stellen. Sta-op stoel Bentley bied je de mogelijkheid om je eigen wensen qua kleur, materialen en uitvoering samen te stellen. Verschillende kleuren stof en leder zijn te kiezen én te combineren, waardoor je een eigen unieke stoel kunt samenstellen.</p><p>&nbsp;</p><p>Sta-op stoel Bentley is dus volledig naar smaak en gebruik samen te stellen. Geniet daarna na een zeer korte levertijd van ca. 6 weken van deze op uw maat bestelde sta-op stoel.</p>",
+      "created_at": "2026-10-09 14:11:13",
+      "category": "Zitcomfort",
+      "subcategory": "Sta-op stoelen"
+    },
+    {
+      "id": "sta-op-stoel-draaibaar-sliedrecht",
+      "name": "Sta-op stoel draaibaar Sliedrecht",
+      "brand": "De Eiken Zetel",
+      "model": "draaibaar Sliedrecht",
+      "price": 1395,
+      "old_price": null,
+      "condition": "nieuw",
+      "status": "beschikbaar",
+      "type": "staop",
+      "material": "leer",
+      "badge": "Draaibaar",
+      "badgeType": "new",
+      "image": "assets/stoelen/Sta-op-stoel-draaibaar-Sliedrecht-1.jpg",
+      "imageUp": "assets/stoelen/Sta-op-stoel-draaibaar-Sliedrecht-2.jpg",
+      "imageLie": null,
+      "ambientImage": "assets/chair_sliedrecht_cozy.png",
+      "gallery": [
+        "assets/stoelen/Sta-op-stoel-draaibaar-Sliedrecht-1.jpg",
+        "assets/stoelen/Sta-op-stoel-draaibaar-Sliedrecht-2.jpg",
+        "assets/stoelen/Sta-op-stoel-draaibaar-Sliedrecht-3.jpg",
+        "assets/stoelen/Sta-op-stoel-draaibaar-Sliedrecht-4.jpg"
+      ],
+      "features": [
+        "100% Ergonomisch zitcomfort",
+        "Geleverd met kwaliteitsgarantie",
+        "Volledig op uw lichaamsmaat afgesteld"
+      ],
+      "specifications": {
+        "Aantal motoren": "2 motoren",
+        "Bediening": "Handbediening (4 knoppen)",
+        "Bekleding": "Leer (beperkte mogelijkheden), Stof (beperkte mogelijkheden)",
+        "Garantie": "1 jaar",
+        "Maatwerk": "1 maat",
+        "Maximaal gebruikersgewicht": "100 kg",
+        "Merk": "De Eiken Zetel",
+        "Opties": "Geen standaard opties mogelijk"
+      },
+      "is_offer": false,
+      "description": "<h4>Sta-op stoel draaibaar Sliedrecht is een heerlijke 2-motorige relax fauteuil met sta-op verstelling.</h4><p>Sta-op stoel draaibaar Sliedrecht is voorzien van een 2-motorig elektrisch relaxsysteem en sta op hulp. Deze draaibare sta op stoel voorziet dus in alle gemakken. Door de geborstelde stalen voet heeft hij een moderne uitstraling.</p><p>De relaxfunctie is voorzien van 2 motoren waarmee de voetenbank en rugleuning onafhankelijk van elkaar verstelbaar zijn. Traploos in iedere gewenste stand in te stellen dus. Tijdens de sta-op functie wordt de draaifunctie geblokkeerd om veilig op te staan of plaats te nemen. Door de handige home-knop in te drukken zal de stoel vanuit elke positie weer terug bewegen naar de gewone zitstand. Oftewel, standaard is deze stoel van alle gemakken voorzien.</p><p>Sta-op stoel Sliedrecht is voorzien van een topswing. Een verstelbare hoofdsteun die voor het nodige comfort voorziet tijdens het lezen of kijken naar de tv. Optioneel kan er een accu worden ingebouwd waardoor de stoel niet perse in de buurt van een stopcontact hoeft te staan.</p><p>Voor de bekleding kan gekozen worden voor 5 stof en 5 leer kleuren Uiteraard een prachtige kwaliteitsstof welke in taupe, bruin, grijs en walnoot leverbaar is. De leerkleuren zijn zwart, antraciet, grijs, taupe en camel. Voor een betaalbare, fraaie sta op stoel die draaibaar is en van een degelijke kwaliteit kiest u voor de Sta-op stoel draaibaar Sliedrecht.</p><p>De prijs en het zitcomfort zijn verbluffend goed, net als de andere DEZ-sta op stoelen.</p>",
+      "created_at": "2026-10-09 14:11:13",
+      "category": "Zitcomfort",
+      "subcategory": "Sta-op stoelen"
+    },
+    {
+      "id": "sta-op-stoel-draaibaar-zwijndrecht",
+      "name": "Sta-op stoel draaibaar Zwijndrecht",
+      "brand": "De Eiken Zetel",
+      "model": "draaibaar Zwijndrecht",
+      "price": 1350,
+      "old_price": null,
+      "condition": "nieuw",
+      "status": "beschikbaar",
+      "type": "staop",
+      "material": "leer",
+      "badge": "Draaibaar",
+      "badgeType": "new",
+      "image": "assets/stoelen/Sta-op-stoel-ZWIJNDRECHT-1-e1772115887824.jpg",
+      "imageUp": "assets/stoelen/Sta-op-stoel-ZWIJNDRECHT-2.jpg",
+      "imageLie": null,
+      "ambientImage": "assets/chair_zwijndrecht_cozy.png",
+      "gallery": [
+        "assets/stoelen/Sta-op-stoel-ZWIJNDRECHT-1-e1772115887824.jpg",
+        "assets/stoelen/Sta-op-stoel-ZWIJNDRECHT-2.jpg",
+        "assets/stoelen/Sta-op-stoel-ZWIJNDRECHT-3.jpg"
+      ],
+      "features": [
+        "100% Ergonomisch zitcomfort",
+        "Geleverd met kwaliteitsgarantie",
+        "Volledig op uw lichaamsmaat afgesteld"
+      ],
+      "specifications": {
+        "Aantal motoren": "2 motoren",
+        "Bediening": "Handbediening (4 knoppen)",
+        "Bekleding": "Stof (beperkte mogelijkheden)",
+        "Garantie": "1 jaar",
+        "Maatwerk": "1 maat",
+        "Maximaal gebruikersgewicht": "100 kg",
+        "Merk": "De Eiken Zetel",
+        "Opties": "Geen standaard opties mogelijk"
+      },
+      "is_offer": false,
+      "description": "<h4>Sta-op stoel draaibaar Zwijndrecht is een heerlijke 2-motorige relax fauteuil met sta-op verstelling.</h4><p>Sta-op stoel draaibaar Zwijndrecht is voorzien van een 2-motorig elektrisch relaxsysteem en sta op hulp. Deze draaibare sta op stoel voorziet dus in alle gemakken en heeft door het houten draaiplateau een klassieke maar toch ook moderne uitstraling.</p><p>De relaxfunctie is voorzien van 2 motoren waarmee de voetenbank en rugleuning onafhankelijk van elkaar, traploos verstelbaar zijn in iedere gewenste stand. Tijdens de sta-op functie wordt de draaifunctie geblokkeerd om veilig op te staan of plaats te nemen. Door de handige home-knop in te drukken zal de stoel vanuit elke positie weer terug bewegen naar de gewone zitstand. Oftewel standaard is deze stoel van alle gemakken voorzien.</p><p>Sta-op stoel Zwijndrecht is standaard voorzien van een topswing. Een verstelbare hoofdsteun die voor het nodige comfort voorziet tijdens het lezen of kijken naar de tv. Optioneel kan er een accu worden ingebouwd waardoor de stoel niet perse in de buurt van een stopcontact hoeft te staan.</p><p>De bekleding is van een prachtige kwaliteitsstof welke taupe, bruin, grijs en antraciet leverbaar is. Voor een betaalbare, fraaie sta op stoel die draaibaar is en van een degelijke kwaliteit kiest u voor de Sta-op stoel draaibaar Zwijndrecht.</p>",
+      "created_at": "2026-10-09 14:11:13",
+      "category": "Zitcomfort",
+      "subcategory": "Sta-op stoelen"
+    },
+    {
+      "id": "senioren-sta-op-stoel-farstrup-multiplus",
+      "name": "Senioren sta-op stoel Farstrup MULTIPLUS",
+      "brand": "Farstrup",
+      "model": "Multiplus",
+      "price": 4395,
+      "old_price": null,
+      "condition": "nieuw",
+      "status": "beschikbaar",
+      "type": "relax",
+      "material": "stof",
+      "badge": "10 Jaar Garantie",
+      "badgeType": "new",
+      "image": "assets/Senioren_sta_op_stoel_Farstrup_MultiPlus_zitstand.jpg",
+      "imageUp": null,
+      "imageLie": null,
+      "ambientImage": null,
+      "gallery": [
+        "assets/Senioren_sta_op_stoel_Farstrup_MultiPlus_zitstand.jpg",
+        "assets/Senioren_sta_op_stoel_Farstrup_MultiPlus_sta_op_stand.jpg",
+        "assets/Senioren_sta_op_stoel_Farstrup_MultiPlus_beensteun.jpg",
+        "assets/Senioren_sta_op_stoel_Farstrup_MultiPlus_sfeer.jpg"
+      ],
+      "features": [
+        "100% Ergonomisch zitcomfort",
+        "Geleverd met kwaliteitsgarantie",
+        "Volledig op uw lichaamsmaat afgesteld"
+      ],
+      "specifications": {
+        "Bekleding": "Stof / Leer, zeer veel mogelijkheden",
+        "Garantie": "10 jaar",
+        "Maatwerk": "Geheel op maat gemaakt",
+        "Maximaal gebruikersgewicht": "120 kg",
+        "Merk": "Farstrup Comfort",
+        "Opties": "Diverse opties mogelijk"
+      },
+      "is_offer": false,
+      "description": "<p>De Farstrup Multiplus is een senioren fauteuil met uitzonderlijk zitcomfort. Deze serie is ontworpen voor mensen die veel uren per dag zitten en de neiging hebben om met hun bovenlichaam in elkaar te zakken. Farstrup biedt diverse oplossingen binnen functionele stoelen.</p><p><br></p><p>Deze senioren stoel heeft een elektronische rugleuning waarmee u de zitpositie kunt aanpassen, zowel rechtop als in een meer ontspannen ligpositie. Daarnaast is er een elektronische sta-op stand (zitlift) die u gemakkelijk kan ondersteunen bij het opstaan. Eventueel is er een elektronische voetensteun mogelijk die een voetenbankje vervangt.</p>",
+      "created_at": "2026-10-09 14:11:13",
+      "category": "Zitcomfort",
+      "subcategory": "Relaxstoelen"
+    },
+    {
+      "id": "voorraad-sta-op-stoel-fitform-570-vario-iii-reco",
+      "name": "Voorraad Sta-op stoel Fitform 570 Vario III RECO",
+      "brand": "Fitform",
+      "model": "570 Vario RECO",
+      "price": 1500,
+      "old_price": 1603,
+      "condition": "occasion",
+      "status": "beschikbaar",
+      "type": "staop",
+      "material": "stof",
+      "badge": "Gereviseerd",
+      "badgeType": "reco",
+      "image": "assets/stoelen/Sta-op-stoel-Fitform-570-Vario-RECO-0.jpg",
+      "imageUp": "assets/stoelen/Sta-op-stoel-Fitform-570-Vario-RECO-7.jpg",
+      "imageLie": null,
+      "ambientImage": null,
+      "gallery": [
+        "assets/stoelen/Sta-op-stoel-Fitform-570-Vario-RECO-0.jpg",
+        "assets/stoelen/Sta-op-stoel-Fitform-570-Vario-RECO-7.jpg",
+        "assets/stoelen/Sta-op-stoel-Fitform-570-Vario-RECO-6.jpg",
+        "assets/stoelen/Sta-op-stoel-Fitform-570-Vario-RECO-5.jpg",
+        "assets/stoelen/Sta-op-stoel-Fitform-570-Vario-RECO-4.jpg",
+        "assets/stoelen/Sta-op-stoel-Fitform-570-Vario-RECO-3.jpg",
+        "assets/stoelen/Sta-op-stoel-Fitform-570-Vario-RECO-2.jpg",
+        "assets/stoelen/Sta-op-stoel-Fitform-570-Vario-RECO-1.jpg",
+        "assets/stoelen/Sta-op-stoel-Fitform-570-Vario-RECO-9.jpg",
+        "assets/stoelen/Sta-op-stoel-Fitform-570-Vario-RECO-8.jpg"
+      ],
+      "features": [
+        "Standaard zitbreedte 51 cm",
+        "Standaard rughoogte 84 cm",
+        "Zitdiepte instelbaar van 43 tot 53 cm",
+        "Zithoogte instelbaar van 40 tot 60 cm",
+        "Armleggerhoogte instelbaar van 16 tot 29 cm"
+      ],
+      "specifications": {
+        "Aantal motoren": "3 motoren (of meer)",
+        "Bediening": "Handbediening (6 knoppen)",
+        "Bekleding": "Stof / Leer, zeer veel mogelijkheden",
+        "Garantie": "1 jaar",
+        "Maatwerk": "Geheel op maat gemaakt",
+        "Maximaal gebruikersgewicht": "150 kg",
+        "Merk": "Fitform (by Wellco)",
+        "Opties": "Diverse opties mogelijk"
+      },
+      "is_offer": false,
+      "description": "<p>De Sta-op stoel Fitform 570 Vario III RECO is een sta-op stoel met heerlijke relaxfunctie. De handige sta-op voorziening zorgt er voor dat u zelf makkelijk uit uw fauteuil kunt komen. U kunt (langer) zelfstandig blijven wonen en hoeft minder vaak een beroep te doen op familie of professionele hulpverleners.</p><p>&nbsp;</p><p>Bovendien wordt een Fitform 570 Vario III op uw maat ingesteld. Zithoogte, zitdiepte, armleggerhoogte en hoogte en dikte van de lendensteun worden daarvoor opgemeten. Dit is de enige manier om op een gezonde en ergonomisch verantwoorde manier te zitten.</p><p>&nbsp;</p><p>Een Sta-op stoel Fitform 570 Vario III RECO is een stoel welke aan de buitenkant niet is te onderscheiden van een nieuw exemplaar. Wij maken gebruik van een gebruikt frame, welke wordt gereviseerd. Alle assen en scharnierpunten worden gecontroleerd en waar nodig vervangen. Een gereconditioneerde Fitform wordt altijd voorzien van een nieuwe handbediening. Hierna wordt de stoel opnieuw opgebouwd en bekleed met de nieuwe bekleding van uw keuze.</p><p>&nbsp;</p><p><br></p><p>&nbsp;</p><p>Fitform produceert eigentijdse en comfortabele sta-op stoelen met vele verstel- en instelmogelijkheden. Zitoplossingen die voldoen aan de meest actuele, wetenschappelijke inzichten op ergonomisch gebied. Fitform is een ècht Nederlands kwaliteitsproduct.</p><p>&nbsp;</p><p><br></p>",
+      "created_at": "2026-10-09 14:11:13",
+      "category": "Zitcomfort",
+      "subcategory": "Occasions"
+    },
+    {
+      "id": "occasion-sta-op-stoel-fitform-570-vario-verrijdbaar",
+      "name": "Occasion Sta-op stoel Fitform 570 Vario verrijdbaar",
+      "brand": "Fitform",
+      "model": "570 Vario verrijdbaar",
+      "price": 1200,
+      "old_price": null,
+      "condition": "occasion",
+      "status": "beschikbaar",
+      "type": "staop",
+      "material": "stof",
+      "badge": "Gereviseerd",
+      "badgeType": "reco",
+      "image": "assets/Occasion_Sta-op_stoel_Fitform_570_verrijdbaar_1.jpg",
+      "imageUp": null,
+      "imageLie": null,
+      "ambientImage": null,
+      "gallery": [
+        "assets/Occasion_Sta-op_stoel_Fitform_570_verrijdbaar_1.jpg",
+        "assets/Occasion_Sta-op_stoel_Fitform_570_verrijdbaar_2.jpg",
+        "assets/Occasion_Sta-op_stoel_Fitform_570_verrijdbaar_3.jpg",
+        "assets/Occasion_Sta-op_stoel_Fitform_570_verrijdbaar_4.jpg",
+        "assets/Occasion_Sta-op_stoel_Fitform_570_verrijdbaar_5.jpg"
+      ],
+      "features": [
+        "Zitbreedte 51 cm (standaard)",
+        "Rughoogte 84cm",
+        "Zitdiepte instelbaar van 43 tot 53 cm",
+        "Zithoogte instelbaar van 40 tot 60 cm",
+        "Armleggerhoogte instelbaar van 16 tot 29 cm"
+      ],
+      "specifications": {
+        "Aantal motoren": "3 motoren (of meer)",
+        "Bediening": "Handbediening (6 knoppen)",
+        "Bekleding": "Stof oranje gemêleerd",
+        "Garantie": "1 jaar",
+        "Maatwerk": "Geheel op maat gemaakt",
+        "Maximaal gebruikersgewicht": "150 kg",
+        "Merk": "Fitform (by Wellco)",
+        "Opties": "Zeer uitgebreide opties mogelijk"
+      },
+      "is_offer": false,
+      "description": "<p><span style=\"color: rgb(45, 60, 77); background-color: rgb(251, 251, 250);\">Deze </span><strong style=\"color: rgb(45, 60, 77); background-color: rgb(251, 251, 250);\">Occasion sta op stoel Fitform 570 Vario verrijdbaar</strong><span style=\"color: rgb(45, 60, 77); background-color: rgb(251, 251, 250);\"> is geheel gereviseerd. De bekleding is gewassen en nu mag hij weg voor €1200 (nieuwprijs is €4300).</span></p><p><span style=\"color: rgb(45, 60, 77); background-color: rgb(251, 251, 250);\">Een Fitform fauteuil is een betrouwbare en uiterst comfortabele sta op stoel met relaxfunctie. De handige sta-op voorziening zorgt er voor dat u zelf makkelijk in en uit uw stoel kunt komen. Door de relaxfunctie kunt u ook heerlijk ontspannen in de stoel.</span></p><p><br></p><p><span style=\"color: rgb(45, 60, 77); background-color: rgb(251, 251, 250);\">De Fitform 570 Vario is voorzien van </span><strong style=\"color: rgb(45, 60, 77); background-color: rgb(251, 251, 250);\">drie motoren</strong><span style=\"color: rgb(45, 60, 77); background-color: rgb(251, 251, 250);\">, hiermee kunnen de volgende functies (afzonderlijk van elkaar) worden bediend:</span></p><p><span style=\"color: rgb(45, 60, 77); background-color: rgb(251, 251, 250);\">- elektrisch verstelbare beensteun</span></p><p><span style=\"color: rgb(45, 60, 77); background-color: rgb(251, 251, 250);\">- elektrisch verstelbare rugleuning</span></p><p><span style=\"color: rgb(45, 60, 77); background-color: rgb(251, 251, 250);\">- elektrisch verstelbare kantelfunctie</span></p><p><span style=\"color: rgb(45, 60, 77); background-color: rgb(251, 251, 250);\">- elektrisch verstelbare sta-op functie</span></p>",
+      "created_at": "2026-10-09 14:11:13",
+      "category": "Zitcomfort",
+      "subcategory": "Occasions"
+    },
+    {
+      "id": "voorraad-sta-op-stoel-fitform-570-vario-iii-xl-reco",
+      "name": "Voorraad Sta-op stoel Fitform 570 Vario III XL RECO",
+      "brand": "Fitform",
+      "model": "570 Vario XL RECO",
+      "price": 1700,
+      "old_price": null,
+      "condition": "occasion",
+      "status": "beschikbaar",
+      "type": "staop",
+      "material": "stof",
+      "badge": "Gereviseerd",
+      "badgeType": "reco",
+      "image": "assets/stoelen/Sta-op-stoel-Fitform-570-Vario-XL-zand-zitten.png",
+      "imageUp": "assets/stoelen/Sta-op-stoel-Fitform-570-Vario-XL-zand-staop.png",
+      "imageLie": null,
+      "ambientImage": null,
+      "gallery": [
+        "assets/stoelen/Sta-op-stoel-Fitform-570-Vario-XL-zand-zitten.png",
+        "assets/stoelen/Sta-op-stoel-Fitform-570-Vario-XL-zand-staop.png",
+        "assets/stoelen/Sta-op-stoel-Fitform-570-Vario-XL-zand-liggen.png"
+      ],
+      "features": [
+        "Standaard zitbreedte 57 cm (LET OP: extra breed)",
+        "Standaard rughoogte 84 cm",
+        "Zitdiepte instelbaar van 43 tot 53 cm",
+        "Zithoogte instelbaar van 40 tot 60 cm",
+        "Armleggerhoogte instelbaar van 16 tot 29 cm"
+      ],
+      "specifications": {
+        "Aantal motoren": "3 motoren (of meer)",
+        "Bediening": "Handbediening (6 knoppen)",
+        "Bekleding": "Stof / Leer, zeer veel mogelijkheden",
+        "Garantie": "1 jaar",
+        "Maatwerk": "Geheel op maat gemaakt",
+        "Maximaal gebruikersgewicht": "150 kg",
+        "Merk": "Fitform (by Wellco)",
+        "Opties": "Zeer uitgebreide opties mogelijk"
+      },
+      "is_offer": false,
+      "description": "<p>De Sta-op stoel Fitform 570 Vario III XL RECO is een sta-op stoel met heerlijke relaxfunctie. De handige sta-op voorziening zorgt er voor dat u zelf makkelijk uit uw fauteuil kunt komen. U kunt (langer) zelfstandig blijven wonen en hoeft minder vaak een beroep te doen op familie of professionele hulpverleners.</p><p>&nbsp;</p><p>Bovendien wordt een Fitform 570 Vario III XL op uw maat ingesteld. Zithoogte, zitdiepte, armleggerhoogte en hoogte en dikte van de lendensteun worden daarvoor opgemeten. Dit is de enige manier om op een gezonde en ergonomisch verantwoorde manier te zitten.</p><p>&nbsp;</p><p>Een Sta-op stoel Fitform 570 Vario III XL RECO is een stoel welke aan de buitenkant niet is te onderscheiden van een nieuw exemplaar. Wij maken gebruik van een gebruikt frame, welke wordt gereviseerd. Alle assen en scharnierpunten worden gecontroleerd en waar nodig vervangen. Een gereconditioneerde Fitform wordt altijd voorzien van een nieuwe handbediening. Hierna wordt de stoel opnieuw opgebouwd en bekleed met de nieuwe bekleding van uw keuze.</p><p>&nbsp;</p><p><br></p><p>&nbsp;</p><p>Fitform produceert eigentijdse en comfortabele sta-op stoelen met vele verstel- en instelmogelijkheden. Zitoplossingen die voldoen aan de meest actuele, wetenschappelijke inzichten op ergonomisch gebied. Fitform is een ècht Nederlands kwaliteitsproduct.</p><p>&nbsp;</p><p><br></p>",
+      "created_at": "2026-10-09 14:11:13",
+      "category": "Zitcomfort",
+      "subcategory": "Occasions"
+    },
+    {
+      "id": "voorraad-sta-op-stoel-fitform-570-vario-iii-reco-smal-board",
+      "name": "Voorraad Sta op stoel Fitform 570 Vario III RECO Smal Board",
+      "brand": "Fitform",
+      "model": "570 Vario RECO Smal ",
+      "price": 1700,
+      "old_price": null,
+      "condition": "occasion",
+      "status": "beschikbaar",
+      "type": "staop",
+      "material": "leer",
+      "badge": "Gereviseerd",
+      "badgeType": "reco",
+      "image": "assets/stoelen/Sta-op-stoel-RECO-Fitform-570-Vario-smal-Board-1-Copy.jpg",
+      "imageUp": null,
+      "imageLie": null,
+      "ambientImage": null,
+      "gallery": [
+        "assets/stoelen/Sta-op-stoel-RECO-Fitform-570-Vario-smal-Board-1-Copy.jpg"
+      ],
+      "features": [
+        "Zitbreedte 45 cm (Smalle uitvoering = meerprijs)",
+        "Standaard rughoogte 84 cm",
+        "Zitdiepte instelbaar van 43 tot 53 cm",
+        "Zithoogte instelbaar van 40 tot 60 cm",
+        "Armleggerhoogte instelbaar van 16 tot 29 cm"
+      ],
+      "specifications": {
+        "Aantal motoren": "3 motoren (of meer)",
+        "Bediening": "Handbediening (6 knoppen)",
+        "Garantie": "1 jaar",
+        "Maatwerk": "Geheel op maat gemaakt",
+        "Maximaal gebruikersgewicht": "150 kg",
+        "Merk": "Fitform (by Wellco)"
+      },
+      "is_offer": false,
+      "description": "<p>Deze Sta op stoel Fitform 570 Vario III RECO <strong>Smal</strong> is een stoel welke aan de buitenkant niet is te onderscheiden van een nieuw exemplaar. Er wordt gebruik gemaakt van een gebruikt frame, welke wordt gereviseerd. Alle assen en scharnierpunten worden gecontroleerd en waar nodig vervangen. Een gereconditioneerde Fitform wordt altijd voorzien van een nieuwe handbediening en polstering. Hierna wordt de stoel opnieuw opgebouwd en bekleed met de nieuwe bekleding van uw keuze.</p><p>&nbsp;</p><p>De Sta op stoel Fitform 570 Vario III RECO is een sta-op stoel met heerlijke relaxfunctie. De handige sta-op voorziening zorgt er voor dat u zelf makkelijk uit uw fauteuil kunt komen. U kunt (langer) zelfstandig blijven wonen en hoeft minder vaak een beroep te doen op familie of professionele hulpverleners.</p><p>&nbsp;</p><p>Bovendien wordt een Fitform 570 Vario III op uw maat ingesteld. Zithoogte, zitdiepte, armleggerhoogte en hoogte en dikte van de lendensteun worden daarvoor opgemeten. Dit is de enige manier om op een gezonde en ergonomisch verantwoorde manier te zitten.</p><p>&nbsp;</p><p><br></p><p>&nbsp;</p><p>Fitform produceert eigentijdse en comfortabele sta-op stoelen met vele verstel- en instelmogelijkheden. Zitoplossingen die voldoen aan de meest actuele, wetenschappelijke inzichten op ergonomisch gebied. Fitform is een ècht Nederlands kwaliteitsproduct.</p><p>&nbsp;</p><p><br></p>",
+      "created_at": "2026-10-09 14:11:13",
+      "category": "Zitcomfort",
+      "subcategory": "Occasions"
+    },
+    {
+      "id": "sta-op-stoel-cayman",
+      "name": "Sta-op stoel CAYMAN",
+      "brand": "DFM",
+      "model": "Cayman",
+      "price": 2500,
+      "old_price": null,
+      "condition": "nieuw",
+      "status": "beschikbaar",
+      "type": "staop",
+      "material": "stof",
+      "badge": "Luxe design",
+      "badgeType": "new",
+      "image": "assets/Sta-op_stoel_1_Cayman_zitstand.jpg",
+      "imageUp": null,
+      "imageLie": null,
+      "ambientImage": "assets/Sta-op_stoel_1_Cayman_Cozy.jpeg",
+      "gallery": [
+        "assets/Sta-op_stoel_1_Cayman_zitstand.jpg",
+        "assets/Sta-op_stoel_1_Cayman_sta_op_stand.jpg",
+        "assets/Sta-op_stoel_1_Cayman_ligstand.jpg",
+        "assets/Cayman_Dreh_A3_R1_M_Man_m.Fuss_ManL_Paper_28_cognac_Pella_34_burgundy_KMF20_perle_brown_007a.jpg"
+      ],
+      "features": [
+        "100% Ergonomisch zitcomfort",
+        "Geleverd met kwaliteitsgarantie",
+        "Volledig op uw lichaamsmaat afgesteld"
+      ],
+      "specifications": {
+        "Aantal motoren": "2 motoren",
+        "Bediening": "Handbediening in armleuning (4 knoppen)",
+        "Bekleding": "Stof / Leer, zeer veel mogelijkheden",
+        "Garantie": "3 jaar",
+        "Maatwerk": "5 maten, Small / Medium / Large / Xtra large / XtraXtra Large",
+        "Maximaal gebruikersgewicht": "120 kg",
+        "Merk": "DFM",
+        "Opties": "Diverse opties mogelijk"
+      },
+      "is_offer": false,
+      "description": "<p><strong style=\"background-color: rgb(255, 255, 255); color: rgb(50, 48, 69);\">Sta-op stoel Cayman</strong><span style=\"background-color: rgb(255, 255, 255); color: rgb(50, 48, 69);\"> is ontworpen voor optimaal comfort en veelzijdigheid. De fauteuil biedt een ergonomische zit met goede ondersteuning voor rug, nek en benen, waardoor u heerlijk kunt ontspannen tijdens het lezen, televisie kijken of een rustmoment gedurende de dag.</span></p><p><span style=\"background-color: rgb(255, 255, 255); color: rgb(50, 48, 69);\">Wat sta-op stoel Cayman bijzonder maakt, is de grote mate van </span><strong style=\"background-color: rgb(255, 255, 255); color: rgb(50, 48, 69);\">maatwerk en personalisatie</strong><span style=\"background-color: rgb(255, 255, 255); color: rgb(50, 48, 69);\">. Deze fauteuil kan volledig worden afgestemd op uw persoonlijke voorkeuren. U heeft keuze uit een uitgebreide collectie </span><strong style=\"background-color: rgb(255, 255, 255); color: rgb(50, 48, 69);\">stoffen en ledersoorten</strong><span style=\"background-color: rgb(255, 255, 255); color: rgb(50, 48, 69);\"> in verschillende kleuren en structuren. Zo kunt u een fauteuil samenstellen die perfect past bij uw interieur.</span></p><p><span style=\"background-color: rgb(255, 255, 255); color: rgb(50, 48, 69);\">Daarnaast zijn er diverse </span><strong style=\"background-color: rgb(255, 255, 255); color: rgb(50, 48, 69);\">onderstellen en voetvarianten</strong><span style=\"background-color: rgb(255, 255, 255); color: rgb(50, 48, 69);\"> beschikbaar, zoals een elegante draaivoet of moderne stervoet in verschillende materialen en afwerkingen. Hierdoor krijgt de fauteuil niet alleen optimaal zitcomfort, maar ook een uitstraling die past bij uw woonstijl.</span></p><p><span style=\"background-color: rgb(255, 255, 255); color: rgb(50, 48, 69);\">Voor extra gebruiksgemak kan de Cayman worden uitgerust met verschillende </span><strong style=\"background-color: rgb(255, 255, 255); color: rgb(50, 48, 69);\">verstelmogelijkheden</strong><span style=\"background-color: rgb(255, 255, 255); color: rgb(50, 48, 69);\">. U kunt kiezen voor een handmatige bediening of een elektrische uitvoering waarbij rugleuning en voetsteun eenvoudig verstelbaar zijn. Optioneel kan de fauteuil worden voorzien van een </span><strong style=\"background-color: rgb(255, 255, 255); color: rgb(50, 48, 69);\">sta-op functie</strong><span style=\"background-color: rgb(255, 255, 255); color: rgb(50, 48, 69);\">, die helpt om gemakkelijker uit de stoel op te staan.</span></p><p><span style=\"background-color: rgb(255, 255, 255); color: rgb(50, 48, 69);\">Omdat iedereen anders zit, kan de fauteuil vaak ook worden aangepast in </span><strong style=\"background-color: rgb(255, 255, 255); color: rgb(50, 48, 69);\">maatvoering en zitcomfort</strong><span style=\"background-color: rgb(255, 255, 255); color: rgb(50, 48, 69);\">. Zo wordt de Cayman afgestemd op uw lichaamslengte en zithouding voor een ergonomische en ontspannen zitervaring.</span></p>",
+      "created_at": "2026-10-09 13:15:04",
+      "category": "Zitcomfort",
+      "subcategory": "Sta-op stoelen"
+    },
+    {
+      "id": "sta-op-stoel-carrera",
+      "name": "Sta-op Stoel CARRERA",
+      "brand": "DFM",
+      "model": "Carrera",
+      "price": 2500,
+      "old_price": null,
+      "condition": "nieuw",
+      "status": "beschikbaar",
+      "type": "staop",
+      "material": "stof",
+      "badge": "Modern design & Draaibaar",
+      "badgeType": "new",
+      "image": "assets/Sta-op_stoel_Carrera_1.jpg",
+      "imageUp": null,
+      "imageLie": null,
+      "ambientImage": "assets/Sta-op_stoel_Carrera_4.jpg",
+      "gallery": [
+        "assets/Sta-op_stoel_Carrera_1.jpg",
+        "assets/Sta-op_stoel_Carrera_2.jpg",
+        "assets/Sta-op_stoel_Carrera_3.jpg"
+      ],
+      "features": [
+        "100% Ergonomisch zitcomfort",
+        "Geleverd met kwaliteitsgarantie",
+        "Volledig op uw lichaamsmaat afgesteld"
+      ],
+      "specifications": {
+        "Aantal motoren": "2 motoren",
+        "Bediening": "Handbediening in armleuning (4 knoppen)",
+        "Bekleding": "Stof / Leer, zeer veel mogelijkheden",
+        "Garantie": "3 jaar",
+        "Maatwerk": "5 maten, Small / Medium / Large / Extra Large / Extra Extra Large",
+        "Maximaal gebruikersgewicht": "120 kg",
+        "Merk": "DFM",
+        "Opties": "Diverse opties mogelijk"
+      },
+      "is_offer": false,
+      "description": "<p><span style=\"background-color: rgb(255, 255, 255); color: rgb(78, 78, 85);\">De Carrera is een stijlvolle en comfortabele sta-op stoel die volledig naar uw wensen samen te stellen is. Of u nu kiest voor extra ondersteuning, een lumbaalsteun of luxe opties: met de Carrera geniet u iedere dag van optimaal zitcomfort, zonder zorgen.</span></p><p><span style=\"background-color: rgb(255, 255, 255); color: rgb(50, 48, 69);\">De Carrera is ontworpen voor iedereen die waarde hecht aan comfort, gemak en uitstraling in huis. Deze veelzijdige relaxfauteuil combineert een moderne vormgeving met uitgebreide instelmogelijkheden, zodat u altijd verzekerd bent van een zitoplossing die perfect bij u past.</span></p><p><span style=\"background-color: rgb(255, 255, 255); color: rgb(50, 48, 69);\">Dankzij de verschillende maten en uitvoeringen sluit de Carrera naadloos aan op uw lichaam. Of u nu wat kleiner of juist langer bent: u ervaart altijd de juiste ondersteuning in rug, nek en benen. De fauteuil is verkrijgbaar met diverse bedieningsopties, van handmatig tot volledig elektrisch, zodat u eenvoudig uw ideale zit- of ligpositie instelt.</span></p><p><span style=\"background-color: rgb(255, 255, 255); color: rgb(50, 48, 69);\">Ook luxe uitbreidingen zoals een accu (draadloos gebruik), verwarming of massagefunctie behoren tot de mogelijkheden. Zo maakt u van de Carrera niet alleen een fauteuil, maar uw persoonlijke plek om volledig tot rust te komen.</span></p><p><span style=\"background-color: rgb(255, 255, 255); color: rgb(50, 48, 69);\">Daarnaast heeft u ruime keuze in bekleding en kleuren, zodat de Carrera perfect aansluit bij uw interieur. Van warm stof tot stijlvol leder: u stelt de fauteuil volledig samen naar uw smaak.</span></p><p><br></p>",
+      "created_at": "2026-10-09 13:06:13",
+      "category": "Zitcomfort",
+      "subcategory": "Sta-op stoelen"
+    },
     {
       "id": "sta-op-stoel-ravi",
       "name": "Sta-op stoel Ravi",
@@ -19,7 +505,7 @@
       "image": "assets/stoelen/Sta-op-stoel-RAVI-1-kopie.jpg",
       "imageUp": "assets/stoelen/Sta-op-stoel-RAVI-8-rotated.jpg",
       "imageLie": null,
-      "ambientImage": null,
+      "ambientImage": "assets/chair_ravi_cozy.png",
       "gallery": [
         "assets/stoelen/Sta-op-stoel-RAVI-1-kopie.jpg",
         "assets/stoelen/Sta-op-stoel-RAVI-8-rotated.jpg",
@@ -92,7 +578,7 @@
       "description": "<h3>Seniorenstoel Dylan is nieuw in ons assortiment.</h3><p>Seniorenstoel Dylan is een comfort stoel welke is ontwikkeld voor de professionele ouderenzorg. Dit is terug te zien in het basic maar stijlvol en robuust uiterlijk. Verder is de stoel altijd in 1 stuk gestoffeerd in verband met optimale hygiëne. Alle mogelijke stoffen zijn zorgvuldig geselecteerd vanuit het perspectief van reiniging en goede hygiëne.</p><p>Het is de missie van Schipper Compact Wonen om mee te werken aan het aanbieden van optimaal comfort. Dit geldt natuurlijk specifiek voor mensen die zorg nodig hebben. Onze collecties zijn onderling combineerbaar. U bepaalt wat nodig is en wij laten u graag zien wat mogelijk is met de OtiumCare producten. Op die wijze willen we meewerken aan wat we allemaal willen: waardig ouder worden. OtiumCare wil daar voluit voor gaan door het ontwikkelen van aangepast zitmeubilair voor ouderen, ook als ze geconfronteerd worden met specifieke zorgnoden. Thuis of residentieel, het is de oudere man of vrouw waarop we ons met overtuiging willen richten.</p><p>Schipper Compact Wonen vindt het belangrijk dat u met een gerust hart voor ons kiest en blijft kiezen. Daarom staan we erop dat onze stoelen, zoals ook de Seniorenstoel Dylan, beantwoorden aan specifieke criteria die ons uniek maken in de sector.<br> Om deze criteria concreet te maken is het <strong>Goldcare label</strong> ontwikkeld, met volgende invalshoeken:</p><li><b>Mechanische en elektrische duurzaamheidstesten:</b> elke stoel wordt getest volgens EN16139 – extreme use – level 2. Dit wordt uitgevoerd in samenwerking met Wood.be</li><li><b>Testen door gebruikers en zorgverleners</b>: elk type stoel wordt getest door oudere mensen, mensen met specifieke zorgnoden en zorgverleners. Door permanent te blijven luisteren naar hen kan OtiumCare zijn gamma gericht bijsturen en zal het assortiment verder worden uitgebouwd. We doen dat in goede samenwerking met Happy Aging.</li><li><strong>Universal design én individu gericht</strong>: Elke stoel start met het uitgangspunt dat ze multifunctioneel moeten zijn, geschikt voor velen, maar dat ze ook steeds aangepast kunnen worden aan specifieke noden en verwachtingen. Hiervoor is er een breed gamma aan opties en mogelijkheden, in functionaliteit en in afwerking.</li><li><strong>Interne testen</strong>: Elke stof of kunstleder wordt zorgvuldig geselecteerd, geanalyseerd en gecontroleerd/getest voor gebruik, zowel vanuit het perspectief van reiniging als vanuit goede hygiëne.</li><p>&nbsp;</p>",
       "created_at": "2026-10-05 11:34:17",
       "category": "Zitcomfort",
-      "subcategory": "Seniorenstoelen"
+      "subcategory": "Relaxstoelen"
     },
     {
       "id": "sta-op-stoel-alfred",
@@ -110,7 +596,7 @@
       "image": "assets/stoelen/Sta-op-stoel-ALFRED-1-scaled.jpg",
       "imageUp": "assets/stoelen/Sta-op-stoel-ALFRED-2-scaled.jpg",
       "imageLie": null,
-      "ambientImage": null,
+      "ambientImage": "assets/chair_alfred_cozy.png",
       "gallery": [
         "assets/stoelen/Sta-op-stoel-ALFRED-1-scaled.jpg",
         "assets/stoelen/Sta-op-stoel-ALFRED-2-scaled.jpg",
@@ -132,7 +618,7 @@
         "Opties": "Diverse opties mogelijk"
       },
       "is_offer": false,
-      "description": "Sta-op stoel ALFRED is een 2-motorige relax fauteuil met sta-op verstelling.<p>Sta-op stoel ALFRED is een prachtige betaalbare sta-op stoel. Geheel in leer bekleedt, met dus 2 afzonderlijke motoren voor €1595,-<br> Geen bijkomende kosten dus voor lederen bekleding of sta-op verstelling.</p><p>Een heerlijke relax fauteuil met sta-op verstelling. Deze robuuste moderne fauteuil wordt elektrisch, door middel van 2 krachtige motoren versteld. De uitklapbare voetensteun en de verstelbare rugleuning zijn onafhankelijk van elkaar te bedienen. Bij het uitklappen van de voetensteun komen zitting en rugleuning in een iets meer achterover hellende positie waardoor een uitermate comfortabele zithouding bereikt wordt. Het verstellen van de rugleuning is mogelijk zonder de voetensteun uit te klappen.</p><p>Sta op stoel ALFRED is zo ontwikkeld dat de voetenbank nagenoeg onzichtbaar onder de zitting verdwijnt. Hierdoor krijgt deze sta-op stoel een luchtigere en lichtere indruk.<br> De zeer eenvoudige handbediening is fraai met een magneet aan het zijpand gemonteerd. Er bevinden zich 5 knoppen op de handbediening. 4 om de hele stoel te bedienen en 1 handige ‘home’ knop. Met deze knop gaat de stoel vanuit elke stand weer terug in de home-zitstand.</p>Heerlijk ontspannen en comfortabel makkelijk weer opstaan.<p>&nbsp;</p><p>Sta-op stoel ALFRED helpt u niet alleen om in verschillende houdingen te kunnen ontspannen, maar ook met opstaan uit de stoel. De stoel heeft een slimme oplossing voor de sta-op verstelling, deze is onzichtbaar onder de fauteuil verborgen.</p><p>Bij gebruik van de sta-op functie helpt de stoel u als het ware op de been. De stoel tilt u omhoog en kantelt wat voorover. Doordat de fauteuil in zijn geheel wordt opgetild en naar achteren wegdraait, blijven uw voeten op de grond. Zo blijft u in balans en kunt u eenvoudig uit de fauteuil opstaan.</p><p>De stoel is bekleed met echt leer en is verkrijgbaar in enkele kleuren. Met de robuuste moderne uitstraling past Sta-op stoel ALFRED in haast elk interieur. Dit is er een die u zelf zou moeten proberen. De prijs en het zitcomfort zijn verbluffend goed, net als de andere DEZ sta-op stoelen.</p>",
+      "description": "<p>Sta-op stoel ALFRED is een 2-motorige relax fauteuil met sta-op verstelling.</p><p>Sta-op stoel ALFRED is een prachtige betaalbare sta-op stoel. Geheel in leer bekleedt, met dus 2 afzonderlijke motoren voor €1595,- Geen bijkomende kosten dus voor lederen bekleding of sta-op verstelling.</p><p>Een heerlijke relax fauteuil met sta-op verstelling. Deze robuuste moderne fauteuil wordt elektrisch, door middel van 2 krachtige motoren versteld. De uitklapbare voetensteun en de verstelbare rugleuning zijn onafhankelijk van elkaar te bedienen. Bij het uitklappen van de voetensteun komen zitting en rugleuning in een iets meer achterover hellende positie waardoor een uitermate comfortabele zithouding bereikt wordt. Het verstellen van de rugleuning is mogelijk zonder de voetensteun uit te klappen.</p><p>Sta op stoel ALFRED is zo ontwikkeld dat de voetenbank nagenoeg onzichtbaar onder de zitting verdwijnt. Hierdoor krijgt deze sta-op stoel een luchtigere en lichtere indruk. De zeer eenvoudige handbediening is fraai met een magneet aan het zijpand gemonteerd. Er bevinden zich 5 knoppen op de handbediening. 4 om de hele stoel te bedienen en 1 handige ‘home’ knop. Met deze knop gaat de stoel vanuit elke stand weer terug in de home-zitstand.</p><p>Heerlijk ontspannen en comfortabel makkelijk weer opstaan.</p><p>&nbsp;</p><p>Sta-op stoel ALFRED helpt u niet alleen om in verschillende houdingen te kunnen ontspannen, maar ook met opstaan uit de stoel. De stoel heeft een slimme oplossing voor de sta-op verstelling, deze is onzichtbaar onder de fauteuil verborgen.</p><p>Bij gebruik van de sta-op functie helpt de stoel u als het ware op de been. De stoel tilt u omhoog en kantelt wat voorover. Doordat de fauteuil in zijn geheel wordt opgetild en naar achteren wegdraait, blijven uw voeten op de grond. Zo blijft u in balans en kunt u eenvoudig uit de fauteuil opstaan.</p><p>De stoel is bekleed met echt leer en is verkrijgbaar in enkele kleuren. Met de robuuste moderne uitstraling past Sta-op stoel ALFRED in haast elk interieur. Dit is er een die u zelf zou moeten proberen. De prijs en het zitcomfort zijn verbluffend goed, net als de andere DEZ sta-op stoelen.</p>",
       "created_at": "2026-10-05 11:34:17",
       "category": "Zitcomfort",
       "subcategory": "Sta-op stoelen"
@@ -238,7 +724,7 @@
     {
       "id": "sta-op-stoel-dordrecht",
       "name": "Sta-op stoel Dordrecht",
-      "brand": "YLF",
+      "brand": "De Eiken Zetel",
       "model": "Dordrecht",
       "price": 700,
       "old_price": null,
@@ -251,7 +737,7 @@
       "image": "assets/stoelen/Sta-op-stoel-DORDRECHT-1.jpg",
       "imageUp": "assets/stoelen/Sta-op-stoel-DORDRECHT-2.jpg",
       "imageLie": null,
-      "ambientImage": "assets/stoelen/Sta-op-stoel-DORDRECHT-interior.png",
+      "ambientImage": "assets/chair_dordrecht_cozy.png",
       "gallery": [
         "assets/stoelen/Sta-op-stoel-DORDRECHT-1.jpg",
         "assets/stoelen/Sta-op-stoel-DORDRECHT-2.jpg",
@@ -273,7 +759,7 @@
         "Opties": "Geen standaard opties mogelijk"
       },
       "is_offer": false,
-      "description": "<h4>De Sta-op stoel Dordrecht is een van de eenvoudigste in onze sta-op stoelen uit onze collectie.</h4><p>Sta-op stoel Dordrecht is voorzien van sta-op hulp en relax functie. Hiermee is het mogelijk om comfortabel rechtop te zitten, met de benen omhoog of lekker liggend te relaxen. Met een enkele elektromotor, is de hele stoel verstelbaar. Dit wil zeggen dat u met deze krachtige motor de kuitsteun, de rugleuning en de sta-op verstelling versteld.</p><p>&nbsp;</p><p>De sta-op stoel Dordrecht is zeer eenvoudig te bedienen omdat er maar 2 knopjes op de handbediening zitten. Met het ene knopje gaat de stoel omhoog naar de sta-op stand en met het andere knopje komt de stoel naar beneden en zal de stoel heerlijk achterover kantelen naar de ligstand.</p><p>&nbsp;</p><p>De stoel is bekleed met een prachtige lichtbruine luxe microvezel stof welke eenvoudig te reinigen is. Deze prachtige fauteuil is verkrijgbaar in 1 maat. Voor personen met &#8216;gemiddelde afmetingen&#8217; zit de stoel als gegoten, de ervaring leert dat 75% van de mensen er goed ondersteund in kunnen zitten. Mensen die groter of juist kleiner zijn dan &#8216;gemiddeld&#8217; zullen in een andere stoel beter zitten.<br> De prijs en het zitcomfort zijn verbluffend goed, net als de andere DEZ-sta op stoelen.</p>",
+      "description": "<h4>De Sta-op stoel Dordrecht is een van de eenvoudigste in onze sta-op stoelen uit onze collectie.</h4><p>Sta-op stoel Dordrecht is voorzien van sta-op hulp en relax functie. Hiermee is het mogelijk om comfortabel rechtop te zitten, met de benen omhoog of lekker liggend te relaxen. Met een enkele elektromotor, is de hele stoel verstelbaar. Dit wil zeggen dat u met deze krachtige motor de kuitsteun, de rugleuning en de sta-op verstelling versteld.</p><p>&nbsp;</p><p>De sta-op stoel Dordrecht is zeer eenvoudig te bedienen omdat er maar 2 knopjes op de handbediening zitten. Met het ene knopje gaat de stoel omhoog naar de sta-op stand en met het andere knopje komt de stoel naar beneden en zal de stoel heerlijk achterover kantelen naar de ligstand.</p><p>&nbsp;</p><p>De stoel is bekleed met een prachtige lichtbruine luxe microvezel stof welke eenvoudig te reinigen is. Deze prachtige fauteuil is verkrijgbaar in 1 maat. Voor personen met ‘gemiddelde afmetingen’ zit de stoel als gegoten, de ervaring leert dat 75% van de mensen er goed ondersteund in kunnen zitten. Mensen die groter of juist kleiner zijn dan ‘gemiddeld’ zullen in een andere stoel beter zitten. De prijs en het zitcomfort zijn verbluffend goed, net als de andere DEZ-sta op stoelen.</p>",
       "created_at": "2026-10-05 11:34:17",
       "category": "Zitcomfort",
       "subcategory": "Sta-op stoelen"
@@ -294,7 +780,7 @@
       "image": "assets/stoelen/Staop-stoel-ROTTERDAM-1-min-scaled.jpg",
       "imageUp": "assets/stoelen/Staop-stoel-ROTTERDAM-3-min-2-scaled.jpg",
       "imageLie": null,
-      "ambientImage": null,
+      "ambientImage": "assets/chair_rotterdam_cozy.png",
       "gallery": [
         "assets/stoelen/Staop-stoel-ROTTERDAM-1-min-scaled.jpg",
         "assets/stoelen/Staop-stoel-ROTTERDAM-3-min-2-scaled.jpg",
@@ -361,7 +847,7 @@
       "description": "<p>De Seniorenstoel HK Zwolle is een zeer comfortabele senioren fauteuil met verstelbare rugleuning. Door middel van een hendel aan de zijkant van de stoel kunt u deze verstelling gebruiken.</p><p>&nbsp;</p><p>U verdient persoonlijke aandacht, niet bij wijze van uitzondering, maar elke dag. Uw stoel wordt op den duur een kostbaar persoonlijk bezit. De stoel is immers helemaal op uw persoonlijke zitcomfort afgestemd. Zo’n stoel geeft u weer nieuwe energie.</p><p>&nbsp;</p><p>De naam senioren fauteuil is misschien niet helemaal goed gekozen voor deze categorie comfortabele stoelen. Dit type fauteuil is namelijk geschikt voor iedereen die hoge eisen aan zijn of haar zitcomfort stelt. De kwaliteit van interieur, romp en stoffering voldoet aan de hoogste normen. Er is een zeer groot scala van mogelijkheden voor wat betreft de uitvoering. Verkrijgbaar in stof of leder. Er is ook een bijpassend voetenbankje.</p><p>&nbsp;</p><p>De hieronder genoemde maten zijn standaard Seniorenstoel HK Zwolle uitvoeringen.</p><p><br></p>",
       "created_at": "2026-10-05 11:34:17",
       "category": "Zitcomfort",
-      "subcategory": "Seniorenstoelen"
+      "subcategory": "Relaxstoelen"
     },
     {
       "id": "sta-op-stoel-ridderkerk",
@@ -375,11 +861,11 @@
       "type": "staop",
       "material": "leer",
       "badge": "Stoelverwarming",
-      "badgeType": "",
+      "badgeType": "new",
       "image": "assets/stoelen/Sta-op-stoel-HK-Ridderkerk-1-scaled.jpg",
       "imageUp": "assets/stoelen/Sta-op-stoel-HK-Ridderkerk-2-scaled.jpg",
       "imageLie": null,
-      "ambientImage": null,
+      "ambientImage": "assets/chair_ridderkerk_cozy.png",
       "gallery": [
         "assets/stoelen/Sta-op-stoel-HK-Ridderkerk-1-scaled.jpg",
         "assets/stoelen/Sta-op-stoel-HK-Ridderkerk-2-scaled.jpg",
@@ -422,11 +908,11 @@
       "type": "staop",
       "material": "leer",
       "badge": "Met Accu",
-      "badgeType": "accent",
+      "badgeType": "",
       "image": "assets/stoelen/Sta-op-stoel-BARENDRECHT-1-min-scaled-e1760613493995.jpg",
       "imageUp": "assets/stoelen/Sta-op-stoel-BARENDRECHT-2-min-2-scaled.jpg",
       "imageLie": null,
-      "ambientImage": null,
+      "ambientImage": "assets/chair_barendrecht_cozy.png",
       "gallery": [
         "assets/stoelen/Sta-op-stoel-BARENDRECHT-1-min-scaled-e1760613493995.jpg",
         "assets/stoelen/Sta-op-stoel-BARENDRECHT-2-min-2-scaled.jpg",
@@ -448,7 +934,7 @@
         "Opties": "Diverse opties mogelijk"
       },
       "is_offer": false,
-      "description": "<h4>Sta-op stoel Barendrecht is een heerlijke 2-motorige relax fauteuil met sta-op verstelling en standaard ingebouwde accu!.</h4><p>Sta-op stoel Barendrecht is elektrisch verstelbaar. Hij is voorzien van een sta-op hulp en een heerlijke relax functie. Hiermee is het mogelijk om comfortabel te zitten, met de benen omhoog of helemaal te relaxen.</p><p>&nbsp;</p><p>De BARENDRECHT helpt u niet alleen met opstaan en gaan zitten maar ook om te ontspannen. Met de beensteun omhoog en de rugleuning achterover kunt u heerlijk liggend in de stoel een dutje doen. De rugleuning kunt u in elke stand apart verstellen. Zo kunt u helemaal rechtop zitten, maar ook met de rugleuning wat meer achterover.<br> Sta op stoel BARENDRECHT is standaard voorzien van een ingebouwde accu. Zo is hij op elke plek in de kamer te plaatsen zonder dat u rekening hoeft te houden met de plek van een stopcontact.</p><p>De BARENDRECHT is verkrijgbaar in 1 maat en daarmee dus voor de ‘gemiddelde persoon’. Niet geschikt voor wat kleinere of langere zitters.<br> De eenvoudige fauteuil is fraai afgewerkt. De stoel is bekleed met echt leer en is verkrijgbaar in enkele kleuren.</p><p>&nbsp;</p><p>Deze prachtige 2-motorige stoel is er een die u zelf zou moeten proberen. De prijs en het zitcomfort zijn verbluffend goed, net als de andere DEZ-sta op stoelen.</p>",
+      "description": "<h4>Sta-op stoel Barendrecht is een heerlijke 2-motorige relax fauteuil met sta-op verstelling en standaard ingebouwde accu!.</h4><p>Sta-op stoel Barendrecht is elektrisch verstelbaar. Hij is voorzien van een sta-op hulp en een heerlijke relax functie. Hiermee is het mogelijk om comfortabel te zitten, met de benen omhoog of helemaal te relaxen.</p><p>&nbsp;</p><p>De BARENDRECHT helpt u niet alleen met opstaan en gaan zitten maar ook om te ontspannen. Met de beensteun omhoog en de rugleuning achterover kunt u heerlijk liggend in de stoel een dutje doen. De rugleuning kunt u in elke stand apart verstellen. Zo kunt u helemaal rechtop zitten, maar ook met de rugleuning wat meer achterover. Sta op stoel BARENDRECHT is standaard voorzien van een ingebouwde accu. Zo is hij op elke plek in de kamer te plaatsen zonder dat u rekening hoeft te houden met de plek van een stopcontact.</p><p>De BARENDRECHT is verkrijgbaar in 1 maat en daarmee dus voor de ‘gemiddelde persoon’. Niet geschikt voor wat kleinere of langere zitters. De eenvoudige fauteuil is fraai afgewerkt. De stoel is bekleed met echt leer en is verkrijgbaar in enkele kleuren.</p><p>&nbsp;</p><p>Deze prachtige 2-motorige stoel is er een die u zelf zou moeten proberen. De prijs en het zitcomfort zijn verbluffend goed, net als de andere DEZ-sta op stoelen.</p>",
       "created_at": "2026-10-05 11:34:17",
       "category": "Zitcomfort",
       "subcategory": "Sta-op stoelen"
@@ -631,7 +1117,7 @@
       "description": "<h4>Seniorenstoel Farstrup Casa, klassieke lijnen en degelijk meubelmakershandwerk.</h4><p>Bij Farstrup luisteren ze naar het lichaam bij het ontwerpen van een fauteuil, waarin u lekker lang kunt zitten. Het lichaam moet rust en ondersteuning krijgen en de fauteuil moet over praktische hulpfuncties beschikken. Daarom hebben deze fauteuils afgeronde kanten en een bekleding die de bloedsomloop zo min mogelijk belemmert. De rug en nek worden op een correcte en ergonomische manier ondersteund en verschillende fauteuils kunnen ver afwisseling of voor een dutje achterover leunen.</p><p>&nbsp;</p><p>Wij weten hoe belangrijk het is dat een fauteuil aan de gebruiker is aangepast. Daarom zijn er zoveel aanpassingen mogelijk, zoals de rugleuninghoogte, de vorm van de neksteun, de individuele zithoogte en zitdiepte. Accessoires en hulpfuncties worden naar wens toegevoegd.</p><p>Seniorenstoel Farstrup Casa is een schoolvoorbeeld van degelijk meubelmakershandwerk. Een prachtige, ergonomische relaxfauteuil met klassieke lijnen die in elke inrichting past.<br> Seniorenstoel Farstrup Casa heeft een ingenieuze constructie waarmee de stoel zonder moeite achterover, in een relaxpositie is te kantelen.</p><p>&nbsp;</p><p>Elke Seniorenstoel Farstrup Casa wordt op bestelling gemaakt. U kunt zelf het model, de stof, de kleur en de houtbeits kiezen.<br> Bij Farstrup komen alle componenten op basis van de beste meubeltradities tot stand. Op die manier garandeert Farstrup dat het uiteindelijke meubelstuk aan de hoogte meubeleisen op het gebied van kwaliteit en duurzaamheid voldoet. Op een Farstrup stoel krijgt u dan ook 10 jaar garantie, op voorwaarde dat ze normaal worden gebruikt.</p>",
       "created_at": "2026-10-05 11:34:17",
       "category": "Zitcomfort",
-      "subcategory": "Seniorenstoelen"
+      "subcategory": "Relaxstoelen"
     },
     {
       "id": "seniorenstoel-farstrup-plus",
@@ -645,19 +1131,19 @@
       "type": "relax",
       "material": "leer",
       "badge": "Ambachtelijk",
-      "badgeType": "luxury",
+      "badgeType": "",
       "image": "assets/stoelen/Ergonomische-Senioren-fauteuil-Plus-7.jpg",
       "imageUp": null,
       "imageLie": null,
       "ambientImage": null,
       "gallery": [
         "assets/stoelen/Ergonomische-Senioren-fauteuil-Plus-7.jpg",
+        "assets/stoelen/Ergonomische-Senioren-fauteuil-Plus-1.jpg",
+        "assets/stoelen/Ergonomische-Senioren-fauteuil-Plus-8-scaled.jpg",
         "assets/stoelen/Ergonomische-Senioren-fauteuil-Plusmulti03.jpg",
         "assets/stoelen/Ergonomische-Senioren-fauteuil-Plus_Casa.jpg",
-        "assets/stoelen/Ergonomische-Senioren-fauteuil-Plus-8-scaled.jpg",
         "assets/stoelen/Ergonomische-Senioren-fauteuil-Plus-5.jpg",
-        "assets/stoelen/Ergonomische-Senioren-fauteuil-Plus-4.jpg",
-        "assets/stoelen/Ergonomische-Senioren-fauteuil-Plus-1.jpg"
+        "assets/stoelen/Ergonomische-Senioren-fauteuil-Plus-4.jpg"
       ],
       "features": [
         "100% Ergonomisch zitcomfort",
@@ -673,10 +1159,10 @@
         "Opties": "Diverse opties mogelijk"
       },
       "is_offer": false,
-      "description": "<h4>Seniorenstoel Farstrup Plus, klassieke lijnen en degelijk meubelmakershandwerk.</h4><p>Bij Farstrup luisteren ze naar het lichaam bij het ontwerpen van een Seniorenstoel Farstrup Plus, waarin u lekker lang kunt zitten. Het lichaam moet rust en ondersteuning krijgen en de fauteuil moet over praktische hulpfuncties beschikken. Daarom hebben deze fauteuils afgeronde kanten en een bekleding die de bloedsomloop zo min mogelijk belemmert. De rug en nek worden op een correcte en ergonomische manier ondersteund en verschillende fauteuils kunnen voor afwisseling of voor een dutje achterover leunen.</p><p>&nbsp;</p><p>Wij weten hoe belangrijk het is dat een fauteuil aan de gebruiker is aangepast. Daarom zijn er zoveel aanpassingen mogelijk, zoals de rugleuninghoogte, de vorm van de neksteun, de individuele zithoogte en zitdiepte. Accessoires en hulpfuncties worden naar wens toegevoegd.</p><p>Seniorenstoel Farstrup Plus is een schoolvoorbeeld van degelijk meubelmakershandwerk. Een prachtige, ergonomische relaxfauteuil met klassieke lijnen die in elke inrichting past.<br> Seniorenstoel Farstrup Plus heeft een ingenieuze constructie waarmee de stoel zonder moeite achterover, in een relaxpositie is te kantelen.</p><p>&nbsp;</p><p>Elke Seniorenstoel Farstrup Plus wordt op bestelling gemaakt. U kunt zelf het model, de stof, de kleur en de houtbeits kiezen.<br> Bij Farstrup komen alle componenten op basis van de beste meubeltradities tot stand. Op die manier garandeert Farstrup dat het uiteindelijke meubelstuk aan de hoogte meubeleisen op het gebied van kwaliteit en duurzaamheid voldoet. Op een Farstrup stoel krijgt u dan ook 10 jaar garantie, op voorwaarde dat ze normaal worden gebruikt.</p>",
+      "description": "<h4>Seniorenstoel Farstrup Plus, klassieke lijnen en degelijk meubelmakershandwerk.</h4><p>Bij Farstrup luisteren ze naar het lichaam bij het ontwerpen van een Seniorenstoel Farstrup Plus, waarin u lekker lang kunt zitten. Het lichaam moet rust en ondersteuning krijgen en de fauteuil moet over praktische hulpfuncties beschikken. Daarom hebben deze fauteuils afgeronde kanten en een bekleding die de bloedsomloop zo min mogelijk belemmert. De rug en nek worden op een correcte en ergonomische manier ondersteund en verschillende fauteuils kunnen voor afwisseling of voor een dutje achterover leunen.</p><p>&nbsp;</p><p>Wij weten hoe belangrijk het is dat een fauteuil aan de gebruiker is aangepast. Daarom zijn er zoveel aanpassingen mogelijk, zoals de rugleuninghoogte, de vorm van de neksteun, de individuele zithoogte en zitdiepte. Accessoires en hulpfuncties worden naar wens toegevoegd.</p><p>Seniorenstoel Farstrup Plus is een schoolvoorbeeld van degelijk meubelmakershandwerk. Een prachtige, ergonomische relaxfauteuil met klassieke lijnen die in elke inrichting past. Seniorenstoel Farstrup Plus heeft een ingenieuze constructie waarmee de stoel zonder moeite achterover, in een relaxpositie is te kantelen.</p><p>&nbsp;</p><p>Elke Seniorenstoel Farstrup Plus wordt op bestelling gemaakt. U kunt zelf het model, de stof, de kleur en de houtbeits kiezen. Bij Farstrup komen alle componenten op basis van de beste meubeltradities tot stand. Op die manier garandeert Farstrup dat het uiteindelijke meubelstuk aan de hoogte meubeleisen op het gebied van kwaliteit en duurzaamheid voldoet. Op een Farstrup stoel krijgt u dan ook 10 jaar garantie, op voorwaarde dat ze normaal worden gebruikt.</p>",
       "created_at": "2026-10-05 11:34:17",
       "category": "Zitcomfort",
-      "subcategory": "Seniorenstoelen"
+      "subcategory": "Relaxstoelen"
     },
     {
       "id": "occasion-sta-op-stoel-refitto",
@@ -692,10 +1178,10 @@
       "badge": "Gereviseerd",
       "badgeType": "reco",
       "image": "assets/Sta-op_stoel_Refitto_draaibaar_1.jpg",
-      "imageUp": null,
+      "imageUp": "assets/Sta-op_stoel_Refitto_draaibaar_2.jpg",
       "imageLie": null,
       "ambientImage": null,
-      "gallery": [],
+      "gallery": null,
       "features": [
         "Modern design met stervoet",
         "Automatische draaiblokkering bij opstaan",
@@ -715,7 +1201,7 @@
       "description": "<p>Deze prachtige Occasion Sta-op stoel Refitto verkeert in een uitstekende conditie en is bekleed met een hoogwaardige kwaliteit leer in een rustige beige tint. Refitto staat bekend om zijn modern ogende vormgeving en uitstekend ergonomisch comfort.</p><p>Deze stoel is voorzien van een meermotorig elektrisch systeem voor de onafhankelijke verstelling van de rugleuning en de voetensteun, evenals een comfortabele en veilige opstahulp. Wanneer de opstahulp wordt gebruikt, blokkeert de draaifunctie van de stervoet automatisch voor optimale veiligheid en stabiliteit.</p>",
       "created_at": "2026-10-05 11:34:17",
       "category": "Zitcomfort",
-      "subcategory": "Sta-op stoelen"
+      "subcategory": "Occasions"
     },
     {
       "id": "sta-op-stoel-dfm-bentley-open",
@@ -733,7 +1219,7 @@
       "image": "assets/stoelen/Sta-op-stoel-DFM-Bentley-open-1-Copy.jpg",
       "imageUp": "assets/stoelen/Sta-op-stoel-DFM-Bentley-open-2-Copy.jpg",
       "imageLie": null,
-      "ambientImage": null,
+      "ambientImage": "assets/chair_bentley_open_cozy.png",
       "gallery": [
         "assets/stoelen/Sta-op-stoel-DFM-Bentley-open-1-Copy.jpg",
         "assets/stoelen/Sta-op-stoel-DFM-Bentley-open-2-Copy.jpg",
@@ -803,7 +1289,7 @@
       "description": "<p>De Senioren sta-op stoel HK Dordt is heeft een heerlijk stevig zitcomfort.<br> Deze wolf in schaapskleren heeft meer functies dan men in eerste instantie zou vermoeden. Naast de elektrisch verstelbare sta-op verstelling heeft deze fauteuil een elektrisch verstelbare rugleuning. Hiermee kan u de ideale zit gemakkelijk instellen.<br> De armleuningen van Senioren sta-op stoel HK Dordt zorgen voor stabiele steun bij het opstaan.</p><p>&nbsp;</p><p>De kwaliteit van interieur, romp en stoffering voldoet aan de hoogste normen. De fauteuil is leverbaar in vele stof- en leervarianten. Het eikenhouten frame is leverbaar in diverse kleuren en dus geheel naar uw smaak op te bouwen. Er is ook een bijpassend voetenbankje.</p><p>&nbsp;</p><p>U verdient persoonlijke aandacht, niet bij wijze van uitzondering, maar elke dag. Uw stoel wordt op den duur een kostbaar persoonlijk bezit. De stoel is immers helemaal op uw persoonlijke zitcomfort afgestemd. Zo’n stoel geeft u weer nieuwe energie.</p><p>&nbsp;</p>",
       "created_at": "2026-10-05 11:34:17",
       "category": "Zitcomfort",
-      "subcategory": "Sta-op stoelen"
+      "subcategory": "Relaxstoelen"
     },
     {
       "id": "seniorenstoel-farstrup-applaus",
@@ -821,7 +1307,7 @@
       "image": "assets/stoelen/Senioren-fauteuil-Farstrup-APPLAUS.jpg",
       "imageUp": null,
       "imageLie": null,
-      "ambientImage": "assets/stoelen/chair_seniorenstoel-farstrup-applaus_ambient.png",
+      "ambientImage": null,
       "gallery": [
         "assets/stoelen/Senioren-fauteuil-Farstrup-APPLAUS.jpg"
       ],
@@ -842,7 +1328,7 @@
       "description": "<h4>Seniorenstoel Farstrup Applaus, nostalgische charme en technische finesse.</h4><p>Bij Farstrup luisteren ze naar het lichaam bij het ontwerpen van een fauteuil, waarin u lekker lang kunt zitten. Het lichaam moet rust en ondersteuning krijgen en de fauteuil moet over praktische hulpfuncties beschikken. Daarom hebben deze fauteuils afgeronde kanten en een bekleding die de bloedsomloop zo min mogelijk belemmert. De rug en nek worden op een correcte en ergonomische manier ondersteund en verschillende fauteuils kunnen ver afwisseling of voor een dutje achterover leunen.</p><p>&nbsp;</p><p>Wij weten hoe belangrijk het is dat een fauteuil aan de gebruiker is aangepast. Daarom zijn er zoveel aanpassingen mogelijk, zoals de rugleuninghoogte, de vorm van de neksteun, de individuele zithoogte en zitdiepte. Accessoires en hulpfuncties worden naar wens toegevoegd.</p><p>Seniorenstoel Farstrup Applaus is een schoolvoorbeeld van degelijk meubelmakers handwerk. Een prachtige, ergonomische relaxfauteuil met maximale aandacht voor comfortabel zitten.<br> Seniorenstoel Farstrup Applaus heeft een ingenieuze constructie waarmee de stoel zonder moeite achterover, in een relaxpositie is te kantelen.</p><p>&nbsp;</p><p>Elke Seniorenstoel Farstrup Applaus wordt op bestelling gemaakt. U kunt zelf het model, de stof, de kleur en de houtbeits kiezen.<br> Bij Farstrup komen alle componenten op basis van de beste meubeltradities tot stand. Op die manier garandeert Farstrup dat het uiteindelijke meubelstuk aan de hoogte meubeleisen op het gebied van kwaliteit en duurzaamheid voldoet. Op een Farstrup stoel krijgt u dan ook 10 jaar garantie, op voorwaarde dat ze normaal worden gebruikt.</p>",
       "created_at": "2026-10-05 11:34:17",
       "category": "Zitcomfort",
-      "subcategory": "Seniorenstoelen"
+      "subcategory": "Relaxstoelen"
     },
     {
       "id": "seniorenstoel-farstrup-cantate",
@@ -887,51 +1373,7 @@
       "description": "<h4>Seniorenstoel Farstrup Cantate, Zwaluwstaartverbindingen en een voortreffelijk zitcomfort. Zacht en uitnodigend.</h4><h4>klassieke lijnen en degelijk meubelmakershandwerk.</h4><p>Bij Farstrup luisteren ze naar het lichaam bij het ontwerpen van een fauteuil, waarin u lekker lang kunt zitten. Het lichaam moet rust en ondersteuning krijgen en de fauteuil moet over praktische hulpfuncties beschikken. Daarom hebben deze fauteuils afgeronde kanten en een bekleding die de bloedsomloop zo min mogelijk belemmert. De rug en nek worden op een correcte en ergonomische manier ondersteund en verschillende fauteuils kunnen ver afwisseling of voor een dutje achterover leunen.</p><p>&nbsp;</p><p>Wij weten hoe belangrijk het is dat een fauteuil aan de gebruiker is aangepast. Daarom zijn er zoveel aanpassingen mogelijk, zoals de rugleuninghoogte, de vorm van de neksteun, de individuele zithoogte en zitdiepte. Accessoires en hulpfuncties worden naar wens toegevoegd.</p><p>Seniorenstoel Farstrup Cantate is een schoolvoorbeeld van degelijk meubelmakershandwerk. Een prachtige, ergonomische relaxfauteuil met klassieke lijnen die in elke inrichting past.<br> Seniorenstoel Farstrup Cantate heeft een ingenieuze constructie waarmee de stoel zonder moeite achterover, in een relaxpositie is te kantelen.</p><p>&nbsp;</p><p>Elke Seniorenstoel Farstrup Cantate wordt op bestelling gemaakt. U kunt zelf het model, de stof, de kleur en de houtbeits kiezen.<br> Bij Farstrup komen alle componenten op basis van de beste meubeltradities tot stand. Op die manier garandeert Farstrup dat het uiteindelijke meubelstuk aan de hoogte meubeleisen op het gebied van kwaliteit en duurzaamheid voldoet. Op een Farstrup stoel krijgt u dan ook 10 jaar garantie, op voorwaarde dat ze normaal worden gebruikt.</p>",
       "created_at": "2026-10-05 11:34:17",
       "category": "Zitcomfort",
-      "subcategory": "Seniorenstoelen"
-    },
-    {
-      "id": "sta-op-stoel-dfm-bentley-dicht",
-      "name": "Sta-op stoel DFM Bentley (dicht)",
-      "brand": "DFM",
-      "model": "DFM Bentley (dicht)",
-      "price": 1945,
-      "old_price": null,
-      "condition": "nieuw",
-      "status": "beschikbaar",
-      "type": "staop",
-      "material": "leer",
-      "badge": "Premium Leer",
-      "badgeType": "sale",
-      "image": "assets/stoelen/Sta-op-stoel-DFM-Bentley-dicht-1-Copy.jpg",
-      "imageUp": "assets/stoelen/Sta-op-stoel-DFM-Bentley-dicht-2-Copy.jpg",
-      "imageLie": null,
-      "ambientImage": null,
-      "gallery": [
-        "assets/stoelen/Sta-op-stoel-DFM-Bentley-dicht-1-Copy.jpg",
-        "assets/stoelen/Sta-op-stoel-DFM-Bentley-dicht-2-Copy.jpg",
-        "assets/stoelen/Sta-op-stoel-DFM-Bentley-dicht-3-Copy.jpg",
-        "assets/stoelen/Sta-op-stoel-DFM-Bentley-dicht-5-Copy.jpg"
-      ],
-      "features": [
-        "100% Ergonomisch zitcomfort",
-        "Geleverd met kwaliteitsgarantie",
-        "Volledig op uw lichaamsmaat afgesteld"
-      ],
-      "specifications": {
-        "Aantal motoren": "2 motoren",
-        "Bediening": "Handbediening in armleuning (4 knoppen)",
-        "Bekleding": "Stof / Leer, zeer veel mogelijkheden",
-        "Garantie": "3 jaar",
-        "Maatwerk": "3 maten, Small / Medium / Large",
-        "Maximaal gebruikersgewicht": "120 kg",
-        "Merk": "DFM",
-        "Opties": "Diverse opties mogelijk"
-      },
-      "is_offer": false,
-      "description": "<h4>Sta-op stoel DFM Bentley is een zeer veelzijdige fauteuil met sta-op functie, waarbij comfort en uitstraling voorop staan.</h4><p>Deze sta-op stoel van topkwaliteit is leverbaar met een groot aantal functies en opties. De Sta-op stoel Bentley staat dan ook bekend om de vele mogelijkheden om de stoel aan te passen op voorkeuren, maar ook de hoge kwaliteit in afwerking en materialen. Een topmodel in onze collectie, met focus op ultiem comfort voor de gebruiker.</p><p>&nbsp;</p><p>Sta-op stoel DFM Bentley is zeer comfortabel. Naast de sta-op functie is de Bentley tevens te kiezen als vaste of draaifauteuil en met verschillende comfortfuncties en -opties. Denk hierbij aan de uitklapbare voetensteun, verstelbare hoofd-nek steun, verstelbare lendesteun, elektrische bediening en een USB-oplaadpunt voor tablet en telefoon.</p><p>&nbsp;</p><p>De zithoogte en zitdiepte zijn bij Sta-op stoel DFM Bentley niet standaard, maar worden op maat afgestemd doordat er met verschillende maten wordt gewerkt. Samen met onze zitadviseurs wordt de definitieve maatvoering bepaald. Hierdoor zit je niet alleen heerlijk, maar profiteer je door de optimale ondersteuning gegarandeerd van een uitgerust lichaam.</p><p>&nbsp;</p><p>De Bentley heeft een functionele vormgeving in combinatie met ultiem zitcomfort. Ondanks een ingetogen uiterlijk biedt de Bentley veel mogelijkheden met kleur en materialen. Welke smaak je ook hebt, de Bentley is hierop samen te stellen. Sta-op stoel Bentley bied je de mogelijkheid om je eigen wensen qua kleur, materialen en uitvoering samen te stellen. Verschillende kleuren stof en leder zijn te kiezen én te combineren, waardoor je een eigen unieke stoel kunt samenstellen.</p><p>&nbsp;</p><p>Sta-op stoel Bentley is dus volledig naar smaak en gebruik samen te stellen. Geniet daarna na een zeer korte levertijd van ca. 6 weken van deze op uw maat bestelde sta-op stoel.</p>",
-      "created_at": "2026-10-05 11:34:17",
-      "category": "Zitcomfort",
-      "subcategory": "Sta-op stoelen"
+      "subcategory": "Relaxstoelen"
     },
     {
       "id": "sta-op-stoel-fitform-570-vario",
@@ -949,7 +1391,7 @@
       "image": "assets/stoelen/Sta-op-stoel-Fitform-570-Vario-III-5.jpg",
       "imageUp": "assets/stoelen/Sta-op-stoel-Fitform-570-Vario-III-4.jpg",
       "imageLie": null,
-      "ambientImage": null,
+      "ambientImage": "assets/RECO_Sta-op_stoel_Fitform_570_Smal_Sfeer.jpeg",
       "gallery": [
         "assets/stoelen/Sta-op-stoel-Fitform-570-Vario-III-5.jpg",
         "assets/stoelen/Sta-op-stoel-Fitform-570-Vario-III-2.jpg",
@@ -998,7 +1440,7 @@
       "image": "assets/stoelen/Sta-op-stoel-Fitform-574-Vario-2.jpg",
       "imageUp": "assets/stoelen/Sta-op-stoel-Fitform-574-Vario-6.jpg",
       "imageLie": null,
-      "ambientImage": null,
+      "ambientImage": "assets/chair_fitform_574_cozy.png",
       "gallery": [
         "assets/stoelen/Sta-op-stoel-Fitform-574-Vario-2.jpg",
         "assets/stoelen/Sta-op-stoel-Fitform-574-Vario-6.jpg",
@@ -1046,7 +1488,7 @@
       "image": "assets/stoelen/Sta-op-stoel-Fitform-580-Elevo-III-5.jpg",
       "imageUp": "assets/stoelen/Sta-op-stoel-Fitform-580-Elevo-III-1-1.jpg",
       "imageLie": null,
-      "ambientImage": "assets/stoelen/580-neutraal-sfeer-staand-2.jpg",
+      "ambientImage": "assets/chair_fitform_580_cozy.png",
       "gallery": [
         "assets/stoelen/Sta-op-stoel-Fitform-580-Elevo-III-5.jpg",
         "assets/stoelen/Sta-op-stoel-Fitform-580-Elevo-III-1-1.jpg",
@@ -1081,7 +1523,7 @@
       "id": "demo-sta-op-stoel-fitform-570-ilp",
       "name": "DEMO Sta op stoel Fitform 570 Vario ILP",
       "brand": "Fitform",
-      "model": "Voorraad Sta op stoel Fitform 570 Vario ILP",
+      "model": "570 Vario ILP",
       "price": 2400,
       "old_price": 4718,
       "condition": "occasion",
@@ -1091,11 +1533,12 @@
       "badge": "Zo Goed Als Nieuw",
       "badgeType": "sale",
       "image": "assets/DEMO_Sta_op_stoel_Fitform_570_Vario_ILP_main.jpeg",
-      "imageUp": null,
+      "imageUp": "assets/Sta-op_stoel_Fitform_570_ILP_rugleuning_2.jpg",
       "imageLie": null,
       "ambientImage": null,
       "gallery": [
-        "assets/DEMO_Sta_op_stoel_Fitform_570_Vario_ILP_main.jpeg"
+        "assets/DEMO_Sta_op_stoel_Fitform_570_Vario_ILP_main.jpeg",
+        "assets/Sta-op_stoel_Fitform_570_ILP_rugleuning_2.jpg"
       ],
       "features": [
         "Standaard zitbreedte 51 cm",
@@ -1118,51 +1561,7 @@
       "description": "<p>Deze Voorraad Sta op stoel Fitform 570 Vario ILP rugleuning is een nagenoeg nieuwe stoel, eigenlijk niet gebruikt. Deze stoel hebben wij uit coulance teruggekocht ivm het overlijden van een klant.</p><p>&nbsp;</p><p>Deze Voorraad Sta op stoel Fitform 570 Vario ILP rugleuning is een sta-op stoel met heerlijke relaxfunctie. De handige sta-op voorziening zorgt er voor dat u zelf makkelijk uit uw fauteuil kunt komen. U kunt (langer) zelfstandig blijven wonen en hoeft minder vaak een beroep te doen op familie of professionele hulpverleners.</p><p>&nbsp;</p><p>Bovendien wordt een Fitform 570 Vario op uw maat ingesteld. Zithoogte, zitdiepte, armleggerhoogte en hoogte en dikte van de lendensteun worden daarvoor opgemeten. Dit is de enige manier om op een gezonde en ergonomisch verantwoorde manier te zitten.</p><p>&nbsp;</p><p><br></p><p>&nbsp;</p><p>Fitform produceert eigentijdse en comfortabele sta-op stoelen met vele verstel- en instelmogelijkheden. Zitoplossingen die voldoen aan de meest actuele, wetenschappelijke inzichten op ergonomisch gebied. Fitform is een ècht Nederlands kwaliteitsproduct.</p><p>&nbsp;</p><p><br></p>",
       "created_at": "2026-10-05 11:34:17",
       "category": "Zitcomfort",
-      "subcategory": "Sta-op stoelen"
-    },
-    {
-      "id": "sta-op-stoel-draaibaar-sliedrecht",
-      "name": "Sta-op stoel draaibaar Sliedrecht",
-      "brand": "De Eiken Zetel",
-      "model": "draaibaar Sliedrecht",
-      "price": 1395,
-      "old_price": null,
-      "condition": "nieuw",
-      "status": "beschikbaar",
-      "type": "staop",
-      "material": "leer",
-      "badge": "Draaibaar",
-      "badgeType": "new",
-      "image": "assets/stoelen/Sta-op-stoel-draaibaar-Sliedrecht-1.jpg",
-      "imageUp": "assets/stoelen/Sta-op-stoel-draaibaar-Sliedrecht-2.jpg",
-      "imageLie": null,
-      "ambientImage": null,
-      "gallery": [
-        "assets/stoelen/Sta-op-stoel-draaibaar-Sliedrecht-1.jpg",
-        "assets/stoelen/Sta-op-stoel-draaibaar-Sliedrecht-2.jpg",
-        "assets/stoelen/Sta-op-stoel-draaibaar-Sliedrecht-3.jpg",
-        "assets/stoelen/Sta-op-stoel-draaibaar-Sliedrecht-4.jpg"
-      ],
-      "features": [
-        "100% Ergonomisch zitcomfort",
-        "Geleverd met kwaliteitsgarantie",
-        "Volledig op uw lichaamsmaat afgesteld"
-      ],
-      "specifications": {
-        "Aantal motoren": "2 motoren",
-        "Bediening": "Handbediening (4 knoppen)",
-        "Bekleding": "Leer (beperkte mogelijkheden), Stof (beperkte mogelijkheden)",
-        "Garantie": "1 jaar",
-        "Maatwerk": "1 maat",
-        "Maximaal gebruikersgewicht": "100 kg",
-        "Merk": "De Eiken Zetel",
-        "Opties": "Geen standaard opties mogelijk"
-      },
-      "is_offer": false,
-      "description": "<h4>Sta-op stoel draaibaar Sliedrecht is een heerlijke 2-motorige relax fauteuil met sta-op verstelling.</h4><p>Sta-op stoel draaibaar Sliedrecht is voorzien van een 2-motorig elektrisch relaxsysteem en sta op hulp. Deze draaibare sta op stoel voorziet dus in alle gemakken. Door de geborstelde stalen voet heeft hij een moderne uitstraling.</p><p>De relaxfunctie is voorzien van 2 motoren waarmee de voetenbank en rugleuning onafhankelijk van elkaar verstelbaar zijn. Traploos in iedere gewenste stand in te stellen dus. Tijdens de sta-op functie wordt de draaifunctie geblokkeerd om veilig op te staan of plaats te nemen. Door de handige home-knop in te drukken zal de stoel vanuit elke positie weer terug bewegen naar de gewone zitstand. Oftewel, standaard is deze stoel van alle gemakken voorzien.</p><p>Sta-op stoel Sliedrecht is voorzien van een topswing. Een verstelbare hoofdsteun die voor het nodige comfort voorziet tijdens het lezen of kijken naar de tv. Optioneel kan er een accu worden ingebouwd waardoor de stoel niet perse in de buurt van een stopcontact hoeft te staan.</p><p>Voor de bekleding kan gekozen worden voor 5 stof en 5 leer kleuren Uiteraard een prachtige kwaliteitsstof welke in taupe, bruin, grijs en walnoot leverbaar is. De leerkleuren zijn zwart, antraciet, grijs, taupe en camel. Voor een betaalbare, fraaie sta op stoel die draaibaar is en van een degelijke kwaliteit kiest u voor de Sta-op stoel draaibaar Sliedrecht.</p><p>De prijs en het zitcomfort zijn verbluffend goed, net als de andere DEZ-sta op stoelen.</p>",
-      "created_at": "2026-10-05 11:34:17",
-      "category": "Zitcomfort",
-      "subcategory": "Sta-op stoelen"
+      "subcategory": "Occasions"
     },
     {
       "id": "sta-op-stoel-fitform-247-wellness",
@@ -1178,11 +1577,12 @@
       "badge": "10 Jaar Garantie",
       "badgeType": "new",
       "image": "assets/257-beige-neutraal.jpg",
-      "imageUp": null,
+      "imageUp": "assets/257-beige-staop.jpg",
       "imageLie": null,
-      "ambientImage": null,
+      "ambientImage": "assets/Sta-op_stoel_Fitform_247_Wellness_cosy.jpeg",
       "gallery": [
-        "assets/257-beige-neutraal.jpg"
+        "assets/257-beige-neutraal.jpg",
+        "assets/257-beige-relax-persoon_.jpg"
       ],
       "features": [
         "100% Ergonomisch zitcomfort",
@@ -1219,10 +1619,12 @@
       "badge": "10 Jaar Garantie",
       "badgeType": "new",
       "image": "assets/Sta-op_stoel_Fitform_Wellness_633_neutraalstand_met_persoon_-_kopie.jpg",
-      "imageUp": null,
+      "imageUp": "assets/Sta-op_stoel_Fitform_Wellness_633_ruststand_met_persoon_ogen_open.jpg",
       "imageLie": null,
-      "ambientImage": null,
-      "gallery": [],
+      "ambientImage": "assets/fitform_najaarsactie_2026.jpg",
+      "gallery": [
+        "assets/Sta-op_stoel_Fitform_Wellness_633_neutraalstand_met_persoon_-_kopie.jpg"
+      ],
       "features": [
         "100% Ergonomisch zitcomfort",
         "Geleverd met kwaliteitsgarantie",
@@ -1285,50 +1687,7 @@
       "description": "<h4>Senioren sta-op stoel Mecam Athena is nieuw in ons assortiment.</h4><p>De Senioren sta-op stoel Mecam Athena is uniek in zijn soort. De Athena is namelijk een sta-op stoel zonder motoren. Er zitten geen accu&#8217;s in en er hoeft geen stekker in het stopcontact, om gebruik te maken van de sta-op verstelling. Onder de zitting zit een veer mechaniek welke door middel van een hendeltje aan de zijkant van de stoel wordt geactiveerd. Het mechaniek wordt zo afgesteld dat het uw lichaamsgewicht net niet optilt. Als u zelf de sta-op beweging inzet, zult u merken dat u bijna geen kracht hoeft te gebruiken.<br> Ook bij het gaan zitten doet het veer mechaniek zijn werk. Hij vangt uw gewicht op en zorgt ervoor dat u in een rustige beweging omlaag komt.</p><p>&nbsp;</p><p>Senioren sta-op stoel Mecam Athena heeft een huiselijke uitstraling en heeft een zeer comfortabel, stevig zitcomfort. De Athena wordt voor u op maat gemaakt. Aan de afwerking van de stoel kan men zien dat dit met liefde en passie gebeurt.<br> Het houtwerk van de stoel is massief eiken en kan in diverse kleuren gebeitst worden. Tevens zijn er eindeloos veel stoffen en leren mogelijk, waardoor hij precies in uw stijl kan passen.</p><p>&nbsp;</p>",
       "created_at": "2026-10-05 11:34:17",
       "category": "Zitcomfort",
-      "subcategory": "Sta-op stoelen"
-    },
-    {
-      "id": "sta-op-stoel-draaibaar-zwijndrecht",
-      "name": "Sta-op stoel draaibaar Zwijndrecht",
-      "brand": "De Eiken Zetel",
-      "model": "draaibaar Zwijndrecht",
-      "price": 1350,
-      "old_price": null,
-      "condition": "nieuw",
-      "status": "beschikbaar",
-      "type": "staop",
-      "material": "leer",
-      "badge": "Draaibaar",
-      "badgeType": "new",
-      "image": "assets/stoelen/Sta-op-stoel-ZWIJNDRECHT-1-e1772115887824.jpg",
-      "imageUp": "assets/stoelen/Sta-op-stoel-ZWIJNDRECHT-2.jpg",
-      "imageLie": null,
-      "ambientImage": null,
-      "gallery": [
-        "assets/stoelen/Sta-op-stoel-ZWIJNDRECHT-1-e1772115887824.jpg",
-        "assets/stoelen/Sta-op-stoel-ZWIJNDRECHT-2.jpg",
-        "assets/stoelen/Sta-op-stoel-ZWIJNDRECHT-3.jpg"
-      ],
-      "features": [
-        "100% Ergonomisch zitcomfort",
-        "Geleverd met kwaliteitsgarantie",
-        "Volledig op uw lichaamsmaat afgesteld"
-      ],
-      "specifications": {
-        "Aantal motoren": "2 motoren",
-        "Bediening": "Handbediening (4 knoppen)",
-        "Bekleding": "Stof (beperkte mogelijkheden)",
-        "Garantie": "1 jaar",
-        "Maatwerk": "1 maat",
-        "Maximaal gebruikersgewicht": "100 kg",
-        "Merk": "De Eiken Zetel",
-        "Opties": "Geen standaard opties mogelijk"
-      },
-      "is_offer": false,
-      "description": "<h4>Sta-op stoel draaibaar Zwijndrecht is een heerlijke 2-motorige relax fauteuil met sta-op verstelling.</h4><p>Sta-op stoel draaibaar Zwijndrecht is voorzien van een 2-motorig elektrisch relaxsysteem en sta op hulp. Deze draaibare sta op stoel voorziet dus in alle gemakken en heeft door het houten draaiplateau een klassieke maar toch ook moderne uitstraling.</p><p>De relaxfunctie is voorzien van 2 motoren waarmee de voetenbank en rugleuning onafhankelijk van elkaar, traploos verstelbaar zijn in iedere gewenste stand. Tijdens de sta-op functie wordt de draaifunctie geblokkeerd om veilig op te staan of plaats te nemen. Door de handige home-knop in te drukken zal de stoel vanuit elke positie weer terug bewegen naar de gewone zitstand. Oftewel standaard is deze stoel van alle gemakken voorzien.</p><p>Sta-op stoel Zwijndrecht is standaard voorzien van een topswing. Een verstelbare hoofdsteun die voor het nodige comfort voorziet tijdens het lezen of kijken naar de tv. Optioneel kan er een accu worden ingebouwd waardoor de stoel niet perse in de buurt van een stopcontact hoeft te staan.</p><p>De bekleding is van een prachtige kwaliteitsstof welke taupe, bruin, grijs en antraciet leverbaar is. Voor een betaalbare, fraaie sta op stoel die draaibaar is en van een degelijke kwaliteit kiest u voor de Sta-op stoel draaibaar Zwijndrecht.</p>",
-      "created_at": "2026-10-05 11:34:17",
-      "category": "Zitcomfort",
-      "subcategory": "Sta-op stoelen"
+      "subcategory": "Relaxstoelen"
     },
     {
       "id": "sta-op-stoel-fitform-570-vario-reco",
@@ -1375,23 +1734,26 @@
     {
       "id": "occasion-sta-op-stoel-fitform-570-vario-xl",
       "name": "Occasion Sta-op stoel Fitform XL (57cm breed)",
-      "brand": "Fitform (by Wellco)",
-      "model": "Occasion Sta-op stoel Fitform XL (57cm breed)",
+      "brand": "Fitform",
+      "model": "570 Vario XL",
       "price": 1250,
       "old_price": null,
       "condition": "occasion",
       "status": "beschikbaar",
       "type": "staop",
-      "material": "leer",
+      "material": "stof",
       "badge": "Gereviseerd",
       "badgeType": "reco",
-      "image": "assets/stoelen/Sta-op-stoel-Fitform-570-XL-extra-breed-scaled.jpg",
+      "image": "assets/Occasion_sta-op_stoel_Fitform_570_Vario_XL_1.jpeg",
       "imageUp": "assets/stoelen/Sta-op-stoel-Winkel-1-scaled-e1775121347680.jpg",
       "imageLie": null,
       "ambientImage": null,
       "gallery": [
-        "assets/stoelen/Sta-op-stoel-Fitform-570-XL-extra-breed-scaled.jpg",
-        "assets/stoelen/Sta-op-stoel-Winkel-1-scaled-e1775121347680.jpg"
+        "assets/Occasion_sta-op_stoel_Fitform_570_Vario_XL_1.jpeg",
+        "assets/Occasion_sta-op_stoel_Fitform_570_Vario_XL_2.jpeg",
+        "assets/Occasion_sta-op_stoel_Fitform_570_Vario_XL_3.jpeg",
+        "assets/Occasion_sta-op_stoel_Fitform_570_Vario_XL_4.jpeg",
+        "assets/Occasion_sta-op_stoel_Fitform_570_Vario_XL_5.jpeg"
       ],
       "features": [
         "Zitbreedte 57 cm (LET OP: extra breed)",
@@ -1403,7 +1765,7 @@
       "specifications": {
         "Aantal motoren": "3 motoren (of meer)",
         "Bediening": "Handbediening (6 knoppen)",
-        "Bekleding": "Stof (beperkte mogelijkheden)",
+        "Bekleding": "Stof Divine steenrood",
         "Garantie": "1 jaar",
         "Maatwerk": "Geheel op maat gemaakt",
         "Maximaal gebruikersgewicht": "150 kg",
@@ -1411,10 +1773,10 @@
         "Opties": "Zeer uitgebreide opties mogelijk"
       },
       "is_offer": false,
-      "description": "<p>Deze Occasion Sta-op stoel Fitform XL is er weer helemaal klaar voor, de bekleding is gewassen en het frame gereviseerd. De handige sta-op voorziening zorgt er voor dat u zelf makkelijk uit uw fauteuil kunt komen. Daardoor kunt u (langer) zelfstandig blijven wonen en hoeft minder vaak een beroep te doen op familie of professionele hulpverleners.<br> LET OP: dit is een extra brede uitvoering</p><p>&nbsp;</p><p>Bovendien wordt een Occasion sta-op stoel Fitform XL op uw maat ingesteld. Zithoogte, zitdiepte, armleggerhoogte en hoogte en dikte van de lendensteun worden daarvoor opgemeten. Dit is de enige manier om op een gezonde en ergonomisch verantwoorde manier te zitten.</p><p>&nbsp;</p><ul><li>Zitbreedte 57 cm (LET OP: extra breed)</li><li>Rughoogte 84cm</li><li>Zitdiepte instelbaar van 43 tot 53 cm</li><li>Zithoogte instelbaar van 40 tot 60 cm</li><li>Armleggerhoogte instelbaar van 16 tot 29 cm</li><li>Lendensteun in hoogte en dikte instelbaar</li><li>Geïntegreerde knikbare hoofdsteun</li><li>Nekkussen met losse vulling</li><li>Bekleding: stof grijs</li></ul><p>&nbsp;</p><p>Fitform produceert eigentijdse en comfortabele sta-op stoelen met vele verstel- en instelmogelijkheden. Zo maken ze zitoplossingen die voldoen aan de meest actuele, wetenschappelijke inzichten op ergonomisch gebied. Fitform is een ècht Nederlands kwaliteitsproduct.</p>",
+      "description": "<p>Deze Occasion Sta-op stoel Fitform XL is er weer helemaal klaar voor, de bekleding is gewassen en het frame gereviseerd. De handige sta-op voorziening zorgt er voor dat u zelf makkelijk uit uw fauteuil kunt komen. Daardoor kunt u (langer) zelfstandig blijven wonen en hoeft minder vaak een beroep te doen op familie of professionele hulpverleners. LET OP: dit is een extra brede uitvoering</p><p>&nbsp;</p><p>Bovendien wordt een Occasion sta-op stoel Fitform XL op uw maat ingesteld. Zithoogte, zitdiepte, armleggerhoogte en hoogte en dikte van de lendensteun worden daarvoor opgemeten. Dit is de enige manier om op een gezonde en ergonomisch verantwoorde manier te zitten.</p><p>&nbsp;</p><p><br></p><p>&nbsp;</p><p>Fitform produceert eigentijdse en comfortabele sta-op stoelen met vele verstel- en instelmogelijkheden. Zo maken ze zitoplossingen die voldoen aan de meest actuele, wetenschappelijke inzichten op ergonomisch gebied. Fitform is een ècht Nederlands kwaliteitsproduct.</p>",
       "created_at": "2026-10-05 11:34:17",
       "category": "Zitcomfort",
-      "subcategory": "Sta-op stoelen"
+      "subcategory": "Occasions"
     },
     {
       "id": "occasion-sta-op-stoel-fitform-570-vario-zand",
@@ -1429,8 +1791,8 @@
       "material": "stof",
       "badge": "Gereviseerd",
       "badgeType": "reco",
-      "image": "assets/stoelen/Sta-op-stoel-Fitform-570-Vario-XL-zand-1-Copy.jpg",
-      "imageUp": null,
+      "image": "assets/Occasion_Sta-op_stoel_Fitform_570_Vario_Zand_1.jpg",
+      "imageUp": "assets/Sta-op_stoel_Fitform_570_ILP_rugleuning_2.jpg",
       "imageLie": null,
       "ambientImage": null,
       "gallery": [
@@ -1461,7 +1823,7 @@
       "description": "<p>Deze <strong>Occasion Sta-op stoel Fitform 570 Vario Zand </strong>is er weer helemaal klaar voor, de bekleding is gewassen en het frame gereviseerd. De handige sta-op voorziening zorgt er voor dat u zelf makkelijk uit uw fauteuil kunt komen. Daardoor kunt u (langer) zelfstandig blijven wonen en hoeft minder vaak een beroep te doen op familie of professionele hulpverleners. </p><p>&nbsp;</p><p>Bovendien wordt een Occasion sta-op stoel Fitform 570 Vario op uw maat ingesteld. Zithoogte, zitdiepte, armleggerhoogte en hoogte en dikte van de lendensteun worden daarvoor opgemeten. Dit is de enige manier om op een gezonde en ergonomisch verantwoorde manier te zitten.</p><p>&nbsp;&nbsp;</p><p>Fitform produceert eigentijdse en comfortabele sta-op stoelen met vele verstel- en instelmogelijkheden. Zo maken ze zitoplossingen die voldoen aan de meest actuele, wetenschappelijke inzichten op ergonomisch gebied. Fitform is een ècht Nederlands kwaliteitsproduct.</p>",
       "created_at": "2026-10-05 11:34:17",
       "category": "Zitcomfort",
-      "subcategory": "Sta-op stoelen"
+      "subcategory": "Occasions"
     },
     {
       "id": "occasion-sta-op-stoel-fitform-570-vario-ilp-rug",
@@ -1476,11 +1838,17 @@
       "material": "stof",
       "badge": "Gereviseerd",
       "badgeType": "reco",
-      "image": "assets/stoelen/Sta-op-stoel-Fitform-570-ILP-rugleuning-scaled.jpg",
-      "imageUp": null,
+      "image": "assets/Occasion_Sta-op_stoel_Fitform_570_ILP_rugleuning_1.jpg",
+      "imageUp": "assets/Sta-op_stoel_Fitform_570_ILP_rugleuning_2.jpg",
       "imageLie": null,
       "ambientImage": null,
-      "gallery": [],
+      "gallery": [
+        "assets/Occasion_Sta-op_stoel_Fitform_570_ILP_rugleuning_1.jpg",
+        "assets/Occasion_Sta-op_stoel_Fitform_570_ILP_rugleuning_2.jpg",
+        "assets/Occasion_Sta-op_stoel_Fitform_570_ILP_rugleuning_3.jpg",
+        "assets/Occasion_Sta-op_stoel_Fitform_570_ILP_rugleuning_4.jpg",
+        "assets/Occasion_Sta-op_stoel_Fitform_570_ILP_rugleuning_5.jpg"
+      ],
       "features": [
         "ILP Rugleuning (individueel instelbaar)",
         "Zitbreedte 51 cm (standaard)",
@@ -1503,27 +1871,31 @@
       "description": "<p><span style=\"background-color: rgb(251, 251, 250); color: rgb(45, 60, 77);\">Deze </span><strong style=\"background-color: rgb(251, 251, 250); color: rgb(45, 60, 77);\">Occasion  sta op stoel Fitform 570 Vario ILP</strong><span style=\"background-color: rgb(251, 251, 250); color: rgb(45, 60, 77);\"> is geheel gereviseerd. De bekleding is gewassen en nu mag hij weg voor €1100 (nieuwprijs is €4300).</span></p><p><span style=\"background-color: rgb(251, 251, 250); color: rgb(45, 60, 77);\">Een Fitform fauteuil is een betrouwbare en uiterst comfortabele sta op stoel met relaxfunctie. De handige sta-op voorziening zorgt er voor dat u zelf makkelijk in en uit uw stoel kunt komen. Door de relaxfunctie kunt u ook heerlijk ontspannen in de stoel.</span></p><p><br></p><p><span style=\"background-color: rgb(251, 251, 250); color: rgb(45, 60, 77);\">De Fitform 570 Vario is voorzien van </span><strong style=\"background-color: rgb(251, 251, 250); color: rgb(45, 60, 77);\">drie motoren</strong><span style=\"background-color: rgb(251, 251, 250); color: rgb(45, 60, 77);\">, hiermee kunnen de volgende functies (afzonderlijk van elkaar) worden bediend:</span></p><p><span style=\"background-color: rgb(251, 251, 250); color: rgb(45, 60, 77);\">- elektrisch verstelbare beensteun</span></p><p><span style=\"background-color: rgb(251, 251, 250); color: rgb(45, 60, 77);\">- elektrisch verstelbare rugleuning</span></p><p><span style=\"background-color: rgb(251, 251, 250); color: rgb(45, 60, 77);\">- elektrisch verstelbare kantelfunctie</span></p><p><span style=\"background-color: rgb(251, 251, 250); color: rgb(45, 60, 77);\">- elektrisch verstelbare sta-op functie</span></p>",
       "created_at": "2026-10-05 11:34:17",
       "category": "Zitcomfort",
-      "subcategory": "Sta-op stoelen"
+      "subcategory": "Occasions"
     },
     {
       "id": "reco-sta-op-stoel-fitform-571-vario-iii-mini-ilp",
       "name": "RECO Sta-op stoel Fitform 571 Vario III Mini ILP",
-      "brand": "Fitform (by Wellco)",
-      "model": "RECO Sta-op stoel Fitform 571 Vario III Mini ILP",
+      "brand": "Fitform",
+      "model": "571 Vario Mini ILP RECO",
       "price": 2400,
       "old_price": 2518,
       "condition": "occasion",
       "status": "beschikbaar",
       "type": "staop",
-      "material": "leer",
+      "material": "stof",
       "badge": "Gereviseerd",
       "badgeType": "reco",
       "image": "assets/Sta-op_stoel_Fitform_571_MINI_Kyphoserug_1.jpg",
-      "imageUp": null,
+      "imageUp": "assets/Sta-op_stoel_Fitform_571_MINI_Kyphoserug_5.jpg",
       "imageLie": null,
       "ambientImage": null,
       "gallery": [
-        "assets/Sta-op_stoel_Fitform_571_MINI_Kyphoserug_1.jpg"
+        "assets/Sta-op_stoel_Fitform_571_MINI_Kyphoserug_1.jpg",
+        "assets/Sta-op_stoel_Fitform_571_MINI_Kyphoserug_5.jpg",
+        "assets/Sta-op_stoel_Fitform_571_MINI_Kyphoserug_2.jpg",
+        "assets/Sta-op_stoel_Fitform_571_MINI_Kyphoserug_3.jpg",
+        "assets/Sta-op_stoel_Fitform_571_MINI_Kyphoserug_4.jpg"
       ],
       "features": [
         "Zitbreedte 45 cm (LET OP: dit is smaller dan standaard)",
@@ -1546,110 +1918,13 @@
       "description": "<p>Deze (gereconditioneerde) RECO Sta-op stoel Fitform 571 Vario III Mini ILP is er weer helemaal klaar voor, hij is opnieuw bekleedt en het frame gereviseerd. De handige sta-op voorziening zorgt er voor dat u zelf makkelijk uit uw fauteuil kunt komen. U kunt (langer) zelfstandig blijven wonen en hoeft minder vaak een beroep te doen op familie of professionele hulpverleners. LET OP: dit is een kleine uitvoering (smalle zitbreedte en lage rugleuning).</p><p>&nbsp;</p><p>Bovendien wordt een RECO Sta-op stoel Fitform 571 Vario III op uw maat ingesteld. Zithoogte, zitdiepte, armleggerhoogte en hoogte en dikte van de lendensteun worden daarvoor opgemeten. Dit is de enige manier om op een gezonde en ergonomisch verantwoorde manier te zitten.</p><p>&nbsp;</p><p><br></p><p>&nbsp;</p><p>Fitform produceert eigentijdse en comfortabele sta-op stoelen met vele verstel- en instelmogelijkheden. Zitoplossingen die voldoen aan de meest actuele, wetenschappelijke inzichten op ergonomisch gebied. Fitform is een ècht Nederlands kwaliteitsproduct.</p>",
       "created_at": "2026-10-05 11:34:17",
       "category": "Zitcomfort",
-      "subcategory": "Sta-op stoelen"
-    },
-    {
-      "id": "voorraad-sta-op-stoel-fitform-570-vario-iii-reco",
-      "name": "Voorraad Sta-op stoel Fitform 570 Vario III RECO",
-      "brand": "Fitform (by Wellco)",
-      "model": "Voorraad Sta-op stoel Fitform 570 Vario III RECO",
-      "price": 1500,
-      "old_price": 1603,
-      "condition": "occasion",
-      "status": "beschikbaar",
-      "type": "staop",
-      "material": "leer",
-      "badge": "Gereviseerd",
-      "badgeType": "reco",
-      "image": "assets/stoelen/Sta-op-stoel-Fitform-570-Vario-RECO-0.jpg",
-      "imageUp": "assets/stoelen/Sta-op-stoel-Fitform-570-Vario-RECO-7.jpg",
-      "imageLie": null,
-      "ambientImage": null,
-      "gallery": [
-        "assets/stoelen/Sta-op-stoel-Fitform-570-Vario-RECO-0.jpg",
-        "assets/stoelen/Sta-op-stoel-Fitform-570-Vario-RECO-7.jpg",
-        "assets/stoelen/Sta-op-stoel-Fitform-570-Vario-RECO-6.jpg",
-        "assets/stoelen/Sta-op-stoel-Fitform-570-Vario-RECO-5.jpg",
-        "assets/stoelen/Sta-op-stoel-Fitform-570-Vario-RECO-4.jpg",
-        "assets/stoelen/Sta-op-stoel-Fitform-570-Vario-RECO-3.jpg",
-        "assets/stoelen/Sta-op-stoel-Fitform-570-Vario-RECO-2.jpg",
-        "assets/stoelen/Sta-op-stoel-Fitform-570-Vario-RECO-1.jpg",
-        "assets/stoelen/Sta-op-stoel-Fitform-570-Vario-RECO-9.jpg",
-        "assets/stoelen/Sta-op-stoel-Fitform-570-Vario-RECO-8.jpg"
-      ],
-      "features": [
-        "Standaard zitbreedte 51 cm",
-        "Standaard rughoogte 84 cm",
-        "Zitdiepte instelbaar van 43 tot 53 cm",
-        "Zithoogte instelbaar van 40 tot 60 cm",
-        "Armleggerhoogte instelbaar van 16 tot 29 cm"
-      ],
-      "specifications": {
-        "Aantal motoren": "3 motoren (of meer)",
-        "Bediening": "Handbediening (6 knoppen)",
-        "Bekleding": "Stof / Leer, zeer veel mogelijkheden",
-        "Garantie": "1 jaar",
-        "Maatwerk": "Geheel op maat gemaakt",
-        "Maximaal gebruikersgewicht": "150 kg",
-        "Merk": "Fitform (by Wellco)",
-        "Opties": "Diverse opties mogelijk"
-      },
-      "is_offer": false,
-      "description": "<p>De Sta-op stoel Fitform 570 Vario III RECO is een sta-op stoel met heerlijke relaxfunctie. De handige sta-op voorziening zorgt er voor dat u zelf makkelijk uit uw fauteuil kunt komen. U kunt (langer) zelfstandig blijven wonen en hoeft minder vaak een beroep te doen op familie of professionele hulpverleners.</p><p>&nbsp;</p><p>Bovendien wordt een Fitform 570 Vario III op uw maat ingesteld. Zithoogte, zitdiepte, armleggerhoogte en hoogte en dikte van de lendensteun worden daarvoor opgemeten. Dit is de enige manier om op een gezonde en ergonomisch verantwoorde manier te zitten.</p><p>&nbsp;</p><p>Een Sta-op stoel Fitform 570 Vario III RECO is een stoel welke aan de buitenkant niet is te onderscheiden van een nieuw exemplaar. Wij maken gebruik van een gebruikt frame, welke wordt gereviseerd. Alle assen en scharnierpunten worden gecontroleerd en waar nodig vervangen. Een gereconditioneerde Fitform wordt altijd voorzien van een nieuwe handbediening. Hierna wordt de stoel opnieuw opgebouwd en bekleed met de nieuwe bekleding van uw keuze.</p><p>&nbsp;</p><ul><li>Standaard zitbreedte 51 cm</li><li>Standaard rughoogte 84 cm</li><li>Zitdiepte instelbaar van 43 tot 53 cm</li><li>Zithoogte instelbaar van 40 tot 60 cm</li><li>Armleggerhoogte instelbaar van 16 tot 29 cm</li><li>Lendensteun in hoogte en dikte instelbaar</li><li>Geïntegreerde knikbare hoofdsteun</li></ul><p>&nbsp;</p><p>Fitform produceert eigentijdse en comfortabele sta-op stoelen met vele verstel- en instelmogelijkheden. Zitoplossingen die voldoen aan de meest actuele, wetenschappelijke inzichten op ergonomisch gebied. Fitform is een ècht Nederlands kwaliteitsproduct.</p><p>&nbsp;</p><ul><li>Meest veelzijdige 3-motorige relax- en sta-op fauteuil</li><li>Unieke kantelbeweging voor optimaal comfort</li><li>Comfortabele elektrische sta-op hulp</li><li>Rugleuning en voetenbank zijn elk afzonderlijk te bedienen</li><li>Uitgevoerd in brandvertragende materialen</li><li>Gebruikersgewicht tot en met 150 kg</li><li>2-zijdige opbergzakken</li><li>Fauteuil is volledig op lichaamsmaat instelbaar</li></ul>",
-      "created_at": "2026-10-05 11:34:17",
-      "category": "Zitcomfort",
-      "subcategory": "Sta-op stoelen"
-    },
-    {
-      "id": "voorraad-sta-op-stoel-fitform-570-vario-iii-xl-reco",
-      "name": "Voorraad Sta-op stoel Fitform 570 Vario III XL RECO",
-      "brand": "Fitform (by Wellco)",
-      "model": "Voorraad Sta-op stoel Fitform 570 Vario III XL RECO",
-      "price": 1700,
-      "old_price": null,
-      "condition": "occasion",
-      "status": "beschikbaar",
-      "type": "staop",
-      "material": "leer",
-      "badge": "Gereviseerd",
-      "badgeType": "reco",
-      "image": "assets/stoelen/Sta-op-stoel-Fitform-570-Vario-XL-zand-zitten.png",
-      "imageUp": "assets/stoelen/Sta-op-stoel-Fitform-570-Vario-XL-zand-staop.png",
-      "imageLie": null,
-      "ambientImage": null,
-      "gallery": [
-        "assets/stoelen/Sta-op-stoel-Fitform-570-Vario-XL-zand-zitten.png",
-        "assets/stoelen/Sta-op-stoel-Fitform-570-Vario-XL-zand-staop.png",
-        "assets/stoelen/Sta-op-stoel-Fitform-570-Vario-XL-zand-liggen.png"
-      ],
-      "features": [
-        "Standaard zitbreedte 57 cm (LET OP: extra breed)",
-        "Standaard rughoogte 84 cm",
-        "Zitdiepte instelbaar van 43 tot 53 cm",
-        "Zithoogte instelbaar van 40 tot 60 cm",
-        "Armleggerhoogte instelbaar van 16 tot 29 cm"
-      ],
-      "specifications": {
-        "Aantal motoren": "3 motoren (of meer)",
-        "Bediening": "Handbediening (6 knoppen)",
-        "Bekleding": "Stof / Leer, zeer veel mogelijkheden",
-        "Garantie": "1 jaar",
-        "Maatwerk": "Geheel op maat gemaakt",
-        "Maximaal gebruikersgewicht": "150 kg",
-        "Merk": "Fitform (by Wellco)",
-        "Opties": "Zeer uitgebreide opties mogelijk"
-      },
-      "is_offer": false,
-      "description": "<p>De Sta-op stoel Fitform 570 Vario III XL RECO is een sta-op stoel met heerlijke relaxfunctie. De handige sta-op voorziening zorgt er voor dat u zelf makkelijk uit uw fauteuil kunt komen. U kunt (langer) zelfstandig blijven wonen en hoeft minder vaak een beroep te doen op familie of professionele hulpverleners.</p><p>&nbsp;</p><p>Bovendien wordt een Fitform 570 Vario III XL op uw maat ingesteld. Zithoogte, zitdiepte, armleggerhoogte en hoogte en dikte van de lendensteun worden daarvoor opgemeten. Dit is de enige manier om op een gezonde en ergonomisch verantwoorde manier te zitten.</p><p>&nbsp;</p><p>Een Sta-op stoel Fitform 570 Vario III XL RECO is een stoel welke aan de buitenkant niet is te onderscheiden van een nieuw exemplaar. Wij maken gebruik van een gebruikt frame, welke wordt gereviseerd. Alle assen en scharnierpunten worden gecontroleerd en waar nodig vervangen. Een gereconditioneerde Fitform wordt altijd voorzien van een nieuwe handbediening. Hierna wordt de stoel opnieuw opgebouwd en bekleed met de nieuwe bekleding van uw keuze.</p><p>&nbsp;</p><ul><li>Standaard zitbreedte 57 cm (LET OP: extra breed)</li><li>Standaard rughoogte 84 cm</li><li>Zitdiepte instelbaar van 43 tot 53 cm</li><li>Zithoogte instelbaar van 40 tot 60 cm</li><li>Armleggerhoogte instelbaar van 16 tot 29 cm</li><li>Lendensteun in hoogte en dikte instelbaar</li><li>Geïntegreerde knikbare hoofdsteun</li></ul><p>&nbsp;</p><p>Fitform produceert eigentijdse en comfortabele sta-op stoelen met vele verstel- en instelmogelijkheden. Zitoplossingen die voldoen aan de meest actuele, wetenschappelijke inzichten op ergonomisch gebied. Fitform is een ècht Nederlands kwaliteitsproduct.</p><p>&nbsp;</p><ul><li>Meest veelzijdige 3-motorige relax- en sta-op fauteuil</li><li>Unieke kantelbeweging voor optimaal comfort</li><li>Comfortabele elektrische sta-op hulp</li><li>Rugleuning en voetenbank zijn elk afzonderlijk te bedienen</li><li>Uitgevoerd in brandvertragende materialen</li><li>Gebruikersgewicht tot en met 150 kg</li><li>2-zijdige opbergzakken</li><li>Fauteuil is volledig op lichaamsmaat instelbaar</li></ul>",
-      "created_at": "2026-10-05 11:34:17",
-      "category": "Zitcomfort",
-      "subcategory": "Sta-op stoelen"
+      "subcategory": "Occasions"
     },
     {
       "id": "voorraad-sta-op-stoel-fitform-570-vario-iii-reco-smal",
       "name": "Voorraad Sta op stoel Fitform 570 Vario III RECO Smal",
       "brand": "Fitform",
-      "model": "570 Vario RECO",
+      "model": "570 Vario RECO Smal ",
       "price": 1700,
       "old_price": null,
       "condition": "occasion",
@@ -1663,7 +1938,11 @@
       "imageLie": null,
       "ambientImage": null,
       "gallery": [
-        "assets/RECO_Sta-op_stoel_Fitform_570_Smal_1.jpg"
+        "assets/RECO_Sta-op_stoel_Fitform_570_Smal_1.jpg",
+        "assets/RECO_Sta-op_stoel_Fitform_570_Smal_2.jpg",
+        "assets/RECO_Sta-op_stoel_Fitform_570_Smal_3.jpg",
+        "assets/RECO_Sta-op_stoel_Fitform_570_Smal_4.jpg",
+        "assets/RECO_Sta-op_stoel_Fitform_570_Smal_5.jpg"
       ],
       "features": [
         "Zitbreedte 45 cm (Smalle uitvoering = meerprijs)",
@@ -1684,13 +1963,13 @@
       "description": "<p>Deze Sta op stoel Fitform 570 Vario III RECO <strong>Smal</strong> is een stoel welke aan de buitenkant niet is te onderscheiden van een nieuw exemplaar. Er wordt gebruik gemaakt van een gebruikt frame, welke wordt gereviseerd. Alle assen en scharnierpunten worden gecontroleerd en waar nodig vervangen. Een gereconditioneerde Fitform wordt altijd voorzien van een nieuwe handbediening en polstering. Hierna wordt de stoel opnieuw opgebouwd en bekleed met de nieuwe bekleding van uw keuze.</p><p>&nbsp;</p><p>De Sta op stoel Fitform 570 Vario III RECO is een sta-op stoel met heerlijke relaxfunctie. De handige sta-op voorziening zorgt er voor dat u zelf makkelijk uit uw fauteuil kunt komen. U kunt (langer) zelfstandig blijven wonen en hoeft minder vaak een beroep te doen op familie of professionele hulpverleners.</p><p>&nbsp;</p><p>Bovendien wordt een Fitform 570 Vario III op uw maat ingesteld. Zithoogte, zitdiepte, armleggerhoogte en hoogte en dikte van de lendensteun worden daarvoor opgemeten. Dit is de enige manier om op een gezonde en ergonomisch verantwoorde manier te zitten.</p><p><br></p>",
       "created_at": "2026-10-05 11:34:17",
       "category": "Zitcomfort",
-      "subcategory": "Sta-op stoelen"
+      "subcategory": "Occasions"
     },
     {
       "id": "occasion-sta-op-stoel-fitform-571-vario-kuiprugleuning",
       "name": "Occasion sta-op stoel Fitform 571 Vario Kuiprugleuning",
       "brand": "Fitform",
-      "model": "571 Vario kuiprug",
+      "model": "571 Vario Mini kuiprug",
       "price": 1150,
       "old_price": null,
       "condition": "occasion",
@@ -1704,7 +1983,11 @@
       "imageLie": null,
       "ambientImage": null,
       "gallery": [
-        "assets/Sta-op_stoel_Fitform_571_MINI_kuiprug_1.jpg"
+        "assets/Sta-op_stoel_Fitform_571_MINI_kuiprug_1.jpg",
+        "assets/Sta-op_stoel_Fitform_571_MINI_kuiprug_2.jpg",
+        "assets/Sta-op_stoel_Fitform_571_MINI_kuiprug_5.jpg",
+        "assets/Sta-op_stoel_Fitform_571_MINI_kuiprug_3.jpg",
+        "assets/Sta-op_stoel_Fitform_571_MINI_kuiprug_4.jpg"
       ],
       "features": [
         "Zitbreedte 45 cm (LET OP: smal)",
@@ -1728,48 +2011,7 @@
       "description": "<p>Deze Occasion Sta-op stoel Fitform 571 Vario III Mini is er weer helemaal klaar voor, de <strong>bekleding is gewassen en het frame gereviseerd</strong>. De handige sta-op voorziening zorgt er voor dat u zelf makkelijk uit uw fauteuil kunt komen. Daardoor kunt u (langer) zelfstandig blijven wonen en hoeft minder vaak een beroep te doen op familie of professionele hulpverleners. LET OP: dit is een kleine uitvoering</p><p>&nbsp;</p><p>Bovendien wordt een Fitform 570 Vario III op uw maat ingesteld. Zithoogte, zitdiepte, armleggerhoogte en hoogte en dikte van de lendensteun worden daarvoor opgemeten. Dit is de enige manier om op een gezonde en ergonomisch verantwoorde manier te zitten.</p><p>&nbsp;&nbsp;</p><p>Fitform produceert eigentijdse en comfortabele sta-op stoelen met vele verstel- en instelmogelijkheden. Zo maken ze zitoplossingen die voldoen aan de meest actuele, wetenschappelijke inzichten op ergonomisch gebied. Fitform is een ècht Nederlands kwaliteitsproduct.</p>",
       "created_at": "2026-10-05 11:34:17",
       "category": "Zitcomfort",
-      "subcategory": "Sta-op stoelen"
-    },
-    {
-      "id": "voorraad-sta-op-stoel-fitform-570-vario-iii-reco-smal-board",
-      "name": "Voorraad Sta op stoel Fitform 570 Vario III RECO Smal Board",
-      "brand": "Fitform (by Wellco)",
-      "model": "Voorraad Sta op stoel Fitform 570 Vario III RECO Smal Board",
-      "price": 1700,
-      "old_price": null,
-      "condition": "occasion",
-      "status": "beschikbaar",
-      "type": "staop",
-      "material": "leer",
-      "badge": "Gereviseerd",
-      "badgeType": "reco",
-      "image": "assets/stoelen/Sta-op-stoel-RECO-Fitform-570-Vario-smal-Board-1-Copy.jpg",
-      "imageUp": null,
-      "imageLie": null,
-      "ambientImage": null,
-      "gallery": [
-        "assets/stoelen/Sta-op-stoel-RECO-Fitform-570-Vario-smal-Board-1-Copy.jpg"
-      ],
-      "features": [
-        "Zitbreedte 45 cm (Smalle uitvoering = meerprijs)",
-        "Standaard rughoogte 84 cm",
-        "Zitdiepte instelbaar van 43 tot 53 cm",
-        "Zithoogte instelbaar van 40 tot 60 cm",
-        "Armleggerhoogte instelbaar van 16 tot 29 cm"
-      ],
-      "specifications": {
-        "Aantal motoren": "3 motoren (of meer)",
-        "Bediening": "Handbediening (6 knoppen)",
-        "Garantie": "1 jaar",
-        "Maatwerk": "Geheel op maat gemaakt",
-        "Maximaal gebruikersgewicht": "150 kg",
-        "Merk": "Fitform (by Wellco)"
-      },
-      "is_offer": false,
-      "description": "<p>Deze Sta op stoel Fitform 570 Vario III RECO <strong>Smal</strong> is een stoel welke aan de buitenkant niet is te onderscheiden van een nieuw exemplaar. Er wordt gebruik gemaakt van een gebruikt frame, welke wordt gereviseerd. Alle assen en scharnierpunten worden gecontroleerd en waar nodig vervangen. Een gereconditioneerde Fitform wordt altijd voorzien van een nieuwe handbediening en polstering. Hierna wordt de stoel opnieuw opgebouwd en bekleed met de nieuwe bekleding van uw keuze.</p><p>&nbsp;</p><p>De Sta op stoel Fitform 570 Vario III RECO is een sta-op stoel met heerlijke relaxfunctie. De handige sta-op voorziening zorgt er voor dat u zelf makkelijk uit uw fauteuil kunt komen. U kunt (langer) zelfstandig blijven wonen en hoeft minder vaak een beroep te doen op familie of professionele hulpverleners.</p><p>&nbsp;</p><p>Bovendien wordt een Fitform 570 Vario III op uw maat ingesteld. Zithoogte, zitdiepte, armleggerhoogte en hoogte en dikte van de lendensteun worden daarvoor opgemeten. Dit is de enige manier om op een gezonde en ergonomisch verantwoorde manier te zitten.</p><p>&nbsp;</p><ul><li>Zitbreedte 45 cm (Smalle uitvoering = meerprijs)</li><li>Standaard rughoogte 84 cm</li><li>Zitdiepte instelbaar van 43 tot 53 cm</li><li>Zithoogte instelbaar van 40 tot 60 cm</li><li>Armleggerhoogte instelbaar van 16 tot 29 cm</li><li>Lendensteun in hoogte en dikte instelbaar</li><li>Geïntegreerde knikbare hoofdsteun</li></ul><p>&nbsp;</p><p>Fitform produceert eigentijdse en comfortabele sta-op stoelen met vele verstel- en instelmogelijkheden. Zitoplossingen die voldoen aan de meest actuele, wetenschappelijke inzichten op ergonomisch gebied. Fitform is een ècht Nederlands kwaliteitsproduct.</p><p>&nbsp;</p><ul><li>Meest veelzijdige 3-motorige relax- en sta-op fauteuil</li><li>Unieke kantelbeweging voor optimaal comfort</li><li>Comfortabele elektrische sta-op hulp</li><li>Rugleuning en voetenbank zijn elk afzonderlijk te bedienen</li><li>Uitgevoerd in brandvertragende materialen</li><li>Gebruikersgewicht tot en met 150 kg</li><li>2-zijdige opbergzakken</li><li>Fauteuil is volledig op lichaamsmaat instelbaar</li></ul>",
-      "created_at": "2026-10-05 11:34:17",
-      "category": "Zitcomfort",
-      "subcategory": "Sta-op stoelen"
+      "subcategory": "Occasions"
     },
     {
       "id": "hoog-laag-bed-ecofit-de-luxe",

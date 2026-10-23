@@ -159,6 +159,11 @@
     .empty-state{text-align:center;padding:64px 20px;background:#fff;border-radius:32px;border:1px dashed var(--line);grid-column:1/-1}
     .empty-state h3{font-size:24px;margin-bottom:8px}
 
+    /* Live Sync Tag */
+    .live-sync-tag{display:inline-flex;align-items:center;gap:6px;background:rgba(88,129,87,0.14);color:var(--forest);padding:3px 10px;border-radius:999px;font-size:12px;font-weight:700;margin:0 4px;border:1px solid rgba(88,129,87,0.22)}
+    .dot-pulse{width:7px;height:7px;border-radius:50%;background:#2e7d32;box-shadow:0 0 0 rgba(46,125,50,0.4);animation:pulse-dot 2s infinite}
+    @keyframes pulse-dot{0%{box-shadow:0 0 0 0 rgba(46,125,50,0.6)}70%{box-shadow:0 0 0 7px rgba(46,125,50,0)}100%{box-shadow:0 0 0 0 rgba(46,125,50,0)}}
+
     /* Chair Detail Modal */
     .modal-detail-card{position:relative;z-index:1;background:var(--linen);border-radius:40px;max-width:960px;width:100%;padding:40px 36px;box-shadow:0 40px 80px -30px rgba(30,40,30,.5);animation:pop .35s ease;max-height:92vh;overflow-y:auto}
     .modal-detail-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:36px;align-items:start}
@@ -364,9 +369,9 @@
     
     <!-- Hero Header -->
     <div class="catalog-hero">
-      <span class="eyebrow">Actueel Assortiment · Merwedestraat 239 Dordrecht</span>
+      <span class="eyebrow">Actueel Assortiment · <span class="live-sync-tag"><span class="dot-pulse"></span>Live database</span> · Merwedestraat 239 Dordrecht</span>
       <h1>Onze Complete <span class="squig">Collectie<svg viewBox="0 0 200 14" preserveAspectRatio="none" aria-hidden="true"><path d="M3 8 C 40 2, 70 12, 110 7 S 170 3, 197 8"/></svg></span></h1>
-      <p>Al ruim 35 jaar dé zit- en zorgspecialist in comfortabel en zelfstandig wonen in de regio Drechtsteden &amp; Rijnmond. Ontdek onze 62 modellen verdeeld over drie disciplines: ergonomische maatwerk sta-op stoelen (o.a. Fitform &amp; Farstrup), hoog/laag bedden en seniorenledikanten, en betrouwbare loophulpmiddelen. Vrijblijvend uit te proberen in onze showroom of bij u thuis.</p>
+      <p>Al ruim 35 jaar dé zit- en zorgspecialist in comfortabel en zelfstandig wonen in de regio Drechtsteden &amp; Rijnmond. Ontdek onze actuele collectie van <span id="hero-total-count" style="font-weight:700;color:var(--forest)">67</span> modellen verdeeld over drie disciplines: ergonomische maatwerk sta-op stoelen (o.a. Fitform &amp; Farstrup), hoog/laag bedden en seniorenledikanten, en betrouwbare loophulpmiddelen. Vrijblijvend uit te proberen in onze showroom of bij u thuis.</p>
     </div>
 
     <!-- Filters Section -->
@@ -666,8 +671,17 @@
     };
     let activeChair = null;
 
-    // Graceful Image fallback
+    // Intelligent image fallback: tries Staopstoelen.nl CDN before fallback placeholder
     function handleImgError(img) {
+      if (!img.dataset.triedRemote && img.src && !img.src.includes('staopstoelen.nl')) {
+        img.dataset.triedRemote = '1';
+        try {
+          const u = new URL(img.src, window.location.href);
+          const cleanPath = u.pathname.replace(/^\//, '');
+          img.src = 'https://staopstoelen.nl/' + cleanPath;
+          return;
+        } catch (e) {}
+      }
       img.onerror = null;
       img.src = 'assets/chair_custom.png';
     }
@@ -687,21 +701,109 @@
       return '€ ' + num.toLocaleString('nl-NL') + ',-';
     }
 
-    // Load Database strictly from local database.json (62 authentic Schipper Compact Wonen products)
-    async function loadDatabase() {
-      try {
-        const res = await fetch('database.json');
-        if (res.ok) {
-          const data = await res.json();
-          allChairs = data.staopstoelen || [];
+    // Resolves image paths: preserves http/https, normalizes relative paths
+    function resolveImgPath(p) {
+      if (!p) return 'assets/chair_custom.png';
+      if (p.startsWith('http://') || p.startsWith('https://') || p.startsWith('//')) return p;
+      return p.replace(/^\.\//, '');
+    }
+
+    // Normalize chairs received from the live Staopstoelen.nl MySQL API
+    function normalizeRemoteChair(c) {
+      const name = c.name || '';
+      const cond = (c.condition || 'nieuw').toLowerCase();
+      let subcat = c.subcategory;
+      if (!subcat) {
+        if (cond === 'occasion') {
+          subcat = 'Occasions';
+        } else if (c.type === 'relax' || name.toLowerCase().includes('fauteuil') || name.toLowerCase().includes('relax')) {
+          subcat = 'Relaxstoelen';
+        } else if (name.toLowerCase().includes('senioren')) {
+          subcat = 'Seniorenstoelen';
         } else {
-          console.error('database.json response not ok:', res.status);
+          subcat = 'Sta-op stoelen';
         }
-      } catch (err) {
-        console.error('Kon database.json niet laden:', err);
       }
 
-      // Initialize UI
+      const mainImg = resolveImgPath(c.image);
+      let gallery = [];
+      if (Array.isArray(c.gallery) && c.gallery.length > 0) {
+        gallery = c.gallery.map(resolveImgPath);
+      } else if (mainImg) {
+        gallery = [mainImg];
+      }
+
+      return {
+        ...c,
+        category: 'Zitcomfort',
+        subcategory: subcat,
+        image: mainImg,
+        gallery: gallery,
+        features: (c.features && c.features.length) ? c.features : [
+          '100% Ergonomisch zitcomfort',
+          'Geleverd met kwaliteitsgarantie',
+          'Volledig op uw lichaamsmaat afgesteld'
+        ],
+        specifications: c.specifications || {}
+      };
+    }
+
+    const LIVE_API_URL = 'https://staopstoelen.nl/api/admin_api.php';
+    const LOCAL_DB_PATH = 'database.json';
+    let isInitialRenderDone = false;
+
+    // Load Database: instant local snapshot + live real-time sync with Staopstoelen.nl API
+    async function loadDatabase() {
+      // 1. Instant local render (guarantees fast loading without waiting for network)
+      try {
+        const localRes = await fetch(LOCAL_DB_PATH);
+        if (localRes.ok) {
+          const localData = await localRes.json();
+          if (Array.isArray(localData.staopstoelen) && localData.staopstoelen.length > 0) {
+            allChairs = localData.staopstoelen;
+            applyInitialUI();
+          }
+        }
+      } catch (err) {
+        console.warn('Lokale database.json buffer kon niet worden geladen:', err);
+      }
+
+      // 2. Real-time Live synchronisatie met de MySQL database van Staopstoelen.nl
+      try {
+        const liveRes = await fetch(LIVE_API_URL, { cache: 'no-store' });
+        if (liveRes.ok) {
+          const liveData = await liveRes.json();
+          if (liveData && Array.isArray(liveData.staopstoelen) && liveData.staopstoelen.length > 0) {
+            // Behoud alle Ligcomfort (hoog-laag bedden) en Zorgcomfort (rollators, trapliften)
+            const careAndBedProducts = allChairs.filter(p => p.category && p.category !== 'Zitcomfort');
+            
+            // Normaliseer de actuele live stoelen uit de database
+            const liveChairs = liveData.staopstoelen.map(normalizeRemoteChair);
+
+            // Voeg samen: actuele live stoelen + bedden & zorghulpmiddelen
+            allChairs = [...liveChairs, ...careAndBedProducts];
+
+            // Re-render filters & tellingen
+            populateBrandSelect();
+            updateCounts();
+            renderChairs();
+
+            console.log(`[Schipper Live Sync] Live verbinding actief: ${liveChairs.length} stoelen gesynchroniseerd met staopstoelen.nl database (${allChairs.length} totaal assortiment).`);
+          }
+        }
+      } catch (liveErr) {
+        console.warn('Live API van staopstoelen.nl niet bereikbaar, lokale database blijft actief:', liveErr);
+      }
+
+      if (!isInitialRenderDone) {
+        applyInitialUI();
+      }
+    }
+
+    function applyInitialUI() {
+      if (isInitialRenderDone) return;
+      isInitialRenderDone = true;
+
       populateBrandSelect();
       updateCounts();
 
@@ -733,10 +835,11 @@
       }
     }
 
-    // Populate Brand Dropdown dynamically
+    // Populate Brand Dropdown dynamically (preserves currently selected brand)
     function populateBrandSelect() {
       const brandSelect = document.getElementById('brand-select');
       if (!brandSelect) return;
+      const currentSelected = currentFilter.brand || 'all';
       const brands = new Set();
       allChairs.forEach(c => {
         if (c.brand) brands.add(c.brand);
@@ -747,6 +850,7 @@
         const opt = document.createElement('option');
         opt.value = b;
         opt.textContent = b;
+        if (b === currentSelected) opt.selected = true;
         brandSelect.appendChild(opt);
       });
     }
@@ -767,6 +871,9 @@
       if (elZit) elZit.textContent = countZit;
       if (elLig) elLig.textContent = countLig;
       if (elZorg) elZorg.textContent = countZorg;
+
+      const heroCount = document.getElementById('hero-total-count');
+      if (heroCount) heroCount.textContent = countAll;
     }
 
     // Filter Handlers
