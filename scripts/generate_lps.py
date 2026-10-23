@@ -860,6 +860,8 @@ def generate_lp_html(lp_item, is_rotterdam=False):
         method: "POST",
         headers: {{ "Content-Type": "text/plain" }},
         body: JSON.stringify({{
+          brand: "Schipper Compact Wonen",
+          site: "schippercompactwonen.nl",
           name: name,
           phone: phone,
           email: "",
@@ -868,6 +870,7 @@ def generate_lp_html(lp_item, is_rotterdam=False):
           notes: notes + " [Landingspagina: {title}]",
           emailSubject: "Nieuwe Landingspagina Aanvraag: {title}",
           senderName: "Geertjan Klein Haneveld - Schipper Compact Wonen",
+          replyTo: "info@schippercompactwonen.nl",
           notificationEmail: "schipperwonen@gmail.com, info@schippercompactwonen.nl",
           timestamp: new Date().toISOString()
         }})

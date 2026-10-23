@@ -1379,6 +1379,8 @@
         method: "POST",
         headers: { "Content-Type": "text/plain" },
         body: JSON.stringify({
+          brand: "Schipper Compact Wonen",
+          site: "schippercompactwonen.nl",
           name: name,
           phone: phone,
           email: email,
@@ -1387,6 +1389,7 @@
           notes: notes + (activeChair ? ` [Interesse in: ${activeChair.name}]` : ''),
           emailSubject: "Nieuwe Collectie Adviesaanvraag - Schipper Compact Wonen",
           senderName: "Geertjan Klein Haneveld - Schipper Compact Wonen",
+          replyTo: "info@schippercompactwonen.nl",
           notificationEmail: "schipperwonen@gmail.com, info@schippercompactwonen.nl",
           timestamp: new Date().toISOString()
         })

@@ -732,6 +732,8 @@
         method: "POST",
         headers: { "Content-Type": "text/plain" },
         body: JSON.stringify({
+          brand: "Schipper Compact Wonen",
+          site: "schippercompactwonen.nl",
           name: name,
           phone: phone,
           email: "",
@@ -740,6 +742,7 @@
           notes: notes + " [Landingspagina: Fitform sta op stoel Barendrecht]",
           emailSubject: "Nieuwe Landingspagina Aanvraag: Fitform sta op stoel Barendrecht",
           senderName: "Geertjan Klein Haneveld - Schipper Compact Wonen",
+          replyTo: "info@schippercompactwonen.nl",
           notificationEmail: "schipperwonen@gmail.com, info@schippercompactwonen.nl",
           timestamp: new Date().toISOString()
         })

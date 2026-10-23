@@ -910,40 +910,79 @@
       const typeLabel = state.appointmentType === "home" ? "Gratis Proefzitten aan Huis" : "Showroombezoek Dordrecht";
 
       // Customer confirmation email HTML (rich template)
+      let startTime = "10:00";
+      let endTime = "12:00";
+      if (state.selectedTimeSlot && state.selectedTimeSlot.includes(" - ")) {
+        const parts = state.selectedTimeSlot.split(" - ");
+        startTime = parts[0].trim();
+        endTime = parts[1].trim();
+      }
+
       const customerEmailHtml = `
-        <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 600px; margin: 0 auto; padding: 24px; color: #3D3B36; background: #FAF7F1; border-radius: 16px;">
+        <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; max-width: 620px; margin: 0 auto; padding: 24px; color: #2e382b; background: #FAF7F1; border-radius: 16px; border: 1px solid #DDD3C2;">
           <div style="text-align: center; margin-bottom: 24px;">
-            <h1 style="color: #344E41; margin: 0; font-size: 24px;">Schipper Compact Wonen</h1>
+            <h1 style="color: #344E41; margin: 0; font-size: 24px; font-weight: 700;">Schipper Compact Wonen</h1>
             <p style="color: #588157; margin: 4px 0 0; font-size: 14px; font-weight: 600;">Afspraakbevestiging Zitadvies</p>
           </div>
           <div style="background: #ffffff; padding: 24px; border-radius: 12px; border: 1px solid #DDD3C2;">
-            <p>Beste ${name},</p>
-            <p>Hartelijk dank voor uw aanvraag. Uw afspraak met onze bewegingstechnoloog staat gereserveerd in de agenda.</p>
-            <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+            <p style="font-size: 16px; margin-top: 0;">Beste <strong>${name}</strong>,</p>
+            <p>Hartelijk dank voor uw aanvraag. Uw afspraak met onze bewegingstechnoloog staat gereserveerd in de agenda met onderstaande gegevens:</p>
+            <table style="width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 15px;">
               <tr><td style="padding: 8px 0; color: #6E6A60; width: 35%;">Type:</td><td style="padding: 8px 0; font-weight: 600; color: #344E41;">${typeLabel}</td></tr>
               <tr><td style="padding: 8px 0; color: #6E6A60;">Datum:</td><td style="padding: 8px 0; font-weight: 600;">${dateFormatted}</td></tr>
               <tr><td style="padding: 8px 0; color: #6E6A60;">Tijdslot:</td><td style="padding: 8px 0; font-weight: 600;">${state.selectedTimeSlot}</td></tr>
               <tr><td style="padding: 8px 0; color: #6E6A60;">Locatie:</td><td style="padding: 8px 0; font-weight: 600;">${address}</td></tr>
+              ${notes ? `<tr><td style="padding: 8px 0; color: #6E6A60;">Opmerkingen:</td><td style="padding: 8px 0; font-style: italic;">${notes}</td></tr>` : ''}
             </table>
-            <p style="font-size: 13px; color: #6E6A60;">Mocht u verhinderd zijn of de afspraak willen verplaatsen, neem dan gerust telefonisch contact met ons op via <a href="tel:0786314858" style="color: #344E41; font-weight: 600;">078 - 631 48 58</a>.</p>
+            
+            <h3 style="color: #344E41; margin-top: 24px; margin-bottom: 8px; font-size: 16px;">Hoe nu verder?</h3>
+            <p style="margin-top: 0; font-size: 14px; line-height: 1.6; color: #444;">
+              Ik neem voorafgaand aan de afspraak telefonisch contact met u op om de details door te nemen en eventuele specifieke wensen te bespreken.
+            </p>
+
+            <div style="margin-top: 28px; padding-top: 20px; border-top: 1px solid #eee;">
+              <p style="margin: 0 0 16px 0; line-height: 1.5; font-size: 14px;">Met vriendelijke groet,</p>
+              <table role="presentation" border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse; margin: 0; padding: 0;">
+                <tr>
+                  <td style="vertical-align: top; padding-right: 18px; width: 84px;">
+                    <img src="https://staopstoelen.nl/assets/geert_avatar.png" alt="Geertjan Klein Haneveld" width="84" height="84" style="display: block; width: 84px; height: 84px; border-radius: 50%; border: 1px solid #DDD3C2; object-fit: cover;">
+                  </td>
+                  <td style="vertical-align: top; font-size: 14px; line-height: 1.5; color: #111111;">
+                    <div style="font-size: 16px; font-weight: bold; color: #111111; margin-bottom: 2px;">Geertjan Klein Haneveld</div>
+                    <div style="font-size: 13px; color: #588157; font-weight: 600; margin-bottom: 8px;">Gediplomeerd bewegingstechnoloog &amp; Zitadviseur</div>
+                    <div style="font-size: 13px; line-height: 1.6; color: #333333;">
+                      06 - 22 23 29 64 &nbsp;&bull;&nbsp; 078 - 631 4858<br>
+                      <a href="mailto:info@schippercompactwonen.nl" style="color: #344E41; font-weight: 600; text-decoration: none;">info@schippercompactwonen.nl</a> &nbsp;&bull;&nbsp; <a href="https://schippercompactwonen.nl" target="_blank" style="color: #344E41; text-decoration: none;">www.schippercompactwonen.nl</a><br>
+                      Showroom: Merwedestraat 239, 3313 GT Dordrecht
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </div>
           </div>
-          <p style="text-align: center; font-size: 12px; color: #6E6A60; margin-top: 20px;">
-            Schipper Compact Wonen BV · Merwedestraat 239, 3313 GT Dordrecht
+          <p style="text-align: center; font-size: 12px; color: #8C887B; margin-top: 20px;">
+            Schipper Compact Wonen BV &bull; Merwedestraat 239, 3313 GT Dordrecht
           </p>
         </div>
       `;
 
       const bookingPayload = {
+        brand: "Schipper Compact Wonen",
+        site: "schippercompactwonen.nl",
         name: name,
         phone: phone,
         email: email,
         date: dateIso,
+        timeSlot: state.selectedTimeSlot,
         time: state.selectedTimeSlot,
+        startTime: startTime,
+        endTime: endTime,
         appointmentType: state.appointmentType,
         address: address,
         notes: notes,
         emailSubject: `Afspraakbevestiging: ${typeLabel} - Schipper Compact Wonen`,
         senderName: "Geertjan Klein Haneveld - Schipper Compact Wonen",
+        replyTo: "info@schippercompactwonen.nl",
         notificationEmail: "schipperwonen@gmail.com, info@schippercompactwonen.nl",
         emailHtml: customerEmailHtml,
         timestamp: new Date().toISOString()
