@@ -563,12 +563,13 @@ def generate_lp_html(lp_item, is_rotterdam=False):
         <a href="{root_rel}collectie.html">Collectie</a>
         <a href="{root_rel}index.html#werkwijze">Werkwijze</a>
         <a href="{root_rel}index.html#ervaringen">Ervaringen</a>
+        <a href="{root_rel}afspraak.html">Afspraak Maken</a>
         <a href="#contact">Contact</a>
       </nav>
       <div class="hdr-right">
-        <button onclick="openBookingModal('header')" class="btn btn-clay btn-sm hdr-cta">
+        <a href="{root_rel}afspraak.html" class="btn btn-clay btn-sm hdr-cta">
           <svg class="ic" aria-hidden="true"><use href="#i-calendar"/></svg>Plan Adviesgesprek
-        </button>
+        </a>
         <button id="mobile-menu-btn" class="menu-btn" aria-label="Menu openen">
           <svg class="ic" aria-hidden="true"><use href="#i-menu"/></svg>
         </button>
@@ -578,11 +579,12 @@ def generate_lp_html(lp_item, is_rotterdam=False):
       <a class="ml" href="{root_rel}collectie.html">Collectie</a>
       <a class="ml" href="{root_rel}index.html#werkwijze">Werkwijze</a>
       <a class="ml" href="{root_rel}index.html#ervaringen">Ervaringen</a>
+      <a class="ml" href="{root_rel}afspraak.html">Afspraak Maken</a>
       <a class="ml" href="#contact">Contact</a>
       <div class="mm-cta">
-        <button onclick="openBookingModal('mobile-menu')" class="btn btn-clay">
+        <a href="{root_rel}afspraak.html" class="btn btn-clay">
           <svg class="ic" aria-hidden="true"><use href="#i-calendar"/></svg>Plan Adviesgesprek
-        </button>
+        </a>
         <a href="tel:0786314858" class="btn btn-ghost">
           <svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>Bel direct: 078 - 631 48 58
         </a>
@@ -726,7 +728,7 @@ def generate_lp_html(lp_item, is_rotterdam=False):
         <div id="modal-form-container">
           <span class="eyebrow">100% Vrijblijvend</span>
           <h3 id="bm-title">Plan uw Persoonlijk Adviesgesprek</h3>
-          <p class="lede">Geef uw voorkeur aan. Wij nemen binnen 1 werkdag telefonisch contact met u op om het tijdstip af te stemmen.</p>
+          <p class="lede">Geef hieronder uw voorkeur aan, of <a href="{root_rel}afspraak.html" style="color:var(--forest);font-weight:700;text-decoration:underline;">kies direct datum &amp; tijd in onze live agenda &rarr;</a></p>
           <form onsubmit="handleBookingSubmit(event)">
             <div>
               <span class="qlabel">Waar wilt u het advies ontvangen?</span>
@@ -844,6 +846,33 @@ def generate_lp_html(lp_item, is_rotterdam=False):
 
     function handleBookingSubmit(e) {{
       e.preventDefault();
+
+      const name = document.getElementById('book-name') ? document.getElementById('book-name').value.trim() : '';
+      const phone = document.getElementById('book-phone') ? document.getElementById('book-phone').value.trim() : '';
+      const city = document.getElementById('book-city') ? document.getElementById('book-city').value.trim() : '';
+      const notes = document.getElementById('book-notes') ? document.getElementById('book-notes').value.trim() : '';
+      const typeInput = document.querySelector('input[name="appointment-type"]:checked');
+      const appointmentType = typeInput ? typeInput.value : 'thuis';
+
+      // Push to Google Calendar Webhook
+      const GOOGLE_CALENDAR_WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbwyRN-iLM83LFZ4hZ08jzwpMdeHI6o5kU5fr0Bz2KpmOuG3XP5y_4zbyE2cO45WCdNN/exec";
+      fetch(GOOGLE_CALENDAR_WEBHOOK_URL, {{
+        method: "POST",
+        headers: {{ "Content-Type": "text/plain" }},
+        body: JSON.stringify({{
+          name: name,
+          phone: phone,
+          email: "",
+          appointmentType: appointmentType,
+          address: appointmentType === 'thuis' ? (city || "Aan Huis") : "Showroom Dordrecht (Merwedestraat 239)",
+          notes: notes + " [Landingspagina: {title}]",
+          emailSubject: "Nieuwe Landingspagina Aanvraag: {title}",
+          senderName: "Geertjan Klein Haneveld - Schipper Compact Wonen",
+          notificationEmail: "schipperwonen@gmail.com, info@schippercompactwonen.nl",
+          timestamp: new Date().toISOString()
+        }})
+      }}).catch(err => console.warn("Google Webhook warning:", err));
+
       document.getElementById('modal-form-container').classList.add('hidden');
       document.getElementById('modal-success-container').classList.remove('hidden');
     }}
@@ -978,6 +1007,7 @@ def generate_sitemap(lps):
     urls = [
         '<url><loc>https://schippercompactwonen.nl/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>',
         '<url><loc>https://schippercompactwonen.nl/collectie</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>',
+        '<url><loc>https://schippercompactwonen.nl/afspraak</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>',
         '<url><loc>https://schippercompactwonen.nl/lp/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>',
         '<url><loc>https://schippercompactwonen.nl/sta-op-stoelen-rotterdam/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>'
     ]
