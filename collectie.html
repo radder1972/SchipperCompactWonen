@@ -128,6 +128,39 @@
     .chair-thumb{position:relative;aspect-ratio:4/3.5;background:linear-gradient(180deg, #fff 0%, var(--oat) 100%);overflow:hidden;border-radius:36px 36px 0 0}
     .chair-thumb img{position:absolute;inset:24px;width:calc(100% - 48px);height:calc(100% - 48px);max-width:calc(100% - 48px);max-height:calc(100% - 48px);object-fit:contain;object-position:center;mix-blend-mode:multiply;transition:transform .35s ease}
     .chair-card:hover .chair-thumb img{transform:scale(1.04)}
+
+    /* Huisstijl Boogkader voor foto's met achtergrond */
+    .chair-thumb.has-arch{
+      background: var(--linen);
+      padding: 16px 20px 0;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+    .chair-thumb.has-arch .arch-frame{
+      position: relative;
+      width: 100%;
+      height: 100%;
+      border-radius: 999px 999px 18px 18px; /* Authentieke Huisstijl Boog */
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 10px 24px -6px rgba(45,62,52,0.18), 0 0 0 1.5px rgba(88,129,87,0.25);
+    }
+    .chair-thumb.has-arch .arch-frame img{
+      position: absolute;
+      inset: 4px;
+      width: calc(100% - 8px);
+      height: calc(100% - 8px);
+      max-width: calc(100% - 8px);
+      max-height: calc(100% - 8px);
+      object-fit: contain;
+      object-position: center center;
+      mix-blend-mode: normal !important;
+      transition: transform .4s ease;
+    }
+    .chair-card:hover .chair-thumb.has-arch .arch-frame img{
+      transform: scale(1.05);
+    }
     
     .chair-badge{position:absolute;top:16px;left:16px;padding:6px 14px;border-radius:999px;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
     .badge-nieuw{background:var(--forest);color:var(--linen)}
@@ -163,13 +196,57 @@
     .modal-detail-card{position:relative;z-index:1;background:var(--linen);border-radius:40px;max-width:960px;width:100%;padding:40px 36px;box-shadow:0 40px 80px -30px rgba(30,40,30,.5);animation:pop .35s ease;max-height:92vh;overflow-y:auto}
     .modal-detail-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:36px;align-items:start}
     .modal-detail-grid > div{min-width:0;width:100%}
-    .gallery-main{position:relative;aspect-ratio:4/3.2;background:linear-gradient(180deg, #fff 0%, var(--oat) 100%);border-radius:28px;overflow:hidden;border:1px solid var(--line);margin-bottom:12px}
+    /* Modal Arch Frame */
+    .modal-arch-frame{display:contents}
+    .gallery-main{position:relative;aspect-ratio:4/3.2;background:linear-gradient(180deg, #fff 0%, var(--oat) 100%);border-radius:28px;overflow:hidden;border:1px solid var(--line);margin-bottom:12px;transition:all .3s ease}
     .gallery-main img{position:absolute;inset:20px;width:calc(100% - 40px);height:calc(100% - 40px);max-width:calc(100% - 40px);max-height:calc(100% - 40px);object-fit:contain;object-position:center;mix-blend-mode:multiply;transition:transform .2s ease}
+
+    /* Modal Gallery Arch Frame */
+    .gallery-main.has-arch{
+      background: var(--linen);
+      padding: 16px 20px 0;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      border: 1px solid var(--line);
+    }
+    .gallery-main.has-arch .modal-arch-frame{
+      display: block;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      border-radius: 999px 999px 20px 20px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 14px 32px -8px rgba(45,62,52,0.22), 0 0 0 1.5px rgba(88,129,87,0.28);
+    }
+    .gallery-main.has-arch .modal-arch-frame img{
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: cover;
+      object-position: center bottom;
+      mix-blend-mode: normal !important;
+      transition: transform .25s ease;
+    }
+
     .gallery-thumbs{display:flex;flex-wrap:wrap;gap:8px;max-height:152px;overflow-y:auto;padding:2px 2px 4px;margin-bottom:4px}
     .gallery-thumb{position:relative;width:62px;height:62px;border-radius:14px;background:#fff;border:2px solid transparent;cursor:pointer;flex-shrink:0;padding:6px;overflow:hidden;display:flex;align-items:center;justify-content:center;transition:border-color .2s,transform .15s}
     .gallery-thumb:hover{transform:translateY(-2px);border-color:var(--sage)}
     .gallery-thumb.active{border-color:var(--moss)}
     .gallery-thumb img{width:100%;height:100%;max-width:100%;max-height:100%;object-fit:contain;mix-blend-mode:multiply}
+    .gallery-thumb.has-arch{
+      border-radius: 999px 999px 10px 10px;
+      padding: 3px;
+    }
+    .gallery-thumb.has-arch img{
+      border-radius: 999px 999px 8px 8px;
+      object-fit: cover;
+      mix-blend-mode: normal !important;
+    }
 
     .modal-specs-table{width:100%;table-layout:fixed;border-collapse:collapse;margin:18px 0;font-size:13.5px}
     .modal-specs-table tr{border-bottom:1px solid var(--line)}
@@ -469,7 +546,9 @@
           <!-- Left: Gallery -->
           <div>
             <div class="gallery-main" id="modal-gallery-main">
-              <img id="modal-main-img" src="" alt="Product foto">
+              <div class="modal-arch-frame" id="modal-arch-frame">
+                <img id="modal-main-img" src="" alt="Product foto">
+              </div>
             </div>
             <div class="gallery-thumbs" id="modal-gallery-thumbs"></div>
             
@@ -728,12 +807,18 @@
         gallery = [mainImg];
       }
 
+      const imgLower = (mainImg || '').toLowerCase();
+      const hasBg = (c.has_background !== undefined) ? Boolean(c.has_background) : (
+        imgLower.includes('occasion') || imgLower.includes('reco') || imgLower.includes('interior') || imgLower.includes('bed') || imgLower.includes('rembrandt')
+      );
+
       return {
         ...c,
         category: 'Zitcomfort',
         subcategory: subcat,
         image: mainImg,
         gallery: gallery,
+        has_background: hasBg,
         features: (c.features && c.features.length) ? c.features : [
           '100% Ergonomisch zitcomfort',
           'Geleverd met kwaliteitsgarantie',
@@ -741,6 +826,23 @@
         ],
         specifications: c.specifications || {}
       };
+    }
+
+    // Detect if chair photo has real-life room/floor background (needs Scandinavian arch frame)
+    function isImageWithBackground(c) {
+      if (!c) return false;
+      if (typeof c.has_background === 'boolean') return c.has_background;
+      const s = ((c.image || '') + ' ' + (c.id || '')).toLowerCase();
+      const roomKeywords = [
+        'occasion_sta-op_stoel_fitform_570_verrijdbaar',
+        'occasion_sta-op_stoel_fitform_570_vario_zand',
+        'sta-op_stoel_fitform_571_mini_kuiprug',
+        'sta-op_stoel_refitto_draaibaar',
+        'sta-op_stoel_fitform_571_mini_kyphose',
+        'reco_sta-op_stoel_fitform_570_smal',
+        'bed_ecofit', 'bed_houston', 'bed_boston', 'bed_miami', 'bed_adriano', 'traplift_rembrandt'
+      ];
+      return roomKeywords.some(k => s.includes(k));
     }
 
     const LIVE_API_URL = 'https://staopstoelen.nl/api/admin_api.php';
@@ -771,9 +873,17 @@
           if (liveData && Array.isArray(liveData.staopstoelen) && liveData.staopstoelen.length > 0) {
             // Behoud alle Ligcomfort (hoog-laag bedden) en Zorgcomfort (rollators, trapliften)
             const careAndBedProducts = allChairs.filter(p => p.category && p.category !== 'Zitcomfort');
+            const localChairMap = new Map(allChairs.map(p => [p.id, p]));
             
             // Normaliseer de actuele live stoelen uit de database
-            const liveChairs = liveData.staopstoelen.map(normalizeRemoteChair);
+            const liveChairs = liveData.staopstoelen.map(rc => {
+              const normalized = normalizeRemoteChair(rc);
+              const localExisting = localChairMap.get(rc.id);
+              if (localExisting && typeof localExisting.has_background === 'boolean') {
+                normalized.has_background = localExisting.has_background;
+              }
+              return normalized;
+            });
 
             // Voeg samen: actuele live stoelen + bedden & zorghulpmiddelen
             allChairs = [...liveChairs, ...careAndBedProducts];
@@ -977,13 +1087,26 @@
           ? `<span class="chair-price">${formatPrice(c.price)}</span>`
           : `<span class="chair-price" style="font-size:18px;font-weight:700;color:var(--forest)">Prijs op aanvraag</span>`;
 
-        return `
-          <article class="chair-card">
+        const hasBg = isImageWithBackground(c);
+        const thumbHtml = hasBg ? `
+            <div class="chair-thumb has-arch" onclick="openChairDetail('${c.id}')" style="cursor:pointer">
+              <div class="arch-frame">
+                <img src="${c.image || 'assets/chair_custom.png'}" alt="${c.name}" onerror="handleImgError(this)" loading="lazy">
+              </div>
+              <span class="chair-badge ${badgeClass}">${badgeText}</span>
+              <span class="chair-status-tag">${statusText}</span>
+            </div>
+        ` : `
             <div class="chair-thumb" onclick="openChairDetail('${c.id}')" style="cursor:pointer">
               <img src="${c.image || 'assets/chair_custom.png'}" alt="${c.name}" onerror="handleImgError(this)" loading="lazy">
               <span class="chair-badge ${badgeClass}">${badgeText}</span>
               <span class="chair-status-tag">${statusText}</span>
             </div>
+        `;
+
+        return `
+          <article class="chair-card">
+            ${thumbHtml}
             
             <div class="chair-content">
               <span class="chair-brand">${c.brand || 'Schipper Compact Wonen'}</span>
@@ -1122,13 +1245,21 @@
         if (!gallery.includes(img)) gallery.push(img);
       });
 
+      const hasBg = isImageWithBackground(activeChair);
+      const galleryMain = document.getElementById('modal-gallery-main');
+      if (hasBg) {
+        galleryMain.classList.add('has-arch');
+      } else {
+        galleryMain.classList.remove('has-arch');
+      }
+
       const mainImg = document.getElementById('modal-main-img');
       mainImg.src = gallery[0] || 'assets/chair_custom.png';
       mainImg.onerror = function() { handleImgError(this); };
 
       const thumbsContainer = document.getElementById('modal-gallery-thumbs');
       thumbsContainer.innerHTML = gallery.map((img, idx) => `
-        <div class="gallery-thumb ${idx === 0 ? 'active' : ''}" onclick="selectModalImg(this, '${img}')">
+        <div class="gallery-thumb ${hasBg ? 'has-arch' : ''} ${idx === 0 ? 'active' : ''}" onclick="selectModalImg(this, '${img}')">
           <img src="${img}" alt="Miniatuur ${idx + 1}" onerror="handleImgError(this)">
         </div>
       `).join('');
