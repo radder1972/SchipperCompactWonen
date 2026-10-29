@@ -695,7 +695,7 @@ def generate_lp_html(lp_item, is_rotterdam=False):
             <div class="trust-num">2</div>
             <div>
               <h4>Ergonomisch meten</h4>
-              <p>Onze bewegingstechnoloog meet uw lichaam tot op de millimeter nauwkeurig in.</p>
+              <p>Onze bewegingstechnoloog meet uw ideale zithoogte, zitdiepte en armleggers vakkundig in.</p>
             </div>
           </div>
           <div class="trust-item">
